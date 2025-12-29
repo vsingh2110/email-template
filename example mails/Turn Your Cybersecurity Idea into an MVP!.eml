@@ -1,0 +1,546 @@
+Delivered-To: vsingh2110@gmail.com
+Received: by 2002:a05:640c:7706:b0:256:8a2c:2551 with SMTP id l6csp651951eiw;
+        Wed, 24 Dec 2025 04:45:03 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IHqbLDA1w/R8/BMEguFhVXbOyqDFnpvFw3O4Joz0tlxEGywDP9v/ywCIRr+Qs+OO0f05dBN
+X-Received: by 2002:a05:6a00:3286:b0:7f0:4694:1c21 with SMTP id d2e1a72fcca58-7ff64cd8d46mr16301859b3a.20.1766580303072;
+        Wed, 24 Dec 2025 04:45:03 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1766580303; cv=none;
+        d=google.com; s=arc-20240605;
+        b=QLRzTZfhObEzcGqAk9kfX1LUSjfFZoN6S2l+4nEa6WVpFbDqSMoGCfoVcHAyT9zqEE
+         QlszxAVRY19cpz2iAhzegZn3x6M3in8/5k8k6KH9YqS1V4QhR6XV6jbVqZ0s957NSiyp
+         GSu6FDet2GLMVmHuveAXVjhdbdF6P/VG4yrpq5jvmHPOR41FocIC576nREWcHoHS0iNz
+         5E/3sxpkRgLiE7XdZkYU44IC7JQCDv3W3VZS1iHdpp8m5HAsRAAB/jPHEsPa4ZJ8GXi2
+         l4rJlNGJowHE1RJZwxc32sWUbyIaHjaRROjpuNcMFVv9yL0howq809EV/jLrfBAQyxrt
+         L/sQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=date:content-transfer-encoding:mime-version:subject:to:from
+         :message-id:dkim-signature;
+        bh=zIzUdDzRsUFQ3rZpjbW78lWXLZvHzeY2Lfiq0AK6zhY=;
+        fh=VsADH51DasWUAWKbge5tokyYCeQDDfmF8MJrxNRkreQ=;
+        b=Zk5YF9xc4L/Qc8NGYEGrswUAG9qSgoPpacNeHB6pQVJiYziKypqtca4k2lMNQ8zgOn
+         J1omQDe5SIG6hqrVz/7/iz7WWxy/W6urRePlclCPuHinFC0ggyX4f8s6O9nbYOHNmp91
+         jKF0S/ONUj3yITgSk/h+iY6zxnjrugbtlxmzbsJDBn+h1TGhZp0qz1Dvy36lq50LnW+D
+         GP1SzPZ47mP5w4iyyLExEt9L/m52uP1U4/+Hb/hHKZbt9nFrQPvz3QS7JNZp6A8J5dny
+         wzlccO9qyARW/No4Ql+kC7uRybCmRKPTa9B6YdQGvUGjO4RhrDtTZk2UrizLrNRBWDRf
+         odwA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@sampark.gov.in header.s=sampark1 header.b=pOYJlRyt;
+       spf=pass (google.com: domain of no-reply@sampark.gov.in designates 164.100.172.134 as permitted sender) smtp.mailfrom=no-reply@sampark.gov.in;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=sampark.gov.in
+Return-Path: <no-reply@sampark.gov.in>
+Received: from vastu172163.nic.in (vastu172134.nic.in. [164.100.172.134])
+        by mx.google.com with ESMTPS id d2e1a72fcca58-7ff7dbb20c1si30345978b3a.169.2025.12.24.04.45.02
+        for <vsingh2110@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Wed, 24 Dec 2025 04:45:03 -0800 (PST)
+Received-SPF: pass (google.com: domain of no-reply@sampark.gov.in designates 164.100.172.134 as permitted sender) client-ip=164.100.172.134;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@sampark.gov.in header.s=sampark1 header.b=pOYJlRyt;
+       spf=pass (google.com: domain of no-reply@sampark.gov.in designates 164.100.172.134 as permitted sender) smtp.mailfrom=no-reply@sampark.gov.in;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=sampark.gov.in
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=sampark.gov.in;
+	s=sampark1; t=1766580300;
+	bh=LLPE6hNH4Jhe2i6j8sqqnOv8LG3zyYhCf2WoQ1Gv57Y=;
+	h=Message-ID:From:To:Subject:Date;
+	b=pOYJlRyt45VaOxuocZBn6tG/mV5u94GrddfN4DvyhaD+uIYnO2SEH5yVROC2q4czG
+	 XEvWsdfheRiuz7ihWQqSDDzF3kZfmrW0o703kH1d/lMKIUD7yQAxC0fj5FfxZ4c2Nv
+	 WWIsX2fe5URgsQAjHWxLzM4Etlt57s7hYB8D05vs=
+Received: from rabbit-mq3.nic.in (unknown [192.168.255.11])
+	by vastu172163.nic.in (Postfix) with ESMTP id B7D358172B87
+	for <vsingh2110@gmail.com>; Wed, 24 Dec 2025 18:15:00 +0530 (IST)
+Received: from rabbit-mq3.nic.in (localhost [127.0.0.1])
+	by rabbit-mq3.nic.in (Postfix) with ESMTP id 95C19AB
+	for <vsingh2110@gmail.com>; Wed, 24 Dec 2025 18:15:00 +0530 (IST)
+Message-ID: <1441962118.470421766580300611.JavaMail.root@rabbit-mq3.nic.in>
+From: MyGov <no-reply@sampark.gov.in>
+To: vsingh2110@gmail.com
+Subject: Turn Your Cybersecurity Idea into an MVP!
+MIME-Version: 1.0
+Content-type: text/html
+Content-Transfer-Encoding: quoted-printable
+Date: Wed, 24 Dec 2025 18:15:00 +0530 (IST)
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+ <head>=20
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8" =
+/>=20
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1, maximum-scale=3D1" />=20
+  <link rel=3D"preconnect" href=3D"https://fonts.googleapis.com" />=20
+  <link rel=3D"preconnect" href=3D"https://jan-sampark.nic.in/jansampark/cl=
+ick.jsp?tab=3Dpmo&amp;urlid=3D3661a5a8a1345c0c9de281192851d7f7214eefc7&amp;=
+lat=3D2025&amp;mid=3Da3e1838cf6191fee777f34ee5d43772abb421630" crossorigin=
+=3D"" />=20
+  <link rel=3D"preconnect" href=3D"https://fonts.googleapis.com" />=20
+  <link rel=3D"preconnect" href=3D"https://jan-sampark.nic.in/jansampark/cl=
+ick.jsp?tab=3Dpmo&amp;urlid=3D3661a5a8a1345c0c9de281192851d7f7214eefc7&amp;=
+lat=3D2025&amp;mid=3Da3e1838cf6191fee777f34ee5d43772abb421630" crossorigin=
+=3D"" />=20
+  <link href=3D"https://fonts.googleapis.com/css2?family=3DNoto+Sans+Devana=
+gari:wght@100..900&amp;display=3Dswap" rel=3D"stylesheet" />=20
+  <title>Turn Your Cybersecurity Idea into an MVP!</title>=20
+  <style type=3D"text/css">
+html {width:100%; height:100%;}
+body {margin:0; padding:0; width:100%; background:#fff; -webkit-text-size-a=
+djust:none; -ms-text-size-adjust:none;}
+img {border:0;}
+table {border-collapse:collapse;}
+.ReadMsgBody { width: 100%;}
+.ExternalClass {width: 100%;}
+/* INTRO [OR] CALL TO ACTION TEXT */
+td[class=3D"action"] {padding:0 60px!important;}
+table[class=3D"action_text"] {font-family: 'Montserrat', sans-serif;!import=
+ant; font-size:25px!important; color:#444!important; line-height:35px!impor=
+tant; font-weight:lighter!important;}
+/* FEATURED AUTHORS AND AD */
+table[class=3D"authors"] {margin-top:30px!important;}
+/* FOOTER */
+table[class=3D"footer"] {margin:auto!important; padding-bottom:20px!importa=
+nt;}
+table[class=3D"footer_column"] {text-align:left!important;}
+/* COPY-RIGHT */
+table[class=3D"copyright"] {text-align:left!important;}
+table[class=3D"unsubscribe"] {text-align:right!important;}
+/* MEDIA QUIRES */
+@media only screen and (max-width:640px) {
+=09/* GENERAL */
+=09body {width:auto!important; background:#ffffff!important;}
+=09table[class=3D"layout"] {width:100%!important; margin:auto!important; ba=
+ckground:#fff!important;} /* CONTROLS THE LAYOUT WIDTH */
+=09table[class=3D"container"] {width:100%!important; margin:auto!important;=
+ padding-left: 20px; padding-right: 20px;} /* CONTROLS THE WIDTH OF EACH SE=
+CTION */
+=09td[class=3D"space"] {height:30px!important;}
+=09td[class=3D"hrule"] {border-bottom:1px solid #ddd!important; height:30px=
+!important;}
+=09img[class=3D"top-space"] {margin-top:30px!important;}
+=09img[class=3D"bottom-space"] {margin-bottom:30px!important;}=09
+=09/* HEADER */
+=09table[class=3D"logo"] {width:100%!important; text-align:center!important=
+; margin-bottom:20px!important; border-bottom:1px solid #ddd!important;}
+=09table[class=3D"logo_place"] {padding-bottom:20px!important;}
+=09table[class=3D"media"] {width:100%!important;}
+=09/* INTRO [OR] CALL TO ACTION TEXT */
+=09
+=09td[class=3D"action"] {padding:0!important;}
+=09table[class=3D"action_text"] {width:100%px!important; font-size:16px!imp=
+ortant; line-height:25px!important; font-weight:600!important;}
+=09
+=09/* IMAGES LEFT [OR] RIGHT SIDE */
+=09
+=09table[class=3D"image_content"] {width:100%!important;}
+=09table[class=3D"text_content"] {width:100%!important;}
+=09table[class=3D"half-width"] {width:100%!important; margin-top:30px!impor=
+tant;}
+
+=09
+=09/* FEATURED AUTHORS AND AD */
+
+=09table[class=3D"authors"] {width:100%!important; margin:30px 0!important;=
+}
+=09table[class=3D"ad-one"] {display:none!important;}
+=09
+=09/* ILLUSTRATIONS LEFT [OR] RIGHT SIDE */
+
+=09table[class=3D"illustration_content"], table[class=3D"illustration_text"=
+] {width:100%!important;}
+=09
+=09/* THREE COLUMN */
+
+=09table[class=3D"one_third"] {width:100%!important; margin-bottom:30px!imp=
+ortant;}
+=09table[class=3D"two_third"] {width:100%!important;}
+=09table[class=3D"single_column"] {width:100%!important;}
+=09
+=09/* GALLERY */
+=09
+=09table[class=3D"gallery"] {width:100%!important;}
+=09
+=09/* FOOTER */
+=09
+=09table[class=3D"footer"] {width:100%!important;}
+=09table[class=3D"footer_column"] {width:100%!important; text-align:center!=
+important;}
+=09
+=09/* COPY-RIGHT */
+
+=09table[class=3D"copyright"], table[class=3D"unsubscribe"] {width:100%!imp=
+ortant; text-align:center!important;}
+
+}
+
+@media only screen and (max-width:480px) {
+=09
+=09/* GENERAL */
+=09
+=09body {width:auto!important; background:#ffffff!important;}
+=09table[class=3D"layout"] {width:100%!important; margin:auto!important;}
+=09table[class=3D"container"] {width:100%!important;}
+=09td[class=3D"space"] {height:20px!important;}
+=09td[class=3D"hrule"] {border-bottom:1px solid #ddd!important; height:22px=
+!important;}=09
+=09img[class=3D"top-space"] {margin-top:20px!important;}
+=09img[class=3D"bottom-space"] {margin-bottom:20px!important;}
+=09img[class=3D"img_top_space"] {margin-top:20px!important;}
+=09table[class=3D"half-width"] {margin-top:20px!important;}
+=09
+=09/* INTRO [OR] CALL TO ACTION TEXT */
+=09
+=09table[class=3D"action_text"] {width:100%!important; text-align:center!im=
+portant; font-size:14px!important; line-height:normal!important; font-weigh=
+t:600!important;}
+=09table[class=3D"action_button"] {display:none!important;}
+=09
+=09/* FEATURED AUTHORS AND AD */
+
+=09table[class=3D"authors"] {width:100%!important; margin:15px 0!important;=
+}
+=09
+=09/* THREE COLUMN */
+=09
+=09table[class=3D"one_third"] {width:100%!important; margin-bottom:20px!imp=
+ortant;}
+=09table[class=3D"two_third"] {width:100%!important; text-align: center!imp=
+ortant;}
+=09=09table[class=3D"single_column"] {width:100%!important;}
+
+=09/* FOOTER */
+=09
+=09table[class=3D"footer"] {width:200px!important;}
+=09=09
+}
+
+</style>=20
+ </head>=20
+ <body style=3D"background: #f6f1e9">
+  <div style=3D"margin:0 auto;display:block;text-align:center; background-c=
+olor:#2a2a2a;">=20
+   <font color=3D"#AAAAAA" face=3D"Arial, sans-serif" size=3D"-1"> Having t=
+rouble reading this email? <a style=3D"color:#f6f6f6;font-weight:600;text-d=
+ecoration:none;font-style:italic; text-decoration: underline;" href=3D"http=
+s://jan-sampark.nic.in/campaigns/2025/24-Dec/MyGov/index.html" target=3D"_b=
+lank">View it in your mobile/ web browser</a> </font>=20
+   <hr style=3D"color:#aaa;border:1px solid #aaaaaa" />=20
+  </div>=20
+  <table cellpadding=3D"0" cellspacing=3D"0" style=3D"width:100%;padding:30=
+px 0;">=20
+   <tbody>
+    <tr>=20
+     <td>=20
+      <table width=3D"650" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"=
+ align=3D"center" class=3D"layout" bgcolor=3D"#175566" style=3D"-moz-border=
+-radius:22px; -webkit-border-radius:22px; border-radius:22px">=20
+       <tbody>=20
+        <tr>=20
+         <td>=20
+          <!-- MAIN HEADER IMAGE SPACE 600 X 210 PIXELS -->=20
+          <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" class=3D"container">=20
+           <tbody>=20
+            <tr>=20
+             <td align=3D"center" bgcolor=3D"#ffffff" style=3D"font-size:17=
+px;font-family: 'Noto Sans Devanagari';color: #000000;font-weight: 400;">=
+=20
+              <table width=3D"650" align=3D"center" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" class=3D"container">=20
+               <tbody>
+                <tr>=20
+                 <td>=20
+                  <table width=3D"100%" border=3D"0" cellspacing=3D"0" cell=
+padding=3D"0">=20
+                   <tbody>=20
+                    <tr>=20
+                     <td align=3D"center" style=3D"font-size:20px;font-fami=
+ly: 'Noto Sans Devanagari';color: #2a2a2a; font-weight:400;">=20
+                      <table width=3D"650" align=3D"center" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" class=3D"container" bgcolor=3D"#ffffff" s=
+tyle=3D"-moz-border-radius:22px; -webkit-border-radius:22px; border-radius:=
+22px">=20
+                       <tbody>
+                        <tr>=20
+                         <td>
+                          <table width=3D"100%" border=3D"0" cellspacing=3D=
+"0" cellpadding=3D"0">=20
+                           <tbody>=20
+                            <tr>=20
+                             <td width=3D"650" colspan=3D"2" align=3D"left"=
+ style=3D"font-size:20px;font-family: 'Noto Sans Devanagari';color: #2a2a2a=
+; font-weight:400;"> <a href=3D"https://jan-sampark.nic.in/jansampark/click=
+.jsp?tab=3Dpmo&amp;urlid=3Dccc6ef3f25895ad49fef9b263ed4b35b31f2359e&amp;lat=
+=3D2025&amp;mid=3Da3e1838cf6191fee777f34ee5d43772abb421630" target=3D"_blan=
+k"> <img src=3D"https://jan-sampark.nic.in/campaigns/2025/24-Dec/MyGov/imag=
+es/cyber-security.jpg" alt=3D"Turn Your Cybersecurity Idea into an MVP!" bo=
+rder=3D"0" style=3D"width:100%;" /> </a> </td>=20
+                            </tr>=20
+                           </tbody>=20
+                          </table></td>=20
+                        </tr>=20
+                       </tbody>
+                      </table></td>=20
+                    </tr>=20
+                   </tbody>
+                  </table></td>=20
+                </tr>=20
+               </tbody>
+              </table></td>=20
+            </tr>=20
+           </tbody>
+          </table> </td>=20
+        </tr>=20
+        <tr>=20
+         <td></td>=20
+        </tr>=20
+        <tr>=20
+         <td>=20
+          <table width=3D"650" align=3D"center" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" class=3D"container">=20
+           <tbody>
+            <tr>=20
+             <td>=20
+              <table width=3D"650" align=3D"center" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" class=3D"container" bgcolor=3D"#1d3a7c">=20
+               <tbody>
+                <tr>=20
+                 <td align=3D"left">&nbsp;</td>=20
+                </tr>=20
+                <tr>=20
+                 <td align=3D"left">=20
+                  <table width=3D"650" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" align=3D"left" class=3D"single_column">=20
+                   <tbody>
+                    <tr>=20
+                     <td><a href=3D"https://jan-sampark.nic.in/jansampark/c=
+lick.jsp?tab=3Dpmo&amp;urlid=3D41cdfc8cc23f5f09cc7f04af5a747c5676b3c76d&amp=
+;lat=3D2025&amp;mid=3Da3e1838cf6191fee777f34ee5d43772abb421630" target=3D"_=
+blank"><img src=3D"https://jan-sampark.nic.in/campaigns/2025/24-Dec/MyGov/i=
+mages/pmindia.png" style=3D"display: block;text-align:center;" border=3D"0"=
+ width=3D"100%" /></a></td>=20
+                     <td><a href=3D"https://jan-sampark.nic.in/jansampark/c=
+lick.jsp?tab=3Dpmo&amp;urlid=3D0d1c22fe3bf03c591197f8767be76418146554c8&amp=
+;lat=3D2025&amp;mid=3Da3e1838cf6191fee777f34ee5d43772abb421630" target=3D"_=
+blank"><img src=3D"https://jan-sampark.nic.in/campaigns/2025/24-Dec/MyGov/i=
+mages/mygov.png" style=3D"display: block;text-align:center;" border=3D"0" w=
+idth=3D"100%" /></a></td>=20
+                     <td><a href=3D"https://jan-sampark.nic.in/jansampark/c=
+lick.jsp?tab=3Dpmo&amp;urlid=3D6e388f6a585f87b5a3f7a4cfbbf1e4290ea4e915&amp=
+;lat=3D2025&amp;mid=3Da3e1838cf6191fee777f34ee5d43772abb421630" target=3D"_=
+blank"><img src=3D"https://jan-sampark.nic.in/campaigns/2025/24-Dec/MyGov/i=
+mages/tran-logo.png" style=3D"display: block; text-align:center;" border=3D=
+"0" width=3D"100%" /></a></td>=20
+                     <td><a href=3D"https://jan-sampark.nic.in/jansampark/c=
+lick.jsp?tab=3Dpmo&amp;urlid=3D5670c6816a1de317b67b325fc7e504f87b57e8df&amp=
+;lat=3D2025&amp;mid=3Da3e1838cf6191fee777f34ee5d43772abb421630" target=3D"_=
+blank"><img src=3D"https://jan-sampark.nic.in/campaigns/2025/24-Dec/MyGov/i=
+mages/eg-logo.png" style=3D"display: block;text-align:center;" border=3D"0"=
+ width=3D"100%" /></a></td>=20
+                     <td><a href=3D"https://jan-sampark.nic.in/jansampark/c=
+lick.jsp?tab=3Dpmo&amp;urlid=3De13e60e32479528acfb6c12d7f2b99811c01e21e&amp=
+;lat=3D2025&amp;mid=3Da3e1838cf6191fee777f34ee5d43772abb421630" target=3D"_=
+blank"><img src=3D"https://jan-sampark.nic.in/campaigns/2025/24-Dec/MyGov/i=
+mages/sampark.png" style=3D"display: block;text-align:center;" border=3D"0"=
+ width=3D"100%" /></a></td>=20
+                    </tr>=20
+                   </tbody>
+                  </table></td>=20
+                </tr>=20
+                <tr>=20
+                 <td align=3D"left">&nbsp; </td>=20
+                </tr>=20
+                <tr>=20
+                 <td align=3D"left">
+                  <table width=3D"650" align=3D"center" border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" class=3D"container" bgcolor=3D"#ffffff">=20
+                   <tbody>
+                    <tr>=20
+                     <td align=3D"left" bgcolor=3D"#ffffff">&nbsp;</td>=20
+                    </tr>=20
+                    <tr>=20
+                     <td align=3D"center" bgcolor=3D"#ffffff" style=3D"colo=
+r:#000000;text-decoration: none;font-family: 'Montserrat', sans-serif;font-=
+size:20px;line-height:20px; text-align:center; font-weight:800">Download th=
+e MyGov app </td>=20
+                    </tr>=20
+                    <tr>=20
+                     <td align=3D"left" bgcolor=3D"#ffffff">&nbsp;</td>=20
+                    </tr>=20
+                    <tr>=20
+                     <td align=3D"center" bgcolor=3D"#ffffff"> <a href=3D"h=
+ttps://jan-sampark.nic.in/jansampark/click.jsp?tab=3Dpmo&amp;urlid=3D261171=
+0bcc33c89d767fc4d82da42149316eefb2&amp;lat=3D2025&amp;mid=3Da3e1838cf6191fe=
+e777f34ee5d43772abb421630" target=3D"_blank" style=3D" margin-left: 8px; di=
+splay:inline-block"><img src=3D"https://jan-sampark.nic.in/campaigns/2025/2=
+4-Dec/MyGov/images/android-store.png" style=3D"display: block; text-align:l=
+eft;" border=3D"0" /></a> <a href=3D"https://jan-sampark.nic.in/jansampark/=
+click.jsp?tab=3Dpmo&amp;urlid=3Db498acdf495988add21105a38d309be473bfca44&am=
+p;lat=3D2025&amp;mid=3Da3e1838cf6191fee777f34ee5d43772abb421630" target=3D"=
+_blank" style=3D"display:inline-block"><img src=3D"https://jan-sampark.nic.=
+in/campaigns/2025/24-Dec/MyGov/images/ios-app-store.png" style=3D"display: =
+block;text-align:left;" border=3D"0" /></a> </td>=20
+                    </tr>=20
+                    <tr>=20
+                     <td align=3D"center" bgcolor=3D"#ffffff">&nbsp;</td>=
+=20
+                    </tr>=20
+                    <tr>=20
+                     <td align=3D"left">&nbsp;</td>=20
+                    </tr>=20
+                    <tr>=20
+                     <td align=3D"left" style=3D"color:#000000;text-decorat=
+ion: none;font-family: 'Noto Sans Devanagari';font-size:20px;line-height:20=
+px; text-align:center; font-weight:800;">Follow us </td>=20
+                    </tr>=20
+                    <tr>=20
+                     <td align=3D"left">&nbsp;</td>=20
+                    </tr>=20
+                    <tr>=20
+                     <td align=3D"center"> <a href=3D"https://jan-sampark.n=
+ic.in/jansampark/click.jsp?tab=3Dpmo&amp;urlid=3Df19e2f1cc8b9904e0b418eb390=
+bb1e268400a416&amp;lat=3D2025&amp;mid=3Da3e1838cf6191fee777f34ee5d43772abb4=
+21630" target=3D"_blank" style=3D" margin-left: 8px; display:inline-block">=
+<img src=3D"https://jan-sampark.nic.in/campaigns/2025/24-Dec/MyGov/images/y=
+ou.png" alt=3D"MyGov Twitter" style=3D"display: block;" border=3D"0" height=
+=3D"30" width=3D"30" /></a> <a href=3D"https://jan-sampark.nic.in/jansampar=
+k/click.jsp?tab=3Dpmo&amp;urlid=3D4a7caf64f0446431ede158c635af0bc1b9ba935c&=
+amp;lat=3D2025&amp;mid=3Da3e1838cf6191fee777f34ee5d43772abb421630" target=
+=3D"_blank" style=3D"display:inline-block"><img src=3D"https://jan-sampark.=
+nic.in/campaigns/2025/24-Dec/MyGov/images/fb.png" alt=3D"MyGov Facebook" st=
+yle=3D"display: block; margin-left: 8px;" border=3D"0" height=3D"30" width=
+=3D"30" /></a> <a href=3D"https://jan-sampark.nic.in/jansampark/click.jsp?t=
+ab=3Dpmo&amp;urlid=3D67881b34332e239ee98bddf99e2fca409ce40f01&amp;lat=3D202=
+5&amp;mid=3Da3e1838cf6191fee777f34ee5d43772abb421630" target=3D"_blank" sty=
+le=3D"display:inline-block"><img src=3D"https://jan-sampark.nic.in/campaign=
+s/2025/24-Dec/MyGov/images/tw.png" style=3D"display: block; margin-left: 8p=
+x;" border=3D"0" height=3D"30" width=3D"30" /></a> <a href=3D"https://jan-s=
+ampark.nic.in/jansampark/click.jsp?tab=3Dpmo&amp;urlid=3D1c74b7967288e9ea8d=
+ab8b301d76dfb9225d7c4e&amp;lat=3D2025&amp;mid=3Da3e1838cf6191fee777f34ee5d4=
+3772abb421630" target=3D"_blank" style=3D"display:inline-block "><img src=
+=3D"https://jan-sampark.nic.in/campaigns/2025/24-Dec/MyGov/images/inst-link=
+.png" alt=3D"mygovindia" style=3D"display: block; margin-left: 8px;" border=
+=3D"0" height=3D"30" width=3D"30" /></a> <a href=3D"https://jan-sampark.nic=
+.in/jansampark/click.jsp?tab=3Dpmo&amp;urlid=3Dd9f8978bfe3b1e21bce7189aa9bc=
+42f2e1ae0259&amp;lat=3D2025&amp;mid=3Da3e1838cf6191fee777f34ee5d43772abb421=
+630" target=3D"_blank" style=3D"display:inline-block "><img src=3D"https://=
+jan-sampark.nic.in/campaigns/2025/24-Dec/MyGov/images/whatsapp.png" alt=3D"=
+mygovindia" style=3D"display: block; margin-left: 8px;" border=3D"0" height=
+=3D"30" width=3D"30" /></a> <a href=3D"https://jan-sampark.nic.in/jansampar=
+k/click.jsp?tab=3Dpmo&amp;urlid=3Dc845c9265d2544d4e15b854cb8413616aa1cbda3&=
+amp;lat=3D2025&amp;mid=3Da3e1838cf6191fee777f34ee5d43772abb421630" target=
+=3D"_blank" style=3D"display:inline-block "><img src=3D"https://jan-sampark=
+.nic.in/campaigns/2025/24-Dec/MyGov/images/telegram.png" alt=3D"mygovindia"=
+ style=3D"display: block; margin-left: 8px;" border=3D"0" height=3D"30" wid=
+th=3D"30" /></a> <a href=3D"https://jan-sampark.nic.in/jansampark/click.jsp=
+?tab=3Dpmo&amp;urlid=3D7501fcdda88e27be7fb50d42f8f35c4f890dbcb8&amp;lat=3D2=
+025&amp;mid=3Da3e1838cf6191fee777f34ee5d43772abb421630" target=3D"_blank" s=
+tyle=3D"display:inline-block "><img src=3D"https://jan-sampark.nic.in/campa=
+igns/2025/24-Dec/MyGov/images/linkedin.png" alt=3D"mygovindia" style=3D"dis=
+play: block; margin-left: 8px;" border=3D"0" height=3D"30" width=3D"30" /><=
+/a> <a href=3D"https://jan-sampark.nic.in/jansampark/click.jsp?tab=3Dpmo&am=
+p;urlid=3D8d3e379e7b388955ea3dc1d1e46cb7b0a3c320f4&amp;lat=3D2025&amp;mid=
+=3Da3e1838cf6191fee777f34ee5d43772abb421630" target=3D"_blank" style=3D"dis=
+play:inline-block "><img src=3D"https://jan-sampark.nic.in/campaigns/2025/2=
+4-Dec/MyGov/images/pinterest.png" alt=3D"mygovindia" style=3D"display: bloc=
+k; margin-left: 8px;" border=3D"0" height=3D"30" width=3D"30" /></a> <a hre=
+f=3D"https://jan-sampark.nic.in/jansampark/click.jsp?tab=3Dpmo&amp;urlid=3D=
+3dfd803c80559025f9be6362049a2b5c38778d0b&amp;lat=3D2025&amp;mid=3Da3e1838cf=
+6191fee777f34ee5d43772abb421630" target=3D"_blank" style=3D"display:inline-=
+block "><img src=3D"https://jan-sampark.nic.in/campaigns/2025/24-Dec/MyGov/=
+images/sharechat.png" alt=3D"mygovindia" style=3D"display: block; margin-le=
+ft: 8px;" border=3D"0" height=3D"30" width=3D"30" /></a> <a href=3D"https:/=
+/jan-sampark.nic.in/jansampark/click.jsp?tab=3Dpmo&amp;urlid=3D4589aa24197d=
+bc171e2d87b4a246ac3328e0c4a2&amp;lat=3D2025&amp;mid=3Da3e1838cf6191fee777f3=
+4ee5d43772abb421630" target=3D"_blank" style=3D"display:inline-block "><img=
+ src=3D"https://jan-sampark.nic.in/campaigns/2025/24-Dec/MyGov/images/spoti=
+fy.png" alt=3D"mygovindia" style=3D"display: block; margin-left: 8px;" bord=
+er=3D"0" height=3D"30" width=3D"30" /></a> </td>=20
+                    </tr>=20
+                   </tbody>
+                  </table></td>=20
+                </tr>=20
+                <tr>=20
+                 <td align=3D"left" bgcolor=3D"#FFFFFF">&nbsp;</td>=20
+                </tr>=20
+               </tbody>
+              </table> </td>=20
+            </tr>=20
+           </tbody>
+          </table> </td>=20
+        </tr>=20
+        <tr>=20
+         <td>=20
+          <!-- LINKS WITH ICON --> </td>=20
+        </tr>=20
+       </tbody>
+      </table> </td>=20
+    </tr>=20
+   </tbody>
+  </table>  =20
+  <div id=3D"profile-div">=20
+   <div style=3D"margin:0 auto;display: block;text-align:center; background=
+-color:#302330;">=20
+    <table style=3D"font-family: arial, serif; font-size: 12px; font-weight=
+: 300; border-bottom-width: 1px; display: block; max-width: 600px;" cellspa=
+cing=3D"0" cellpadding=3D"0" border=3D"0" bgcolor=3D"#302330" align=3D"cent=
+er">=20
+     <tbody>=20
+      <tr>=20
+       <td align=3D"center" width=3D"600" valign=3D"top">=20
+        <table style=3D"width: 100%; height: auto; padding-top:7px; padding=
+-bottom:7px;" bgcolor=3D"#302330" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0">=20
+         <tbody>=20
+          <tr style=3D"height:45px;">=20
+           <td style=3D"border-right: 1px solid #fff;width: 50%;"><font sty=
+le=3D"color: #ffffff; text-decoration: none;font-family: 'Noto Sans', sans-=
+serif;font-size:13px;line-height:20px; text-align:right; font-weight:600; p=
+osition:relative; top:-9px;"> Share it on Social Media </font> <a target=3D=
+"_blank" href=3D"https://www.facebook.com/sharer/sharer.php?u=3Dhttps%3A%2F=
+%2Fjan-sampark.nic.in%2Fcampaigns%2F2025%2F24-Dec%2FMyGov%2Findex.html" cla=
+ss=3D"fb-xfbml-parse-ignore"> <img src=3D"https://jan-sampark.nic.in/jansam=
+park/images/mailer/fb-icon.png" width=3D"25" height=3D"25" alt=3D"social ic=
+on" style=3D"margin-left: 5px; max-width:25px; margin-right: 10px;" /> </a>=
+ <a class=3D"twitter-share-button" target=3D"_blank" href=3D"https://twitte=
+r.com/intent/tweet?hashtags=3DeSampark.Gov&amp;url=3Dhttps%3A%2F%2Fjan-samp=
+ark.nic.in%2Fcampaigns%2F2025%2F24-Dec%2FMyGov%2Findex.html" data-size=3D"l=
+arge" data-text=3D"custom share text"> <img src=3D"https://jan-sampark.nic.=
+in/jansampark/images/mailer/tw-icon.png" width=3D"25" height=3D"25" alt=3D"=
+social icon" style=3D"margin-left: 5px; max-width:25px; margin-right: 10px;=
+" /> </a> </td>=20
+           <td style=3D"position: relative; left: 20px;"> <a style=3D"borde=
+r:0;text-decoration:none;display:table" href=3D"https://jan-sampark.nic.in/=
+jansampark/forward.jsp?tab=3Dpmo&amp;lat=3D2025&amp;mid=3Da3e1838cf6191fee7=
+77f34ee5d43772abb421630" target=3D"_blank"> <img src=3D"https://jan-sampark=
+.nic.in/jansampark/images/mailer/mail-icon.png" alt=3D"social icon" style=
+=3D"margin-left: 5px; max-width:25px; margin-right: 10px;" /> <font style=
+=3D"color: #ffffff; text-decoration: none;font-family: 'Noto Sans', sans-se=
+rif;font-size:13px;line-height:20px; text-align:right; font-weight:600; pos=
+ition:relative; top:-4px;"> Forward it to a Friend</font> </a></td>=20
+          </tr>=20
+         </tbody>=20
+        </table> </td>=20
+      </tr>=20
+      <tr>=20
+       <td><font color=3D"#AAAAAA" face=3D"Arial, sans-serif" size=3D"-1"> =
+This message was sent to vsingh2110[at]gmail[dot]com from <a style=3D"color=
+:#f6f6f6;font-weight:600;text-decoration:none;font-style:italic" href=3D"ht=
+tps://www.mygov.in" target=3D"_blank">MyGov</a> through no-reply[at]sampark=
+[dot]gov[dot]in </font>=20
+        <hr style=3D"color:#aaa;border:1px solid #aaaaaa" /> <font color=3D=
+"#AAAAAA" face=3D"Arial, sans-serif" size=3D"-1" style=3D"text-align: justi=
+fy;"> If you would prefer not to receive these emails please click <a style=
+=3D"color:#f6f6f6;font-weight:600;text-decoration:none;font-style:italic" h=
+ref=3D"https://sampark.gov.in/Sampark/unsubscribe_1?tab=3Dpmo&amp;lat=3D202=
+5&amp;mid=3Da3e1838cf6191fee777f34ee5d43772abb421630" target=3D"_blank">uns=
+ubscribe</a> </font> <br /> </td>=20
+      </tr>=20
+     </tbody>=20
+    </table>=20
+   </div>=20
+   <img style=3D"display: none !important" src=3D"https://jan-sampark.nic.i=
+n/jansampark/read.jsp?tab=3Dpmo&amp;lat=3D2025&amp;mid=3Da3e1838cf6191fee77=
+7f34ee5d43772abb421630" />=20
+  </div>
+ </body>
+</html>

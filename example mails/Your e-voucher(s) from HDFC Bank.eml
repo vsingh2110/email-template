@@ -1,0 +1,779 @@
+Delivered-To: vsingh2110@gmail.com
+Received: by 2002:a05:640c:7706:b0:256:8a2c:2551 with SMTP id l6csp640264eiw;
+        Sun, 21 Dec 2025 23:48:02 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IFnWkqMt/jYDCaCebsSnWjBFj9PRctIxCxSe3KoCacG631mQ/QrGzLifIIGA0M4dkz4VvdB
+X-Received: by 2002:a05:6214:5191:b0:80b:11b7:210b with SMTP id 6a1803df08f44-88d8369e93dmr150232686d6.43.1766389681887;
+        Sun, 21 Dec 2025 23:48:01 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1766389681; cv=none;
+        d=google.com; s=arc-20240605;
+        b=NCsnMWgNapBWu+5C9XJJjBD3cQ7BXUcQ4UXqeZ7uFg4EpzTK10gGHF7hfnGRYJs4Ra
+         MeKTGi/VJ8jD1qSOEh1kIZ/QCmShw5/ehjibYnsumnZAzqgKSBK9tf+mP1PeJ53y/rWU
+         2Tf0zHgb5Ztr99+DCqn3Kj5bIj8Yzg1WeVJMVbz20H3/Zmxaf81gGHhNx/w4ZUG7R7Yr
+         T+i2IGts/RrLVIucj4ALgdooXyT26ol+aw8HKh3qbOoLfmB+6t/yO/CvOTJrqWTjWIL+
+         fx5I7GoYUw3rz/5aOWrovpbtW5uEJ7FxjOq4KdhLmPz/+CekhpHUY4wzbWjj39YN+181
+         2T0g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=date:list-unsubscribe-post:feedback-id:list-unsubscribe
+         :content-transfer-encoding:mime-version:subject:from:to
+         :domainkey-signature:dkim-signature:dkim-signature:message-id;
+        bh=0vAWqRKNQXRqXtT8pXHF/UPKvSQb2InnqOQ2oKdxgKg=;
+        fh=jsQ7xJJ5ayTHU+ptpOuJckTo0WFpqHKDYZlFYR28RXY=;
+        b=KJIgJ2FDvHF+KH0MCwAGIdef1gT/gDI6I88l1jd+GRblDL6Kx8kjnOERSzxcDOqekl
+         9htIjB5icfcbYYVVG26GixNUxgQLFLyixUz/9Z4U7kKBewOEOAjqfeUU0shmgQ9maJr0
+         es5jj1B5t2scOJWNw4IFCsj6DhOnXk07hccAbUxzKsZFK0q/QvBJcRsnJHiTMg1InghG
+         3dayrM0rqXdyhwBJ4QxOAK2jEI/xO4o/imXlOrEjbjnsrkf8QUhEqiwzrzGYPofU19Hh
+         GpwJOPEqQmO+t01AvBeHGsWvLA0RR9NGNIs0pTYjqRmQLSJpoYRsshDb9AUYpxA3+Mke
+         ej2Q==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=permerror (no key for signature) header.i=@accentivindia.co.in header.s=nc2048 header.b=HsqGDSYV;
+       dkim=pass header.i=@env.etransmail.com header.s=fnc header.b=I0L+AHsF;
+       spf=pass (google.com: domain of 17663427700353727-129695-1-gmail.com@delivery.accentivindia.co.in designates 150.129.232.37 as permitted sender) smtp.mailfrom=17663427700353727-129695-1-gmail.com@delivery.accentivindia.co.in;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=accentivindia.co.in
+Return-Path: <17663427700353727-129695-1-gmail.com@delivery.accentivindia.co.in>
+Received: from pmta15-232.37.ncdelivery01.com (pmta15-232.37.ncdelivery01.com. [150.129.232.37])
+        by mx.google.com with ESMTPS id 6a1803df08f44-88fc6b342ddsi46720966d6.649.2025.12.21.23.48.01
+        for <vsingh2110@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 21 Dec 2025 23:48:01 -0800 (PST)
+Received-SPF: pass (google.com: domain of 17663427700353727-129695-1-gmail.com@delivery.accentivindia.co.in designates 150.129.232.37 as permitted sender) client-ip=150.129.232.37;
+Authentication-Results: mx.google.com;
+       dkim=permerror (no key for signature) header.i=@accentivindia.co.in header.s=nc2048 header.b=HsqGDSYV;
+       dkim=pass header.i=@env.etransmail.com header.s=fnc header.b=I0L+AHsF;
+       spf=pass (google.com: domain of 17663427700353727-129695-1-gmail.com@delivery.accentivindia.co.in designates 150.129.232.37 as permitted sender) smtp.mailfrom=17663427700353727-129695-1-gmail.com@delivery.accentivindia.co.in;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=accentivindia.co.in
+Message-ID: <6948f7b1.0c0a0220.34295d.b5bdSMTPIN_ADDED_MISSING@mx.google.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=nc2048; d=accentivindia.co.in;
+ h=To:From:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:List-Unsubscribe:Feedback-Id:Date:from:to:subject; i=tx.india@accentivindia.co.in;
+ bh=0vAWqRKNQXRqXtT8pXHF/UPKvSQb2InnqOQ2oKdxgKg=;
+ b=HsqGDSYVP4zv9yUBYr2Z8/3HC0ErPMzxX1ZGvmzQgyjgN4xEWMjgdEOglpXFlPDUkNMP5V/KhEYT
+   ssUMnXPj3HZZuxTahRU+3pT3KYS87/r+CB4Difa4k71++VZ6io+Ag4p0f8573g9PZ6SXyPZy8QPB
+   DfrcrMI8LNZh8w2Nz4e52SN1k0tRc+umJkUaif0lT9e0yTnOJv1EvnGRRI3EtmdgBOrgxVJcTAV/
+   okEOYrvPUK+vnPSNajL+tbqmG8V1HsTUuZ1cmkuEp0dy+9srB6cYvVyZtNX095fdR+EuuL8r2UQ6
+   hIGug29HeCfTgd6OAwcpXqMg+tFwXpAFuG0Dsw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=fnc; d=env.etransmail.com;
+ h=To:From:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:List-Unsubscribe:Feedback-Id:Date:from:to:subject;
+ bh=0vAWqRKNQXRqXtT8pXHF/UPKvSQb2InnqOQ2oKdxgKg=;
+ b=I0L+AHsFIQe6YOdyStKuPLEr0uGbjqxo/xvfgixQBnb+Gs1OEi+5anmfu2+/jNrEl5x82cQlwMxs
+   gFrUt3MvhRMROD/oPxmZHBQXaJrp3YLlWYKBpxkSmjs09sDLtOCRkH+W0LID0rSRLwpUm91ywsse
+   O16XkYg9Jubdxz7IbUc=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=nc2048; d=accentivindia.co.in;
+ b=fHEVkCzd+4uZfeHikYM7VaVW4zZOnax+ueSD2f8j1AYjeSj2tmZuoEMwXSjZANZOyTndSiGqZRmY
+   nyc7MNBdUusX2++6kfj4QfqgE5ArDhl0yLr6fK1ryOGjPq2TSrzqLirXQ4htkW0gsSjXUABrSVuV
+   OIkF845p2yUddtPPOJ2bOMt1FO4bLHTHZqrHqPigqreh2+lImTX0VTmDzdR3N3qLwltgb379jeMr
+   HV6GmR5mbY3w4lSWZW0pMojm+A63rGWUgxe6QbT03tjkFyqqG+MWaF3jWHHSMvYNfgIzMdMQizCA
+   UMAnmCKP93bfuhGNHGnkSQZjbktUoDyg6OSSgw==;
+To: <vsingh2110@gmail.com>
+From: =?UTF-8?B?SERGQyBCQU5L?= <tx.india@accentivindia.co.in>
+Subject: =?UTF-8?B?WW91ciBlLXZvdWNoZXIocykgZnJvbSBIREZDIEJhbms=?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_----------=_176638968020343671194"
+Content-Transfer-Encoding: binary
+List-Unsubscribe: <https://unsub-api.netcorecloud.net/YHNMJN?id=129695=YE9VUlALDgECTEVCRBhBRhUUFxdGFhYWQ0MYQxUZFBEVE0VDQhIYGBcQRUJEGEFGFQRLQRVfWFELUQlSBXlTXFRaCU0BXVVEBgdTVFcMU1ECBAcEUwUBBFQfUBdBSUcLGhwQDRFHWhVWQAxMCl0VBVpGUlQKWUNSTQ1dFxpgfH94eStcC1ZETgQ=>, <mailto:17663427700353727-129695-fncunsub@usub.ftrans03.com?subject=Unsubscribe>
+Feedback-Id: 129695:202512:1:falconide
+X-Dkim-Options: s=pepipost;d=accentivindia.co.in
+X-Fncid: 129695-17663427700353727-0
+X-Mta-Source: edenredpepi_129695
+X-Injtime: 1766389680
+X-Traffic-Type: 129695-2
+X-Mailer: NetcoreCloud Mailer
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Date: Mon, 22 Dec 2025 13:18:01 +0530
+
+This is a multi-part message in MIME format.
+
+--_----------=_176638968020343671194
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="utf-8"
+
+=0D
+	=C2=A0=0D
+=0D
+=0D
+	=0D
+		=0D
+			=0D
+				=0D
+					=0D
+						=0D
+							=0D
+								=C2=A0=0D
+						=0D
+					=0D
+				=0D
+			=0D
+		=0D
+	=0D
+=0D
+=0D
+	=0D
+		=0D
+			=0D
+				=0D
+					=0D
+						=0D
+							=0D
+								=0D
+									=0D
+										=0D
+											=0D
+												=C2=A0=0D
+										=0D
+										=0D
+									=0D
+								=0D
+							=0D
+						=0D
+					=0D
+				=0D
+			=0D
+		=0D
+	=0D
+=0D
+=0D
+=0D
+	=0D
+		=0D
+			=0D
+				=0D
+					=0D
+						=0D
+							=0D
+								=0D
+									=0D
+										=0D
+										=0D
+											=0D
+												=C2=A0=0D
+										=0D
+										=0D
+										=0D
+											=0D
+												=0D
+													=0D
+														=0D
+															=0D
+																=0D
+														=0D
+														=0D
+														=0D
+															=0D
+																=0D
+																	Dear=C2=A0 Customer ,=0D
+																=0D
+																	Greetings from HDFC Bank! Your e-voucher(s) has been redee=
+med successfully.=0D
+																=0D
+																	Click on the smart voucher link below to claim your e-vouc=
+her.=0D
+																=0D
+																	Amazon Pay E-Gift Card Rs.250/-=C2=A0 4 Qty=0D
+																=0D
+																	Face Value QR Code Short URL PIN Expiry Date 250.00 https:=
+//txp2.in/v?alias=3DCaZG5zgdj86 7075 12/22/2026 250.00 https://txp2.in/v?al=
+ias=3DE3qTsVPcsi1 6555 12/22/2026 250.00 https://txp2.in/v?alias=3DGaQ7XAZ0=
+6U9 1787 12/22/2026 250.00 https://txp2.in/v?alias=3DCSTC4ckQ836 4513 12/22=
+/2026=0D
+																=0D
+																	*Please ensure to redeem your e-voucher before the expiry =
+date.=C2=A0 Kindly note these e-voucher code(s) cannot be re-validated post=
+ the expiry date mentioned above.=0D
+																=0D
+																	If you face challenge opening above link on your company=
+=E2=80=99s internal network, please try opening this link from mobile or ou=
+tside of your company=E2=80=99s network=0D
+																=0D
+																	To know more about the redemption procedure and t&C, For Q=
+ueries please call us at 18005727813. It is our pleasure to service you. We=
+ look forward to your next redemption request.=0D
+																=0D
+																	=C2=A0=0D
+															=0D
+														=0D
+														=0D
+													=0D
+												=0D
+											=0D
+										=0D
+										=0D
+										=0D
+											=0D
+												=C2=A0=0D
+										=0D
+										=0D
+									=0D
+								=0D
+							=0D
+						=0D
+					=0D
+				=0D
+			=0D
+		=0D
+	=0D
+=0D
+=0D
+=0D
+	=0D
+		=0D
+			=0D
+				=0D
+					=0D
+						=0D
+							=0D
+								=C2=A0=0D
+						=0D
+					=0D
+				=0D
+			=0D
+		=0D
+	=0D
+=0D
+=0D
+=0D
+	=0D
+		=0D
+			=0D
+				=0D
+					=0D
+						=0D
+							=0D
+								=0D
+									=0D
+										=0D
+										=0D
+											=0D
+												=0D
+													=C2=A0=0D
+											=0D
+										=0D
+										=0D
+											=0D
+												=C2=A0=0D
+										=0D
+									=0D
+									=0D
+										=0D
+											=0D
+												=0D
+													=0D
+														=0D
+															=0D
+																=0D
+																	=0D
+															=0D
+														=0D
+													=0D
+												=0D
+											=0D
+										=0D
+									=0D
+								=0D
+							=0D
+						=0D
+					=0D
+				=0D
+			=0D
+		=0D
+	=0D
+=0D
+=0D
+	=C2=A0=0D
+=0D
+	=C2=A0 Click here to unsubscribe=
+=
+
+--_----------=_176638968020343671194
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
+
+<p>=0D
+	&nbsp;</p>=0D
+<!--CTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dt--><!-- Start of preheader -->=0D
+<table bgcolor=3D"#f4f5f7" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ id=3D"backgroundTable" style=3D"margin: 0px; padding: 0px; width: 100% !im=
+portant; line-height: 100% !important; border-collapse: collapse; mso-table=
+-lspace: 0pt; mso-table-rspace: 0pt;" width=3D"100%">=0D
+	<tbody>=0D
+		<tr>=0D
+			<td style=3D"border-collapse: collapse;">=0D
+				<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" class=3D"devicewidth" style=3D"border-collapse: collapse; mso-table-lspac=
+e: 0pt; mso-table-rspace: 0pt;" width=3D"660">=0D
+					<tbody>=0D
+						<tr>=0D
+							<td style=3D"border-collapse: collapse;" width=3D"100%">=0D
+								&nbsp;</td>=0D
+						</tr>=0D
+					</tbody>=0D
+				</table>=0D
+			</td>=0D
+		</tr>=0D
+	</tbody>=0D
+</table>=0D
+<table bgcolor=3D"#f4f5f7" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ id=3D"backgroundTable" style=3D"margin: 0px; padding: 0px; width: 100% !im=
+portant; line-height: 100% !important; border-collapse: collapse; mso-table=
+-lspace: 0pt; mso-table-rspace: 0pt;" width=3D"100%">=0D
+	<tbody>=0D
+		<tr>=0D
+			<td style=3D"border-collapse: collapse;">=0D
+				<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" class=3D"devicewidth" style=3D"border-collapse: collapse; mso-table-lspac=
+e: 0pt; mso-table-rspace: 0pt;" width=3D"660">=0D
+					<tbody>=0D
+						<tr>=0D
+							<td style=3D"border-collapse: collapse;" width=3D"100%">=0D
+								<table align=3D"center" bgcolor=3D"#ffffff" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" class=3D"devicewidth" style=3D"border-collapse: c=
+ollapse; border-top-left-radius: 5px; border-top-right-radius: 5px; mso-tab=
+le-lspace: 0pt; mso-table-rspace: 0pt;" width=3D"660">=0D
+									<tbody>=0D
+										<tr>=0D
+											<td bgcolor=3D"#dddddd" height=3D"1" style=3D"line-height: 1px; =
+font-size: 1px; border-collapse: collapse; mso-line-height-rule: exactly;">=
+=0D
+												&nbsp;</td>=0D
+										</tr>=0D
+										<!-- Spacing -->=0D
+									</tbody>=0D
+								</table>=0D
+							</td>=0D
+						</tr>=0D
+					</tbody>=0D
+				</table>=0D
+			</td>=0D
+		</tr>=0D
+	</tbody>=0D
+</table>=0D
+<!-- fulltext -->=0D
+<table bgcolor=3D"#f4f5f7" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ id=3D"backgroundTable" style=3D"margin: 0px; padding: 0px; width: 100% !im=
+portant; line-height: 100% !important; border-collapse: collapse; mso-table=
+-lspace: 0pt; mso-table-rspace: 0pt;" width=3D"100%">=0D
+	<tbody>=0D
+		<tr>=0D
+			<td style=3D"border-collapse: collapse;">=0D
+				<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" class=3D"devicewidth" style=3D"border-collapse: collapse; mso-table-lspac=
+e: 0pt; mso-table-rspace: 0pt;" width=3D"660">=0D
+					<tbody>=0D
+						<tr>=0D
+							<td style=3D"border-collapse: collapse;" width=3D"100%">=0D
+								<table align=3D"center" bgcolor=3D"#ffffff" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" class=3D"devicewidth" style=3D"border-collapse: c=
+ollapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width=3D"660">=0D
+									<tbody>=0D
+										<!-- Spacing -->=0D
+										<tr>=0D
+											<td height=3D"20" style=3D"line-height: 1px; font-size: 1px; bor=
+der-collapse: collapse; mso-line-height-rule: exactly;">=0D
+												&nbsp;</td>=0D
+										</tr>=0D
+										<!-- Spacing -->=0D
+										<tr>=0D
+											<td style=3D"border-collapse: collapse;">=0D
+												<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" class=3D"devicewidthinner" style=3D"border-collapse: collapse; ms=
+o-table-lspace: 0pt; mso-table-rspace: 0pt;" width=3D"620">=0D
+													<tbody>=0D
+														<tr>=0D
+															<td style=3D"text-align: left; color: rgb(45, 42, 38); line-=
+height: 24px; font-family: Helvetica, arial, sans-serif; font-size: 16px; f=
+ont-weight: 600; border-collapse: collapse;">=0D
+																<img alt=3D"" src=3D"data:image/png;base64,iVBORw0KGgoAAAAN=
+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3D=3D" /></td>=
+=0D
+														</tr>=0D
+														<!-- /Spacing --><!-- content -->=0D
+														<tr>=0D
+															<td style=3D"text-align: left; line-height: 24px; font-famil=
+y: Helvetica, arial, sans-serif; font-size: 14px; border-collapse: collapse=
+;">=0D
+																<p>=0D
+																	Dear&nbsp;<span style=3D"font-family: Verdana, Arial, sans=
+-serif; font-size: 14.3px;">Customer</span>,</p>=0D
+																<p>=0D
+																	Greetings from HDFC Bank! Your e-voucher(s) has been <stro=
+ng>redeemed</strong> successfully.</p>=0D
+																<p>=0D
+																	Click on the smart voucher link below to claim your e-vouc=
+her.</p>=0D
+																<p style=3D"text-align: center;">=0D
+																	<span style=3D"font-size: 18px;">Amazon Pay E-Gift Card Rs=
+.250/-&nbsp;</span><span style=3D"font-size:18px;">4 Qty</span></p>=0D
+																<p style=3D"box-sizing: border-box; margin: 0px 0px 9px; co=
+lor: rgb(51, 51, 51);">=0D
+																	<table cellspacing=3D'0' style=3D'text-align:center; FONT-=
+FAMILY:Helvetica,arial,sans-serif;' cellpadding=3D'5' border=3D'1' borderco=
+lor=3D'#aaa' align=3D'center'><tr><TH style=3D'FONT-SIZE: 14px; FONT-WEIGHT=
+: 600; COLOR: #fff; TEXT-ALIGN: center; BACKGROUND-COLOR: #666'; width: 50p=
+x;>Face Value</TH><TH style=3D'FONT-SIZE: 14px; FONT-WEIGHT: 600; COLOR: #f=
+ff; TEXT-ALIGN: center; BACKGROUND-COLOR: #666'; width: 50px;>QR Code</TH><=
+TH style=3D'FONT-SIZE: 14px; FONT-WEIGHT: 600; COLOR: #fff; TEXT-ALIGN: cen=
+ter; BACKGROUND-COLOR: #666'; width: 300px;>Short URL</TH><TH style=3D'FONT=
+-SIZE: 14px; FONT-WEIGHT: 600; COLOR: #fff; TEXT-ALIGN: center; BACKGROUND-=
+COLOR: #666'; width: 50px;>PIN</TH><TH style=3D'FONT-SIZE: 14px; FONT-WEIGH=
+T: 600; COLOR: #fff; TEXT-ALIGN: center; BACKGROUND-COLOR: #666'; width: 10=
+0px;>Expiry Date</TH><tr><td style=3D'FONT-SIZE:=C2=A012px;'>250.00</td><td=
+ style=3D'FONT-SIZE:=C2=A012px;'><img src=3Dhttps://media-in-txc.ticketxpre=
+ss.com/api/mda/Media/GetBarcode?&barcode=3Dhttps://txp2.in/v?alias=3DCaZG5z=
+gdj86&BarcodeType=3D6 /></td><td style=3D'FONT-SIZE:=C2=A012px;'><a href=3D=
+'http://delivery.accentivindia.co.in/GSYKJCAFLHRO?id=3D129695=3Ddk9VUlALDgE=
+CTFVWAg9RAA0AVQ8EUwUBBlALVgENAgdUCwFaVQUOC1RTXAMAWVNeBlBLQRVfWFELUQlSBXlTXF=
+RaCU0BXVVEBgdTVFcMU1ECBAcEUwUBBFQfUBdBSQ4eGlcADwtEXUpOHgQBB10PElxCXlkCX1cYA=
+AwWClsWc2JseC8gI3R0cGV/WgsARBdV&fl=3DXUcRExEIFxdDSBVQSlEPSUM=3D&ext=3DYWxpY=
+XM9Q2FaRzV6Z2RqODY=3D' target=3D'_blank'>https://txp2.in/v?alias=3DCaZG5zgd=
+j86</a></td><td style=3D'FONT-SIZE:=C2=A012px;'>7075</td><td style=3D'FONT-=
+SIZE:=C2=A012px;'>12/22/2026</td></tr><tr><td style=3D'FONT-SIZE:=C2=A012px=
+;'>250.00</td><td style=3D'FONT-SIZE:=C2=A012px;'><img src=3Dhttps://media-=
+in-txc.ticketxpress.com/api/mda/Media/GetBarcode?&barcode=3Dhttps://txp2.in=
+/v?alias=3DE3qTsVPcsi1&BarcodeType=3D6 /></td><td style=3D'FONT-SIZE:=C2=A0=
+12px;'><a href=3D'http://delivery.accentivindia.co.in/GSYKJCAFLHRO?id=3D129=
+695=3Ddk9VUlALDgECTFEHV1xVVQMFUg4CBQUOWlReV1ELBAICBVBUBgcLCQdSA1NRAQMAA1dLQ=
+RVfWFELUQlSBXlTXFRaCU0BXVVEBgdTVFcMU1ECBAcEUwUBBFQfUBdBSQ4eGlcADwtEXUpOHgQB=
+B10PElxCXlkCX1cYAAwWClsWc2JseC8gI3R0cGV/WgsARBdV&fl=3DXUcRExEIFxdDSBVQSlEPS=
+UM=3D&ext=3DYWxpYXM9RTNxVHNWUGNzaTE=3D' target=3D'_blank'>https://txp2.in/v=
+?alias=3DE3qTsVPcsi1</a></td><td style=3D'FONT-SIZE:=C2=A012px;'>6555</td><=
+td style=3D'FONT-SIZE:=C2=A012px;'>12/22/2026</td></tr><tr><td style=3D'FON=
+T-SIZE:=C2=A012px;'>250.00</td><td style=3D'FONT-SIZE:=C2=A012px;'><img src=
+=3Dhttps://media-in-txc.ticketxpress.com/api/mda/Media/GetBarcode?&barcode=
+=3Dhttps://txp2.in/v?alias=3DGaQ7XAZ06U9&BarcodeType=3D6 /></td><td style=
+=3D'FONT-SIZE:=C2=A012px;'><a href=3D'http://delivery.accentivindia.co.in/G=
+SYKJCAFLHRO?id=3D129695=3Ddk9VUlALDgECTANRVQpWUQNRDgADBgQGAAAAAgAJA1cCAFZaA=
+wIBXFQBXAEGDVlSVwJLQRVfWFELUQlSBXlTXFRaCU0BXVVEBgdTVFcMU1ECBAcEUwUBBFQfUBdB=
+SQ4eGlcADwtEXUpOHgQBB10PElxCXlkCX1cYAAwWClsWc2JseC8gI3R0cGV/WgsARBdV&fl=3DX=
+UcRExEIFxdDSBVQSlEPSUM=3D&ext=3DYWxpYXM9R2FRN1hBWjA2VTk=3D' target=3D'_blan=
+k'>https://txp2.in/v?alias=3DGaQ7XAZ06U9</a></td><td style=3D'FONT-SIZE:=C2=
+=A012px;'>1787</td><td style=3D'FONT-SIZE:=C2=A012px;'>12/22/2026</td></tr>=
+<tr><td style=3D'FONT-SIZE:=C2=A012px;'>250.00</td><td style=3D'FONT-SIZE:=
+=C2=A012px;'><img src=3Dhttps://media-in-txc.ticketxpress.com/api/mda/Media=
+/GetBarcode?&barcode=3Dhttps://txp2.in/v?alias=3DCSTC4ckQ836&BarcodeType=3D=
+6 /></td><td style=3D'FONT-SIZE:=C2=A012px;'><a href=3D'http://delivery.acc=
+entivindia.co.in/GSYKJCAFLHRO?id=3D129695=3Ddk9VUlALDgECTF1aUwlRUFcFVlEEUlQ=
+HAQELAAQPAwEHUgFUVgULCVYDXFMBDldSVAJLQRVfWFELUQlSBXlTXFRaCU0BXVVEBgdTVFcMU1=
+ECBAcEUwUBBFQfUBdBSQ4eGlcADwtEXUpOHgQBB10PElxCXlkCX1cYAAwWClsWc2JseC8gI3R0c=
+GV/WgsARBdV&fl=3DXUcRExEIFxdDSBVQSlEPSUM=3D&ext=3DYWxpYXM9Q1NUQzRja1E4MzY=
+=3D' target=3D'_blank'>https://txp2.in/v?alias=3DCSTC4ckQ836</a></td><td st=
+yle=3D'FONT-SIZE:=C2=A012px;'>4513</td><td style=3D'FONT-SIZE:=C2=A012px;'>=
+12/22/2026</td></tr></table></p>=0D
+																<p style=3D"box-sizing: border-box; margin: 0px 0px 9px; co=
+lor: rgb(51, 51, 51);">=0D
+																	<span style=3D"font-family: Helvetica, sans-serif; font-si=
+ze: 10.5pt; color: rgb(34, 34, 34);">*Please ensure to redeem your e-vouche=
+r before the expiry date.&nbsp;</span><span style=3D"color: rgb(34, 34, 34)=
+; font-family: Helvetica, sans-serif; font-size: 10.5pt;">Kindly note these=
+ e-voucher code(s) cannot be re-validated post the expiry date mentioned ab=
+ove.</span></p>=0D
+																<p style=3D"line-height:18.0pt">=0D
+																	<span style=3D"font-size: 10.5pt; font-family: Helvetica, =
+sans-serif; background-image: initial; background-position: initial; backgr=
+ound-size: initial; background-repeat: initial; background-attachment: init=
+ial; background-origin: initial; background-clip: initial;">If you face cha=
+llenge opening above link on your company&rsquo;s internal network, please =
+try opening this link from mobile or outside of your company&rsquo;s networ=
+k</span><o:p></o:p></p>=0D
+																<p style=3D"line-height:18.0pt">=0D
+																	<span style=3D"font-size: 10.5pt; font-family: Helvetica, =
+sans-serif; background-image: initial; background-position: initial; backgr=
+ound-size: initial; background-repeat: initial; background-attachment: init=
+ial; background-origin: initial; background-clip: initial;">To know more ab=
+out the redemption procedure and t&amp;C, For Queries please call us at 180=
+05727813. It is our pleasure to service you. We look forward to your next r=
+edemption request.<o:p></o:p></span></p>=0D
+																<p>=0D
+																	&nbsp;</p>=0D
+															</td>=0D
+														</tr>=0D
+														<!-- end of content -->=0D
+													</tbody>=0D
+												</table>=0D
+											</td>=0D
+										</tr>=0D
+										<!-- Spacing -->=0D
+										<tr>=0D
+											<td height=3D"20" style=3D"line-height: 1px; font-size: 1px; bor=
+der-collapse: collapse; text-align: center;">=0D
+												&nbsp;</td>=0D
+										</tr>=0D
+										<!-- Spacing -->=0D
+									</tbody>=0D
+								</table>=0D
+							</td>=0D
+						</tr>=0D
+					</tbody>=0D
+				</table>=0D
+			</td>=0D
+		</tr>=0D
+	</tbody>=0D
+</table>=0D
+<!-- end of fulltext --><!-- leftimage -->=0D
+<table bgcolor=3D"#f4f5f7" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ id=3D"backgroundTable" style=3D"margin: 0px; padding: 0px; width: 100% !im=
+portant; line-height: 100% !important; border-collapse: collapse; mso-table=
+-lspace: 0pt; mso-table-rspace: 0pt;" width=3D"100%">=0D
+	<tbody>=0D
+		<tr>=0D
+			<td style=3D"border-collapse: collapse;">=0D
+				<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" class=3D"devicewidth" style=3D"border-collapse: collapse; mso-table-lspac=
+e: 0pt; mso-table-rspace: 0pt;" width=3D"660">=0D
+					<tbody>=0D
+						<tr>=0D
+							<td style=3D"border-collapse: collapse;" width=3D"100%">=0D
+								&nbsp;</td>=0D
+						</tr>=0D
+					</tbody>=0D
+				</table>=0D
+			</td>=0D
+		</tr>=0D
+	</tbody>=0D
+</table>=0D
+<!-- end of left image --><!-- 3-columns -->=0D
+<table bgcolor=3D"#ff0000" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ id=3D"backgroundTable" width=3D"100%">=0D
+	<tbody>=0D
+		<tr>=0D
+			<td bgcolor=3D"#f4f5f7" style=3D"border-collapse: collapse;">=0D
+				<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" class=3D"devicewidth" style=3D"border-collapse: collapse; mso-table-lspac=
+e: 0pt; mso-table-rspace: 0pt;" width=3D"660">=0D
+					<tbody>=0D
+						<tr>=0D
+							<td style=3D"border-collapse: collapse;" width=3D"100%">=0D
+								<table align=3D"center" bgcolor=3D"#ffffff" border=3D"0" cellpaddin=
+g=3D"0" class=3D"devicewidth" style=3D"border-collapse: collapse; mso-table=
+-lspace: 0pt; mso-table-rspace: 0pt;" width=3D"660">=0D
+									<tbody>=0D
+										<!-- Spacing -->=0D
+										<tr>=0D
+											<td height=3D"20" style=3D"line-height: 1px; font-size: 1px; bor=
+der-collapse: collapse; mso-line-height-rule: exactly;">=0D
+												<p>=0D
+													&nbsp;</p>=0D
+											</td>=0D
+										</tr>=0D
+										<tr>=0D
+											<td bgcolor=3D"#f4f5f7" style=3D"margin: 0px; padding: 0px; bord=
+er-collapse: collapse; width: 100% !important; line-height: 100% !important=
+; text-align: center;" width=3D"100%">=0D
+												&nbsp;</td>=0D
+										</tr>=0D
+									</tbody>=0D
+									<tbody>=0D
+										<tr>=0D
+											<td style=3D"border-collapse: collapse;">=0D
+												<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" class=3D"devicewidth" style=3D"border-collapse: collapse; mso-tab=
+le-lspace: 0pt; mso-table-rspace: 0pt;" width=3D"660">=0D
+													<tbody>=0D
+														<tr>=0D
+															<td style=3D"border-collapse: collapse;" width=3D"100%">=0D
+																<p style=3D"text-align: center;">=0D
+																	<!-- Spacing --></p>=0D
+															</td>=0D
+														</tr>=0D
+													</tbody>=0D
+												</table>=0D
+											</td>=0D
+										</tr>=0D
+									</tbody>=0D
+								</table>=0D
+							</td>=0D
+						</tr>=0D
+					</tbody>=0D
+				</table>=0D
+			</td>=0D
+		</tr>=0D
+	</tbody>=0D
+</table>=0D
+<p>=0D
+	&nbsp;</p>=0D
+<div>=0D
+	&nbsp;</div>Click <a href=3D"http://delivery.accentivindia.co.in/GSYKJCAFL=
+HRO?id=3D129695=3DYE9VUlALDgECTEVCRBhBRhUUFxdGFhYWQ0MYQxUZFBEVE0VDQhIYGBcQR=
+UJEGEFGFQRLQRVfWFELUQlSBXlTXFRaCU0BXVVEBgdTVFcMU1ECBAcEUwUBBFQfUBdBSQ4eGlcA=
+DwtEXUpOHgQBB10PElxCXlkCX1cYAAwWClsWc2JseC8gI3R0cGV/WgsARBdV">here</a> to u=
+nsubscribe<img src=3D'http://delivery.accentivindia.co.in/GSYKJCAFLHRO?id=
+=3D129695=3Dek9VUlALDgECTEVCRBhBRhUUFxdGFhYWQ0MYQxUZFBEVE0VDQhIYGBcQRUJEGEF=
+GFQRLQRVfWFELUQlSBXlTXFRaCU0BXVVEBgdTVFcMU1ECBAcEUwUBBFQfUBdBSQ4eGlcADwtEXU=
+pOHgQBB10PElxCXlkCX1cYAAwWClsWc2JseC8gI3R0cGV/WgsARBdV' alt=3D'' />=
+=
+
+--_----------=_176638968020343671194--
+

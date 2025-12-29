@@ -1,0 +1,2248 @@
+Delivered-To: phantomhealthcareindia@gmail.com
+Received: by 2002:a05:6400:1c2:b0:2c0:dac6:a2eb with SMTP id hx2csp5283668ecb;
+        Sun, 28 Dec 2025 04:15:26 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IHPM57K7W05f2CM4vPA9hoN0PLkd1hIS/hvDVyL4Ei6IyHXyrVcANPtWpD+dJI4+xOTJlH5
+X-Received: by 2002:a05:600c:8a0a:20b0:477:a3d1:aafb with SMTP id 5b1f17b1804b1-47d2001edbamr195814545e9.29.1766924126516;
+        Sun, 28 Dec 2025 04:15:26 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1766924126; cv=none;
+        d=google.com; s=arc-20240605;
+        b=cBsOCvfJZwXy2fbik9cbS+t3NJN8VOA7yCLj68r0qaAywAKD/UJl8iSj5vpnsxckMR
+         xB7bFwWvMxFKZTwVTHpsejcz56X5A0YNXWde5iNQKjk3XY5YWX6HammSXxTrUIT62n5d
+         XNmU9a2uK89N2mnGlvKQYZbCzuPhP0j82Dfw62gZyjbWfDn6CH0kQ3kJyPh+wJaBXUlr
+         xZqobvRhoj0Hr/VY/2yN6X6Xiwxi5+PsLY5rGjctmg8YGRBedjAHETzNvGR8wVARm5rx
+         M3e6o8aYOr3FIvzAjKno/7jWuxwEfkRH9uSlUKQC7U2V6Iz4DhCncYtsH+/bWYdsqWVi
+         I8FA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=list-id:list-unsubscribe:list-unsubscribe-post:feedback-id
+         :mime-version:subject:message-id:to:reply-to:from:date
+         :dkim-signature:dkim-signature;
+        bh=ovdS/vg6512JgczvWrhuHd0O9CQdwUjnBnShsWUYV9M=;
+        fh=nip7zJsvfq6BNC+OEr+MKKNJt8mX0foLcLGEXHeoKTs=;
+        b=Wo02JNe5PRS8/rb38iOxyWfhsBNbHgxe4JuuqVaTV1EImVZrJ0od5IaaJ2sCOQs3Dp
+         HzGrVt662evWNbdH/vn+dIRNx07FC7KFrW3Z5/NEtKbjGErgU+pkTfhoQML9Y9mIGJ8k
+         nUEq/1AUWCqB6fATgjKBsETWw8pvfODy4dujEHQ7Qt+jqK22iRq+8w0TYRhUTBAnAviD
+         TUyy9pLten1KO3M1k9GW4QtB1fuBY2djpCgQLZ8fFLFLd5jiUG1xRCr2u0+cyXtw6POG
+         KwWQSjUIDzMll3Ori3iwyNj3EUfnJjt2Hofm1U9hIoF5n8y4I8tr9KMpsd14Wegx8h7M
+         pZSA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@stripo-test.email header.s=esputnik header.b="Jk+GGPG/";
+       dkim=pass header.i=@esputnik.com header.s=km2 header.b=BeO326By;
+       spf=pass (google.com: domain of bounce+4-phantomhealthcareindia=gmail.com@stripo-test.email designates 54.72.76.202 as permitted sender) smtp.mailfrom="bounce+4-phantomhealthcareindia=gmail.com@stripo-test.email";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=stripo-test.email
+Return-Path: <bounce+4-phantomhealthcareindia=gmail.com@stripo-test.email>
+Received: from m118.esputnik.com (m118.esputnik.com. [54.72.76.202])
+        by mx.google.com with ESMTPS id ffacd0b85a97d-4324eae1436si39121152f8f.479.2025.12.28.04.15.26
+        for <phantomhealthcareindia@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 28 Dec 2025 04:15:26 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce+4-phantomhealthcareindia=gmail.com@stripo-test.email designates 54.72.76.202 as permitted sender) client-ip=54.72.76.202;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@stripo-test.email header.s=esputnik header.b="Jk+GGPG/";
+       dkim=pass header.i=@esputnik.com header.s=km2 header.b=BeO326By;
+       spf=pass (google.com: domain of bounce+4-phantomhealthcareindia=gmail.com@stripo-test.email designates 54.72.76.202 as permitted sender) smtp.mailfrom="bounce+4-phantomhealthcareindia=gmail.com@stripo-test.email";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=stripo-test.email
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=esputnik; d=stripo-test.email;
+ h=X-Mailer:Date:From:Reply-To:To:Message-ID:Subject:MIME-Version:Content-Type:
+ Feedback-ID:List-Unsubscribe:List-Id:X-ES-IID; t=1766924126; x=1766925326;
+ bh=ovdS/vg6512JgczvWrhuHd0O9CQdwUjnBnShsWUYV9M=;
+ b=Jk+GGPG/3CxXjAZ9Lcx/xwVYxb4URmTbHB0ElrGPbfRIRdF3aOT/cVB0i6zovPBwVgpzjDlnJq+D
+   iU/WupFUNdDQUUIL5enJqMMFNqI7tHPe9Zmh+aLI/DtIpbbPp5+03DviFim9jctVqssJ789mGBnS
+   xgfEzatPEcB6L8dwCFngLgXO0F7660LhytkGnB5PkyYYtF3ij8mJ7KCBtv8yI5PqIzS/r1+MU5fy
+   FdlokeOu2tS/8TB/dY9EPWQSJW3OyJOfdJNdsbmPDxTNfdD4GLJwMcajrmt5nDIAKQmfdYWD0Lko
+   cU3YJKyuYexAlzDIuz3yadVsMb4pldR1FN7dQw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=km2; d=esputnik.com;
+ h=X-Mailer:Date:From:Reply-To:To:Message-ID:Subject:MIME-Version:Content-Type:
+ Feedback-ID:List-Unsubscribe:List-Id:X-ES-IID; t=1766924126; x=1766925326;
+ bh=ovdS/vg6512JgczvWrhuHd0O9CQdwUjnBnShsWUYV9M=;
+ b=BeO326ByFlA8TvxvIAsiHcAP6nwRCihqXnau1tU35F54wMRF10QFLnPH9g2xz3ki4uCxpzFwvJUX
+   cjSxZX7yPZawpewq0HaPG4rU9gXtCzWcrof9T0GTdXiE9SmlLbdz8HZIFz4DVhI0noqGuUCgVC9l
+   1inTdHFLCLg30aBO3W7LfzOOShmlV8YMXnCvoUSxdDnq5RN04EOtHaPFZU/hKI02/zmNtbsV7Qw8
+   GWnrGsMI5rtB/AkQlzKumcnQE0qh1/La1bOv7uHm1eFSI1HqXZuE0i0G/P57N8YDJFwBJot3EvDl
+   dXEbFuq/vCrkC/Xd404tHnXR4o5Kg53optW53A==
+X-Mailer: eSputnik.com Mailer (1)
+Date: Sun, 28 Dec 2025 12:15:26 +0000 (UTC)
+From: "[TEST]" <info@stripo-test.email>
+Reply-To: "[TEST]" <info@stripo-test.email>
+To: phantomhealthcareindia@gmail.com
+Message-ID: <e3a72290-e3e6-11f0-87f2-b78d8026e405@ms4-fc86b4644-btvwn>
+Subject: Stripo TEST: "WHX Dubai 2026 - 9-12 Feb"
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_764077_349351447.1766924126158"
+X-Mailru-Msgtype: o36066
+Feedback-ID: im24433794379:36066:im:eSputnik.com
+X-Report-Abuse-To: abuse@trap.esputnik.com
+X-Complaints-To: complain@trap.esputnik.com
+X-Priority: 1
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Unsubscribe: <https://esputnik.com/message-service/v1/unsubscribe/e3a72290-e3e6-11f0-87f2-b78d8026e405>,
+ <mailto:complain@mta1.esputnik.com?subject=unsubscribe-e3a72290-e3e6-11f0-87f2-b78d8026e405>
+List-Id: <36066.trigger>
+X-Report-Abuse: Please report abuse here: abuse@trap.esputnik.com
+X-ES-IID: e3a72290-e3e6-11f0-87f2-b78d8026e405
+
+------=_Part_764077_349351447.1766924126158
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+WHX Dubai 2026 - 9-12 Feb
+   =20
+    a {text-decoration: none;}
+   =20
+    sup { font-size: 100% !important; }
+        =20
+          =20
+          =20
+           96
+          =20
+        =20
+     =20
+   =20
+     =20
+   =20
+   =20
+  .rollover:hover .rollover-first {
+  max-height:0px!important;
+  display:none!important;
+}
+.rollover:hover .rollover-second {
+  max-height:none!important;
+  display:block!important;
+}
+.rollover span {
+  font-size:0px;
+}
+u + .body img ~ div div {
+  display:none;
+}
+#outlook a {
+  padding:0;
+}
+span.MsoHyperlink,
+span.MsoHyperlinkFollowed {
+  color:inherit;
+  mso-style-priority:99;
+}
+a.bt {
+  mso-style-priority:100!important;
+  text-decoration:none!important;
+}
+a[x-apple-data-detectors],
+#MessageViewBody a {
+  color:inherit!important;
+  text-decoration:none!important;
+  font-size:inherit!important;
+  font-family:inherit!important;
+  font-weight:inherit!important;
+  line-height:inherit!important;
+}
+.bh {
+  display:none;
+  float:left;
+  overflow:hidden;
+  width:0;
+  max-height:0;
+  line-height:0;
+  mso-hide:all;
+}
+@media only screen and (max-width:600px) {.cx { line-height:100%!important =
+} .cw { line-height:130%!important } .cv { line-height:120%!important } .cu=
+ { line-height:110%!important } .ct { padding-right:0px!important } .cs { p=
+adding-left:0px!important } .cr { padding-right:5px!important } .cq { paddi=
+ng-top:40px!important } .cp { padding-bottom:10px!important } .co { padding=
+-bottom:0px!important } .cn { padding-top:25px!important } .cm { padding-le=
+ft:11px!important } .cl { padding-left:10px!important } .ck { padding-right=
+:10px!important } .cj { padding-right:6px!important } .ci { padding-top:5px=
+!important }  *[class=3D"gmail-fix"] { display:none!important } p, a { line=
+-height:150%!important } h1, h1 a { line-height:120%!important } h2, h2 a {=
+ line-height:120%!important } h3, h3 a { line-height:120%!important } h4, h=
+4 a { line-height:120%!important } h5, h5 a { line-height:120%!important } =
+h6, h6 a { line-height:120%!important }  .cf p { } .ce p { } .cd p { } h1 {=
+ font-size:36px!important; text-align:left } h2 { font-size:26px!important;=
+ text-align:left } h3 { font-size:20px!important; text-align:left } h4 { fo=
+nt-size:24px!important; text-align:left } h5 { font-size:20px!important; te=
+xt-align:left } h6 { font-size:16px!important; text-align:left }       .bf =
+td a { font-size:12px!important }  .cf p, .cf a { font-size:14px!important =
+} .ce p, .ce a { font-size:14px!important } .cd p, .cd a { font-size:12px!i=
+mportant } .ca, .ca h1, .ca h2, .ca h3, .ca h4, .ca h5, .ca h6 { text-align=
+:center!important }   .cb, .cb h1, .cb h2, .cb h3, .cb h4, .cb h5, .cb h6 {=
+ text-align:left!important } .bz img, .ca img, .cb img { display:inline!imp=
+ortant } .bz .rollover:hover .rollover-second, .ca .rollover:hover .rollove=
+r-second, .cb .rollover:hover .rollover-second { display:inline!important }=
+  .by { display:inline-table } a.bt, button.bt { font-size:20px!important; =
+padding:10px 20px 10px 20px!important; line-height:120%!important } a.bt, b=
+utton.bt, .bx { display:inline-block!important }  .bs, .bs .bt, .bu, .bu td=
+, .bf.be { display:inline-block!important } .bp table, .bq, .br { width:100=
+%!important } .bm table, .bn table, .bo table, .bm, .bo, .bn { width:100%!i=
+mportant; max-width:600px!important } .adapt-img { width:100%!important; he=
+ight:auto!important }  .bj, .bk { display:none!important }  .bh { width:aut=
+o!important; overflow:visible!important; float:none!important; max-height:i=
+nherit!important; line-height:inherit!important } tr.bh { display:table-row=
+!important } table.bh { display:table!important }   .bf td { width:1%!impor=
+tant } table.be, .esd-block-html table { width:auto!important } .h-auto { h=
+eight:auto!important } .img-9594 { width:80px!important } .img-6425 { width=
+:80px!important } .img-4699 { width:46px!important } .img-9956 { width:51px=
+!important } .img-1243 { width:46px!important } .img-5736 { width:51px!impo=
+rtant } .img-2274 { width:51px!important } .bd { width:33.33%!important } .=
+bc { width:0px!important } .bb .u, .bb .u * { font-size:22px!important } .b=
+a .u, .ba .u * { font-size:22px!important } .z .u, .z .u * { font-size:22px=
+!important } .bb .o, .bb .o * { font-size:12px!important } .ba .o, .ba .o *=
+ { font-size:12px!important } .z .o, .z .o * { font-size:12px!important } .=
+bb .n, .bb .n * { font-size:14px!important } .a .n, .a .n * { font-size:14p=
+x!important } .ba .n, .ba .n * { font-size:14px!important } .z .n, .z .n * =
+{ font-size:14px!important }  .v .s, .v .s * { font-size:28px!important } .=
+v .x, .v .x * { font-size:36px!important } .v .w, .v .w * { font-size:24px!=
+important } .t .u, .t .u * { font-size:22px!important } .r .s, .r .s * { fo=
+nt-size:28px!important } .q .h, .q .h * { font-size:18px!important } .e .f.=
+c, .e .f.c * { font-size:9px!important } .d .f.c, .d .f.c * { font-size:9px=
+!important } .a .o.c, .a .o.c * { font-size:12px!important } .e .p.c, .e .p=
+.c * { font-size:13px!important } .d .o.c, .d .o.c * { font-size:12px!impor=
+tant } .e .o.c, .e .o.c * { font-size:12px!important } .d .p.c, .d .p.c * {=
+ font-size:13px!important } .a .p.c, .a .p.c * { font-size:13px!important }=
+ .m .o.c, .m .o.c * { font-size:12px!important } .m .b.c, .m .b.c * { font-=
+size:11px!important } .m .n.c, .m .n.c * { font-size:14px!important } .k .l=
+.c, .k .l.c * { font-size:8px!important } .i .j.c, .i .j.c * { font-size:10=
+px!important } .g .h.c, .g .h.c * { font-size:18px!important } .a .f.c, .a =
+.f.c * { font-size:9px!important } .e .b.c, .e .b.c * { font-size:11px!impo=
+rtant } .d .b.c, .d .b.c * { font-size:11px!important } .a .b.c, .a .b.c * =
+{ font-size:11px!important } }
+@media screen and (max-width:384px) {.mail-message-content { width:414px!im=
+portant } }
+  #mshidden { mso-hide: all; display: none; width: 0px; height: 0px; float:=
+ none; opacity: 0.0; border: 0px solid; margin: 0px;}=20
+=20
+ =20
+  =20
+=09=09=09
+=09=09=09=09
+=09=09=09
+=09=09
+  =20
+    =20
+     =20
+      =20
+        =20
+         =20
+          =20
+            =20
+             =20
+              =20
+                =20
+                 =20
+                  =20
+                    =20
+                       [ https://www.phantomhealthcare.com/ ]
+                    =20
+                  =20
+                =20
+              =20
+            =20
+          =20
+        =20
+      =20
+      =20
+        =20
+         =20
+          =20
+            =20
+             =20
+              =20
+                =20
+                 =20
+                  =20
+                    =20
+                       [ https://www.worldhealthexpo.com/events/healthcare/=
+dubai/en/home.html ]
+                    =20
+                  =20
+                =20
+              =20
+            =20
+            =20
+             =20
+              =20
+                =20
+                 =20
+                  =20
+                    =20
+                     =20
+                        =F0=9F=93=859th to 12th February 2026
+                       =F0=9F=93=8DDubai Exhibition Centre
+                       99, 2020 Boulevard, Madinat Al Mataar,
+                       Expo City Dubai, Dubai, (U.A.E)=20
+                    =20
+                  =20
+                =20
+                =20
+                 =20
+                  =20
+                    =20
+                     =20
+=09
+=09=09
+=09=09Click to Learn More
+=09
+Click to Learn More [ https://www.worldhealthexpo.com/events/healthcare/dub=
+ai/en/home.html ]
+                    =20
+                  =20
+                =20
+              =20
+            =20
+          =20
+        =20
+      =20
+      =20
+        =20
+         =20
+          =20
+            =20
+             =20
+              =20
+                =20
+                 =20
+                  =20
+                    =20
+                     =20
+                      =20
+                        =20
+                           [ https://phantomhealthcare.com/ ]
+                        =20
+                      =20
+                    =20
+                  =20
+                  =20
+                    =20
+                     =20
+                      =20
+                        =20
+                           [ https://www.worldhealthexpo.com/events/healthc=
+are/dubai/en/home.html ]
+                        =20
+                      =20
+                    =20
+                  =20
+                =20
+              =20
+            =20
+            =20
+             =20
+              =20
+                =20
+                 =20
+                  =20
+                    =20
+                     =20
+                      =20
+                        =20
+                         =20
+                        =20
+                      =20
+                    =20
+                  =20
+                 =20
+                 =20
+                  =20
+                    =20
+                     =20
+                      =20
+                        =20
+                         =20
+                        =20
+                      =20
+                    =20
+                  =20
+                =20
+              =20
+            =20
+          =20
+        =20
+      =20
+      =20
+        =20
+         =20
+          =20
+            =20
+             =20
+              =20
+                =20
+                 =20
+                  =20
+                    =20
+                     =20
+                       Our Registered Offices
+                    =20
+                  =20
+                =20
+              =20
+            =20
+          =20
+        =20
+      =20
+      =20
+        =20
+         =20
+          =20
+            =20
+             =20
+              =20
+                =20
+                 =20
+                  =20
+                    =20
+                       [ https://phantomhealthcare.com ]
+                    =20
+                    =20
+                     =20
+                       USA & West
+                       Phantom Healthcare US LLC
+                       424, Fort Hill Drive, STE 105,
+                       Naperville, Illinois(60540) ,
+                       United States of America(USA)
+                       +16307206801 [ tel:+16307206801 ] +919899963601 [ te=
+l:+919899963601 ]
+                    =20
+                  =20
+                =20
+              =20
+              =20
+                =20
+                 =20
+                  =20
+                    =20
+                       [ https://phantomhealthcare.com ]
+                    =20
+                    =20
+                     =20
+                       Middle-East & Africa
+                       Phantom Healthcare AE FZC
+LV 63-C, Al Hamriyah Freezone, Sharjah
+                       United Arab Emirates(UAE)
+                       +971522208819 [ tel:+971522208819  ]
+                    =20
+                  =20
+                =20
+              =20
+              =20
+                =20
+                 =20
+                  =20
+                    =20
+                       [ https://phantomhealthcare.com ]
+                    =20
+                    =20
+                     =20
+                       India & Subcontinent=20
+                       Phantom Healthcare IND Pvt Ltd
+Plot No. 51, Sector 27C, Near NHP Chowk,
+                       Faridabad, Haryana -121003 (INDIA)
+                       +919899963601 [ tel:+919899963601 ] +911294312423 [ =
+tel:+911294312423 ]
+                    =20
+                  =20
+                =20
+              =20
+            =20
+            =20
+             =20
+              =20
+                =20
+                 =20
+                  =20
+                    =20
+                     =20
+                      =20
+                        =20
+                         =20
+                        =20
+                      =20
+                    =20
+                  =20
+                =20
+              =20
+            =20
+          =20
+        =20
+      =20
+      =20
+        =20
+         =20
+          =20
+            =20
+             =20
+              =20
+                =20
+                 =20
+                  =20
+                    =20
+                     =20
+                      =20
+                        =20
+                           [ https://phantomhealthcare.com ]
+                        =20
+                        =20
+                         =20
+                           USA & West
+                           Phantom Healthcare US LLC
+                           424, Fort Hill Drive, STE 105,
+                           Naperville, Illinois(60540),
+                           United States of America(USA)
+                           +16307206801 [ tel:+16307206801 ] +919899963601 =
+[ tel:+919899963601 ]
+                        =20
+                      =20
+                    =20
+                  =20
+                 =20
+                  =20
+                    =20
+                     =20
+                      =20
+                        =20
+                           [ https://phantomhealthcare.com ]
+                        =20
+                        =20
+                         =20
+                           Middle-East & Africa
+                           Phantom Healthcare=20
+                           AE FZC
+                           LV 63-C, Al Hamriyah Freezone,
+                           Sharjah
+                           United Arab Emirates(UAE)
+                           +971522208819 [ tel:+971522208819  ]
+                        =20
+                      =20
+                    =20
+                  =20
+                 =20
+                  =20
+                    =20
+                     =20
+                      =20
+                        =20
+                           [ https://phantomhealthcare.com ]
+                        =20
+                        =20
+                         =20
+                           India & Subcontinent=20
+                           Phantom Healthcare IND Pvt Ltd
+                           Plot No. 51, Sector 27C, Near NHP Chowk, Faridab=
+ad, Haryana -121003 (INDIA)
+                           +919899963601 [ tel:+919899963601 ] +91129431242=
+3 [ tel:+911294312423 ]
+                        =20
+                      =20
+                    =20
+                  =20
+                =20
+              =20
+            =20
+            =20
+             =20
+              =20
+                =20
+                 =20
+                  =20
+                    =20
+                     =20
+                      =20
+                        =20
+                         =20
+                        =20
+                      =20
+                    =20
+                  =20
+                =20
+              =20
+            =20
+          =20
+        =20
+      =20
+      =20
+        =20
+         =20
+          =20
+            =20
+             =20
+              =20
+                =20
+                 =20
+                  =20
+                    =20
+                     =20
+                       Connect To US
+                    =20
+                  =20
+                =20
+              =20
+            =20
+            =20
+             =20
+              =20
+                =20
+                 =20
+                  =20
+                    =20
+                     =20
+                       Call Us or Connect Via Mail,
+                       Social Media & WhatsApp
+                    =20
+                  =20
+                 =20
+                =20
+              =20
+              =20
+                =20
+                 =20
+                  =20
+                    =20
+                       [ mailto:digital@phantomhealthcare.com?subject=3DEnq=
+uiry+For+Radiology+Equipment+Product%2FService+-+Via+WHX+2026+Dubai ]
+                    =20
+                  =20
+                 =20
+                =20
+              =20
+              =20
+                =20
+                 =20
+                  =20
+                    =20
+                       [ https://api.whatsapp.com/send?phone=3D919899963601=
+ ]
+                    =20
+                    =20
+                     =20
+                      =20
+                    =20
+                  =20
+                =20
+              =20
+              =20
+                =20
+                 =20
+                  =20
+                    =20
+                       [ tel:+919899963601 ]
+                    =20
+                  =20
+                =20
+              =20
+            =20
+            =20
+             =20
+              =20
+                =20
+                 =20
+                  =20
+                    =20
+                     =20
+                      =20
+                        =20
+                           [ https://www.facebook.com/phantom.healthcare.in=
+d ]
+                           [ https://x.com/Phantomhealthc ]
+                           [ https://www.instagram.com/phantomhealthcare/ ]
+                           [ https://www.youtube.com/@phantomhealthcare ]
+                           [ https://in.linkedin.com/company/phantom-health=
+care-ind-private-limited-company ]
+                           [ https://www.threads.com/@phantomhealthcare ]
+                           [ https://www.snapchat.com/@phantomhealth ]
+                           [ https://www.pinterest.com/phantomhealthcare/ ]
+                        =20
+                      =20
+                    =20
+                  =20
+                =20
+              =20
+            =20
+            =20
+             =20
+              =20
+                =20
+                 =20
+                  =20
+                    =20
+                     =20
+                      =20
+                        =20
+                         =20
+                        =20
+                      =20
+                    =20
+                  =20
+                =20
+              =20
+            =20
+          =20
+        =20
+      =20
+      =20
+        =20
+         =20
+          =20
+            =20
+             =20
+              =20
+                =20
+                 =20
+                  =20
+                    =20
+                     =20
+                       Connect To US
+                    =20
+                  =20
+                =20
+              =20
+            =20
+            =20
+             =20
+              =20
+                =20
+                 =20
+                  =20
+                    =20
+                     =20
+                      =20
+                        =20
+                         =20
+                           Call Us or Connect=20
+                           Via Mail, Social Media & WhatsApp=20
+                        =20
+                      =20
+                    =20
+                  =20
+                 =20
+                 =20
+                  =20
+                    =20
+                     =20
+                      =20
+                        =20
+                           [ mailto:digital@phantomhealthcare.com?subject=
+=3DEnquiry+For+Radiology+Equipment+Product%2FService+-+Via+WHX+2026+Dubai ]
+                        =20
+                      =20
+                    =20
+                  =20
+                 =20
+                 =20
+                  =20
+                    =20
+                     =20
+                      =20
+                        =20
+                           [ https://api.whatsapp.com/send?phone=3D91989996=
+3601 ]
+                        =20
+                        =20
+                         =20
+                          =20
+                        =20
+                      =20
+                    =20
+                  =20
+                 =20
+                 =20
+                  =20
+                    =20
+                     =20
+                      =20
+                        =20
+                           [ tel:+919899963601 ]
+                        =20
+                      =20
+                    =20
+                  =20
+                =20
+              =20
+            =20
+            =20
+             =20
+              =20
+                =20
+                 =20
+                  =20
+                    =20
+                     =20
+                      =20
+                        =20
+                           [ https://www.facebook.com/phantom.healthcare.in=
+d ]
+                           [ https://x.com/Phantomhealthc ]
+                           [ https://www.instagram.com/phantomhealthcare/ ]
+                           [ https://www.youtube.com/@phantomhealthcare ]
+                           [ https://in.linkedin.com/company/phantom-health=
+care-ind-private-limited-company ]
+                           [ https://www.threads.com/@phantomhealthcare ]
+                           [ https://www.snapchat.com/@phantomhealth ]
+                           [ https://www.pinterest.com/phantomhealthcare/ ]
+                        =20
+                      =20
+                    =20
+                  =20
+                =20
+              =20
+            =20
+            =20
+             =20
+              =20
+                =20
+                 =20
+                  =20
+                    =20
+                     =20
+                      =20
+                        =20
+                         =20
+                        =20
+                      =20
+                    =20
+                  =20
+                =20
+              =20
+            =20
+          =20
+        =20
+      =20
+      =20
+        =20
+         =20
+          =20
+            =20
+             =20
+              =20
+                =20
+                 =20
+                  =20
+                    =20
+                     =20
+                       Phantom Healthcare IND Private Ltd  C 2026. All Righ=
+ts Reserved.
+                       Plot No. 51, Sector 27-C, Near NHPC Chowk
+                          Faridabad, Haryana 121003
+                       +919899963601 [ tel:+919899963601 ] +918384037073 [ =
+tel:+918384037073 ] +911294312423 [ tel:+911294312423 ]
+                       digital@phantomhealthcare.com [ mailto:digital@phant=
+omhealthcare.com?subject=3DEnquiry%20for%20radiology%20equipment%20products=
+%2Fservices%20-via%20WHX%202026%20Dubai ]
+                    =20
+                    =20
+                     =20
+                      =20
+                        =20
+                         =20
+                          =20
+                           =20
+                              Visit Us
+                          =20
+                         =20
+                          =20
+                           =20
+                              Privacy Policy
+                          =20
+                         =20
+                          =20
+                           =20
+                              Terms of Use
+                          =20
+                        =20
+                      =20
+                    =20
+                    =20
+                     =20
+                      =20
+                        =20
+                         =20
+                        =20
+                      =20
+                    =20
+                  =20
+                =20
+              =20
+            =20
+          =20
+        =20
+      =20
+      =20
+        =20
+         =20
+          =20
+            =20
+             =20
+              =20
+                =20
+                 =20
+                  =20
+                    =20
+                     =20
+                       You are receiving this email because you have visite=
+d our site or connected to our promotional network to receive the regular n=
+ewsletter and promotional content. Make sure our messages get to your Inbox=
+ (and not your bulk or junk folders).
+Privacy policy [ http://www.phantomhealthcare.com/privacy-policy/ ] | Unsub=
+scribe [ https://phantomhealthcare.com/privacy-policy.html ]
+------=_Part_764077_349351447.1766924126158
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html dir=3D"ltr" xmlns=3D"ht=
+tp://www.w3.org/1999/xhtml" xmlns:o=3D"urn:schemas-microsoft-com:office:off=
+ice" lang=3D"und"><head> <meta charset=3D"UTF-8"> <meta content=3D"width=3D=
+device-width, initial-scale=3D1" name=3D"viewport"> <meta name=3D"x-apple-d=
+isable-message-reformatting"> <meta http-equiv=3D"X-UA-Compatible" content=
+=3D"IE=3Dedge"> <meta content=3D"telephone=3Dno" name=3D"format-detection">=
+ <title>WHX Dubai 2026 - 9-12 Feb</title><!--[if (mso 16)]><style type=3D"t=
+ext/css">
+    a {text-decoration: none;}
+    </style><![endif]--><!--[if gte mso 9]><style>sup { font-size: 100% !im=
+portant; }</style><![endif]--><!--[if gte mso 9]><noscript> <xml> <o:Office=
+DocumentSettings> <o:AllowPNG></o:AllowPNG> <o:PixelsPerInch>96</o:PixelsPe=
+rInch> </o:OfficeDocumentSettings> </xml> </noscript><![endif]--><!--[if ms=
+o]><xml> <w:WordDocument xmlns:w=3D"urn:schemas-microsoft-com:office:word">=
+ <w:DontUseAdvancedTypographyReadingMail/> </w:WordDocument> </xml><![endif=
+]--> <style type=3D"text/css">.rollover:hover .rollover-first {
+  max-height:0px!important;
+  display:none!important;
+}
+.rollover:hover .rollover-second {
+  max-height:none!important;
+  display:block!important;
+}
+.rollover span {
+  font-size:0px;
+}
+u + .body img ~ div div {
+  display:none;
+}
+#outlook a {
+  padding:0;
+}
+span.MsoHyperlink,
+span.MsoHyperlinkFollowed {
+  color:inherit;
+  mso-style-priority:99;
+}
+a.bt {
+  mso-style-priority:100!important;
+  text-decoration:none!important;
+}
+a[x-apple-data-detectors],
+#MessageViewBody a {
+  color:inherit!important;
+  text-decoration:none!important;
+  font-size:inherit!important;
+  font-family:inherit!important;
+  font-weight:inherit!important;
+  line-height:inherit!important;
+}
+.bh {
+  display:none;
+  float:left;
+  overflow:hidden;
+  width:0;
+  max-height:0;
+  line-height:0;
+  mso-hide:all;
+}
+@media only screen and (max-width:600px) {.cx { line-height:100%!important =
+} .cw { line-height:130%!important } .cv { line-height:120%!important } .cu=
+ { line-height:110%!important } .ct { padding-right:0px!important } .cs { p=
+adding-left:0px!important } .cr { padding-right:5px!important } .cq { paddi=
+ng-top:40px!important } .cp { padding-bottom:10px!important } .co { padding=
+-bottom:0px!important } .cn { padding-top:25px!important } .cm { padding-le=
+ft:11px!important } .cl { padding-left:10px!important } .ck { padding-right=
+:10px!important } .cj { padding-right:6px!important } .ci { padding-top:5px=
+!important }  *[class=3D"gmail-fix"] { display:none!important } p, a { line=
+-height:150%!important } h1, h1 a { line-height:120%!important } h2, h2 a {=
+ line-height:120%!important } h3, h3 a { line-height:120%!important } h4, h=
+4 a { line-height:120%!important } h5, h5 a { line-height:120%!important } =
+h6, h6 a { line-height:120%!important }  .cf p { } .ce p { } .cd p { } h1 {=
+ font-size:36px!important; text-align:left } h2 { font-size:26px!important;=
+ text-align:left } h3 { font-size:20px!important; text-align:left } h4 { fo=
+nt-size:24px!important; text-align:left } h5 { font-size:20px!important; te=
+xt-align:left } h6 { font-size:16px!important; text-align:left }       .bf =
+td a { font-size:12px!important }  .cf p, .cf a { font-size:14px!important =
+} .ce p, .ce a { font-size:14px!important } .cd p, .cd a { font-size:12px!i=
+mportant } .ca, .ca h1, .ca h2, .ca h3, .ca h4, .ca h5, .ca h6 { text-align=
+:center!important }   .cb, .cb h1, .cb h2, .cb h3, .cb h4, .cb h5, .cb h6 {=
+ text-align:left!important } .bz img, .ca img, .cb img { display:inline!imp=
+ortant } .bz .rollover:hover .rollover-second, .ca .rollover:hover .rollove=
+r-second, .cb .rollover:hover .rollover-second { display:inline!important }=
+  .by { display:inline-table } a.bt, button.bt { font-size:20px!important; =
+padding:10px 20px 10px 20px!important; line-height:120%!important } a.bt, b=
+utton.bt, .bx { display:inline-block!important }  .bs, .bs .bt, .bu, .bu td=
+, .bf.be { display:inline-block!important } .bp table, .bq, .br { width:100=
+%!important } .bm table, .bn table, .bo table, .bm, .bo, .bn { width:100%!i=
+mportant; max-width:600px!important } .adapt-img { width:100%!important; he=
+ight:auto!important }  .bj, .bk { display:none!important }  .bh { width:aut=
+o!important; overflow:visible!important; float:none!important; max-height:i=
+nherit!important; line-height:inherit!important } tr.bh { display:table-row=
+!important } table.bh { display:table!important }   .bf td { width:1%!impor=
+tant } table.be, .esd-block-html table { width:auto!important } .h-auto { h=
+eight:auto!important } .img-9594 { width:80px!important } .img-6425 { width=
+:80px!important } .img-4699 { width:46px!important } .img-9956 { width:51px=
+!important } .img-1243 { width:46px!important } .img-5736 { width:51px!impo=
+rtant } .img-2274 { width:51px!important } .bd { width:33.33%!important } .=
+bc { width:0px!important } .bb .u, .bb .u * { font-size:22px!important } .b=
+a .u, .ba .u * { font-size:22px!important } .z .u, .z .u * { font-size:22px=
+!important } .bb .o, .bb .o * { font-size:12px!important } .ba .o, .ba .o *=
+ { font-size:12px!important } .z .o, .z .o * { font-size:12px!important } .=
+bb .n, .bb .n * { font-size:14px!important } .a .n, .a .n * { font-size:14p=
+x!important } .ba .n, .ba .n * { font-size:14px!important } .z .n, .z .n * =
+{ font-size:14px!important }  .v .s, .v .s * { font-size:28px!important } .=
+v .x, .v .x * { font-size:36px!important } .v .w, .v .w * { font-size:24px!=
+important } .t .u, .t .u * { font-size:22px!important } .r .s, .r .s * { fo=
+nt-size:28px!important } .q .h, .q .h * { font-size:18px!important } .e .f.=
+c, .e .f.c * { font-size:9px!important } .d .f.c, .d .f.c * { font-size:9px=
+!important } .a .o.c, .a .o.c * { font-size:12px!important } .e .p.c, .e .p=
+.c * { font-size:13px!important } .d .o.c, .d .o.c * { font-size:12px!impor=
+tant } .e .o.c, .e .o.c * { font-size:12px!important } .d .p.c, .d .p.c * {=
+ font-size:13px!important } .a .p.c, .a .p.c * { font-size:13px!important }=
+ .m .o.c, .m .o.c * { font-size:12px!important } .m .b.c, .m .b.c * { font-=
+size:11px!important } .m .n.c, .m .n.c * { font-size:14px!important } .k .l=
+.c, .k .l.c * { font-size:8px!important } .i .j.c, .i .j.c * { font-size:10=
+px!important } .g .h.c, .g .h.c * { font-size:18px!important } .a .f.c, .a =
+.f.c * { font-size:9px!important } .e .b.c, .e .b.c * { font-size:11px!impo=
+rtant } .d .b.c, .d .b.c * { font-size:11px!important } .a .b.c, .a .b.c * =
+{ font-size:11px!important } }
+@media screen and (max-width:384px) {.mail-message-content { width:414px!im=
+portant } }</style> <style> #mshidden { mso-hide: all; display: none; width=
+: 0px; height: 0px; float: none; opacity: 0.0; border: 0px solid; margin: 0=
+px;} </style></head> <body data-new-gr-c-s-loaded=3D"14.1216.0" class=3D"bo=
+dy" style=3D"width:100%;height:100%;-webkit-text-size-adjust:100%;-ms-text-=
+size-adjust:100%;padding:0;Margin:0"><img id=3D"mshidden" src=3D"https://es=
+putnik.com/repository/applications/commons/hidden.png?iid=3De3a72290-e3e6-1=
+1f0-87f2-b78d8026e405" alt=3D"" style=3D"display: block; width: 0px; height=
+: 0px; visibility:hidden; float: none; opacity:0.0; filter:alpha(opacity=3D=
+0);border: 0px solid; margin: 0px"> <div dir=3D"ltr" lang=3D"und" style=3D"=
+background-color:#FAFAFA"> <!--[if gte mso 9]><v:background xmlns:v=3D"urn:=
+schemas-microsoft-com:vml" fill=3D"t"> <v:fill type=3D"tile" src=3D"https:/=
+/jjihzh.stripocdn.email/content/guids/CABINET_7b6b27c42082d1c129d066d24dabb=
+d5fc652f8e2c424b00783826cf47ab2ce4d/images/abstractwavepngtransparent.png" =
+color=3D"#fafafa" origin=3D"0.5, 0" position=3D"0.5, 0"></v:fill> </v:backg=
+round><![endif]--> <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0=
+" background=3D"https://jjihzh.stripocdn.email/content/guids/CABINET_7b6b27=
+c42082d1c129d066d24dabbd5fc652f8e2c424b00783826cf47ab2ce4d/images/abstractw=
+avepngtransparent.png" role=3D"none" style=3D"mso-table-lspace:0pt;mso-tabl=
+e-rspace:0pt;border-collapse:collapse;border-spacing:0px;padding:0;Margin:0=
+;width:100%;height:100%;background-image:url(https://jjihzh.stripocdn.email=
+/content/guids/CABINET_7b6b27c42082d1c129d066d24dabbd5fc652f8e2c424b0078382=
+6cf47ab2ce4d/images/abstractwavepngtransparent.png);background-repeat:repea=
+t;background-position:center top;background-size:auto;background-color:#FAF=
+AFA"> <tbody><tr> <td valign=3D"top" style=3D"padding:0;Margin:0"> <table c=
+ellpadding=3D"0" cellspacing=3D"0" align=3D"center" class=3D"bm" role=3D"no=
+ne" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:coll=
+apse;border-spacing:0px;width:100%;table-layout:fixed !important"> <tbody><=
+tr> <td align=3D"center" background=3D"https://jjihzh.stripocdn.email/conte=
+nt/guids/CABINET_7b6b27c42082d1c129d066d24dabbd5fc652f8e2c424b00783826cf47a=
+b2ce4d/images/abstractwavepngtransparent.png" style=3D"padding:0;Margin:0;b=
+ackground-image:url(https://jjihzh.stripocdn.email/content/guids/CABINET_7b=
+6b27c42082d1c129d066d24dabbd5fc652f8e2c424b00783826cf47ab2ce4d/images/abstr=
+actwavepngtransparent.png);background-repeat:no-repeat;background-position:=
+center top"> <table bgcolor=3D"transparent" align=3D"center" cellpadding=3D=
+"0" cellspacing=3D"0" class=3D"cf" style=3D"mso-table-lspace:0pt;mso-table-=
+rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:tra=
+nsparent;width:800px" role=3D"none"> <tbody><tr> <td align=3D"left" style=
+=3D"padding:0;Margin:0;padding-top:5px"> <table cellpadding=3D"0" cellspaci=
+ng=3D"0" width=3D"100%" role=3D"none" style=3D"mso-table-lspace:0pt;mso-tab=
+le-rspace:0pt;border-collapse:collapse;border-spacing:0px"> <tbody><tr> <td=
+ align=3D"center" valign=3D"top" style=3D"padding:0;Margin:0;width:800px"> =
+<table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" role=3D"presentat=
+ion" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:col=
+lapse;border-spacing:0px"> <tbody><tr> <td align=3D"center" style=3D"paddin=
+g:0;Margin:0;font-size:0px"><a target=3D"_blank" href=3D"https://www.phanto=
+mhealthcare.com/" style=3D"mso-line-height-rule:exactly;text-decoration:non=
+e;color:#5C68E2;font-size:14px"><img src=3D"https://jjihzh.stripocdn.email/=
+content/guids/CABINET_7b6b27c42082d1c129d066d24dabbd5fc652f8e2c424b00783826=
+cf47ab2ce4d/images/invitation.jpg" alt=3D"Invitation by Phantom Healthcare =
+to WHX World Health Expo 2023, Dubai, 9-12 February" width=3D"800" title=3D=
+"Invitation by Phantom Healthcare to WHX World Health Expo 2023, Dubai, 9-1=
+2 February" class=3D"adapt-img" style=3D"display:block;font-size:14px;borde=
+r:0;outline:none;text-decoration:none;margin:0"></a></td> </tr> </tbody></t=
+able></td> </tr> </tbody></table></td> </tr> </tbody></table></td> </tr> </=
+tbody></table> <table cellspacing=3D"0" cellpadding=3D"0" align=3D"center" =
+class=3D"bm" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0=
+pt;border-collapse:collapse;border-spacing:0px;width:100%;table-layout:fixe=
+d !important"> <tbody><tr> <td align=3D"center" background=3D"https://jjihz=
+h.stripocdn.email/content/guids/CABINET_7b6b27c42082d1c129d066d24dabbd5fc65=
+2f8e2c424b00783826cf47ab2ce4d/images/abstractwavepngtransparent.png" style=
+=3D"padding:0;Margin:0;background-image:url(https://jjihzh.stripocdn.email/=
+content/guids/CABINET_7b6b27c42082d1c129d066d24dabbd5fc652f8e2c424b00783826=
+cf47ab2ce4d/images/abstractwavepngtransparent.png);background-repeat:no-rep=
+eat;background-position:center top"> <table cellspacing=3D"0" cellpadding=
+=3D"0" bgcolor=3D"transparent" align=3D"center" class=3D"cf" style=3D"mso-t=
+able-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacin=
+g:0px;background-color:transparent;width:800px" role=3D"none"> <tbody><tr> =
+<td align=3D"left" style=3D"padding:0;Margin:0"> <table width=3D"100%" cell=
+spacing=3D"0" cellpadding=3D"0" role=3D"none" style=3D"mso-table-lspace:0pt=
+;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> <tbody>=
+<tr> <td valign=3D"top" align=3D"center" style=3D"padding:0;Margin:0;width:=
+800px"> <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" role=3D"p=
+resentation" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-coll=
+apse:collapse;border-spacing:0px"> <tbody><tr> <td align=3D"center" style=
+=3D"padding:0;Margin:0;font-size:0px"><a target=3D"_blank" href=3D"https://=
+www.worldhealthexpo.com/events/healthcare/dubai/en/home.html" style=3D"mso-=
+line-height-rule:exactly;text-decoration:none;color:#5C68E2;font-size:14px"=
+><img src=3D"https://jjihzh.stripocdn.email/content/guids/CABINET_8dfb497f3=
+2fddb55eb19aa554156b7145b3bb409bf5217479e6b04a89ad95a82/images/whatsapp_ima=
+ge_20250116_at_140754_692a2f93.jpg" alt=3D"Invitation by Phantom Healthcare=
+ to WHX World Health Expo 2023, Dubai, 9-12 February 2026" width=3D"800" ti=
+tle=3D"Invitation by Phantom Healthcare to WHX World Health Expo 2023, Duba=
+i, 9-12 February 2026" class=3D"adapt-img" style=3D"display:block;font-size=
+:14px;border:0;outline:none;text-decoration:none;margin:0"></a></td> </tr> =
+</tbody></table></td> </tr> </tbody></table></td> </tr> <tr> <td align=3D"l=
+eft" background=3D"https://jjihzh.stripocdn.email/content/guids/CABINET_5d3=
+e92cf9b8470663727296b1ae3ff6ddbdfe8fd237cca0e7f2a3a8c0a8e2ff1/images/gabbfa=
+ca12279e73b8cfbdddf131dd24e18d0c6a1fc511a67422acc2cd3d234c9cca88c72485a3b20=
+6846b975611ee529_640.jpeg" style=3D"padding:0;Margin:0;padding-top:5px;padd=
+ing-bottom:10px;background-image:url(https://jjihzh.stripocdn.email/content=
+/guids/CABINET_5d3e92cf9b8470663727296b1ae3ff6ddbdfe8fd237cca0e7f2a3a8c0a8e=
+2ff1/images/gabbfaca12279e73b8cfbdddf131dd24e18d0c6a1fc511a67422acc2cd3d234=
+c9cca88c72485a3b206846b975611ee529_640.jpeg);background-repeat:no-repeat;ba=
+ckground-position:right bottom;background-size:cover"> <table cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"100%" role=3D"none" style=3D"mso-table-ls=
+pace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">=
+ <tbody><tr> <td align=3D"center" valign=3D"top" style=3D"padding:0;Margin:=
+0;width:800px"> <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" r=
+ole=3D"presentation" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;bor=
+der-collapse:collapse;border-spacing:0px"> <tbody><tr> <td align=3D"center"=
+ class=3D"v" style=3D"padding:0;Margin:0"> <h2 class=3D"x ca" style=3D"Marg=
+in:0;font-family:-apple-system, BlinkMacSystemFont, Aptos, 'Segoe UI', Robo=
+to, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'S=
+egoe UI Symbol';mso-line-height-rule:exactly;letter-spacing:0;font-size:36p=
+x;font-style:normal;font-weight:bold;line-height:64.8px;color:#00aff0"><str=
+ong style=3D"font-weight:700 !important"> <span style=3D"background:#efefef=
+">=F0=9F=93=859th to 12th February 2026</span></strong></h2> <h2 class=3D"c=
+a" style=3D"Margin:0;font-family:-apple-system, BlinkMacSystemFont, Aptos, =
+'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Seg=
+oe UI Emoji', 'Segoe UI Symbol';mso-line-height-rule:exactly;letter-spacing=
+:0;font-size:25px;font-style:normal;font-weight:bold;line-height:36px;color=
+:#00aff0"><strong class=3D"x" style=3D"font-weight:700 !important;font-size=
+:36px"><span style=3D"background:#efefef">=F0=9F=93=8D</span></strong><stro=
+ng class=3D"s" style=3D"font-weight:700 !important;font-size:28px;line-heig=
+ht:36.4px"><span style=3D"background:#efefef">Dubai Exhibition Centre</span=
+></strong></h2> <p class=3D"w ca" style=3D"Margin:0;mso-line-height-rule:ex=
+actly;font-family:-apple-system, BlinkMacSystemFont, Aptos, 'Segoe UI', Rob=
+oto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', '=
+Segoe UI Symbol';line-height:31.2px;letter-spacing:0;color:#00aff0;font-siz=
+e:24px"><span style=3D"background:#efefef">99, 2020 Boulevard, Madinat Al M=
+ataar,</span></p> <p class=3D"w ca" style=3D"Margin:0;mso-line-height-rule:=
+exactly;font-family:-apple-system, BlinkMacSystemFont, Aptos, 'Segoe UI', R=
+oboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',=
+ 'Segoe UI Symbol';line-height:28.8px;letter-spacing:0;color:#00aff0;font-s=
+ize:24px"><span style=3D"background:#efefef">Expo City Dubai, Dubai, (U.A.E=
+)&nbsp;</span></p><strong class=3D"ca" style=3D"font-weight:700 !important"=
+></strong></td> </tr> </tbody></table></td> </tr> <tr> <td align=3D"center"=
+ valign=3D"top" style=3D"padding:0;Margin:0;padding-top:5px;padding-bottom:=
+5px;width:800px"> <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"=
+ role=3D"presentation" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;b=
+order-collapse:collapse;border-spacing:0px"> <tbody><tr> <td align=3D"cente=
+r" style=3D"padding:0;Margin:0"><a name=3D"Invitation%20to%20World%20Health=
+%20Expo%20-%20Dubai%202026%20by%20Phantom%20Healthcare%20-%20MRI%2C%20CT%20=
+Scanner%2C%20PET-CT%2C%20Cath%20Lab%2C%20Gamma%20Camera%20SPECT%2C%20Bone%2=
+0Densitometer%20DEXA" style=3D"mso-line-height-rule:exactly;text-decoration=
+:none;color:#5C68E2;font-size:14px"></a><!--[if mso]><a href=3D"https://www=
+.worldhealthexpo.com/events/healthcare/dubai/en/home.html" target=3D"_blank=
+" hidden> <v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D=
+"urn:schemas-microsoft-com:office:word" esdevVmlButton href=3D"https://www.=
+worldhealthexpo.com/events/healthcare/dubai/en/home.html" style=3D"height:4=
+6px; v-text-anchor:middle; width:271px" arcsize=3D"11%" stroke=3D"f" fillco=
+lor=3D"#3d85c6"> <w:anchorlock></w:anchorlock> <center style=3D'color:#ffff=
+ff; font-family:georgia, times, "times new roman", serif; font-size:18px; f=
+ont-weight:400; line-height:18px; mso-text-raise:1px'>Click to Learn More</=
+center> </v:roundrect></a><![endif]--><!--[if !mso]><!-- --><span class=3D"=
+bx" style=3D"border-style:solid;border-color:#2CB543;background:#3d85c6;bor=
+der-width:0px;display:inline-block;border-radius:5px;width:auto;mso-hide:al=
+l"><a href=3D"https://www.worldhealthexpo.com/events/healthcare/dubai/en/ho=
+me.html" target=3D"_blank" class=3D"bt" style=3D"mso-style-priority:100 !im=
+portant;text-decoration:none !important;mso-line-height-rule:exactly;color:=
+#FFFFFF;font-size:22px;padding:10px 30px 10px 30px;display:inline-block;bac=
+kground:#3d85c6;border-radius:5px;font-family:georgia, times, 'times new ro=
+man', serif;font-weight:normal;font-style:normal;line-height:26.4px;width:a=
+uto;text-align:center;letter-spacing:0;mso-padding-alt:0;mso-border-alt:10p=
+x solid #3d85c6">Click to Learn More</a></span><!--<![endif]--></td> </tr> =
+</tbody></table></td> </tr> </tbody></table></td> </tr> </tbody></table></t=
+d> </tr> </tbody></table> <table cellpadding=3D"0" cellspacing=3D"0" align=
+=3D"center" class=3D"bm" role=3D"none" style=3D"mso-table-lspace:0pt;mso-ta=
+ble-rspace:0pt;border-collapse:collapse;border-spacing:0px;width:100%;table=
+-layout:fixed !important"> <tbody><tr> <td align=3D"center" background=3D"h=
+ttps://jjihzh.stripocdn.email/content/guids/CABINET_7b6b27c42082d1c129d066d=
+24dabbd5fc652f8e2c424b00783826cf47ab2ce4d/images/abstractwavepngtransparent=
+.png" style=3D"padding:0;Margin:0;background-image:url(https://jjihzh.strip=
+ocdn.email/content/guids/CABINET_7b6b27c42082d1c129d066d24dabbd5fc652f8e2c4=
+24b00783826cf47ab2ce4d/images/abstractwavepngtransparent.png);background-re=
+peat:no-repeat;background-position:center top"> <table bgcolor=3D"transpare=
+nt" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"cf" style=
+=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;bord=
+er-spacing:0px;background-color:transparent;width:800px" role=3D"none"> <tb=
+ody><tr class=3D"bj"> <td style=3D"padding:0;Margin:0"> <table cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"center" background=3D"https://jjihzh.stri=
+pocdn.email/content/guids/CABINET_5d3e92cf9b8470663727296b1ae3ff6ddbdfe8fd2=
+37cca0e7f2a3a8c0a8e2ff1/images/gb8f4a9a1d6c32055210d7e579c3cc7aac093159e90d=
+c072e8f46fc9063a8e8d3d2cf2a7d05b28ecbc1098fbb1963fba7_640.jpeg" style=3D"ms=
+o-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spa=
+cing:0px;background-repeat:no-repeat;background-size:cover;width:800px;back=
+ground-image:url(https://jjihzh.stripocdn.email/content/guids/CABINET_5d3e9=
+2cf9b8470663727296b1ae3ff6ddbdfe8fd237cca0e7f2a3a8c0a8e2ff1/images/gb8f4a9a=
+1d6c32055210d7e579c3cc7aac093159e90dc072e8f46fc9063a8e8d3d2cf2a7d05b28ecbc1=
+098fbb1963fba7_640.jpeg);background-position:center top" role=3D"none"> <tb=
+ody><tr> <td align=3D"left" style=3D"padding:0;Margin:0"><!--[if mso]><tabl=
+e style=3D"width:800px" cellpadding=3D"0" cellspacing=3D"0"><tr><td style=
+=3D"width:400px" valign=3D"top"><![endif]--> <table cellpadding=3D"0" cells=
+pacing=3D"0" align=3D"left" class=3D"bq" role=3D"none" style=3D"mso-table-l=
+space:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;=
+float:left"> <tbody><tr> <td align=3D"center" class=3D"ct" style=3D"padding=
+:0;Margin:0;width:400px"> <table cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" role=3D"presentation" style=3D"mso-table-lspace:0pt;mso-table-rsp=
+ace:0pt;border-collapse:collapse;border-spacing:0px"> <tbody><tr> <td align=
+=3D"center" style=3D"padding:0;Margin:0;font-size:0px"><a target=3D"_blank"=
+ href=3D"https://phantomhealthcare.com/" style=3D"mso-line-height-rule:exac=
+tly;text-decoration:none;color:#5C68E2;font-size:14px"><img src=3D"https://=
+jjihzh.stripocdn.email/content/guids/CABINET_5d3e92cf9b8470663727296b1ae3ff=
+6ddbdfe8fd237cca0e7f2a3a8c0a8e2ff1/images/phantom_logo_square_transparent.p=
+ng" alt=3D"Phantom Healthcare - MRI, CT Scanner, PET-CT, Cath Lab, Gamma Ca=
+mera SPECT, Bone Densitometer DEXA" width=3D"400" title=3D"Phantom Healthca=
+re - MRI, CT Scanner, PET-CT, Cath Lab, Gamma Camera SPECT, Bone Densitomet=
+er DEXA" class=3D"adapt-img" style=3D"display:block;font-size:14px;border:0=
+;outline:none;text-decoration:none;margin:0"></a></td> </tr> </tbody></tabl=
+e></td> </tr> </tbody></table><!--[if mso]></td><td style=3D"width:400px" v=
+align=3D"top"><![endif]--> <table cellpadding=3D"0" cellspacing=3D"0" align=
+=3D"right" class=3D"br" role=3D"none" style=3D"mso-table-lspace:0pt;mso-tab=
+le-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:right"> <tb=
+ody><tr> <td align=3D"center" style=3D"padding:0;Margin:0;width:400px"> <ta=
+ble cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" role=3D"presentation=
+" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collap=
+se;border-spacing:0px"> <tbody><tr> <td align=3D"center" style=3D"padding:0=
+;Margin:0;padding-top:85px;font-size:0px"><a target=3D"_blank" href=3D"http=
+s://www.worldhealthexpo.com/events/healthcare/dubai/en/home.html" style=3D"=
+mso-line-height-rule:exactly;text-decoration:none;color:#5C68E2;font-size:1=
+4px"><img src=3D"https://jjihzh.stripocdn.email/content/guids/CABINET_5d3e9=
+2cf9b8470663727296b1ae3ff6ddbdfe8fd237cca0e7f2a3a8c0a8e2ff1/images/whx26dur=
+evampedlogo_SS3.png" alt=3D"WHX World Health Expo 2023, Dubai, 9-12 Februar=
+y" width=3D"400" title=3D"WHX World Health Expo 2023, Dubai, 9-12 February"=
+ class=3D"adapt-img" style=3D"display:block;font-size:14px;border:0;outline=
+:none;text-decoration:none;margin:0"></a></td> </tr> </tbody></table></td> =
+</tr> </tbody></table><!--[if mso]></td></tr></table><![endif]--></td> </tr=
+> </tbody></table></td> </tr><!--[if !mso]><!-- --> <tr class=3D"bh" style=
+=3D"display:none;float:left;overflow:hidden;width:0;max-height:0;line-heigh=
+t:0;mso-hide:all"> <td align=3D"left" background=3D"https://jjihzh.stripocd=
+n.email/content/guids/CABINET_5d3e92cf9b8470663727296b1ae3ff6ddbdfe8fd237cc=
+a0e7f2a3a8c0a8e2ff1/images/gb8f4a9a1d6c32055210d7e579c3cc7aac093159e90dc072=
+e8f46fc9063a8e8d3d2cf2a7d05b28ecbc1098fbb1963fba7_640.jpeg" class=3D"cs ct"=
+ style=3D"Margin:0;padding-top:20px;padding-right:35px;padding-bottom:20px;=
+padding-left:35px;background-image:url(https://jjihzh.stripocdn.email/conte=
+nt/guids/CABINET_5d3e92cf9b8470663727296b1ae3ff6ddbdfe8fd237cca0e7f2a3a8c0a=
+8e2ff1/images/gb8f4a9a1d6c32055210d7e579c3cc7aac093159e90dc072e8f46fc9063a8=
+e8d3d2cf2a7d05b28ecbc1098fbb1963fba7_640.jpeg);background-repeat:no-repeat;=
+background-position:left top;background-size:cover"> <table cellpadding=3D"=
+0" cellspacing=3D"0" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-=
+rspace:0pt;border-collapse:collapse;border-spacing:0px;width:730px"> <tbody=
+><tr> <td valign=3D"top" style=3D"padding:0;Margin:0"> <table align=3D"left=
+" cellpadding=3D"0" cellspacing=3D"0" class=3D"bq" role=3D"none" style=3D"m=
+so-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-sp=
+acing:0px;float:left"> <tbody><tr> <td align=3D"left" style=3D"padding:0;Ma=
+rgin:0;width:355px"> <table width=3D"100%" cellpadding=3D"0" cellspacing=3D=
+"0" role=3D"presentation" style=3D"mso-table-lspace:0pt;mso-table-rspace:0p=
+t;border-collapse:collapse;border-spacing:0px"> <tbody><tr> <td align=3D"ce=
+nter" style=3D"padding:0;Margin:0;font-size:0"><img alt=3D"" width=3D"355" =
+src=3D"https://jjihzh.stripocdn.email/content/guids/CABINET_5d3e92cf9b84706=
+63727296b1ae3ff6ddbdfe8fd237cca0e7f2a3a8c0a8e2ff1/images/phantom_logo_squar=
+e_transparent.png" class=3D"adapt-img" style=3D"display:block;font-size:14p=
+x;border:0;outline:none;text-decoration:none;margin:0"></td> </tr> </tbody>=
+</table></td> </tr> </tbody></table></td> <td class=3D"bc cr" style=3D"padd=
+ing:0;Margin:0;width:20px"></td> <td valign=3D"top" style=3D"padding:0;Marg=
+in:0"> <table cellpadding=3D"0" cellspacing=3D"0" align=3D"right" class=3D"=
+br" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border=
+-collapse:collapse;border-spacing:0px;float:right"> <tbody><tr> <td align=
+=3D"left" style=3D"padding:0;Margin:0;width:355px"> <table cellspacing=3D"0=
+" role=3D"presentation" width=3D"100%" cellpadding=3D"0" style=3D"mso-table=
+-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0p=
+x"> <tbody><tr> <td align=3D"center" class=3D"cq" style=3D"padding:0;Margin=
+:0;font-size:0"><img alt=3D"" width=3D"325" src=3D"https://jjihzh.stripocdn=
+.email/content/guids/CABINET_5d3e92cf9b8470663727296b1ae3ff6ddbdfe8fd237cca=
+0e7f2a3a8c0a8e2ff1/images/image.png" class=3D"adapt-img" style=3D"display:b=
+lock;font-size:14px;border:0;outline:none;text-decoration:none;margin:0"></=
+td> </tr> </tbody></table></td> </tr> </tbody></table></td> </tr> </tbody><=
+/table></td> </tr><!--<![endif]--> </tbody></table></td> </tr> </tbody></ta=
+ble> <table cellpadding=3D"0" cellspacing=3D"0" align=3D"center" class=3D"b=
+m" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-=
+collapse:collapse;border-spacing:0px;width:100%;table-layout:fixed !importa=
+nt"> <tbody><tr> <td align=3D"center" background style=3D"padding:0;Margin:=
+0;background-repeat:no-repeat;background-position:left top"> <table bgcolor=
+=3D"transparent" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=
+=3D"cf" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:=
+collapse;border-spacing:0px;background-color:transparent;width:800px" role=
+=3D"none"> <tbody><tr> <td align=3D"left" bgcolor=3D"#ffffff" background=3D=
+"https://jjihzh.stripocdn.email/content/guids/CABINET_5d3e92cf9b84706637272=
+96b1ae3ff6ddbdfe8fd237cca0e7f2a3a8c0a8e2ff1/images/plainwhitebackgroundimag=
+e.jpg" style=3D"padding:0;Margin:0;background-color:#ffffff;background-imag=
+e:url(https://jjihzh.stripocdn.email/content/guids/CABINET_5d3e92cf9b847066=
+3727296b1ae3ff6ddbdfe8fd237cca0e7f2a3a8c0a8e2ff1/images/plainwhitebackgroun=
+dimage.jpg);background-repeat:repeat;background-position:left top"> <table =
+cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" role=3D"none" style=3D"m=
+so-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-sp=
+acing:0px"> <tbody><tr> <td align=3D"center" valign=3D"top" style=3D"paddin=
+g:0;Margin:0;width:800px"> <table cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" role=3D"presentation" style=3D"mso-table-lspace:0pt;mso-table-rsp=
+ace:0pt;border-collapse:collapse;border-spacing:0px"> <tbody><tr> <td align=
+=3D"center" class=3D"t" style=3D"padding:0;Margin:0;padding-bottom:10px"> <=
+p class=3D"u" style=3D"Margin:0;mso-line-height-rule:exactly;font-family:-a=
+pple-system, BlinkMacSystemFont, Aptos, 'Segoe UI', Roboto, Helvetica, Aria=
+l, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';lin=
+e-height:33px;letter-spacing:0;color:#333333;font-size:22px"><strong style=
+=3D"font-weight:700 !important">Our Registered Offices</strong></p></td> </=
+tr> </tbody></table></td> </tr> </tbody></table></td> </tr> </tbody></table=
+></td> </tr> </tbody></table> <table cellpadding=3D"0" cellspacing=3D"0" al=
+ign=3D"center" class=3D"bo bj" role=3D"none" style=3D"mso-table-lspace:0pt;=
+mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;width:100%=
+;table-layout:fixed !important;background-color:transparent;background-repe=
+at:repeat;background-position:center top"> <tbody><tr> <td align=3D"center"=
+ style=3D"padding:0;Margin:0"> <table cellspacing=3D"0" bgcolor=3D"transpar=
+ent" align=3D"center" cellpadding=3D"0" class=3D"ce" style=3D"mso-table-lsp=
+ace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;ba=
+ckground-color:transparent;width:800px" role=3D"none"> <tbody><tr> <td alig=
+n=3D"left" background=3D"https://jjihzh.stripocdn.email/content/guids/CABIN=
+ET_5d3e92cf9b8470663727296b1ae3ff6ddbdfe8fd237cca0e7f2a3a8c0a8e2ff1/images/=
+plainwhitebackgroundimage.jpg" bgcolor=3D"#ffffff" style=3D"padding:0;Margi=
+n:0;padding-bottom:10px;background-repeat:repeat;background-position:left t=
+op;background-image:url(https://jjihzh.stripocdn.email/content/guids/CABINE=
+T_5d3e92cf9b8470663727296b1ae3ff6ddbdfe8fd237cca0e7f2a3a8c0a8e2ff1/images/p=
+lainwhitebackgroundimage.jpg);background-color:#ffffff"><!--[if mso]><table=
+ style=3D"width:800px" cellpadding=3D"0" cellspacing=3D"0"><tr><td style=3D=
+"width:267px" valign=3D"top"><![endif]--> <table align=3D"left" cellpadding=
+=3D"0" cellspacing=3D"0" class=3D"bq" role=3D"none" style=3D"mso-table-lspa=
+ce:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;flo=
+at:left"> <tbody><tr> <td align=3D"center" class=3D"ct" style=3D"padding:0;=
+Margin:0;width:267px"> <table width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0pt;mso-table-rspace=
+:0pt;border-collapse:collapse;border-spacing:0px"> <tbody><tr> <td align=3D=
+"center" style=3D"padding:0;Margin:0;padding-bottom:8px;font-size:0px"><a t=
+arget=3D"_blank" href=3D"https://phantomhealthcare.com" style=3D"mso-line-h=
+eight-rule:exactly;text-decoration:none;color:#333333;font-size:12px"><img =
+src=3D"https://jjihzh.stripocdn.email/content/guids/CABINET_5d3e92cf9b84706=
+63727296b1ae3ff6ddbdfe8fd237cca0e7f2a3a8c0a8e2ff1/images/unitedstatesflag.p=
+ng" alt=3D"Invitation to World Health Expo - Dubai 2026 by Phantom Healthca=
+re - MRI, CT Scanner, PET-CT, Cath Lab, Gamma Camera SPECT, Bone Densitomet=
+er DEXA" width=3D"90" title=3D"Invitation to World Health Expo - Dubai 2026=
+ by Phantom Healthcare - MRI, CT Scanner, PET-CT, Cath Lab, Gamma Camera SP=
+ECT, Bone Densitometer DEXA" style=3D"display:block;font-size:14px;border:0=
+;outline:none;text-decoration:none;margin:0"></a></td> </tr> <tr> <td align=
+=3D"center" class=3D"z" style=3D"padding:0;Margin:0"> <h3 class=3D"u ca" st=
+yle=3D"Margin:0;font-family:-apple-system, BlinkMacSystemFont, Aptos, 'Sego=
+e UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI=
+ Emoji', 'Segoe UI Symbol';mso-line-height-rule:exactly;letter-spacing:0;fo=
+nt-size:22px;font-style:normal;font-weight:bold;line-height:26.4px;color:#3=
+33333">USA &amp; West</h3> <p class=3D"n ca" style=3D"Margin:0;mso-line-hei=
+ght-rule:exactly;font-family:-apple-system, BlinkMacSystemFont, Aptos, 'Seg=
+oe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe U=
+I Emoji', 'Segoe UI Symbol';line-height:21px;letter-spacing:0;color:#333333=
+;font-size:14px"><strong style=3D"font-weight:700 !important">Phantom Healt=
+hcare US LLC</strong></p> <p class=3D"o ca" style=3D"Margin:0;mso-line-heig=
+ht-rule:exactly;font-family:-apple-system, BlinkMacSystemFont, Aptos, 'Sego=
+e UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI=
+ Emoji', 'Segoe UI Symbol';line-height:18px;letter-spacing:0;color:#333333;=
+font-size:12px">424, Fort Hill Drive, STE 105,</p> <p class=3D"o ca" style=
+=3D"Margin:0;mso-line-height-rule:exactly;font-family:-apple-system, BlinkM=
+acSystemFont, Aptos, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'App=
+le Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';line-height:18px;lette=
+r-spacing:0;color:#333333;font-size:12px">Naperville, Illinois(60540) ,</p>=
+ <p class=3D"o ca" style=3D"Margin:0;mso-line-height-rule:exactly;font-fami=
+ly:-apple-system, BlinkMacSystemFont, Aptos, 'Segoe UI', Roboto, Helvetica,=
+ Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol=
+';line-height:18px;letter-spacing:0;color:#333333;font-size:12px">United St=
+ates of America(USA)</p> <p class=3D"o ca" style=3D"Margin:0;mso-line-heigh=
+t-rule:exactly;font-family:-apple-system, BlinkMacSystemFont, Aptos, 'Segoe=
+ UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI =
+Emoji', 'Segoe UI Symbol';line-height:18px;letter-spacing:0;color:#333333;f=
+ont-size:12px"><a target=3D"_blank" href=3D"tel:+16307206801" style=3D"mso-=
+line-height-rule:exactly;text-decoration:none;color:#333333;font-size:12px;=
+font-family:-apple-system, BlinkMacSystemFont, Aptos, 'Segoe UI', Roboto, H=
+elvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe =
+UI Symbol'">+16307206801</a> <a target=3D"_blank" href=3D"tel:+919899963601=
+" style=3D"mso-line-height-rule:exactly;text-decoration:none;color:#333333;=
+font-size:12px;font-family:-apple-system, BlinkMacSystemFont, Aptos, 'Segoe=
+ UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI =
+Emoji', 'Segoe UI Symbol'">+919899963601</a></p></td> </tr> </tbody></table=
+></td> </tr> </tbody></table><!--[if mso]></td><td style=3D"width:267px" va=
+lign=3D"top"><![endif]--> <table cellpadding=3D"0" cellspacing=3D"0" align=
+=3D"left" class=3D"bq" role=3D"none" style=3D"mso-table-lspace:0pt;mso-tabl=
+e-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left"> <tbod=
+y><tr> <td align=3D"center" style=3D"padding:0;Margin:0;width:267px"> <tabl=
+e cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" role=3D"presentation" =
+style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse=
+;border-spacing:0px"> <tbody><tr> <td align=3D"center" style=3D"padding:0;M=
+argin:0;padding-bottom:8px;font-size:0px"><a target=3D"_blank" href=3D"http=
+s://phantomhealthcare.com" style=3D"mso-line-height-rule:exactly;text-decor=
+ation:none;color:#333333;font-size:12px"><img src=3D"https://jjihzh.stripoc=
+dn.email/content/guids/CABINET_5d3e92cf9b8470663727296b1ae3ff6ddbdfe8fd237c=
+ca0e7f2a3a8c0a8e2ff1/images/flags_flag_country_national_symbol_united_arab_=
+emirates_uae256.png" alt=3D"Invitation to World Health Expo - Dubai 2026 by=
+ Phantom Healthcare - MRI, CT Scanner, PET-CT, Cath Lab, Gamma Camera SPECT=
+, Bone Densitometer DEXA" width=3D"90" title=3D"Invitation to World Health =
+Expo - Dubai 2026 by Phantom Healthcare - MRI, CT Scanner, PET-CT, Cath Lab=
+, Gamma Camera SPECT, Bone Densitometer DEXA" class=3D"adapt-img" style=3D"=
+display:block;font-size:14px;border:0;outline:none;text-decoration:none;mar=
+gin:0"></a></td> </tr> <tr> <td align=3D"center" class=3D"ba" style=3D"padd=
+ing:0;Margin:0"> <h3 class=3D"u" style=3D"Margin:0;font-family:-apple-syste=
+m, BlinkMacSystemFont, Aptos, 'Segoe UI', Roboto, Helvetica, Arial, sans-se=
+rif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';mso-line-heig=
+ht-rule:exactly;letter-spacing:0;font-size:22px;font-style:normal;font-weig=
+ht:bold;line-height:33px;color:#333333">Middle-East &amp; Africa</h3> <p st=
+yle=3D"Margin:0;mso-line-height-rule:exactly;font-family:-apple-system, Bli=
+nkMacSystemFont, Aptos, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, '=
+Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';line-height:21px;le=
+tter-spacing:0;color:#333333;font-size:11px"><span class=3D"n" style=3D"fon=
+t-size:14px"><strong style=3D"font-weight:700 !important">Phantom Healthcar=
+e AE FZC</strong></span><br><span class=3D"o" style=3D"font-size:12px">LV 6=
+3-C, Al Hamriyah Freezone, Sharjah</span></p> <p class=3D"o" style=3D"Margi=
+n:0;mso-line-height-rule:exactly;font-family:-apple-system, BlinkMacSystemF=
+ont, Aptos, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color =
+Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';line-height:18px;letter-spacing=
+:0;color:#333333;font-size:12px">United Arab Emirates(UAE)</p> <p class=3D"=
+o" style=3D"Margin:0;mso-line-height-rule:exactly;font-family:-apple-system=
+, BlinkMacSystemFont, Aptos, 'Segoe UI', Roboto, Helvetica, Arial, sans-ser=
+if, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';line-height:18=
+px;letter-spacing:0;color:#333333;font-size:12px"><a target=3D"_blank" href=
+=3D"tel:+971522208819&nbsp;" style=3D"mso-line-height-rule:exactly;text-dec=
+oration:none;color:#333333;font-size:12px;font-family:-apple-system, BlinkM=
+acSystemFont, Aptos, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'App=
+le Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';line-height:18px">+971=
+522208819</a></p></td> </tr> </tbody></table></td> </tr> </tbody></table><!=
+--[if mso]></td><td style=3D"width:266px" valign=3D"top"><![endif]--> <tabl=
+e cellpadding=3D"0" cellspacing=3D"0" align=3D"right" class=3D"br" role=3D"=
+none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:co=
+llapse;border-spacing:0px;float:right"> <tbody><tr> <td align=3D"center" st=
+yle=3D"padding:0;Margin:0;width:266px"> <table cellspacing=3D"0" width=3D"1=
+00%" cellpadding=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0pt;=
+mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> <tbody><=
+tr> <td align=3D"center" style=3D"padding:0;Margin:0;padding-bottom:8px;fon=
+t-size:0px"><a href=3D"https://phantomhealthcare.com" target=3D"_blank" sty=
+le=3D"mso-line-height-rule:exactly;text-decoration:none;color:#333333;font-=
+size:12px"><img title=3D"Invitation to World Health Expo - Dubai 2026 by Ph=
+antom Healthcare - MRI, CT Scanner, PET-CT, Cath Lab, Gamma Camera SPECT, B=
+one Densitometer DEXA" src=3D"https://jjihzh.stripocdn.email/content/guids/=
+CABINET_5d3e92cf9b8470663727296b1ae3ff6ddbdfe8fd237cca0e7f2a3a8c0a8e2ff1/im=
+ages/indiaflag.png" alt=3D"Invitation to World Health Expo - Dubai 2026 by =
+Phantom Healthcare - MRI, CT Scanner, PET-CT, Cath Lab, Gamma Camera SPECT,=
+ Bone Densitometer DEXA" width=3D"90" class=3D"adapt-img" style=3D"display:=
+block;font-size:14px;border:0;outline:none;text-decoration:none;margin:0"><=
+/a></td> </tr> <tr> <td align=3D"center" class=3D"bb" style=3D"padding:0;Ma=
+rgin:0"> <h3 class=3D"u" style=3D"Margin:0;font-family:-apple-system, Blink=
+MacSystemFont, Aptos, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Ap=
+ple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';mso-line-height-rule:=
+exactly;letter-spacing:0;font-size:22px;font-style:normal;font-weight:bold;=
+line-height:33px;color:#333333">India &amp; Subcontinent&nbsp;</h3> <p styl=
+e=3D"Margin:0;mso-line-height-rule:exactly;font-family:-apple-system, Blink=
+MacSystemFont, Aptos, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Ap=
+ple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';line-height:21px;lett=
+er-spacing:0;color:#333333;font-size:12px"><span class=3D"n" style=3D"font-=
+size:14px"><strong style=3D"font-weight:700 !important">Phantom Healthcare =
+IND Pvt Ltd</strong><br></span><span class=3D"o" style=3D"font-size:12px">P=
+lot No. 51, Sector 27C, Near NHP Chowk,</span></p> <p class=3D"o" style=3D"=
+Margin:0;mso-line-height-rule:exactly;font-family:-apple-system, BlinkMacSy=
+stemFont, Aptos, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple C=
+olor Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';line-height:18px;letter-sp=
+acing:0;color:#333333;font-size:12px">Faridabad, Haryana =E2=80=93121003 (I=
+NDIA)</p> <p class=3D"o" style=3D"Margin:0;mso-line-height-rule:exactly;fon=
+t-family:-apple-system, BlinkMacSystemFont, Aptos, 'Segoe UI', Roboto, Helv=
+etica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI =
+Symbol';line-height:18px;letter-spacing:0;color:#333333;font-size:12px"><a =
+target=3D"_blank" href=3D"tel:+919899963601" style=3D"mso-line-height-rule:=
+exactly;text-decoration:none;color:#333333;font-size:12px;font-family:-appl=
+e-system, BlinkMacSystemFont, Aptos, 'Segoe UI', Roboto, Helvetica, Arial, =
+sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';line-h=
+eight:18px">+919899963601</a> <a target=3D"_blank" href=3D"tel:+91129431242=
+3" style=3D"mso-line-height-rule:exactly;text-decoration:none;color:#333333=
+;font-size:12px;font-family:-apple-system, BlinkMacSystemFont, Aptos, 'Sego=
+e UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI=
+ Emoji', 'Segoe UI Symbol';line-height:18px">+911294312423</a></p></td> </t=
+r> </tbody></table></td> </tr> </tbody></table><!--[if mso]></td></tr></tab=
+le><![endif]--></td> </tr> <tr> <td align=3D"left" style=3D"padding:0;Margi=
+n:0"> <table cellspacing=3D"0" width=3D"100%" cellpadding=3D"0" role=3D"non=
+e" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:colla=
+pse;border-spacing:0px"> <tbody><tr> <td align=3D"left" style=3D"padding:0;=
+Margin:0;width:800px"> <table width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0pt;mso-table-rspace=
+:0pt;border-collapse:collapse;border-spacing:0px"> <tbody><tr> <td align=3D=
+"center" style=3D"padding:0;Margin:0;font-size:0"> <table border=3D"0" widt=
+h=3D"100%" height=3D"100%" cellpadding=3D"0" cellspacing=3D"0" class=3D"by"=
+ role=3D"presentation" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;b=
+order-collapse:collapse;border-spacing:0px"> <tbody><tr> <td style=3D"paddi=
+ng:0;Margin:0;height:0px;width:100%;margin:0px;border-bottom:1px solid #ccc=
+ccc;background:none"></td> </tr> </tbody></table></td> </tr> </tbody></tabl=
+e></td> </tr> </tbody></table></td> </tr> </tbody></table></td> </tr> </tbo=
+dy></table><!--[if !mso]><!-- --> <table cellpadding=3D"0" cellspacing=3D"0=
+" align=3D"center" class=3D"bo bh" role=3D"none" style=3D"display:none;floa=
+t:left;overflow:hidden;width:100%;max-height:0;line-height:0;mso-hide:all;m=
+so-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-sp=
+acing:0px;table-layout:fixed !important;background-color:transparent;backgr=
+ound-repeat:repeat;background-position:center top"> <tbody><tr> <td align=
+=3D"center" style=3D"padding:0;Margin:0"> <table cellspacing=3D"0" bgcolor=
+=3D"transparent" align=3D"center" cellpadding=3D"0" class=3D"ce" style=3D"m=
+so-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-sp=
+acing:0px;background-color:transparent;width:800px" role=3D"none"> <tbody><=
+tr> <td align=3D"left" background=3D"https://jjihzh.stripocdn.email/content=
+/guids/CABINET_5d3e92cf9b8470663727296b1ae3ff6ddbdfe8fd237cca0e7f2a3a8c0a8e=
+2ff1/images/plainwhitebackgroundimage.jpg" bgcolor=3D"#ffffff" style=3D"pad=
+ding:0;Margin:0;padding-bottom:10px;background-repeat:repeat;background-pos=
+ition:left top;background-image:url(https://jjihzh.stripocdn.email/content/=
+guids/CABINET_5d3e92cf9b8470663727296b1ae3ff6ddbdfe8fd237cca0e7f2a3a8c0a8e2=
+ff1/images/plainwhitebackgroundimage.jpg);background-color:#ffffff"> <table=
+ cellpadding=3D"0" cellspacing=3D"0" role=3D"none" style=3D"mso-table-lspac=
+e:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;widt=
+h:800px"> <tbody><tr> <td valign=3D"top" class=3D"bd" style=3D"padding:0;Ma=
+rgin:0"> <table align=3D"left" cellpadding=3D"0" cellspacing=3D"0" class=3D=
+"bq" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;borde=
+r-collapse:collapse;border-spacing:0px;float:left"> <tbody><tr> <td align=
+=3D"center" class=3D"ct" style=3D"padding:0;Margin:0;width:267px"> <table w=
+idth=3D"100%" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" sty=
+le=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;bo=
+rder-spacing:0px"> <tbody><tr> <td align=3D"center" class=3D"cp" style=3D"p=
+adding:0;Margin:0;padding-bottom:8px;font-size:0px"><a target=3D"_blank" hr=
+ef=3D"https://phantomhealthcare.com" style=3D"mso-line-height-rule:exactly;=
+text-decoration:none;color:#333333;font-size:12px"><img src=3D"https://jjih=
+zh.stripocdn.email/content/guids/CABINET_5d3e92cf9b8470663727296b1ae3ff6ddb=
+dfe8fd237cca0e7f2a3a8c0a8e2ff1/images/unitedstatesflag.png" alt=3D"Invitati=
+on to World Health Expo - Dubai 2026 by Phantom Healthcare - MRI, CT Scanne=
+r, PET-CT, Cath Lab, Gamma Camera SPECT, Bone Densitometer DEXA" width=3D"9=
+0" title=3D"Invitation to World Health Expo - Dubai 2026 by Phantom Healthc=
+are - MRI, CT Scanner, PET-CT, Cath Lab, Gamma Camera SPECT, Bone Densitome=
+ter DEXA" class=3D"img-6425" style=3D"display:block;font-size:14px;border:0=
+;outline:none;text-decoration:none;margin:0"></a></td> </tr> <tr> <td align=
+=3D"center" class=3D"e" style=3D"padding:0;Margin:0"> <h4 class=3D"ca c cx =
+b" style=3D"Margin:0;font-family:-apple-system, BlinkMacSystemFont, Aptos, =
+'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Seg=
+oe UI Emoji', 'Segoe UI Symbol';mso-line-height-rule:exactly;letter-spacing=
+:0;font-size:22px;font-style:normal;font-weight:normal;line-height:26.4px;c=
+olor:#333333">USA &amp; West</h4> <p class=3D"ca c cx o" style=3D"Margin:0;=
+mso-line-height-rule:exactly;font-family:-apple-system, BlinkMacSystemFont,=
+ Aptos, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoj=
+i', 'Segoe UI Emoji', 'Segoe UI Symbol';line-height:21px;letter-spacing:0;c=
+olor:#333333;font-size:14px"><strong style=3D"font-weight:700 !important">P=
+hantom Healthcare US LLC</strong></p> <p class=3D"ca c f cx" style=3D"Margi=
+n:0;mso-line-height-rule:exactly;font-family:-apple-system, BlinkMacSystemF=
+ont, Aptos, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color =
+Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';line-height:18px;letter-spacing=
+:0;color:#333333;font-size:12px">424, Fort Hill Drive, STE 105,</p> <p clas=
+s=3D"ca c f cx" style=3D"Margin:0;mso-line-height-rule:exactly;font-family:=
+-apple-system, BlinkMacSystemFont, Aptos, 'Segoe UI', Roboto, Helvetica, Ar=
+ial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';l=
+ine-height:18px;letter-spacing:0;color:#333333;font-size:12px">Naperville, =
+Illinois(60540),</p> <p class=3D"ca c f cx" style=3D"Margin:0;mso-line-heig=
+ht-rule:exactly;font-family:-apple-system, BlinkMacSystemFont, Aptos, 'Sego=
+e UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI=
+ Emoji', 'Segoe UI Symbol';line-height:18px;letter-spacing:0;color:#333333;=
+font-size:12px">United States of America(USA)</p> <p class=3D"ca c p cw" st=
+yle=3D"Margin:0;mso-line-height-rule:exactly;font-family:-apple-system, Bli=
+nkMacSystemFont, Aptos, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, '=
+Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';line-height:18px;le=
+tter-spacing:0;color:#333333;font-size:12px"><a target=3D"_blank" href=3D"t=
+el:+16307206801" style=3D"mso-line-height-rule:exactly;text-decoration:none=
+;color:#333333;font-size:12px;font-family:-apple-system, BlinkMacSystemFont=
+, Aptos, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emo=
+ji', 'Segoe UI Emoji', 'Segoe UI Symbol'">+16307206801</a> <a target=3D"_bl=
+ank" href=3D"tel:+919899963601" style=3D"mso-line-height-rule:exactly;text-=
+decoration:none;color:#333333;font-size:12px;font-family:-apple-system, Bli=
+nkMacSystemFont, Aptos, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, '=
+Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'">+919899963601</a><=
+/p></td> </tr> </tbody></table></td> </tr> </tbody></table></td> <td valign=
+=3D"top" class=3D"bd" style=3D"padding:0;Margin:0"> <table cellpadding=3D"0=
+" cellspacing=3D"0" align=3D"left" class=3D"bq" role=3D"none" style=3D"mso-=
+table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spaci=
+ng:0px;float:left"> <tbody><tr> <td align=3D"center" style=3D"padding:0;Mar=
+gin:0;width:267px"> <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100=
+%" role=3D"presentation" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt=
+;border-collapse:collapse;border-spacing:0px"> <tbody><tr> <td align=3D"cen=
+ter" class=3D"co" style=3D"padding:0;Margin:0;padding-bottom:8px;font-size:=
+0px"><a target=3D"_blank" href=3D"https://phantomhealthcare.com" style=3D"m=
+so-line-height-rule:exactly;text-decoration:none;color:#333333;font-size:12=
+px"><img src=3D"https://jjihzh.stripocdn.email/content/guids/CABINET_5d3e92=
+cf9b8470663727296b1ae3ff6ddbdfe8fd237cca0e7f2a3a8c0a8e2ff1/images/flags_fla=
+g_country_national_symbol_united_arab_emirates_uae256.png" alt=3D"Invitatio=
+n to World Health Expo - Dubai 2026 by Phantom Healthcare - MRI, CT Scanner=
+, PET-CT, Cath Lab, Gamma Camera SPECT, Bone Densitometer DEXA" width=3D"90=
+" title=3D"Invitation to World Health Expo - Dubai 2026 by Phantom Healthca=
+re - MRI, CT Scanner, PET-CT, Cath Lab, Gamma Camera SPECT, Bone Densitomet=
+er DEXA" style=3D"display:block;font-size:14px;border:0;outline:none;text-d=
+ecoration:none;margin:0"></a></td> </tr> <tr> <td align=3D"left" class=3D"d=
+" style=3D"padding:0;Margin:0"> <h4 class=3D"c b ca" style=3D"Margin:0;font=
+-family:-apple-system, BlinkMacSystemFont, Aptos, 'Segoe UI', Roboto, Helve=
+tica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI S=
+ymbol';mso-line-height-rule:exactly;letter-spacing:0;font-size:22px;font-st=
+yle:normal;font-weight:normal;line-height:33px;color:#333333;text-align:cen=
+ter">Middle-East &amp; Africa</h4> <p class=3D"c o ca" style=3D"Margin:0;ms=
+o-line-height-rule:exactly;font-family:-apple-system, BlinkMacSystemFont, A=
+ptos, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji'=
+, 'Segoe UI Emoji', 'Segoe UI Symbol';line-height:21px;letter-spacing:0;col=
+or:#333333;font-size:11px;text-align:center"><span style=3D"font-size:14px"=
+><strong class=3D"cx" style=3D"font-weight:700 !important">Phantom Healthca=
+re </strong></span></p> <p class=3D"cv c o ca" style=3D"Margin:0;mso-line-h=
+eight-rule:exactly;font-family:-apple-system, BlinkMacSystemFont, Aptos, 'S=
+egoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe=
+ UI Emoji', 'Segoe UI Symbol';line-height:21px;letter-spacing:0;color:#3333=
+33;font-size:11px;text-align:center"><span style=3D"font-size:14px"><strong=
+ class=3D"cx" style=3D"font-weight:700 !important">AE FZC</strong></span></=
+p> <p class=3D"cu ca" style=3D"Margin:0;mso-line-height-rule:exactly;font-f=
+amily:-apple-system, BlinkMacSystemFont, Aptos, 'Segoe UI', Roboto, Helveti=
+ca, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Sym=
+bol';line-height:18px;letter-spacing:0;color:#333333;font-size:11px;text-al=
+ign:center"><span class=3D"f c cx" style=3D"font-size:12px">LV 63-C, Al Ham=
+riyah Freezone,</span></p> <p class=3D"cx ca" style=3D"Margin:0;mso-line-he=
+ight-rule:exactly;font-family:-apple-system, BlinkMacSystemFont, Aptos, 'Se=
+goe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe =
+UI Emoji', 'Segoe UI Symbol';line-height:18px;letter-spacing:0;color:#33333=
+3;font-size:11px;text-align:center"><span class=3D"f c cu" style=3D"font-si=
+ze:12px">Sharjah</span></p> <p class=3D"f c cx ca" style=3D"Margin:0;mso-li=
+ne-height-rule:exactly;font-family:-apple-system, BlinkMacSystemFont, Aptos=
+, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'S=
+egoe UI Emoji', 'Segoe UI Symbol';line-height:18px;letter-spacing:0;color:#=
+333333;font-size:12px;text-align:center">United Arab Emirates(UAE)</p> <p c=
+lass=3D"o ca" style=3D"Margin:0;mso-line-height-rule:exactly;font-family:-a=
+pple-system, BlinkMacSystemFont, Aptos, 'Segoe UI', Roboto, Helvetica, Aria=
+l, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';lin=
+e-height:18px;letter-spacing:0;color:#333333;font-size:12px;text-align:cent=
+er"><a target=3D"_blank" href=3D"tel:+971522208819&nbsp;" style=3D"mso-line=
+-height-rule:exactly;text-decoration:none;color:#333333;font-size:12px;font=
+-family:-apple-system, BlinkMacSystemFont, Aptos, 'Segoe UI', Roboto, Helve=
+tica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI S=
+ymbol';line-height:18px">+<span class=3D"p c">971522208819</span></a></p></=
+td> </tr> </tbody></table></td> </tr> </tbody></table></td> <td valign=3D"t=
+op" class=3D"bd" style=3D"padding:0;Margin:0"> <table cellpadding=3D"0" cel=
+lspacing=3D"0" align=3D"right" class=3D"br" role=3D"none" style=3D"mso-tabl=
+e-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0=
+px;float:right"> <tbody><tr> <td align=3D"center" style=3D"padding:0;Margin=
+:0;width:266px"> <table cellspacing=3D"0" width=3D"100%" cellpadding=3D"0" =
+role=3D"presentation" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;bo=
+rder-collapse:collapse;border-spacing:0px"> <tbody><tr> <td align=3D"center=
+" style=3D"padding:0;Margin:0;padding-bottom:8px;font-size:0px"><a href=3D"=
+https://phantomhealthcare.com" target=3D"_blank" style=3D"mso-line-height-r=
+ule:exactly;text-decoration:none;color:#333333;font-size:12px"><img title=
+=3D"Invitation to World Health Expo - Dubai 2026 by Phantom Healthcare - MR=
+I, CT Scanner, PET-CT, Cath Lab, Gamma Camera SPECT, Bone Densitometer DEXA=
+" src=3D"https://jjihzh.stripocdn.email/content/guids/CABINET_5d3e92cf9b847=
+0663727296b1ae3ff6ddbdfe8fd237cca0e7f2a3a8c0a8e2ff1/images/indiaflag.png" a=
+lt=3D"Invitation to World Health Expo - Dubai 2026 by Phantom Healthcare - =
+MRI, CT Scanner, PET-CT, Cath Lab, Gamma Camera SPECT, Bone Densitometer DE=
+XA" width=3D"90" class=3D"img-9594" style=3D"display:block;font-size:14px;b=
+order:0;outline:none;text-decoration:none;margin:0"></a></td> </tr> <tr> <t=
+d align=3D"center" class=3D"a" style=3D"padding:0;Margin:0"> <h4 class=3D"c=
+a c b" style=3D"Margin:0;font-family:-apple-system, BlinkMacSystemFont, Apt=
+os, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', =
+'Segoe UI Emoji', 'Segoe UI Symbol';mso-line-height-rule:exactly;letter-spa=
+cing:0;font-size:22px;font-style:normal;font-weight:normal;line-height:33px=
+;color:#333333">India &amp; Subcontinent&nbsp;</h4> <p class=3D"ca" style=
+=3D"Margin:0;mso-line-height-rule:exactly;font-family:-apple-system, BlinkM=
+acSystemFont, Aptos, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'App=
+le Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';line-height:21px;lette=
+r-spacing:0;color:#333333;font-size:12px"><span class=3D"n" style=3D"font-s=
+ize:14px"><strong class=3D"o c cx" style=3D"font-weight:700 !important">Pha=
+ntom Healthcare IND Pvt Ltd</strong><br></span></p> <p class=3D"cx ca" styl=
+e=3D"Margin:0;mso-line-height-rule:exactly;font-family:-apple-system, Blink=
+MacSystemFont, Aptos, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Ap=
+ple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';line-height:18px;lett=
+er-spacing:0;color:#333333;font-size:12px"><span class=3D"f c cu" style=3D"=
+font-size:12px"><span class=3D"cu">Plot No. 51, Sector 27C, Near</span> NHP=
+ Chowk, </span><span class=3D"f c cv">Faridabad, Haryana =E2=80=93121003 (I=
+NDIA)</span></p> <p class=3D"ca cv p c" style=3D"Margin:0;mso-line-height-r=
+ule:exactly;font-family:-apple-system, BlinkMacSystemFont, Aptos, 'Segoe UI=
+', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emo=
+ji', 'Segoe UI Symbol';line-height:18px;letter-spacing:0;color:#333333;font=
+-size:12px"><a target=3D"_blank" href=3D"tel:+919899963601" style=3D"mso-li=
+ne-height-rule:exactly;text-decoration:none;color:#333333;font-size:12px;fo=
+nt-family:-apple-system, BlinkMacSystemFont, Aptos, 'Segoe UI', Roboto, Hel=
+vetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI=
+ Symbol';line-height:18px">+919899963601</a> <a target=3D"_blank" href=3D"t=
+el:+911294312423" style=3D"mso-line-height-rule:exactly;text-decoration:non=
+e;color:#333333;font-size:12px;font-family:-apple-system, BlinkMacSystemFon=
+t, Aptos, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Em=
+oji', 'Segoe UI Emoji', 'Segoe UI Symbol';line-height:18px">+911294312423</=
+a></p></td> </tr> </tbody></table></td> </tr> </tbody></table></td> </tr> <=
+/tbody></table></td> </tr> <tr> <td align=3D"left" style=3D"padding:0;Margi=
+n:0"> <table cellspacing=3D"0" width=3D"100%" cellpadding=3D"0" role=3D"non=
+e" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:colla=
+pse;border-spacing:0px"> <tbody><tr> <td align=3D"left" style=3D"padding:0;=
+Margin:0;width:800px"> <table width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0pt;mso-table-rspace=
+:0pt;border-collapse:collapse;border-spacing:0px"> <tbody><tr> <td align=3D=
+"center" style=3D"padding:0;Margin:0;font-size:0"> <table border=3D"0" widt=
+h=3D"100%" height=3D"100%" cellpadding=3D"0" cellspacing=3D"0" class=3D"by"=
+ role=3D"presentation" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;b=
+order-collapse:collapse;border-spacing:0px"> <tbody><tr> <td style=3D"paddi=
+ng:0;Margin:0;height:0px;width:100%;margin:0px;border-bottom:1px solid #ccc=
+ccc;background:none"></td> </tr> </tbody></table></td> </tr> </tbody></tabl=
+e></td> </tr> </tbody></table></td> </tr> </tbody></table></td> </tr> </tbo=
+dy></table><!--<![endif]--> <table cellpadding=3D"0" cellspacing=3D"0" alig=
+n=3D"center" class=3D"bo bj" role=3D"none" style=3D"mso-table-lspace:0pt;ms=
+o-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;width:100%;t=
+able-layout:fixed !important;background-color:transparent;background-repeat=
+:repeat;background-position:center top"> <tbody><tr> <td align=3D"center" b=
+ackground=3D"https://jjihzh.stripocdn.email/content/guids/CABINET_7b6b27c42=
+082d1c129d066d24dabbd5fc652f8e2c424b00783826cf47ab2ce4d/images/abstractwave=
+pngtransparent.png" style=3D"padding:0;Margin:0;background-image:url(https:=
+//jjihzh.stripocdn.email/content/guids/CABINET_7b6b27c42082d1c129d066d24dab=
+bd5fc652f8e2c424b00783826cf47ab2ce4d/images/abstractwavepngtransparent.png)=
+;background-repeat:no-repeat;background-position:center top"> <table bgcolo=
+r=3D"transparent" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"ce" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse=
+:collapse;border-spacing:0px;background-color:transparent;width:800px" role=
+=3D"none"> <tbody><tr> <td align=3D"left" background=3D"https://jjihzh.stri=
+pocdn.email/content/guids/CABINET_5d3e92cf9b8470663727296b1ae3ff6ddbdfe8fd2=
+37cca0e7f2a3a8c0a8e2ff1/images/plainwhitebackgroundimage.jpg" bgcolor=3D"#f=
+fffff" style=3D"padding:0;Margin:0;padding-left:35px;background-image:url(h=
+ttps://jjihzh.stripocdn.email/content/guids/CABINET_5d3e92cf9b8470663727296=
+b1ae3ff6ddbdfe8fd237cca0e7f2a3a8c0a8e2ff1/images/plainwhitebackgroundimage.=
+jpg);background-repeat:repeat;background-position:left top;background-color=
+:#ffffff"> <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" role=
+=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collaps=
+e:collapse;border-spacing:0px"> <tbody><tr> <td align=3D"center" valign=3D"=
+top" style=3D"padding:0;Margin:0;width:765px"> <table cellpadding=3D"0" cel=
+lspacing=3D"0" width=3D"100%" role=3D"presentation" style=3D"mso-table-lspa=
+ce:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> <=
+tbody><tr> <td align=3D"left" class=3D"cn r" style=3D"padding:0;Margin:0;pa=
+dding-top:20px"> <h2 class=3D"ca s" style=3D"Margin:0;font-family:arial, 'h=
+elvetica neue', helvetica, sans-serif;mso-line-height-rule:exactly;letter-s=
+pacing:0;font-size:28px;font-style:normal;font-weight:bold;line-height:33.6=
+px;color:#333333">Connect To US</h2></td> </tr> </tbody></table></td> </tr>=
+ </tbody></table></td> </tr> <tr> <td align=3D"left" background=3D"https://=
+jjihzh.stripocdn.email/content/guids/CABINET_5d3e92cf9b8470663727296b1ae3ff=
+6ddbdfe8fd237cca0e7f2a3a8c0a8e2ff1/images/plainwhitebackgroundimage.jpg" bg=
+color=3D"#ffffff" style=3D"padding:0;Margin:0;padding-left:35px;padding-rig=
+ht:15px;background-image:url(https://jjihzh.stripocdn.email/content/guids/C=
+ABINET_5d3e92cf9b8470663727296b1ae3ff6ddbdfe8fd237cca0e7f2a3a8c0a8e2ff1/ima=
+ges/plainwhitebackgroundimage.jpg);background-repeat:repeat;background-posi=
+tion:left top;background-color:#ffffff"><!--[if mso]><table style=3D"width:=
+750px" cellpadding=3D"0" cellspacing=3D"0"><tr><td style=3D"width:430px" va=
+lign=3D"top"><![endif]--> <table cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"left" class=3D"bq" role=3D"none" style=3D"mso-table-lspace:0pt;mso-tabl=
+e-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left"> <tbod=
+y><tr> <td valign=3D"top" align=3D"center" style=3D"padding:0;Margin:0;widt=
+h:420px"> <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" role=3D=
+"presentation" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-co=
+llapse:collapse;border-spacing:0px"> <tbody><tr> <td align=3D"left" class=
+=3D"q" style=3D"padding:0;Margin:0;padding-top:5px;padding-left:4px"> <p cl=
+ass=3D"h" style=3D"Margin:0;mso-line-height-rule:exactly;font-family:-apple=
+-system, BlinkMacSystemFont, Aptos, 'Segoe UI', Roboto, Helvetica, Arial, s=
+ans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';line-he=
+ight:27px;letter-spacing:0;color:#333333;font-size:18px"><b>Call Us or Conn=
+ect Via Mail,</b></p> <p class=3D"h" style=3D"Margin:0;mso-line-height-rule=
+:exactly;font-family:-apple-system, BlinkMacSystemFont, Aptos, 'Segoe UI', =
+Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'=
+, 'Segoe UI Symbol';line-height:27px;letter-spacing:0;color:#333333;font-si=
+ze:18px"><b>Social Media &amp;&nbsp;WhatsApp</b></p></td> </tr> </tbody></t=
+able></td> <td class=3D"bk" style=3D"padding:0;Margin:0;width:10px"></td> <=
+/tr> </tbody></table><!--[if mso]></td><td style=3D"width:111px" valign=3D"=
+top"><![endif]--> <table cellpadding=3D"0" cellspacing=3D"0" align=3D"left"=
+ class=3D"bq" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:=
+0pt;border-collapse:collapse;border-spacing:0px;float:left"> <tbody><tr> <t=
+d align=3D"left" style=3D"padding:0;Margin:0;width:101px"> <table cellpaddi=
+ng=3D"0" cellspacing=3D"0" width=3D"100%" role=3D"presentation" style=3D"ms=
+o-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spa=
+cing:0px"> <tbody><tr> <td align=3D"center" style=3D"padding:0;Margin:0;fon=
+t-size:0px"><a target=3D"_blank" href=3D"mailto:digital@phantomhealthcare.c=
+om?subject=3DEnquiry+For+Radiology+Equipment+Product%2FService+-+Via+WHX+20=
+26+Dubai" style=3D"mso-line-height-rule:exactly;text-decoration:none;color:=
+#333333;font-size:12px"><img src=3D"https://jjihzh.stripocdn.email/content/=
+guids/CABINET_5d3e92cf9b8470663727296b1ae3ff6ddbdfe8fd237cca0e7f2a3a8c0a8e2=
+ff1/images/logo_gmail_envelope_letter_email256.png" alt=3D"Email to Phantom=
+ Healthcare- WHX 2026 Dubai" width=3D"101" title=3D"Email to Phantom Health=
+care- WHX 2026 Dubai" class=3D"adapt-img" style=3D"display:block;font-size:=
+14px;border:0;outline:none;text-decoration:none;margin:0"></a></td> </tr> <=
+/tbody></table></td> <td class=3D"bk" style=3D"padding:0;Margin:0;width:10p=
+x"></td> </tr> </tbody></table><!--[if mso]></td><td style=3D"width:102px" =
+valign=3D"top"><![endif]--> <table cellpadding=3D"0" cellspacing=3D"0" alig=
+n=3D"left" class=3D"bq" role=3D"none" style=3D"mso-table-lspace:0pt;mso-tab=
+le-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left"> <tbo=
+dy><tr> <td align=3D"left" style=3D"padding:0;Margin:0;width:102px"> <table=
+ cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" role=3D"presentation" s=
+tyle=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;=
+border-spacing:0px"> <tbody><tr> <td align=3D"center" style=3D"padding:0;Ma=
+rgin:0;font-size:0px"><a target=3D"_blank" href=3D"https://api.whatsapp.com=
+/send?phone=3D919899963601" style=3D"mso-line-height-rule:exactly;text-deco=
+ration:none;color:#333333;font-size:12px"><img src=3D"https://jjihzh.stripo=
+cdn.email/content/guids/CABINET_5d3e92cf9b8470663727296b1ae3ff6ddbdfe8fd237=
+cca0e7f2a3a8c0a8e2ff1/images/whatsapp256.png" alt=3D"Send WhatsApp Message =
+to Phantom Healthcare" width=3D"102" title=3D"Send WhatsApp Message to Phan=
+tom Healthcare" class=3D"adapt-img" style=3D"display:block;font-size:14px;b=
+order:0;outline:none;text-decoration:none;margin:0"></a></td> </tr> <tr> <t=
+d align=3D"left" style=3D"padding:0;Margin:0"> <p style=3D"Margin:0;mso-lin=
+e-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-=
+serif;line-height:18px;letter-spacing:0;color:#333333;font-size:12px"><br><=
+/p></td> </tr> </tbody></table></td> </tr> </tbody></table><!--[if mso]></t=
+d><td style=3D"width:10px"></td><td style=3D"width:97px" valign=3D"top"><![=
+endif]--> <table cellpadding=3D"0" cellspacing=3D"0" align=3D"right" class=
+=3D"br" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;bo=
+rder-collapse:collapse;border-spacing:0px;float:right"> <tbody><tr> <td ali=
+gn=3D"left" style=3D"padding:0;Margin:0;width:97px"> <table cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"100%" role=3D"presentation" style=3D"mso-tabl=
+e-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0=
+px"> <tbody><tr> <td align=3D"center" style=3D"padding:0;Margin:0;font-size=
+:0px"><a target=3D"_blank" href=3D"tel:+919899963601" style=3D"mso-line-hei=
+ght-rule:exactly;text-decoration:none;color:#333333;font-size:12px"><img sr=
+c=3D"https://jjihzh.stripocdn.email/content/guids/CABINET_5d3e92cf9b8470663=
+727296b1ae3ff6ddbdfe8fd237cca0e7f2a3a8c0a8e2ff1/images/thefreeforty_phone25=
+6.png" alt=3D"Call Phantom Healthcare" width=3D"97" title=3D"Call Phantom H=
+ealthcare" class=3D"adapt-img" style=3D"display:block;font-size:14px;border=
+:0;outline:none;text-decoration:none;margin:0"></a></td> </tr> </tbody></ta=
+ble></td> </tr> </tbody></table><!--[if mso]></td></tr></table><![endif]-->=
+</td> </tr> <tr> <td align=3D"left" background=3D"https://jjihzh.stripocdn.=
+email/content/guids/CABINET_5d3e92cf9b8470663727296b1ae3ff6ddbdfe8fd237cca0=
+e7f2a3a8c0a8e2ff1/images/plainwhitebackgroundimage.jpg" bgcolor=3D"#ffffff"=
+ style=3D"Margin:0;padding-top:20px;padding-right:35px;padding-bottom:20px;=
+padding-left:35px;background-image:url(https://jjihzh.stripocdn.email/conte=
+nt/guids/CABINET_5d3e92cf9b8470663727296b1ae3ff6ddbdfe8fd237cca0e7f2a3a8c0a=
+8e2ff1/images/plainwhitebackgroundimage.jpg);background-repeat:repeat;backg=
+round-position:left top;background-color:#ffffff"> <table cellspacing=3D"0"=
+ width=3D"100%" cellpadding=3D"0" role=3D"none" style=3D"mso-table-lspace:0=
+pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> <tbod=
+y><tr> <td align=3D"left" style=3D"padding:0;Margin:0;width:730px"> <table =
+role=3D"presentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;b=
+order-spacing:0px"> <tbody><tr> <td align=3D"center" style=3D"padding:0;Mar=
+gin:0;font-size:0"><a name=3D"Invitation%20to%20World%20Health%20Expo%20-%2=
+0Dubai%202026%20by%20Phantom%20Healthcare%20-%20MRI%2C%20CT%20Scanner%2C%20=
+PET-CT%2C%20Cath%20Lab%2C%20Gamma%20Camera%20SPECT%2C%20Bone%20Densitometer=
+%20DEXA" style=3D"mso-line-height-rule:exactly;text-decoration:none;color:#=
+333333;font-size:12px"></a> <table cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"be bu" role=3D"presentation" style=3D"mso-table-lspace:0pt;mso-table-r=
+space:0pt;border-collapse:collapse;border-spacing:0px"> <tbody><tr> <td ali=
+gn=3D"center" valign=3D"top" class=3D"cp" style=3D"padding:0;Margin:0;paddi=
+ng-right:17px"><a target=3D"_blank" href=3D"https://www.facebook.com/phanto=
+m.healthcare.ind" style=3D"mso-line-height-rule:exactly;text-decoration:non=
+e;color:#333333;font-size:12px"><img src=3D"https://jjihzh.stripocdn.email/=
+content/assets/img/social-icons/square-colored/facebook-square-colored.png"=
+ alt=3D"Fb" width=3D"53" height=3D"53" title=3D"Facebook" style=3D"display:=
+block;font-size:14px;border:0;outline:none;text-decoration:none;margin:0"><=
+/a></td> <td align=3D"center" valign=3D"top" class=3D"cp" style=3D"padding:=
+0;Margin:0;padding-right:17px"><a target=3D"_blank" href=3D"https://x.com/P=
+hantomhealthc" style=3D"mso-line-height-rule:exactly;text-decoration:none;c=
+olor:#333333;font-size:12px"><img title=3D"X" src=3D"https://jjihzh.stripoc=
+dn.email/content/assets/img/social-icons/square-colored/x-square-colored.pn=
+g" alt=3D"X" width=3D"53" height=3D"53" style=3D"display:block;font-size:14=
+px;border:0;outline:none;text-decoration:none;margin:0"></a></td> <td valig=
+n=3D"top" align=3D"center" class=3D"cp" style=3D"padding:0;Margin:0;padding=
+-right:17px"><a target=3D"_blank" href=3D"https://www.instagram.com/phantom=
+healthcare/" style=3D"mso-line-height-rule:exactly;text-decoration:none;col=
+or:#333333;font-size:12px"><img height=3D"53" title=3D"Instagram" src=3D"ht=
+tps://jjihzh.stripocdn.email/content/assets/img/social-icons/square-colored=
+/instagram-square-colored.png" alt=3D"Ig" width=3D"53" style=3D"display:blo=
+ck;font-size:14px;border:0;outline:none;text-decoration:none;margin:0"></a>=
+</td> <td align=3D"center" valign=3D"top" class=3D"cp" style=3D"padding:0;M=
+argin:0;padding-right:17px"><a target=3D"_blank" href=3D"https://www.youtub=
+e.com/@phantomhealthcare" style=3D"mso-line-height-rule:exactly;text-decora=
+tion:none;color:#333333;font-size:12px"><img alt=3D"Yt" width=3D"53" height=
+=3D"53" title=3D"YouTube" src=3D"https://jjihzh.stripocdn.email/content/ass=
+ets/img/social-icons/square-colored/youtube-square-colored.png" style=3D"di=
+splay:block;font-size:14px;border:0;outline:none;text-decoration:none;margi=
+n:0"></a></td> <td align=3D"center" valign=3D"top" class=3D"cp" style=3D"pa=
+dding:0;Margin:0;padding-right:17px"><a target=3D"_blank" href=3D"https://i=
+n.linkedin.com/company/phantom-healthcare-ind-private-limited-company" styl=
+e=3D"mso-line-height-rule:exactly;text-decoration:none;color:#333333;font-s=
+ize:12px"><img src=3D"https://jjihzh.stripocdn.email/content/assets/img/soc=
+ial-icons/square-colored/linkedin-square-colored.png" alt=3D"In" width=3D"5=
+3" height=3D"53" title=3D"LinkedIn" style=3D"display:block;font-size:14px;b=
+order:0;outline:none;text-decoration:none;margin:0"></a></td> <td align=3D"=
+center" valign=3D"top" style=3D"padding:0;Margin:0;padding-right:17px"><a h=
+ref=3D"https://www.threads.com/@phantomhealthcare" target=3D"_blank" style=
+=3D"mso-line-height-rule:exactly;text-decoration:none;color:#333333;font-si=
+ze:12px"><img height=3D"53" title=3D"Threads" src=3D"https://jjihzh.stripoc=
+dn.email/content/assets/img/social-icons/square-colored/threads-square-colo=
+red.png" alt=3D"Tr" width=3D"53" style=3D"display:block;font-size:14px;bord=
+er:0;outline:none;text-decoration:none;margin:0"></a></td> <td align=3D"cen=
+ter" valign=3D"top" style=3D"padding:0;Margin:0;padding-right:17px"><a targ=
+et=3D"_blank" href=3D"https://www.snapchat.com/@phantomhealth" style=3D"mso=
+-line-height-rule:exactly;text-decoration:none;color:#333333;font-size:12px=
+"><img title=3D"Snapchat" src=3D"https://jjihzh.stripocdn.email/content/ass=
+ets/img/messenger-icons/square-colored/snapchat-square-colored.png" alt=3D"=
+Snapchat" width=3D"53" height=3D"53" style=3D"display:block;font-size:14px;=
+border:0;outline:none;text-decoration:none;margin:0"></a></td> <td align=3D=
+"center" valign=3D"top" style=3D"padding:0;Margin:0"><a target=3D"_blank" h=
+ref=3D"https://www.pinterest.com/phantomhealthcare/" style=3D"mso-line-heig=
+ht-rule:exactly;text-decoration:none;color:#333333;font-size:12px"><img tit=
+le=3D"Pinterest" src=3D"https://jjihzh.stripocdn.email/content/assets/img/s=
+ocial-icons/square-colored/pinterest-square-colored.png" alt=3D"P" width=3D=
+"53" height=3D"53" style=3D"display:block;font-size:14px;border:0;outline:n=
+one;text-decoration:none;margin:0"></a></td> </tr> </tbody></table></td> </=
+tr> </tbody></table></td> </tr> </tbody></table></td> </tr> <tr> <td align=
+=3D"left" style=3D"padding:0;Margin:0"> <table width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"none" style=3D"mso-table-lspace:0pt;mso-ta=
+ble-rspace:0pt;border-collapse:collapse;border-spacing:0px"> <tbody><tr> <t=
+d align=3D"left" style=3D"padding:0;Margin:0;width:800px"> <table role=3D"p=
+resentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"ms=
+o-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spa=
+cing:0px"> <tbody><tr> <td align=3D"center" style=3D"padding:0;Margin:0;fon=
+t-size:0"> <table width=3D"100%" height=3D"100%" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0" class=3D"by" role=3D"presentation" style=3D"mso-tabl=
+e-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0=
+px"> <tbody><tr> <td style=3D"padding:0;Margin:0;border-bottom:1px solid #c=
+ccccc;background:none;height:0px;width:100%;margin:0px"></td> </tr> </tbody=
+></table></td> </tr> </tbody></table></td> </tr> </tbody></table></td> </tr=
+> </tbody></table></td> </tr> </tbody></table><!--[if !mso]><!-- --> <table=
+ cellpadding=3D"0" cellspacing=3D"0" align=3D"center" class=3D"bo bh" role=
+=3D"none" style=3D"display:none;float:left;overflow:hidden;width:100%;max-h=
+eight:0;line-height:0;mso-hide:all;mso-table-lspace:0pt;mso-table-rspace:0p=
+t;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important=
+;background-color:transparent;background-repeat:repeat;background-position:=
+center top"> <tbody><tr> <td align=3D"center" background=3D"https://jjihzh.=
+stripocdn.email/content/guids/CABINET_7b6b27c42082d1c129d066d24dabbd5fc652f=
+8e2c424b00783826cf47ab2ce4d/images/abstractwavepngtransparent.png" style=3D=
+"padding:0;Margin:0;background-image:url(https://jjihzh.stripocdn.email/con=
+tent/guids/CABINET_7b6b27c42082d1c129d066d24dabbd5fc652f8e2c424b00783826cf4=
+7ab2ce4d/images/abstractwavepngtransparent.png);background-repeat:no-repeat=
+;background-position:center top"> <table bgcolor=3D"transparent" align=3D"c=
+enter" cellpadding=3D"0" cellspacing=3D"0" class=3D"ce" style=3D"mso-table-=
+lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px=
+;background-color:transparent;width:800px" role=3D"none"> <tbody><tr> <td a=
+lign=3D"left" background=3D"https://jjihzh.stripocdn.email/content/guids/CA=
+BINET_5d3e92cf9b8470663727296b1ae3ff6ddbdfe8fd237cca0e7f2a3a8c0a8e2ff1/imag=
+es/plainwhitebackgroundimage.jpg" bgcolor=3D"#ffffff" class=3D"cm" style=3D=
+"padding:0;Margin:0;padding-left:35px;background-image:url(https://jjihzh.s=
+tripocdn.email/content/guids/CABINET_5d3e92cf9b8470663727296b1ae3ff6ddbdfe8=
+fd237cca0e7f2a3a8c0a8e2ff1/images/plainwhitebackgroundimage.jpg);background=
+-repeat:repeat;background-position:left top;background-color:#ffffff"> <tab=
+le cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" role=3D"none" style=
+=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;bord=
+er-spacing:0px"> <tbody><tr> <td align=3D"center" valign=3D"top" style=3D"p=
+adding:0;Margin:0;width:765px"> <table cellpadding=3D"0" cellspacing=3D"0" =
+width=3D"100%" role=3D"presentation" style=3D"mso-table-lspace:0pt;mso-tabl=
+e-rspace:0pt;border-collapse:collapse;border-spacing:0px"> <tbody><tr> <td =
+align=3D"left" class=3D"cn g" style=3D"padding:0;Margin:0;padding-top:20px"=
+> <h2 class=3D"cx cb c h" style=3D"Margin:0;font-family:arial, 'helvetica n=
+eue', helvetica, sans-serif;mso-line-height-rule:exactly;letter-spacing:0;f=
+ont-size:28px;font-style:normal;font-weight:bold;line-height:33.6px;color:#=
+333333">Connect To US</h2></td> </tr> </tbody></table></td> </tr> </tbody><=
+/table></td> </tr> <tr> <td align=3D"left" background=3D"https://jjihzh.str=
+ipocdn.email/content/guids/CABINET_5d3e92cf9b8470663727296b1ae3ff6ddbdfe8fd=
+237cca0e7f2a3a8c0a8e2ff1/images/plainwhitebackgroundimage.jpg" bgcolor=3D"#=
+ffffff" class=3D"cl" style=3D"padding:0;Margin:0;padding-left:35px;padding-=
+right:15px;background-image:url(https://jjihzh.stripocdn.email/content/guid=
+s/CABINET_5d3e92cf9b8470663727296b1ae3ff6ddbdfe8fd237cca0e7f2a3a8c0a8e2ff1/=
+images/plainwhitebackgroundimage.jpg);background-repeat:repeat;background-p=
+osition:left top;background-color:#ffffff"> <table cellpadding=3D"0" cellsp=
+acing=3D"0" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0p=
+t;border-collapse:collapse;border-spacing:0px;width:750px"> <tbody><tr> <td=
+ valign=3D"top" style=3D"padding:0;Margin:0"> <table cellspacing=3D"0" cell=
+padding=3D"0" align=3D"left" class=3D"bq" role=3D"none" style=3D"mso-table-=
+lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px=
+;float:left"> <tbody><tr> <td valign=3D"top" align=3D"center" style=3D"padd=
+ing:0;Margin:0;width:420px"> <table width=3D"100%" cellspacing=3D"0" cellpa=
+dding=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0pt;mso-table-r=
+space:0pt;border-collapse:collapse;border-spacing:0px"> <tbody><tr> <td ali=
+gn=3D"left" class=3D"i" style=3D"padding:0;Margin:0;padding-top:5px;padding=
+-left:4px"> <p class=3D"c j" style=3D"Margin:0;mso-line-height-rule:exactly=
+;font-family:-apple-system, BlinkMacSystemFont, Aptos, 'Segoe UI', Roboto, =
+Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe=
+ UI Symbol';line-height:27px;letter-spacing:0;color:#333333;font-size:18px"=
+><b>Call Us or Connect&nbsp;</b></p> <p class=3D"c j" style=3D"Margin:0;mso=
+-line-height-rule:exactly;font-family:-apple-system, BlinkMacSystemFont, Ap=
+tos, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',=
+ 'Segoe UI Emoji', 'Segoe UI Symbol';line-height:27px;letter-spacing:0;colo=
+r:#333333;font-size:18px"><b>Via Mail, Social Media &amp;&nbsp;WhatsApp&nbs=
+p;</b></p></td> </tr> </tbody></table></td> </tr> </tbody></table></td> <td=
+ class=3D"bc" style=3D"padding:0;Margin:0;width:10px"></td> <td valign=3D"t=
+op" style=3D"padding:0;Margin:0"> <table cellpadding=3D"0" cellspacing=3D"0=
+" align=3D"left" class=3D"bq" role=3D"none" style=3D"mso-table-lspace:0pt;m=
+so-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left"=
+> <tbody><tr> <td align=3D"left" style=3D"padding:0;Margin:0;width:101px"> =
+<table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" role=3D"presentat=
+ion" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:col=
+lapse;border-spacing:0px"> <tbody><tr> <td align=3D"center" style=3D"paddin=
+g:0;Margin:0;font-size:0px"><a target=3D"_blank" href=3D"mailto:digital@pha=
+ntomhealthcare.com?subject=3DEnquiry+For+Radiology+Equipment+Product%2FServ=
+ice+-+Via+WHX+2026+Dubai" style=3D"mso-line-height-rule:exactly;text-decora=
+tion:none;color:#333333;font-size:12px"><img src=3D"https://jjihzh.stripocd=
+n.email/content/guids/CABINET_5d3e92cf9b8470663727296b1ae3ff6ddbdfe8fd237cc=
+a0e7f2a3a8c0a8e2ff1/images/logo_gmail_envelope_letter_email256.png" alt=3D"=
+Email to Phantom Healthcare- WHX 2026 Dubai" width=3D"101" title=3D"Email t=
+o Phantom Healthcare- WHX 2026 Dubai" class=3D"img-2274" style=3D"display:b=
+lock;font-size:14px;border:0;outline:none;text-decoration:none;margin:0"></=
+a></td> </tr> </tbody></table></td> </tr> </tbody></table></td> <td class=
+=3D"bc" style=3D"padding:0;Margin:0;width:10px"></td> <td valign=3D"top" st=
+yle=3D"padding:0;Margin:0"> <table cellpadding=3D"0" cellspacing=3D"0" alig=
+n=3D"left" class=3D"bq" role=3D"none" style=3D"mso-table-lspace:0pt;mso-tab=
+le-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left"> <tbo=
+dy><tr> <td align=3D"left" style=3D"padding:0;Margin:0;width:102px"> <table=
+ cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" role=3D"presentation" s=
+tyle=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;=
+border-spacing:0px"> <tbody><tr> <td align=3D"center" style=3D"padding:0;Ma=
+rgin:0;font-size:0px"><a target=3D"_blank" href=3D"https://api.whatsapp.com=
+/send?phone=3D919899963601" style=3D"mso-line-height-rule:exactly;text-deco=
+ration:none;color:#333333;font-size:12px"><img src=3D"https://jjihzh.stripo=
+cdn.email/content/guids/CABINET_5d3e92cf9b8470663727296b1ae3ff6ddbdfe8fd237=
+cca0e7f2a3a8c0a8e2ff1/images/whatsapp256.png" alt=3D"Send WhatsApp Message =
+to Phantom Healthcare" width=3D"102" title=3D"Send WhatsApp Message to Phan=
+tom Healthcare" class=3D"img-5736 img-1243" style=3D"display:block;font-siz=
+e:14px;border:0;outline:none;text-decoration:none;margin:0"></a></td> </tr>=
+ <tr> <td align=3D"left" style=3D"padding:0;Margin:0"> <p style=3D"Margin:0=
+;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetic=
+a, sans-serif;line-height:18px;letter-spacing:0;color:#333333;font-size:12p=
+x"><br></p></td> </tr> </tbody></table></td> </tr> </tbody></table></td> <t=
+d class=3D"bc" style=3D"padding:0;Margin:0;width:10px"></td> <td valign=3D"=
+top" style=3D"padding:0;Margin:0"> <table cellpadding=3D"0" cellspacing=3D"=
+0" align=3D"right" class=3D"br" role=3D"none" style=3D"mso-table-lspace:0pt=
+;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:rig=
+ht"> <tbody><tr> <td align=3D"left" style=3D"padding:0;Margin:0;width:97px"=
+> <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" role=3D"present=
+ation" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:c=
+ollapse;border-spacing:0px"> <tbody><tr> <td align=3D"center" style=3D"padd=
+ing:0;Margin:0;font-size:0px"><a target=3D"_blank" href=3D"tel:+91989996360=
+1" style=3D"mso-line-height-rule:exactly;text-decoration:none;color:#333333=
+;font-size:12px"><img src=3D"https://jjihzh.stripocdn.email/content/guids/C=
+ABINET_5d3e92cf9b8470663727296b1ae3ff6ddbdfe8fd237cca0e7f2a3a8c0a8e2ff1/ima=
+ges/thefreeforty_phone256.png" alt=3D"Call Phantom Healthcare" width=3D"97"=
+ title=3D"Call Phantom Healthcare" class=3D"img-9956 img-4699" style=3D"dis=
+play:block;font-size:14px;border:0;outline:none;text-decoration:none;margin=
+:0"></a></td> </tr> </tbody></table></td> </tr> </tbody></table></td> </tr>=
+ </tbody></table></td> </tr> <tr> <td align=3D"left" background=3D"https://=
+jjihzh.stripocdn.email/content/guids/CABINET_5d3e92cf9b8470663727296b1ae3ff=
+6ddbdfe8fd237cca0e7f2a3a8c0a8e2ff1/images/plainwhitebackgroundimage.jpg" bg=
+color=3D"#ffffff" class=3D"cl ck" style=3D"Margin:0;padding-top:20px;paddin=
+g-right:35px;padding-bottom:20px;padding-left:35px;background-image:url(htt=
+ps://jjihzh.stripocdn.email/content/guids/CABINET_5d3e92cf9b8470663727296b1=
+ae3ff6ddbdfe8fd237cca0e7f2a3a8c0a8e2ff1/images/plainwhitebackgroundimage.jp=
+g);background-repeat:repeat;background-position:left top;background-color:#=
+ffffff"> <table cellspacing=3D"0" width=3D"100%" cellpadding=3D"0" role=3D"=
+none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:co=
+llapse;border-spacing:0px"> <tbody><tr> <td align=3D"left" style=3D"padding=
+:0;Margin:0;width:730px"> <table role=3D"presentation" width=3D"100%" cellp=
+adding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt;mso-table-rspa=
+ce:0pt;border-collapse:collapse;border-spacing:0px"> <tbody><tr> <td align=
+=3D"center" class=3D"ca" style=3D"padding:0;Margin:0;font-size:0"><a name=
+=3D"Invitation%20to%20World%20Health%20Expo%20-%20Dubai%202026%20by%20Phant=
+om%20Healthcare%20-%20MRI%2C%20CT%20Scanner%2C%20PET-CT%2C%20Cath%20Lab%2C%=
+20Gamma%20Camera%20SPECT%2C%20Bone%20Densitometer%20DEXA" style=3D"mso-line=
+-height-rule:exactly;text-decoration:none;color:#333333;font-size:12px"></a=
+> <table cellpadding=3D"0" cellspacing=3D"0" class=3D"be bu" role=3D"presen=
+tation" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:=
+collapse;border-spacing:0px"> <tbody><tr> <td align=3D"center" valign=3D"to=
+p" class=3D"cj" style=3D"padding:0;Margin:0;padding-right:17px"><a target=
+=3D"_blank" href=3D"https://www.facebook.com/phantom.healthcare.ind" style=
+=3D"mso-line-height-rule:exactly;text-decoration:none;color:#333333;font-si=
+ze:12px"><img src=3D"https://jjihzh.stripocdn.email/content/assets/img/soci=
+al-icons/square-colored/facebook-square-colored.png" alt=3D"Fb" width=3D"30=
+" height=3D"30" title=3D"Facebook" style=3D"display:block;font-size:14px;bo=
+rder:0;outline:none;text-decoration:none;margin:0"></a></td> <td align=3D"c=
+enter" valign=3D"top" class=3D"cj" style=3D"padding:0;Margin:0;padding-righ=
+t:17px"><a target=3D"_blank" href=3D"https://x.com/Phantomhealthc" style=3D=
+"mso-line-height-rule:exactly;text-decoration:none;color:#333333;font-size:=
+12px"><img title=3D"X" src=3D"https://jjihzh.stripocdn.email/content/assets=
+/img/social-icons/square-colored/x-square-colored.png" alt=3D"X" width=3D"3=
+0" height=3D"30" style=3D"display:block;font-size:14px;border:0;outline:non=
+e;text-decoration:none;margin:0"></a></td> <td valign=3D"top" align=3D"cent=
+er" class=3D"cj" style=3D"padding:0;Margin:0;padding-right:17px"><a target=
+=3D"_blank" href=3D"https://www.instagram.com/phantomhealthcare/" style=3D"=
+mso-line-height-rule:exactly;text-decoration:none;color:#333333;font-size:1=
+2px"><img height=3D"30" title=3D"Instagram" src=3D"https://jjihzh.stripocdn=
+.email/content/assets/img/social-icons/square-colored/instagram-square-colo=
+red.png" alt=3D"Ig" width=3D"30" style=3D"display:block;font-size:14px;bord=
+er:0;outline:none;text-decoration:none;margin:0"></a></td> <td align=3D"cen=
+ter" valign=3D"top" class=3D"cj" style=3D"padding:0;Margin:0;padding-right:=
+17px"><a target=3D"_blank" href=3D"https://www.youtube.com/@phantomhealthca=
+re" style=3D"mso-line-height-rule:exactly;text-decoration:none;color:#33333=
+3;font-size:12px"><img alt=3D"Yt" width=3D"30" height=3D"30" title=3D"YouTu=
+be" src=3D"https://jjihzh.stripocdn.email/content/assets/img/social-icons/s=
+quare-colored/youtube-square-colored.png" style=3D"display:block;font-size:=
+14px;border:0;outline:none;text-decoration:none;margin:0"></a></td> <td ali=
+gn=3D"center" valign=3D"top" class=3D"cj" style=3D"padding:0;Margin:0;paddi=
+ng-right:17px"><a target=3D"_blank" href=3D"https://in.linkedin.com/company=
+/phantom-healthcare-ind-private-limited-company" style=3D"mso-line-height-r=
+ule:exactly;text-decoration:none;color:#333333;font-size:12px"><img src=3D"=
+https://jjihzh.stripocdn.email/content/assets/img/social-icons/square-color=
+ed/linkedin-square-colored.png" alt=3D"In" width=3D"30" height=3D"30" title=
+=3D"LinkedIn" style=3D"display:block;font-size:14px;border:0;outline:none;t=
+ext-decoration:none;margin:0"></a></td> <td align=3D"center" valign=3D"top"=
+ class=3D"cj" style=3D"padding:0;Margin:0;padding-right:17px"><a href=3D"ht=
+tps://www.threads.com/@phantomhealthcare" target=3D"_blank" style=3D"mso-li=
+ne-height-rule:exactly;text-decoration:none;color:#333333;font-size:12px"><=
+img height=3D"30" title=3D"Threads" src=3D"https://jjihzh.stripocdn.email/c=
+ontent/assets/img/social-icons/square-colored/threads-square-colored.png" a=
+lt=3D"Tr" width=3D"30" style=3D"display:block;font-size:14px;border:0;outli=
+ne:none;text-decoration:none;margin:0"></a></td> <td align=3D"center" valig=
+n=3D"top" class=3D"cj" style=3D"padding:0;Margin:0;padding-right:17px"><a t=
+arget=3D"_blank" href=3D"https://www.snapchat.com/@phantomhealth" style=3D"=
+mso-line-height-rule:exactly;text-decoration:none;color:#333333;font-size:1=
+2px"><img title=3D"Snapchat" src=3D"https://jjihzh.stripocdn.email/content/=
+assets/img/messenger-icons/square-colored/snapchat-square-colored.png" alt=
+=3D"Snapchat" width=3D"30" height=3D"30" style=3D"display:block;font-size:1=
+4px;border:0;outline:none;text-decoration:none;margin:0"></a></td> <td alig=
+n=3D"center" valign=3D"top" style=3D"padding:0;Margin:0"><a target=3D"_blan=
+k" href=3D"https://www.pinterest.com/phantomhealthcare/" style=3D"mso-line-=
+height-rule:exactly;text-decoration:none;color:#333333;font-size:12px"><img=
+ title=3D"Pinterest" src=3D"https://jjihzh.stripocdn.email/content/assets/i=
+mg/social-icons/square-colored/pinterest-square-colored.png" alt=3D"P" widt=
+h=3D"30" height=3D"30" style=3D"display:block;font-size:14px;border:0;outli=
+ne:none;text-decoration:none;margin:0"></a></td> </tr> </tbody></table></td=
+> </tr> </tbody></table></td> </tr> </tbody></table></td> </tr> <tr> <td al=
+ign=3D"left" style=3D"padding:0;Margin:0"> <table width=3D"100%" cellpaddin=
+g=3D"0" cellspacing=3D"0" role=3D"none" style=3D"mso-table-lspace:0pt;mso-t=
+able-rspace:0pt;border-collapse:collapse;border-spacing:0px"> <tbody><tr> <=
+td align=3D"left" style=3D"padding:0;Margin:0;width:800px"> <table role=3D"=
+presentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"m=
+so-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-sp=
+acing:0px"> <tbody><tr> <td align=3D"center" style=3D"padding:0;Margin:0;fo=
+nt-size:0"> <table width=3D"100%" height=3D"100%" cellpadding=3D"0" cellspa=
+cing=3D"0" border=3D"0" class=3D"by" role=3D"presentation" style=3D"mso-tab=
+le-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:=
+0px"> <tbody><tr> <td style=3D"padding:0;Margin:0;border-bottom:1px solid #=
+cccccc;background:none;height:0px;width:100%;margin:0px"></td> </tr> </tbod=
+y></table></td> </tr> </tbody></table></td> </tr> </tbody></table></td> </t=
+r> </tbody></table></td> </tr> </tbody></table><!--<![endif]--> <table cell=
+spacing=3D"0" cellpadding=3D"0" align=3D"center" class=3D"bm" role=3D"none"=
+ style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collaps=
+e;border-spacing:0px;width:100%;table-layout:fixed !important"> <tbody><tr>=
+ <td align=3D"center" background=3D"https://jjihzh.stripocdn.email/content/=
+guids/CABINET_7b6b27c42082d1c129d066d24dabbd5fc652f8e2c424b00783826cf47ab2c=
+e4d/images/abstractwavepngtransparent.png" style=3D"padding:0;Margin:0;back=
+ground-image:url(https://jjihzh.stripocdn.email/content/guids/CABINET_7b6b2=
+7c42082d1c129d066d24dabbd5fc652f8e2c424b00783826cf47ab2ce4d/images/abstract=
+wavepngtransparent.png);background-repeat:no-repeat;background-position:cen=
+ter top"> <table cellspacing=3D"0" bgcolor=3D"#ffffff" align=3D"center" cel=
+lpadding=3D"0" class=3D"cf" role=3D"none" style=3D"mso-table-lspace:0pt;mso=
+-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-co=
+lor:#FFFFFF;width:800px"> <tbody><tr> <td background=3D"https://jjihzh.stri=
+pocdn.email/content/guids/CABINET_5d3e92cf9b8470663727296b1ae3ff6ddbdfe8fd2=
+37cca0e7f2a3a8c0a8e2ff1/images/plainwhitebackgroundimage.jpg" align=3D"left=
+" bgcolor=3D"#ffffff" style=3D"padding:0;Margin:0;padding-top:20px;backgrou=
+nd-image:url(https://jjihzh.stripocdn.email/content/guids/CABINET_5d3e92cf9=
+b8470663727296b1ae3ff6ddbdfe8fd237cca0e7f2a3a8c0a8e2ff1/images/plainwhiteba=
+ckgroundimage.jpg);background-repeat:no-repeat;background-position:left top=
+;background-color:#ffffff"> <table width=3D"100%" cellpadding=3D"0" cellspa=
+cing=3D"0" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt=
+;border-collapse:collapse;border-spacing:0px"> <tbody><tr> <td align=3D"lef=
+t" style=3D"padding:0;Margin:0;width:800px"> <table cellpadding=3D"0" cells=
+pacing=3D"0" width=3D"100%" role=3D"presentation" style=3D"mso-table-lspace=
+:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> <tb=
+ody><tr> <td align=3D"center" class=3D"m" style=3D"padding:0;Margin:0"> <p =
+class=3D"c o" style=3D"Margin:0;mso-line-height-rule:exactly;font-family:-a=
+pple-system, BlinkMacSystemFont, Aptos, 'Segoe UI', Roboto, Helvetica, Aria=
+l, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';lin=
+e-height:21.6px;letter-spacing:0;color:#333333;font-size:18px"><strong styl=
+e=3D"font-weight:700 !important">Phantom Healthcare IND Private Ltd&nbsp;&n=
+bsp;=C2=A9 2026. All Rights Reserved.</strong></p> <p class=3D"c b" style=
+=3D"Margin:0;mso-line-height-rule:exactly;font-family:-apple-system, BlinkM=
+acSystemFont, Aptos, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'App=
+le Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';line-height:16.8px;let=
+ter-spacing:0;color:#333333;font-size:14px"><strong style=3D"font-weight:70=
+0 !important">Plot No. 51, Sector 27-C, Near NHPC Chowk<br> Faridabad, Hary=
+ana 121003<br></strong></p> <p class=3D"n c" style=3D"Margin:0;mso-line-hei=
+ght-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif=
+;line-height:21.6px;letter-spacing:0;color:#333333;font-size:18px"><strong =
+style=3D"font-weight:700 !important;font-family:-apple-system, BlinkMacSyst=
+emFont, Aptos, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Col=
+or Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"><a href=3D"tel:+91989996360=
+1" style=3D"mso-line-height-rule:exactly;text-decoration:none;color:#333333=
+;font-size:18px;line-height:21.6px;font-family:-apple-system, BlinkMacSyste=
+mFont, Aptos, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Colo=
+r Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'">+919899963601</a>&nbsp;<a hr=
+ef=3D"tel:+918384037073" style=3D"mso-line-height-rule:exactly;text-decorat=
+ion:none;color:#333333;font-size:18px;font-family:-apple-system, BlinkMacSy=
+stemFont, Aptos, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple C=
+olor Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';line-height:21.6px">+91838=
+4037073</a> <a href=3D"tel:+911294312423" style=3D"mso-line-height-rule:exa=
+ctly;text-decoration:none;color:#333333;font-size:18px;font-family:-apple-s=
+ystem, BlinkMacSystemFont, Aptos, 'Segoe UI', Roboto, Helvetica, Arial, san=
+s-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';line-heig=
+ht:21.6px">+911294312423</a></strong></p> <p class=3D"n c" style=3D"Margin:=
+0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helveti=
+ca, sans-serif;line-height:27px;letter-spacing:0;color:#333333;font-size:14=
+px"><strong style=3D"font-weight:700 !important;font-family:-apple-system, =
+BlinkMacSystemFont, Aptos, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif=
+, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';line-height:21.6=
+px;font-size:18px"><a href=3D"mailto:digital@phantomhealthcare.com?subject=
+=3DEnquiry%20for%20radiology%20equipment%20products%2Fservices%20-via%20WHX=
+%202026%20Dubai" target=3D"_blank" style=3D"mso-line-height-rule:exactly;te=
+xt-decoration:none;color:#333333;font-size:18px;font-family:-apple-system, =
+BlinkMacSystemFont, Aptos, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif=
+, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';line-height:21.6=
+px">digital@phantomhealthcare.com</a></strong></p></td> </tr> <tr> <td styl=
+e=3D"padding:0;Margin:0;padding-top:5px"> <table width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"0" class=3D"bf" role=3D"presentation" style=3D"mso-ta=
+ble-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing=
+:0px"> <tbody><tr> <td align=3D"center" valign=3D"top" width=3D"33.33%" bgc=
+olor=3D"transparent" style=3D"Margin:0;border:0;padding-bottom:5px;padding-=
+top:5px;padding-right:5px;padding-left:5px"> <div style=3D"vertical-align:m=
+iddle;display:block"> <a target=3D"_blank" href=3D"https://phantomhealthcar=
+e.com/" style=3D"mso-line-height-rule:exactly;text-decoration:none;font-fam=
+ily:arial, 'helvetica neue', helvetica, sans-serif;display:block;color:#666=
+666;font-size:14px;font-weight:false;font-style:false"><img title=3D"Visit =
+Us" alt=3D"" width=3D"15" src=3D"https://jjihzh.stripocdn.email/content/gui=
+ds/CABINET_5d3e92cf9b8470663727296b1ae3ff6ddbdfe8fd237cca0e7f2a3a8c0a8e2ff1=
+/images/_web_internet_network_www_communication_global_worldwide256.png" st=
+yle=3D"display:inline !important;font-size:14px;border:0;outline:none;text-=
+decoration:none;margin:0;vertical-align:middle;padding-bottom:5px"><br> Vis=
+it Us</a> </div></td> <td align=3D"center" valign=3D"top" width=3D"33.33%" =
+style=3D"Margin:0;border:0;padding-bottom:5px;padding-top:5px;padding-right=
+:5px;padding-left:5px;border-left:1px solid #010101"> <div style=3D"vertica=
+l-align:middle;display:block"> <a href=3D"https://phantomhealthcare.com/pri=
+vacy-policy.html" target=3D"_blank" style=3D"mso-line-height-rule:exactly;t=
+ext-decoration:none;font-family:arial, 'helvetica neue', helvetica, sans-se=
+rif;display:block;color:#666666;font-size:14px;font-weight:false;font-style=
+:false"><img alt=3D"" width=3D"15" src=3D"https://jjihzh.stripocdn.email/co=
+ntent/guids/CABINET_5d3e92cf9b8470663727296b1ae3ff6ddbdfe8fd237cca0e7f2a3a8=
+c0a8e2ff1/images/data_privacy256.png" title=3D"Privacy Policy" style=3D"dis=
+play:inline !important;font-size:14px;border:0;outline:none;text-decoration=
+:none;margin:0;vertical-align:middle;padding-bottom:5px"><br> Privacy Polic=
+y</a> </div></td> <td width=3D"33.33%" align=3D"center" valign=3D"top" styl=
+e=3D"Margin:0;border:0;padding-bottom:5px;padding-top:5px;padding-right:5px=
+;padding-left:5px;border-left:1px solid #010101"> <div style=3D"vertical-al=
+ign:middle;display:block"> <a target=3D"_blank" href=3D"https://phantomheal=
+thcare.com/terms-and-conditions.html" style=3D"mso-line-height-rule:exactly=
+;text-decoration:none;font-family:arial, 'helvetica neue', helvetica, sans-=
+serif;display:block;color:#666666;font-size:14px;font-weight:false;font-sty=
+le:false"><img width=3D"15" src=3D"https://jjihzh.stripocdn.email/content/g=
+uids/CABINET_5d3e92cf9b8470663727296b1ae3ff6ddbdfe8fd237cca0e7f2a3a8c0a8e2f=
+f1/images/conditionspolicytermsagreementcontract256.png" title=3D"Terms of =
+Use" alt=3D"" style=3D"display:inline !important;font-size:14px;border:0;ou=
+tline:none;text-decoration:none;margin:0;vertical-align:middle;padding-bott=
+om:5px"><br> Terms of Use</a> </div></td> </tr> </tbody></table></td> </tr>=
+ <tr> <td align=3D"center" style=3D"padding:0;Margin:0;font-size:0"> <table=
+ height=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"=
+100%" class=3D"by" role=3D"presentation" style=3D"mso-table-lspace:0pt;mso-=
+table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> <tbody><tr> =
+<td style=3D"padding:0;Margin:0;width:100%;margin:0px;border-bottom:4px sol=
+id #cccccc;background:none;height:0px"></td> </tr> </tbody></table></td> </=
+tr> </tbody></table></td> </tr> </tbody></table></td> </tr> </tbody></table=
+></td> </tr> </tbody></table> <table cellpadding=3D"0" cellspacing=3D"0" al=
+ign=3D"center" class=3D"bm" role=3D"none" style=3D"mso-table-lspace:0pt;mso=
+-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;width:100%;ta=
+ble-layout:fixed !important"> <tbody><tr> <td align=3D"center" background=
+=3D"https://jjihzh.stripocdn.email/content/guids/CABINET_7b6b27c42082d1c129=
+d066d24dabbd5fc652f8e2c424b00783826cf47ab2ce4d/images/abstractwavepngtransp=
+arent.png" style=3D"padding:0;Margin:0;background-image:url(https://jjihzh.=
+stripocdn.email/content/guids/CABINET_7b6b27c42082d1c129d066d24dabbd5fc652f=
+8e2c424b00783826cf47ab2ce4d/images/abstractwavepngtransparent.png);backgrou=
+nd-repeat:no-repeat;background-position:left top"> <table align=3D"center" =
+cellpadding=3D"0" cellspacing=3D"0" bgcolor=3D"#ffffff" class=3D"cf" style=
+=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;bord=
+er-spacing:0px;background-color:#ffffff;width:800px" role=3D"none"> <tbody>=
+<tr> <td align=3D"left" background=3D"https://jjihzh.stripocdn.email/conten=
+t/guids/CABINET_5d3e92cf9b8470663727296b1ae3ff6ddbdfe8fd237cca0e7f2a3a8c0a8=
+e2ff1/images/ffffff.png" bgcolor=3D"#ffffff" class=3D"ci" style=3D"padding:=
+0;Margin:0;padding-bottom:10px;padding-top:20px;background-image:url(https:=
+//jjihzh.stripocdn.email/content/guids/CABINET_5d3e92cf9b8470663727296b1ae3=
+ff6ddbdfe8fd237cca0e7f2a3a8c0a8e2ff1/images/ffffff.png);background-repeat:r=
+epeat;background-position:left top;background-color:#ffffff"> <table cellpa=
+dding=3D"0" cellspacing=3D"0" width=3D"100%" role=3D"none" style=3D"mso-tab=
+le-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:=
+0px"> <tbody><tr> <td align=3D"center" valign=3D"top" style=3D"padding:0;Ma=
+rgin:0;width:800px"> <table cellpadding=3D"0" cellspacing=3D"0" width=3D"10=
+0%" role=3D"presentation" style=3D"mso-table-lspace:0pt;mso-table-rspace:0p=
+t;border-collapse:collapse;border-spacing:0px"> <tbody><tr> <td align=3D"ce=
+nter" class=3D"cd k" style=3D"padding:0;Margin:0"> <p class=3D"l c" style=
+=3D"Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neu=
+e', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#b8afaf;f=
+ont-size:12px">You are receiving this email because you have visited our si=
+te or connected to our promotional network to receive the regular newslette=
+r and promotional content. Make sure our messages get to your Inbox (and no=
+t your bulk or junk folders).<br><a target=3D"_blank" href=3D"http://www.ph=
+antomhealthcare.com/privacy-policy/" style=3D"mso-line-height-rule:exactly;=
+text-decoration:none;color:#b8afaf;font-size:12px;word-break:break-all">Pri=
+vacy policy</a>&nbsp;|&nbsp;<a target=3D"_blank" href=3D"https://phantomhea=
+lthcare.com/privacy-policy.html" style=3D"mso-line-height-rule:exactly;text=
+-decoration:none;color:#b8afaf;font-size:12px">Unsubscribe</a></p></td> </t=
+r> </tbody></table></td> </tr> </tbody></table></td> </tr> </tbody></table>=
+</td> </tr> </tbody></table></td> </tr> </tbody></table> </div> </body></ht=
+ml>
+------=_Part_764077_349351447.1766924126158--

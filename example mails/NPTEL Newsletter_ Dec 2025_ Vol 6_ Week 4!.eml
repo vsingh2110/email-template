@@ -1,0 +1,1280 @@
+Delivered-To: vsingh2110@gmail.com
+Received: by 2002:a05:640c:7706:b0:256:8a2c:2551 with SMTP id l6csp1117780eiw;
+        Mon, 29 Dec 2025 05:25:13 -0800 (PST)
+X-Forwarded-Encrypted: i=4; AJvYcCUw62p7UNSte3n7+Ou9XW+dXeY6b/pHQ0chnnUYBH3B232F+FYwUt70cvZY4EtoaD35Xq3rGiqrNAEm@gmail.com
+X-Received: by 2002:a05:620a:4113:b0:8b2:ec1e:fe24 with SMTP id af79cd13be357-8c08faa49fcmr4557144985a.42.1767014713190;
+        Mon, 29 Dec 2025 05:25:13 -0800 (PST)
+ARC-Seal: i=3; a=rsa-sha256; t=1767014713; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=MiEawvlACtrQhEzVoqcG2CLxtOfWX02z7sKfY3W/G8BC2w+wY+ZTd6Bwxv8ZydiVf6
+         rD1+sUyh6xIy4BQwFh+JOWdYtxgyYqLE4YRT0iSCP4+9lP6eOOg8Lbiqu4tAj+IockRM
+         2D1zQT0gu8e+WMM2bbL1YVkzFLxhTrdD3DERfk1LlVUynhMAiSgiSilQS2u+b4qsNVbc
+         ldx3Qabo71zogqEgN4LY4y6KFhG5kRD7ECUBuSs6lnDA5UFiiRu091VeYjzc11RPU/gH
+         0S+F6AzzkcpOoH3Qhp965k8/opM4Nx5f157bCSzlBKagQcE4+yxEz+Dp0GgcXVb47xCE
+         kMPw==
+ARC-Message-Signature: i=3; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=list-unsubscribe:list-archive:list-help:list-post:list-id
+         :mailing-list:precedence:to:subject:message-id:date:from
+         :mime-version:dkim-signature;
+        bh=reXclqCANj7TuPofO0ZnuRsEIQC7H/B3vFE7n9RzIpg=;
+        fh=yA57s1lm6CgmsZt/pAMEt24n7AC543pjUxfgXBur09M=;
+        b=TezNRCLSy3hIUcLxZ6/6SSBPPXrRl5IBDoXxAqGZjuDvg6PDLbCLti6m1wt9JuyL9l
+         nx/12p0nP8EYkG0h7cKsx9Hoa11x/Zjw0ECFGHxrR6e3KXJ0HQDnakf09lpNIpo9KhhW
+         RV8n5wkGwsviVta/Uht54yeS3eUUPOxcteTPltdipXCA7t2XkA6Dr6H6QKiu0zkcwiF9
+         94nIerYoVIJmEqILcS3ueyHkUpVNO6QQ100DKFYFXZjLoRCL/rNVugnII2rwqAkRYp0G
+         gKjjkhloAJX3UM1OZr2uua4pfgPmvpRlt5mUcxYTDqPJBl+KM6RVTXtT6n0odYv9mYkL
+         rqhw==;
+        dara=google.com
+ARC-Authentication-Results: i=3; mx.google.com;
+       dkim=pass header.i=@nptel-iitm-ac-in.20230601.gappssmtp.com header.s=20230601 header.b=jEuaaiel;
+       arc=pass (i=2 spf=pass spfdomain=nptel.iitm.ac.in dkim=pass dkdomain=nptel-iitm-ac-in.20230601.gappssmtp.com dmarc=pass fromdomain=nptel.iitm.ac.in);
+       spf=pass (google.com: domain of newsletter-announce+bncbcz5rxnbuuobbrxrzhfamgqeatrswcy@nptel.iitm.ac.in designates 209.85.220.69 as permitted sender) smtp.mailfrom=newsletter-announce+bncBCZ5RXNBUUOBBRXRZHFAMGQEATRSWCY@nptel.iitm.ac.in;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=nptel.iitm.ac.in;
+       dara=pass header.i=@gmail.com
+Return-Path: <newsletter-announce+bncBCZ5RXNBUUOBBRXRZHFAMGQEATRSWCY@nptel.iitm.ac.in>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id af79cd13be357-8beeb6f1ab5sor1454739085a.7.2025.12.29.05.25.13
+        for <vsingh2110@gmail.com>
+        (Google Transport Security);
+        Mon, 29 Dec 2025 05:25:13 -0800 (PST)
+Received-SPF: pass (google.com: domain of newsletter-announce+bncbcz5rxnbuuobbrxrzhfamgqeatrswcy@nptel.iitm.ac.in designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@nptel-iitm-ac-in.20230601.gappssmtp.com header.s=20230601 header.b=jEuaaiel;
+       arc=pass (i=2 spf=pass spfdomain=nptel.iitm.ac.in dkim=pass dkdomain=nptel-iitm-ac-in.20230601.gappssmtp.com dmarc=pass fromdomain=nptel.iitm.ac.in);
+       spf=pass (google.com: domain of newsletter-announce+bncbcz5rxnbuuobbrxrzhfamgqeatrswcy@nptel.iitm.ac.in designates 209.85.220.69 as permitted sender) smtp.mailfrom=newsletter-announce+bncBCZ5RXNBUUOBBRXRZHFAMGQEATRSWCY@nptel.iitm.ac.in;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=nptel.iitm.ac.in;
+       dara=pass header.i=@gmail.com
+ARC-Seal: i=2; a=rsa-sha256; t=1767014713; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=U+9x6xgoG/9quYgVzJ1KFjtA1r0d/+nFU/W0P9cjy7UBvuDDp8edcKI1X16KIaWqO1
+         XNdbotDgo1SYZLTi8dJgVP7D6xyywG0hzl5h/jpeAr1Q6rb8duVkGqbl4SbV6k3ngkjj
+         jsF1MUS6Ca/Km1lvmrDFNMRtrDGaEQLvScvYccirXi6yG33MSY3xwGNnn4AARx5IJHdh
+         OpLjz+B6Bfjnfkrps9xv0g5Kq1huNJO4620YTBpuBrsiMXYFPg9Gz2CXp3z0wNrDLsDK
+         Mnk3zUzRpJggnuXRJbAtbCV0rn/2+1bx7JrzOoEHFKKFjXKADAx2xE2d4UheNVSdtbql
+         dp0A==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=list-unsubscribe:list-archive:list-help:list-post:list-id
+         :mailing-list:precedence:to:subject:message-id:date:from
+         :mime-version:dkim-signature;
+        bh=reXclqCANj7TuPofO0ZnuRsEIQC7H/B3vFE7n9RzIpg=;
+        fh=yA57s1lm6CgmsZt/pAMEt24n7AC543pjUxfgXBur09M=;
+        b=Ug3LTkoI7tuSbMto3UpaTgCn3J+0ZQ5CC2EcsIazfVJiKM5+F/dN5xIt7mOdXmDXno
+         2uZ5FCg8WudW72cROgiJVWzHaLMG513Sahg26EcAVwMDMxptqW8GSECLB9axNuEnitRe
+         xSiTjPDIAFpAMyprqfbsMfjFWOAPahh/s22n5Wr8T16yb7iElkGAW/zNH80VTyTAlUC+
+         vNCCEo6ZA4hDeMbPsOfuEvYr54iULr0DUq4ruGV4QSbuCNuDyDkEWnZvtuzx+sSPkoAK
+         IKXnolRVcab/t1MSwFE/jRHpk4hIEvK8gz80clZyjQ6wenZoFGQobXhApTNckKewSLdR
+         uCdg==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@nptel-iitm-ac-in.20230601.gappssmtp.com header.s=20230601 header.b=L6MyJPly;
+       spf=pass (google.com: domain of onlinecourses@nptel.iitm.ac.in designates 209.85.220.41 as permitted sender) smtp.mailfrom=onlinecourses@nptel.iitm.ac.in;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=nptel.iitm.ac.in;
+       dara=neutral header.i=@nptel.iitm.ac.in
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=nptel-iitm-ac-in.20230601.gappssmtp.com; s=20230601; t=1767014712; x=1767619512; dara=google.com;
+        h=list-unsubscribe:list-archive:list-help:list-post:list-id
+         :mailing-list:precedence:x-original-authentication-results
+         :x-original-sender:to:subject:message-id:date:from:mime-version:from
+         :to:cc:subject:date:message-id:reply-to;
+        bh=reXclqCANj7TuPofO0ZnuRsEIQC7H/B3vFE7n9RzIpg=;
+        b=jEuaaiel01AjNCnP8t90iPgC0qsw8eYMph/Y/Lopv4QM35gwHy7W7Fpdc6py27OBf9
+         cOFgXg9591k3YBcApnAzKbHV/oqWP3KCSZOHSRJ+LA52wiUzTaOSAOAcYOpIGjZtvFfY
+         VlbBIsmsk0Lp0kevp5aJfB64aRCS+BZQY8Nm2kAnYi0kdoh/4eJMBdEXKGX2aG9xad91
+         bXPAWmYFzWhv55mYluI3MJlynqpxCHV20+gEs+bvxXAMku4ZtCm+eFRFQZ+OpkhdP9ux
+         CrU4U+QTsVaLMEPZU2tY4iB8xe+WNLqMlRwKj6DnIKTG8gRA0UdUS57qdn1h7Bj85JQc
+         EfrA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1767014713; x=1767619513;
+        h=list-unsubscribe:list-archive:list-help:list-post
+         :x-spam-checked-in-group:list-id:mailing-list:precedence
+         :x-original-authentication-results:x-original-sender:to:subject
+         :message-id:date:from:mime-version:x-gm-gg:x-beenthere
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=reXclqCANj7TuPofO0ZnuRsEIQC7H/B3vFE7n9RzIpg=;
+        b=iYT2XO+hYpaZOHWYS5S6c9/hteYWohLZvwaa8cZO1ZM/iBqgwyuqFdRnXB3sb3YEjh
+         vZnQApEAY1t0MCVVk0St5W3HnhisbGWJYJOJfDAFJlGMnKASDwQ9FRjv4fzD4k9VVPp3
+         orn0QBRzuw6+V+YY8aaw0fWXeTPEnzL4LHZsnkLe5v19kuWRZBpJbnlWr2mhPxKGRkp3
+         zwUCcEagqvGX+fhYbmOHIoIrAiCdDxuZW+hmOQYcAaxdbs+lYBcllAmVCuMUrWn35b1Q
+         2poGCGi40wUy641gf8Drd1wIDVRSqWwKwhL99PDynFHGH/+7Zerv68Rbkx+K6/a4ALZi
+         XZnQ==
+X-Forwarded-Encrypted: i=2; AJvYcCVzY5NqFkwpMtXYJ0ANlc2WjtET38FZVug9Y7lLap3lml+3PgTyFY9gXeUjLN791zJLveCgZGOWdDGs@gmail.com
+X-Gm-Message-State: AOJu0Yyv0rh6KADhxFBvXP8pDRPpi8wcps12pZwmaIy8bCr0WlZ1IvmT
+	sPm69HVMHtKkNE4QSIy7rfahCSrLKPL3+adMxSYvLT5jNop7+FiVZBO5r6bK7M861Dk=
+X-Google-Smtp-Source: AGHT+IEC1ZFz+p0bK5MCD4si7KFY0kRmHfYiRR1QrVbjVD7F9Wp1XYzbgemH1GqiPgHU9dZVsKWKgw==
+X-Received: by 2002:a05:620a:2950:b0:8b2:f269:f8a1 with SMTP id af79cd13be357-8c08fabf8f5mr5301995685a.71.1767014711753;
+        Mon, 29 Dec 2025 05:25:11 -0800 (PST)
+X-BeenThere: newsletter-announce@nptel.iitm.ac.in; h="AWVwgWYREKN2IrAaV1TEi3cuXY9LGOt+lrZ5//TXBlY/fgdAVg=="
+Received: by 2002:ad4:584b:0:b0:88f:cb33:4219 with SMTP id 6a1803df08f44-88fcb3343adls53084206d6.2.-pod-prod-01-us;
+ Mon, 29 Dec 2025 04:49:08 -0800 (PST)
+X-Received: by 2002:a05:6102:3e0a:b0:5db:cf38:f4f3 with SMTP id ada2fe7eead31-5eb1a7d003dmr8975936137.28.1767012547759;
+        Mon, 29 Dec 2025 04:49:07 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1767012547; cv=none;
+        d=google.com; s=arc-20240605;
+        b=OXRvlyclqyLcP9+IdtqJctdUxNwPaRb6YPzQAr/x4sORfnbqFBint0HrvHmX4bV3Gk
+         cySHo/3aIhAPSSV/C0woCMWH2Ebr2gnWdS2ldVX13+nU6uBa+BxukkkhjQl44nvJlesF
+         TnqIeD77klVvDEgnzIL+LsJGdDsaG5lzChsr05CvokelnSBa4tdpqKqu+tFv74ByxR9b
+         cleBFuNjJjNlqYiNRJ8M1Z+/MlzpuscWxOMgNegDcxxWcZO3DIO1GbZw+lqzkQWr18ZA
+         2hPzGvwfGYlZQoz6R3oHp3S6nRW2SEFYltilakbgQRgGrfSh4ITl3LTzSC+pwPOqc7uw
+         ZAvA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=Dq9ijjm7YBfLt0TAbusqbm2OcPT+sgSxnhHkgPzQlsg=;
+        fh=AOGeH7lFm2zf0K4xCbfWhVHs5/wGjaI4aTeqnl/IpcU=;
+        b=Pye3w92sJoXVmZ3p/V326hVcYKbpL3/tPLSX8hMQ1yIJiZSnZ25bbx1nM/CCyH9DLU
+         WkdYUS5dEV/bumoxzFhMq7D9SMKfyDfQypUH+4IFI9nEOxlW4T0QXgszVfnVp+DaUq6x
+         ZCwfuOJBFyRD58drKREwySWM2uLL5Jiza4jncC888exv8wgILs5iHlBQsOwVR/Wipw3I
+         YwdFrJa6ajdaM7pqcR6jIUW+BgZNVqASILkPwiCrMwyly3COyf4gLtdzsR1HeX75Kpz/
+         fgCMSN0Q9trbGYwcRBuAQyTvv1yZdrAmJ4x0skXSNj8OEUoOzqN2AKELaKjhTO/+wvT2
+         Yb8w==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@nptel-iitm-ac-in.20230601.gappssmtp.com header.s=20230601 header.b=L6MyJPly;
+       spf=pass (google.com: domain of onlinecourses@nptel.iitm.ac.in designates 209.85.220.41 as permitted sender) smtp.mailfrom=onlinecourses@nptel.iitm.ac.in;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=nptel.iitm.ac.in;
+       dara=neutral header.i=@nptel.iitm.ac.in
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a1e0cc1a2514c-94331247f3dsor1183950241.6.2025.12.29.04.49.07
+        for <newsletter-announce@nptel.iitm.ac.in>
+        (Google Transport Security);
+        Mon, 29 Dec 2025 04:49:07 -0800 (PST)
+Received-SPF: pass (google.com: domain of onlinecourses@nptel.iitm.ac.in designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+X-Gm-Gg: AY/fxX7skO/IO8Hnikkuul5+YfLLcyuKlHon9Nt9pvy4zuux6d1UFl32fLQrLwckzJX
+	ig36kqJ7Ujjci3X6NkuRdpe9nMXHYV1obM8KueeGH9whul2nzn1Oq5MrkcsYxMTzLqq2U24W+oZ
+	zIct0DHpwsMteAq3gcnntXFIGEFSTYGEQiAa+RxCVeH8qpZLQCgrPPxV/TBJgziYhnjc0K1YzZq
+	zWv+g8I7o7GQ0aoBX9J1AEWPMqdRwVpHccVSlVSIKmzLgD84g3s6XdKEcwQdl1ZU5VMNHMW40xT
+	WrYvKx0=
+X-Received: by 2002:a05:6102:2d07:b0:5ea:67f4:c1ad with SMTP id
+ ada2fe7eead31-5eb1a7d19c4mr8998491137.21.1767012547030; Mon, 29 Dec 2025
+ 04:49:07 -0800 (PST)
+MIME-Version: 1.0
+From: NPTEL <onlinecourses@nptel.iitm.ac.in>
+Date: Mon, 29 Dec 2025 18:18:54 +0530
+X-Gm-Features: AQt7F2oFHw328A0EuOR2_O7MCigc1pcKUOteWD2-ILKs1THaExQ1k8SRM6oxMXs
+Message-ID: <CAFi4wK-8=U=1WdCRXjiETKRZR25kdtH3=eKGzJdCBpgu8g-H9A@mail.gmail.com>
+Subject: NPTEL Newsletter: Dec 2025: Vol 6: Week 4!
+To: newsletter-announce@nptel.iitm.ac.in
+Content-Type: multipart/alternative; boundary="0000000000002e07ec064716ab98"
+X-Original-Sender: onlinecourses@nptel.iitm.ac.in
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@nptel-iitm-ac-in.20230601.gappssmtp.com header.s=20230601
+ header.b=L6MyJPly;       spf=pass (google.com: domain of onlinecourses@nptel.iitm.ac.in
+ designates 209.85.220.41 as permitted sender) smtp.mailfrom=onlinecourses@nptel.iitm.ac.in;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=nptel.iitm.ac.in;
+       dara=neutral header.i=@nptel.iitm.ac.in
+Precedence: list
+Mailing-list: list newsletter-announce@nptel.iitm.ac.in; contact newsletter-announce+owners@nptel.iitm.ac.in
+List-ID: <newsletter-announce.nptel.iitm.ac.in>
+X-Spam-Checked-In-Group: newsletter-announce@nptel.iitm.ac.in
+X-Google-Group-Id: 821389845798
+List-Post: <https://groups.google.com/a/nptel.iitm.ac.in/group/newsletter-announce/post>,
+ <mailto:newsletter-announce@nptel.iitm.ac.in>
+List-Help: <https://support.google.com/a/nptel.iitm.ac.in/bin/topic.py?topic=25838>,
+ <mailto:newsletter-announce+help@nptel.iitm.ac.in>
+List-Archive: <https://groups.google.com/a/nptel.iitm.ac.in/group/newsletter-announce/>
+List-Unsubscribe: <mailto:googlegroups-manage+821389845798+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/a/nptel.iitm.ac.in/group/newsletter-announce/subscribe>
+
+--0000000000002e07ec064716ab98
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+ NPTEL NEW
+
+<https://nptel.ac.in/>
+=C2=AD
+
+*Strengthen Physics Fundamentals with NPTEL*
+
+NPTEL Physics courses cover core concepts and advanced topics. Learn from
+IIT faculty, strengthen your fundamentals, and earn certifications to
+support your academic and research goals.
+
+*Explore & Enroll Today* <https://onlinecourses.nptel.ac.in/>
+
+* NPTEL Stars - Pre Doc Fellowship*
+
+An NPTEL Star is a dedicated learner recognized for consistent course
+enrollment, exam participation, and strong performance across semesters.
+Learners can become NPTEL Stars by appearing in multiple exams, clearing
+required pass percentages, and maintaining academic discipline. *Know More*
+<https://nptel.ac.in/predocfellowship>
+
+*CODE Programs*
+
+*Battery Cell Technology (Cohort-4)*
+
+Master the future of energy storage through IITM=E2=80=99s Battery Cell Tec=
+hnology,
+a cutting-edge certified executive program.This program equips you with
+essential knowledge in battery design, characterization, and performance
+enhancement=E2=80=94preparing you to thrive in the booming energy storage a=
+nd
+electric vehicle sectors.
+
+Secure your seat today with an extended early bird discount!
+
+*Learn more and enroll*: *BCT Registration/webpage Link
+<https://code.iitm.ac.in/battery-cell-technology>*
+=C2=AD
+
+Certificate Program on eMobility(cPoeM) - Enroll Today!
+
+Step into the world of eMobility with an in-demand certification program
+curated by IIT Madras to provide a comprehensive overview of eMobility and
+Electric Vehicles. Don=E2=80=99t miss your chance to be a part of the next
+generation of e-mobility pioneers.
+
+*Explore and enroll : eMobility Webpage / Registration Link
+<https://code.iitm.ac.in/certificate-programme-on-emobility-cpoem> *
+=C2=AD
+
+*NPTEL+ WORKSHOPS:*
+
+*1. Introduction to Practical Entrepreneurship =E2=80=93 Batch 2*
+
+*Register Now*
+<https://elearn.nptel.ac.in/shop/iit-workshops/ongoing/management-computer-=
+science/introduction-to-practical-entrepreneurship-batch-2/?v=3D13b5bfe96f3=
+e>*
+- *
+
+*Rs. 1,200*
+
+*Last day to Register: Dec 31, 2025*
+
+*2. Nudge Marketing and the Psychological Foundations of Human Behavior*
+
+*Register Now*
+<https://elearn.nptel.ac.in/shop/masterclasss-workshops/masterclass-series-=
+ongoing/nudging-and-the-psychological-foundations-of-human-behavior/?v=3D13=
+b5bfe96f3e>*
+- *
+
+*Rs. 1,999 onwards*
+
+*Last day to Register: *
+
+*Jan 1, 2025*
+
+*3. Leadership and Talent Management*
+
+*Register Now*
+<https://elearn.nptel.ac.in/shop/iit-workshops/ongoing/management-computer-=
+science/leadership-and-talent-management/?v=3D13b5bfe96f3e>*
+- *
+
+*Rs. 1,000*
+
+*Last day to Register: *
+
+*Jan 07, 2025*
+
+*4. Climate Resilient Plants for Future (CRPF) Batch-3*
+
+*Register Now*
+<https://elearn.nptel.ac.in/shop/iit-workshops/ongoing/life-science-compute=
+r-science/climate-resilient-plants-for-future-crpf-batch-3/?v=3D13b5bfe96f3=
+e>*
+- *
+
+*Rs. 200 onwards*
+
+*Last day to Register: *
+
+*Jan 07, 2025*
+
+*5. The Math Behind AI for Filmmaking & Content Creation =E2=80=93 Batch 2*
+
+*Register Now*
+<https://elearn.nptel.ac.in/shop/iit-workshops/ongoing/computer-science/the=
+-math-behind-ai-for-filmmaking-content-creation-batch-2/?v=3D13b5bfe96f3e>*
+- *
+
+*Rs. 500*
+
+*Last day to Register: *
+
+*Jan 07, 2025*
+
+*6. Applied Vibe Coding*
+
+*Register Now*
+<https://elearn.nptel.ac.in/shop/iit-workshops/ongoing/computer-science/app=
+lied-vibe-coding-workshop/?v=3D13b5bfe96f3e>*
+- *
+
+*Rs. 200*
+
+*Last day to Register: *
+
+*Jan 07, 2025*
+
+*7. Essentials of Campus Network Design*
+
+*Register Now*
+<https://elearn.nptel.ac.in/shop/iit-workshops/ongoing/computer-science/ess=
+entials-of-campus-network-design/?v=3D13b5bfe96f3e>*
+- *
+
+*Rs. 2,500*
+
+*Last day to Register: *
+
+*Jan 14, 2025*
+
+*8. AI Cinematic Visuals =E2=80=93 From Prompt to Production =E2=80=93 Batc=
+h 2*
+
+*Register Now*
+<https://elearn.nptel.ac.in/shop/iit-workshops/ongoing/computer-science/ai-=
+cinematic-visuals-from-prompt-to-production-batch-2/?v=3D13b5bfe96f3e>*
+- *
+
+*Rs. 500*
+
+*Last day to Register: *
+
+*Jan 21, 2025*
+=C2=AD
+
+Follow Us:
+<https://www.facebook.com/NPTELNoc/> =C2=AD
+<https://twitter.com/nptel_official?ref_src=3Dtwsrc%5Egoogle%7Ctwcamp%5Eser=
+p%7Ctwgr%5Eauthor>
+=C2=AD
+
+<https://www.youtube.com/user/nptelhrd> =C2=AD
+<https://www.instagram.com/nptel_india/> =C2=AD
+
+*NPTEL Administrator,*
+IC & SR, 3rd floor
+IIT Madras, Chennai - 600036
+
+Thanks and Regards,
+NPTEL TEAM.
+
+--=20
+To unsubscribe from this group and stop receiving emails from it:
+Log in to Google Groups and click on My Groups seen in the left navigation =
+pane. You will see the list of your groups. Choose the group "NPTEL Newslet=
+ter"
+Click the Leave Group icon on the right side to leave the group or you can =
+choose the "No email" option under Subscription to stop receiving these ema=
+ils.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to newsletter-announce+unsubscribe@nptel.iitm.ac.in.
+
+--0000000000002e07ec064716ab98
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><m=
+eta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><meta name=3D"form=
+at-detection" content=3D"telephone=3Dno"><meta name=3D"viewport" content=3D=
+"width=3Ddevice-width, initial-scale=3D1.0"><title>NPTEL NEW</title><style =
+type=3D"text/css">#outlook a { padding:0; } .ExternalClass { width:100%; } =
+.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font,=
+ .ExternalClass td, .ExternalClass div { line-height: 100%; } table td { bo=
+rder-collapse: collapse; mso-line-height-rule: exactly; } .editable.image {=
+ font-size: 0 !important; line-height: 0 !important; } .nl2go_preheader { d=
+isplay: none !important; mso-hide:all !important; mso-line-height-rule: exa=
+ctly; visibility: hidden !important; line-height: 0px !important; font-size=
+: 0px !important; } body { width:100% !important; -webkit-text-size-adjust:=
+100%; -ms-text-size-adjust:100%; margin:0; padding:0; } img { outline:none;=
+ text-decoration:none; -ms-interpolation-mode: bicubic; } a img { border:no=
+ne; } table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rsp=
+ace:0pt; } th { font-weight: normal; text-align: left; } *[class=3D"gmail-f=
+ix"] { display: none !important; } </style><style type=3D"text/css"> @media=
+ (max-width: 600px) { .gmx-killpill { content: ' \03D1';} } </style><style =
+type=3D"text/css">@media (max-width: 600px) { .gmx-killpill { content: ' \0=
+3D1';} .r0-o { border-style: solid !important; margin: 0 auto 0 auto !impor=
+tant; width: 320px !important } .r1-i { background-color: #eeeeee !importan=
+t } .r2-c { box-sizing: border-box !important; text-align: center !importan=
+t; valign: top !important; width: 100% !important } .r3-o { border-style: s=
+olid !important; margin: 0 auto 0 auto !important; width: 100% !important }=
+ .r4-i { background-color: #ffffff !important; padding-top: 28px !important=
+ } .r5-c { box-sizing: border-box !important; display: block !important; va=
+lign: top !important; width: 100% !important } .r6-o { border-style: solid =
+!important; width: 100% !important } .r7-i { text-align: center !important =
+} .r8-i { padding-bottom: 15px !important; padding-top: 15px !important } .=
+r9-i { background-color: #ffffff !important; padding-bottom: 20px !importan=
+t; padding-left: 15px !important; padding-right: 15px !important; padding-t=
+op: 20px !important } .r10-i { padding-left: 0px !important; padding-right:=
+ 0px !important } .r11-c { background-color: transparent !important; box-si=
+zing: border-box !important; text-align: center !important; width: 100% !im=
+portant } .r12-i { background-color: #f4f3ef !important; padding-bottom: 0p=
+x !important; padding-left: 10px !important; padding-right: 10px !important=
+; padding-top: 0px !important } .r13-c { box-sizing: border-box !important;=
+ padding-top: 20px !important; text-align: center !important; valign: top !=
+important; width: 100% !important } .r14-c { box-sizing: border-box !import=
+ant; padding-top: 10px !important; text-align: center !important; valign: t=
+op !important; width: 100% !important } .r15-c { box-sizing: border-box !im=
+portant; padding-bottom: 15px !important; padding-top: 15px !important; tex=
+t-align: left !important; valign: top !important; width: 100% !important } =
+.r16-c { box-sizing: border-box !important; padding-bottom: 15px !important=
+; padding-top: 15px !important; text-align: center !important; valign: top =
+!important; width: 100% !important } .r17-c { box-sizing: border-box !impor=
+tant; padding-top: 15px !important; text-align: left !important; valign: to=
+p !important; width: 100% !important } .r18-i { background-color: #ffffff !=
+important; padding-bottom: 20px !important; padding-left: 0px !important; p=
+adding-right: 0px !important; padding-top: 0px !important } .r19-c { box-si=
+zing: border-box !important; valign: top !important; width: 100% !important=
+ } .r20-i { padding-bottom: 0px !important; padding-left: 7px !important; p=
+adding-right: 7px !important } .r21-o { border-style: solid !important; mar=
+gin: 0 auto 0 auto !important; margin-top: 15px !important; width: 100% !im=
+portant } .r22-i { padding-bottom: 0px !important; padding-left: 0px !impor=
+tant; padding-right: 0px !important; padding-top: 0px !important } .r23-i {=
+ background-color: #f4f3ef !important; padding-left: 0px !important; paddin=
+g-right: 0px !important } .r24-c { box-sizing: border-box !important; paddi=
+ng-bottom: 30px !important; padding-top: 30px !important; text-align: cente=
+r !important; width: 100% !important } .r25-i { background-color: #eeeeee !=
+important; padding-bottom: 0px !important; padding-left: 15px !important; p=
+adding-right: 15px !important; padding-top: 0px !important } .r26-i { backg=
+round-color: #ffffff !important; padding-top: 45px !important } .r27-o { bo=
+rder-style: solid !important; margin: 0 auto 0 0 !important; width: 100% !i=
+mportant } .r28-i { padding-bottom: 10px !important; text-align: center !im=
+portant } .r29-i { background-color: #d48829 !important; padding-bottom: 12=
+px !important; padding-top: 12px !important } .r30-c { box-sizing: border-b=
+ox !important; text-align: center !important; width: 100% !important } .r31=
+-c { box-sizing: border-box !important; width: 100% !important } .r32-i { f=
+ont-size: 0px !important; padding-left: 76px !important; padding-right: 76p=
+x !important } .r33-c { box-sizing: border-box !important; width: 32px !imp=
+ortant } .r34-o { border-style: solid !important; margin-right: 10px !impor=
+tant; width: 32px !important } .r35-i { padding-bottom: 5px !important; pad=
+ding-top: 5px !important } .r36-i { background-color: #ffffff !important; p=
+adding-left: 10px !important; padding-right: 10px !important; padding-top: =
+25px !important } body { -webkit-text-size-adjust: none } .nl2go-responsive=
+-hide { display: none } .nl2go-body-table { min-width: unset !important } .=
+mobshow { height: auto !important; overflow: visible !important; max-height=
+: unset !important; visibility: visible !important } .resp-table { display:=
+ inline-table !important } .magic-resp { display: table-cell !important } }=
+ </style><style type=3D"text/css">@import url("https://fonts.googleapis.com=
+/css?family=3DAlegreya+Sans:400,500,700&amp;display=3Dswap"); </style><styl=
+e type=3D"text/css">p, h1, h2, h3, h4, ol, ul, li { margin: 0; } .nl2go-def=
+ault-textstyle { color: #363636; font-family: Alegreya Sans, Arial, Helveti=
+ca, sans-serif; font-size: 18px; line-height: 1.4; word-break: break-word }=
+ .default-button { color: #000000; font-family: Alegreya Sans, Arial, Helve=
+tica, sans-serif; font-size: 18px; font-style: normal; font-weight: normal;=
+ line-height: 1.15; text-decoration: none; word-break: break-word } a, a:li=
+nk { color: #fcfcfc; text-decoration: none } .default-heading1 { color: #36=
+3636; font-family: Alegreya Sans, Arial, Helvetica, sans-serif; font-size: =
+20px; font-weight: 500; word-break: break-word } .default-heading2 { color:=
+ #1F2D3D; font-family: Alegreya Sans, Arial, Helvetica, sans-serif; font-si=
+ze: 32px; word-break: break-word } .default-heading3 { color: #1F2D3D; font=
+-family: Alegreya Sans, Arial, Helvetica, sans-serif; font-size: 24px; word=
+-break: break-word } .default-heading4 { color: #1F2D3D; font-family: Alegr=
+eya Sans, Arial, Helvetica, sans-serif; font-size: 18px; word-break: break-=
+word } .nl2go_class_14_grey { color: #5e5e5e; font-family: Alegreya Sans, A=
+rial, Helvetica, sans-serif; font-size: 14px; word-break: break-word } .nl2=
+go_class_16_black { color: #363636; font-family: Alegreya Sans, Arial, Helv=
+etica, sans-serif; font-size: 16px; word-break: break-word } .nl2go_class_1=
+6_black_b { color: #363636; font-family: Alegreya Sans, Arial, Helvetica, s=
+ans-serif; font-size: 16px; font-weight: 700; word-break: break-word } .nl2=
+go_class_16_yellow { color: #ffc400; font-family: Alegreya Sans, Arial, Hel=
+vetica, sans-serif; font-size: 16px; word-break: break-word } .nl2go_class_=
+18_black { color: #363636; font-family: Alegreya Sans, Arial, Helvetica, sa=
+ns-serif; font-size: 18px; word-break: break-word } .nl2go_class_18_white_m=
+ { color: #ffffff; font-family: Alegreya Sans, Arial, Helvetica, sans-serif=
+; font-size: 18px; font-weight: 500; word-break: break-word } .nl2go_class_=
+18_yellow_m { color: #ffc400; font-family: Alegreya Sans, Arial, Helvetica,=
+ sans-serif; font-size: 18px; font-weight: 500; word-break: break-word } .n=
+l2go_class_20_black_m { color: #363636; font-family: Alegreya Sans, Arial, =
+Helvetica, sans-serif; font-size: 20px; font-weight: 500; word-break: break=
+-word } .nl2go_class_20_white { color: #ffffff; font-family: Alegreya Sans,=
+ Arial, Helvetica, sans-serif; font-size: 20px; word-break: break-word } a[=
+x-apple-data-detectors] { color: inherit !important; text-decoration: inher=
+it !important; font-size: inherit !important; font-family: inherit !importa=
+nt; font-weight: inherit !important; line-height: inherit !important; } .no=
+-show-for-you { border: none; display: none; float: none; font-size: 0; hei=
+ght: 0; line-height: 0; max-height: 0; mso-hide: all; overflow: hidden; tab=
+le-layout: fixed; visibility: hidden; width: 0; } </style><style type=3D"te=
+xt/css">a:link{color: #fcfcfc; text-decoration: none;}</style> <table cells=
+pacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" class=3D"=
+nl2go-body-table" width=3D"100%" style=3D"background-color:#eeeeee;width:10=
+0%"><tbody><tr><td> <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0"=
+ role=3D"presentation" width=3D"600" align=3D"center" class=3D"r0-o" style=
+=3D"table-layout:fixed;width:600px"><tbody><tr><td valign=3D"top" class=3D"=
+r1-i" style=3D"background-color:#eeeeee"> <table cellspacing=3D"0" cellpadd=
+ing=3D"0" border=3D"0" role=3D"presentation" width=3D"100%" align=3D"center=
+" class=3D"r3-o" style=3D"table-layout:fixed;width:100%"><tbody><tr><td cla=
+ss=3D"r4-i" style=3D"background-color:#ffffff;padding-top:28px"> <table wid=
+th=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presen=
+tation"><tbody><tr><th width=3D"100%" valign=3D"top" class=3D"r5-c" style=
+=3D"font-weight:normal"> <table cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" role=3D"presentation" width=3D"100%" align=3D"center" class=3D"r3-o"=
+ style=3D"table-layout:fixed;width:100%"><tbody><tr><td height=3D"1" align=
+=3D"center" class=3D"r7-i nl2go-default-textstyle" style=3D"color:#363636;f=
+ont-family:Alegreya Sans,Arial,Helvetica,sans-serif;font-size:18px;word-bre=
+ak:break-word;line-height:1px;text-align:center"> <div><p style=3D"margin:0=
+"> </p></div> </td> </tr></tbody></table></th> </tr></tbody></table></td> <=
+/tr></tbody></table><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0"=
+ role=3D"presentation" width=3D"100%" align=3D"center" class=3D"r3-o" style=
+=3D"background-color:#d48829;table-layout:fixed;width:100%"><tbody><tr><th =
+width=3D"100%" valign=3D"top" class=3D"r5-c" style=3D"font-weight:normal"> =
+<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentatio=
+n" width=3D"582" align=3D"center" class=3D"r3-o" style=3D"table-layout:fixe=
+d;width:582px"><tbody><tr><td class=3D"r8-i" style=3D"font-size:0px;line-he=
+ight:0px;padding-bottom:15px;padding-top:15px"> <a href=3D"https://nptel.ac=
+.in/" target=3D"_blank" style=3D"color:#fcfcfc;text-decoration:none"> <img =
+src=3D"https://img.mailinblue.com/6653416/images/content_library/original/6=
+95249de52d32736841c4967.jpg" width=3D"582" border=3D"0" style=3D"display: b=
+lock; width: 100%;"></a> </td> </tr></tbody></table></th> </tr></tbody></ta=
+ble><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"present=
+ation" width=3D"100%" align=3D"center" class=3D"r3-o" style=3D"table-layout=
+:fixed;width:100%"><tbody><tr><td class=3D"r9-i" style=3D"background-color:=
+#ffffff;padding-bottom:20px;padding-top:20px"> <table width=3D"100%" cellsp=
+acing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"><tbody><tr=
+><th width=3D"100%" valign=3D"top" class=3D"r5-c" style=3D"font-weight:norm=
+al"> <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presen=
+tation" width=3D"100%" class=3D"r6-o" style=3D"table-layout:fixed;width:100=
+%"><tbody><tr><td valign=3D"top" class=3D"r10-i" style=3D"padding-left:15px=
+;padding-right:15px"> <table width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" role=3D"presentation"><tbody><tr><td height=3D"30" clas=
+s=3D"r11-c" align=3D"center" style=3D"font-size:30px;line-height:30px;backg=
+round-color:transparent"> =C2=AD </td> </tr></tbody></table></td> </tr></tb=
+ody></table></th> </tr></tbody></table></td> </tr></tbody></table><table ce=
+llspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" width=
+=3D"100%" align=3D"center" class=3D"r3-o" style=3D"table-layout:fixed;width=
+:100%"><tbody><tr><td class=3D"r12-i" style=3D"background-color:#f4f3ef"> <=
+table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=
+=3D"presentation"><tbody><tr><th width=3D"50%" valign=3D"top" class=3D"r5-c=
+" style=3D"font-weight:normal"> <table cellspacing=3D"0" cellpadding=3D"0" =
+border=3D"0" role=3D"presentation" width=3D"100%" class=3D"r6-o" style=3D"t=
+able-layout:fixed;width:100%"><tbody><tr><td valign=3D"top" class=3D"r10-i"=
+ style=3D"padding-left:15px;padding-right:15px"> <table width=3D"100%" cell=
+spacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"><tbody><=
+tr><td class=3D"r13-c nl2go-default-textstyle" align=3D"left" style=3D"colo=
+r:#363636;font-family:Alegreya Sans,Arial,Helvetica,sans-serif;font-size:18=
+px;word-break:break-word;line-height:1.2;text-align:left"> <div><p style=3D=
+"margin:0"><strong>Strengthen Physics Fundamentals with NPTEL</strong></p><=
+/div> </td> </tr><tr><td class=3D"r14-c nl2go-default-textstyle" align=3D"l=
+eft" style=3D"color:#363636;font-family:Alegreya Sans,Arial,Helvetica,sans-=
+serif;font-size:18px;line-height:1.4;word-break:break-word;padding-top:10px=
+;text-align:left"> <div><p class=3D"default" dir=3D"ltr" id=3D"isPasted" st=
+yle=3D"margin:0"><span style=3D"font-weight:400;font-style:normal;text-deco=
+ration:none">NPTEL Physics courses cover core concepts and advanced topics.=
+ Learn from  IIT faculty, strengthen your fundamentals, and earn certificat=
+ions to support your academic and research goals.</span></p></div> </td> </=
+tr><tr><td class=3D"r15-c nl2go-default-textstyle" align=3D"left" style=3D"=
+color:#363636;font-family:Alegreya Sans,Arial,Helvetica,sans-serif;font-siz=
+e:18px;line-height:1.4;word-break:break-word;padding-bottom:15px;padding-to=
+p:15px;text-align:left"> <div><p style=3D"margin:0"><a href=3D"https://onli=
+necourses.nptel.ac.in/" target=3D"_blank" rel=3D"noopener noreferrer" style=
+=3D"color:#fcfcfc;text-decoration:none"><strong><span style=3D"color:rgb(21=
+2,136,41)">Explore &amp; Enroll Today</span></strong></a></p></div> </td> <=
+/tr></tbody></table></td> </tr></tbody></table></th> <th width=3D"50%" vali=
+gn=3D"top" class=3D"r5-c" style=3D"font-weight:normal"> <table cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" width=3D"100%" =
+class=3D"r6-o" style=3D"table-layout:fixed;width:100%"><tbody><tr><td valig=
+n=3D"top" class=3D"r10-i" style=3D"padding-left:15px;padding-right:15px"> <=
+table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=
+=3D"presentation"><tbody><tr><td class=3D"r16-c" align=3D"center" style=3D"=
+font-size:0px;line-height:0px;padding-bottom:15px;padding-top:15px"> <img s=
+rc=3D"https://img.mailinblue.com/6653416/images/content_library/original/69=
+524deb6c09da4842d5a155.png" width=3D"270" border=3D"0" style=3D"display: bl=
+ock; width: 100%;"></td> </tr></tbody></table></td> </tr></tbody></table></=
+th> </tr></tbody></table></td> </tr></tbody></table><table cellspacing=3D"0=
+" cellpadding=3D"0" border=3D"0" role=3D"presentation" width=3D"100%" align=
+=3D"center" class=3D"r3-o" style=3D"table-layout:fixed;width:100%"><tbody><=
+tr><td class=3D"r9-i" style=3D"background-color:#ffffff;padding-bottom:20px=
+;padding-top:20px"> <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"=
+0" border=3D"0" role=3D"presentation"><tbody><tr><th width=3D"100%" valign=
+=3D"top" class=3D"r5-c" style=3D"font-weight:normal"> <table cellspacing=3D=
+"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" width=3D"100%" cla=
+ss=3D"r6-o" style=3D"table-layout:fixed;width:100%"><tbody><tr><td valign=
+=3D"top" class=3D"r10-i" style=3D"padding-left:15px;padding-right:15px"> <t=
+able width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=
+=3D"presentation"><tbody><tr><td class=3D"r17-c nl2go-default-textstyle" al=
+ign=3D"left" style=3D"color:#363636;font-family:Alegreya Sans,Arial,Helveti=
+ca,sans-serif;font-size:18px;line-height:1.4;word-break:break-word;padding-=
+top:15px;text-align:left"> <div><p style=3D"margin:0"><strong> NPTEL Stars =
+- Pre Doc Fellowship</strong></p></div> </td> </tr></tbody></table></td> </=
+tr></tbody></table></th> </tr></tbody></table></td> </tr></tbody></table><t=
+able cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"=
+ width=3D"100%" align=3D"center" class=3D"r3-o" style=3D"table-layout:fixed=
+;width:100%"><tbody><tr><td class=3D"r18-i" style=3D"background-color:#ffff=
+ff;padding-bottom:20px"> <table width=3D"100%" cellspacing=3D"0" cellpaddin=
+g=3D"0" border=3D"0" role=3D"presentation"><tbody><tr><th width=3D"100%" va=
+lign=3D"top" class=3D"r19-c" style=3D"font-weight:normal"> <table cellspaci=
+ng=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" width=3D"100%=
+" class=3D"r6-o" style=3D"table-layout:fixed;width:100%"><tbody><tr><td val=
+ign=3D"top" class=3D"r20-i" style=3D"padding-left:7px;padding-right:7px"> <=
+table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=
+=3D"presentation"><tbody><tr><td class=3D"r2-c" align=3D"center"> <table ce=
+llspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" width=
+=3D"304" class=3D"r21-o" style=3D"border-collapse:separate;border-radius:8p=
+x;margin-top:15px;table-layout:fixed;width:304px"><tbody><tr><td class=3D"r=
+22-i" style=3D"border-radius:8px;font-size:0px;line-height:0px"> <img src=
+=3D"https://img.mailinblue.com/6653416/images/content_library/original/6952=
+4e291492ca1be00640fc.jpg" width=3D"304" border=3D"0" style=3D"display: bloc=
+k; width: 100%; border-radius: 8px;"></td> </tr></tbody></table></td> </tr>=
+</tbody></table></td> </tr></tbody></table></th> </tr></tbody></table></td>=
+ </tr></tbody></table><table cellspacing=3D"0" cellpadding=3D"0" border=3D"=
+0" role=3D"presentation" width=3D"100%" align=3D"center" class=3D"r3-o" sty=
+le=3D"table-layout:fixed;width:100%"><tbody><tr><td class=3D"r9-i" style=3D=
+"background-color:#ffffff;padding-bottom:20px;padding-top:20px"> <table wid=
+th=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presen=
+tation"><tbody><tr><th width=3D"100%" valign=3D"top" class=3D"r5-c" style=
+=3D"font-weight:normal"> <table cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" role=3D"presentation" width=3D"100%" class=3D"r6-o" style=3D"table-l=
+ayout:fixed;width:100%"><tbody><tr><td valign=3D"top" class=3D"r10-i" style=
+=3D"padding-left:15px;padding-right:15px"> <table width=3D"100%" cellspacin=
+g=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"><tbody><tr><td=
+ class=3D"r15-c nl2go-default-textstyle" align=3D"left" style=3D"color:#363=
+636;font-family:Alegreya Sans,Arial,Helvetica,sans-serif;font-size:18px;lin=
+e-height:1.4;word-break:break-word;padding-bottom:15px;padding-top:15px;tex=
+t-align:left"> <div><p style=3D"margin:0"><span id=3D"isPasted" style=3D"fo=
+nt-weight:400;font-style:normal;text-decoration:none">An NPTEL Star is a de=
+dicated learner recognized for consistent course enrollment, exam participa=
+tion, and strong performance across semesters. Learners can become NPTEL St=
+ars by appearing in multiple exams, clearing required pass percentages, and=
+ maintaining academic discipline. </span><a href=3D"https://nptel.ac.in/pre=
+docfellowship" target=3D"_blank" rel=3D"noopener noreferrer" style=3D"text-=
+decoration:none;color:rgb(252,252,252)"><span style=3D"color:rgb(212,136,41=
+)"><strong>Know More</strong></span></a></p></div> </td> </tr></tbody></tab=
+le></td> </tr></tbody></table></th> </tr></tbody></table></td> </tr></tbody=
+></table><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"pr=
+esentation" width=3D"100%" align=3D"center" class=3D"r3-o" style=3D"table-l=
+ayout:fixed;width:100%"><tbody><tr><td class=3D"r9-i" style=3D"background-c=
+olor:#ffffff;padding-bottom:20px;padding-top:20px"> <table width=3D"100%" c=
+ellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"><tbod=
+y><tr><th width=3D"100%" valign=3D"top" class=3D"r5-c" style=3D"font-weight=
+:normal"> <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"p=
+resentation" width=3D"100%" class=3D"r6-o" style=3D"table-layout:fixed;widt=
+h:100%"><tbody><tr><td valign=3D"top" class=3D"r10-i" style=3D"padding-left=
+:15px;padding-right:15px"> <table width=3D"100%" cellspacing=3D"0" cellpadd=
+ing=3D"0" border=3D"0" role=3D"presentation"><tbody><tr><td class=3D"r17-c =
+nl2go-default-textstyle" align=3D"left" style=3D"color:#363636;font-family:=
+Alegreya Sans,Arial,Helvetica,sans-serif;font-size:18px;line-height:1.4;wor=
+d-break:break-word;padding-top:15px;text-align:left"> <div><p style=3D"marg=
+in:0"><strong><span style=3D"font-size:22px">CODE Programs</span></strong><=
+/p></div> </td> </tr></tbody></table></td> </tr></tbody></table></th> </tr>=
+</tbody></table></td> </tr></tbody></table><table cellspacing=3D"0" cellpad=
+ding=3D"0" border=3D"0" role=3D"presentation" width=3D"100%" align=3D"cente=
+r" class=3D"r3-o" style=3D"table-layout:fixed;width:100%"><tbody><tr><td cl=
+ass=3D"r12-i" style=3D"background-color:#f4f3ef"> <table width=3D"100%" cel=
+lspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"><tbody>=
+<tr><th width=3D"50%" valign=3D"top" class=3D"r5-c" style=3D"font-weight:no=
+rmal"> <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"pres=
+entation" width=3D"100%" class=3D"r6-o" style=3D"table-layout:fixed;width:1=
+00%"><tbody><tr><td valign=3D"top" class=3D"r10-i" style=3D"padding-left:15=
+px;padding-right:15px"> <table width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" role=3D"presentation"><tbody><tr><td class=3D"r13-c nl2=
+go-default-textstyle" align=3D"left" style=3D"color:#363636;font-family:Ale=
+greya Sans,Arial,Helvetica,sans-serif;font-size:18px;word-break:break-word;=
+line-height:1.2;text-align:left"> <div><p style=3D"margin:0"><strong>Batter=
+y Cell Technology (Cohort-4)</strong></p></div> </td> </tr><tr><td class=3D=
+"r14-c nl2go-default-textstyle" align=3D"left" style=3D"color:#363636;font-=
+family:Alegreya Sans,Arial,Helvetica,sans-serif;font-size:18px;line-height:=
+1.4;word-break:break-word;padding-top:10px;text-align:left"> <div><p id=3D"=
+isPasted" style=3D"margin:0">Master the future of energy storage through II=
+TM=E2=80=99s Battery Cell Technology, a cutting-edge certified executive pr=
+ogram.This program equips you with essential knowledge in battery design, c=
+haracterization, and performance enhancement=E2=80=94preparing you to thriv=
+e in the booming energy storage and electric vehicle sectors.</p><p style=
+=3D"margin:0">Secure your seat today with an extended early bird discount! =
+</p></div> </td> </tr><tr><td class=3D"r15-c nl2go-default-textstyle" align=
+=3D"left" style=3D"color:#363636;font-family:Alegreya Sans,Arial,Helvetica,=
+sans-serif;font-size:18px;line-height:1.4;word-break:break-word;padding-bot=
+tom:15px;padding-top:15px;text-align:left"> <div><p style=3D"margin:0"><b i=
+d=3D"isPasted" style=3D"font-style:normal;text-decoration-style:initial">Le=
+arn more and enroll</b><span style=3D"font-style:normal;font-weight:400;tex=
+t-decoration-style:initial">: </span><strong style=3D"font-style:normal;tex=
+t-decoration-style:initial"><a rel=3D"noopener" href=3D"https://code.iitm.a=
+c.in/battery-cell-technology" target=3D"_blank" style=3D"text-decoration:no=
+ne;color:rgb(252,252,252)"><span style=3D"color:rgb(212,136,41)">BCT Regist=
+ration/webpage Link</span></a></strong></p></div> </td> </tr></tbody></tabl=
+e></td> </tr></tbody></table></th> <th width=3D"50%" valign=3D"top" class=
+=3D"r5-c" style=3D"font-weight:normal"> <table cellspacing=3D"0" cellpaddin=
+g=3D"0" border=3D"0" role=3D"presentation" width=3D"100%" class=3D"r6-o" st=
+yle=3D"table-layout:fixed;width:100%"><tbody><tr><td valign=3D"top" class=
+=3D"r10-i" style=3D"padding-left:15px;padding-right:15px"> <table width=3D"=
+100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation=
+"><tbody><tr><td class=3D"r16-c" align=3D"center" style=3D"font-size:0px;li=
+ne-height:0px;padding-bottom:15px;padding-top:15px"> <img src=3D"https://im=
+g.mailinblue.com/6653416/images/content_library/original/69524b116c09da4842=
+d5a0a0.jpg" width=3D"270" border=3D"0" style=3D"display: block; width: 100%=
+;"></td> </tr></tbody></table></td> </tr></tbody></table></th> </tr></tbody=
+></table></td> </tr></tbody></table><table cellspacing=3D"0" cellpadding=3D=
+"0" border=3D"0" role=3D"presentation" width=3D"100%" align=3D"center" clas=
+s=3D"r3-o" style=3D"table-layout:fixed;width:100%"><tbody><tr><td class=3D"=
+r9-i" style=3D"background-color:#ffffff;padding-bottom:20px;padding-top:20p=
+x"> <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" =
+role=3D"presentation"><tbody><tr><th width=3D"100%" valign=3D"top" class=3D=
+"r5-c" style=3D"font-weight:normal"> <table cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" role=3D"presentation" width=3D"100%" class=3D"r6-o" sty=
+le=3D"table-layout:fixed;width:100%"><tbody><tr><td valign=3D"top" class=3D=
+"r10-i" style=3D"padding-left:15px;padding-right:15px"> <table width=3D"100=
+%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"><=
+tbody><tr><td height=3D"30" class=3D"r11-c" align=3D"center" style=3D"font-=
+size:30px;line-height:30px;background-color:transparent"> =C2=AD </td> </tr=
+></tbody></table></td> </tr></tbody></table></th> </tr></tbody></table></td=
+> </tr></tbody></table><table cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0" role=3D"presentation" width=3D"100%" align=3D"center" class=3D"r3-o" st=
+yle=3D"table-layout:fixed;width:100%"><tbody><tr><td class=3D"r12-i" style=
+=3D"background-color:#f4f3ef"> <table width=3D"100%" cellspacing=3D"0" cell=
+padding=3D"0" border=3D"0" role=3D"presentation"><tbody><tr><th width=3D"50=
+%" valign=3D"top" class=3D"r5-c" style=3D"font-weight:normal"> <table cells=
+pacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" width=3D"=
+100%" class=3D"r6-o" style=3D"table-layout:fixed;width:100%"><tbody><tr><td=
+ valign=3D"top" class=3D"r10-i" style=3D"padding-left:15px;padding-right:15=
+px"> <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"=
+ role=3D"presentation"><tbody><tr><td class=3D"r13-c nl2go-default-textstyl=
+e" align=3D"left" style=3D"color:#363636;font-family:Alegreya Sans,Arial,He=
+lvetica,sans-serif;font-size:18px;word-break:break-word;line-height:1.2;tex=
+t-align:left"> <div><h3 class=3D"default-heading3" id=3D"isPasted" style=3D=
+"margin:0;color:#1f2d3d;font-family:Alegreya Sans,Arial,Helvetica,sans-seri=
+f;font-size:24px;word-break:break-word;font-style:normal;text-decoration-st=
+yle:initial"><span style=3D"font-size:18px">Certificate Program on eMobilit=
+y(cPoeM) - Enroll Today!</span></h3></div> </td> </tr><tr><td class=3D"r14-=
+c nl2go-default-textstyle" align=3D"left" style=3D"color:#363636;font-famil=
+y:Alegreya Sans,Arial,Helvetica,sans-serif;font-size:18px;line-height:1.4;w=
+ord-break:break-word;padding-top:10px;text-align:left"> <div><p id=3D"isPas=
+ted" style=3D"margin:0">Step into the world of eMobility with an in-demand =
+certification program curated by IIT Madras to provide a comprehensive over=
+view of eMobility and Electric Vehicles. Don=E2=80=99t miss your chance to =
+be a part of the next generation of e-mobility pioneers. </p></div> </td> <=
+/tr><tr><td class=3D"r15-c nl2go-default-textstyle" align=3D"left" style=3D=
+"color:#363636;font-family:Alegreya Sans,Arial,Helvetica,sans-serif;font-si=
+ze:18px;line-height:1.4;word-break:break-word;padding-bottom:15px;padding-t=
+op:15px;text-align:left"> <div><p style=3D"margin:0"><b id=3D"isPasted" sty=
+le=3D"font-style:normal;text-decoration-style:initial">Explore and enroll :=
+ <a href=3D"https://code.iitm.ac.in/certificate-programme-on-emobility-cpoe=
+m" target=3D"_blank" style=3D"text-decoration:none;color:rgb(252,252,252)">=
+<span style=3D"color:rgb(212,136,41)">eMobility Webpage / Registration Link=
+</span></a> </b></p></div> </td> </tr></tbody></table></td> </tr></tbody></=
+table></th> <th width=3D"50%" valign=3D"top" class=3D"r5-c" style=3D"font-w=
+eight:normal"> <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=
+=3D"presentation" width=3D"100%" class=3D"r6-o" style=3D"table-layout:fixed=
+;width:100%"><tbody><tr><td valign=3D"top" class=3D"r10-i" style=3D"padding=
+-left:15px;padding-right:15px"> <table width=3D"100%" cellspacing=3D"0" cel=
+lpadding=3D"0" border=3D"0" role=3D"presentation"><tbody><tr><td class=3D"r=
+16-c" align=3D"center" style=3D"font-size:0px;line-height:0px;padding-botto=
+m:15px;padding-top:15px"> <img src=3D"https://img.mailinblue.com/6653416/im=
+ages/content_library/original/69524bd652d32736841c49d0.jpg" width=3D"270" b=
+order=3D"0" style=3D"display: block; width: 100%;"></td> </tr></tbody></tab=
+le></td> </tr></tbody></table></th> </tr></tbody></table></td> </tr></tbody=
+></table><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"pr=
+esentation" width=3D"100%" align=3D"center" class=3D"r3-o" style=3D"table-l=
+ayout:fixed;width:100%"><tbody><tr><td class=3D"r9-i" style=3D"background-c=
+olor:#ffffff;padding-bottom:20px;padding-top:20px"> <table width=3D"100%" c=
+ellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"><tbod=
+y><tr><th width=3D"100%" valign=3D"top" class=3D"r5-c" style=3D"background-=
+color:#f4f3ef;font-weight:normal"> <table cellspacing=3D"0" cellpadding=3D"=
+0" border=3D"0" role=3D"presentation" width=3D"100%" class=3D"r6-o" style=
+=3D"table-layout:fixed;width:100%"><tbody><tr><td valign=3D"top" class=3D"r=
+23-i" style=3D"background-color:#f4f3ef;padding-left:15px;padding-right:15p=
+x"> <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" =
+role=3D"presentation"><tbody><tr><td class=3D"r24-c" align=3D"center" style=
+=3D"padding-bottom:30px;padding-top:30px"> <table width=3D"100%" cellspacin=
+g=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" height=3D"1" s=
+tyle=3D"border-top-style:solid;background-clip:border-box;border-top-color:=
+#4a4a4a;border-top-width:1px;font-size:1px;line-height:1px"><tbody><tr><td =
+height=3D"0" style=3D"font-size:0px;line-height:0px">=C2=AD</td> </tr></tbo=
+dy></table></td> </tr></tbody></table></td> </tr></tbody></table></th> </tr=
+></tbody></table></td> </tr></tbody></table><table cellspacing=3D"0" cellpa=
+dding=3D"0" border=3D"0" role=3D"presentation" width=3D"100%" align=3D"cent=
+er" class=3D"r3-o" style=3D"table-layout:fixed;width:100%"><tbody><tr><td c=
+lass=3D"r9-i" style=3D"background-color:#ffffff;padding-bottom:20px;padding=
+-top:20px"> <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" borde=
+r=3D"0" role=3D"presentation"><tbody><tr><th width=3D"100%" valign=3D"top" =
+class=3D"r5-c" style=3D"background-color:#f4f3ef;font-weight:normal"> <tabl=
+e cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" wi=
+dth=3D"100%" class=3D"r6-o" style=3D"table-layout:fixed;width:100%"><tbody>=
+<tr><td valign=3D"top" class=3D"r23-i" style=3D"background-color:#f4f3ef;pa=
+dding-left:15px;padding-right:15px"> <table width=3D"100%" cellspacing=3D"0=
+" cellpadding=3D"0" border=3D"0" role=3D"presentation"><tbody><tr><td class=
+=3D"r17-c nl2go-default-textstyle" align=3D"left" style=3D"color:#363636;fo=
+nt-family:Alegreya Sans,Arial,Helvetica,sans-serif;font-size:18px;line-heig=
+ht:1.4;word-break:break-word;padding-top:15px;text-align:left"> <div><h2 cl=
+ass=3D"default-heading2" style=3D"margin:0;color:#1f2d3d;font-family:Alegre=
+ya Sans,Arial,Helvetica,sans-serif;font-size:32px;word-break:break-word"><s=
+pan style=3D"font-size:22px"><strong>NPTEL+ WORKSHOPS:</strong></span></h2>=
+</div> </td> </tr></tbody></table></td> </tr></tbody></table></th> </tr></t=
+body></table></td> </tr></tbody></table><table cellspacing=3D"0" cellpaddin=
+g=3D"0" border=3D"0" role=3D"presentation" width=3D"100%" align=3D"center" =
+class=3D"r3-o" style=3D"table-layout:fixed;width:100%"><tbody><tr><td class=
+=3D"r25-i" style=3D"background-color:#eeeeee"> <table width=3D"100%" cellsp=
+acing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"><tbody><tr=
+><th width=3D"33.33%" valign=3D"top" class=3D"r5-c" style=3D"font-weight:no=
+rmal"> <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"pres=
+entation" width=3D"100%" class=3D"r6-o" style=3D"table-layout:fixed;width:1=
+00%"><tbody><tr><td valign=3D"top" class=3D"r10-i" style=3D"padding-left:15=
+px;padding-right:15px"> <table width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" role=3D"presentation"><tbody><tr><td class=3D"r15-c nl2=
+go-default-textstyle" align=3D"left" style=3D"color:#363636;font-family:Ale=
+greya Sans,Arial,Helvetica,sans-serif;font-size:18px;line-height:1.4;word-b=
+reak:break-word;padding-bottom:15px;padding-top:15px;text-align:left"> <div=
+><p style=3D"margin:0"><span style=3D"font-size:18px"><strong>1. <span styl=
+e=3D"font-style:normal;text-decoration:none"><strong>Introduction to Practi=
+cal Entrepreneurship =E2=80=93 Batch 2</strong></span></strong></span></p><=
+/div> </td> </tr></tbody></table></td> </tr></tbody></table></th> <th width=
+=3D"33.33%" valign=3D"top" class=3D"r5-c" style=3D"font-weight:normal"> <ta=
+ble cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" =
+width=3D"100%" class=3D"r6-o" style=3D"table-layout:fixed;width:100%"><tbod=
+y><tr><td valign=3D"top" class=3D"r10-i" style=3D"padding-left:15px;padding=
+-right:15px"> <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" bor=
+der=3D"0" role=3D"presentation"><tbody><tr><td class=3D"r15-c nl2go-default=
+-textstyle" align=3D"left" style=3D"color:#363636;font-family:Alegreya Sans=
+,Arial,Helvetica,sans-serif;font-size:18px;line-height:1.4;word-break:break=
+-word;padding-bottom:15px;padding-top:15px;text-align:left"> <div><p style=
+=3D"margin:0"><a href=3D"https://elearn.nptel.ac.in/shop/iit-workshops/ongo=
+ing/management-computer-science/introduction-to-practical-entrepreneurship-=
+batch-2/?v=3D13b5bfe96f3e" target=3D"_blank" rel=3D"noopener noreferrer" st=
+yle=3D"color:#fcfcfc;text-decoration:none"><span style=3D"color:#d48829"><s=
+trong>Register Now</strong></span></a><strong> - </strong></p><p style=3D"m=
+argin:0"><strong>Rs. 1,200</strong></p></div> </td> </tr></tbody></table></=
+td> </tr></tbody></table></th> <th width=3D"33.33%" valign=3D"top" class=3D=
+"r5-c" style=3D"font-weight:normal"> <table cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" role=3D"presentation" width=3D"100%" class=3D"r6-o" sty=
+le=3D"table-layout:fixed;width:100%"><tbody><tr><td valign=3D"top" class=3D=
+"r10-i" style=3D"padding-left:15px;padding-right:15px"> <table width=3D"100=
+%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"><=
+tbody><tr><td class=3D"r15-c nl2go-default-textstyle" align=3D"left" style=
+=3D"color:#363636;font-family:Alegreya Sans,Arial,Helvetica,sans-serif;font=
+-size:18px;line-height:1.4;word-break:break-word;padding-bottom:15px;paddin=
+g-top:15px;text-align:left"> <div><p style=3D"margin:0"><span style=3D"colo=
+r:rgb(242,45,45)"><strong>Last day to Register: Dec 31, 2025</strong></span=
+></p></div> </td> </tr></tbody></table></td> </tr></tbody></table></th> </t=
+r></tbody></table></td> </tr></tbody></table><table cellspacing=3D"0" cellp=
+adding=3D"0" border=3D"0" role=3D"presentation" width=3D"100%" align=3D"cen=
+ter" class=3D"r3-o" style=3D"table-layout:fixed;width:100%"><tbody><tr><td =
+class=3D"r25-i" style=3D"background-color:#eeeeee"> <table width=3D"100%" c=
+ellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"><tbod=
+y><tr><th width=3D"33.33%" valign=3D"top" class=3D"r5-c" style=3D"font-weig=
+ht:normal"> <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D=
+"presentation" width=3D"100%" class=3D"r6-o" style=3D"table-layout:fixed;wi=
+dth:100%"><tbody><tr><td valign=3D"top" class=3D"r10-i" style=3D"padding-le=
+ft:15px;padding-right:15px"> <table width=3D"100%" cellspacing=3D"0" cellpa=
+dding=3D"0" border=3D"0" role=3D"presentation"><tbody><tr><td class=3D"r15-=
+c nl2go-default-textstyle" align=3D"left" style=3D"color:#363636;font-famil=
+y:Alegreya Sans,Arial,Helvetica,sans-serif;font-size:18px;line-height:1.4;w=
+ord-break:break-word;padding-bottom:15px;padding-top:15px;text-align:left">=
+ <div><p style=3D"margin:0"><strong>2. Nudge Marketing and the Psychologica=
+l Foundations of Human Behavior</strong></p></div> </td> </tr></tbody></tab=
+le></td> </tr></tbody></table></th> <th width=3D"33.33%" valign=3D"top" cla=
+ss=3D"r5-c" style=3D"font-weight:normal"> <table cellspacing=3D"0" cellpadd=
+ing=3D"0" border=3D"0" role=3D"presentation" width=3D"100%" class=3D"r6-o" =
+style=3D"table-layout:fixed;width:100%"><tbody><tr><td valign=3D"top" class=
+=3D"r10-i" style=3D"padding-left:15px;padding-right:15px"> <table width=3D"=
+100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation=
+"><tbody><tr><td class=3D"r15-c nl2go-default-textstyle" align=3D"left" sty=
+le=3D"color:#363636;font-family:Alegreya Sans,Arial,Helvetica,sans-serif;fo=
+nt-size:18px;line-height:1.4;word-break:break-word;padding-bottom:15px;padd=
+ing-top:15px;text-align:left"> <div><p style=3D"margin:0"><a href=3D"https:=
+//elearn.nptel.ac.in/shop/masterclasss-workshops/masterclass-series-ongoing=
+/nudging-and-the-psychological-foundations-of-human-behavior/?v=3D13b5bfe96=
+f3e" target=3D"_blank" rel=3D"noopener noreferrer" style=3D"color:#fcfcfc;t=
+ext-decoration:none"><span style=3D"color:#d48829"><strong>Register Now</st=
+rong></span></a><strong> - </strong></p><p style=3D"margin:0"><strong>Rs. 1=
+,999 onwards</strong></p></div> </td> </tr></tbody></table></td> </tr></tbo=
+dy></table></th> <th width=3D"33.33%" valign=3D"top" class=3D"r5-c" style=
+=3D"font-weight:normal"> <table cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" role=3D"presentation" width=3D"100%" class=3D"r6-o" style=3D"table-l=
+ayout:fixed;width:100%"><tbody><tr><td valign=3D"top" class=3D"r10-i" style=
+=3D"padding-left:15px;padding-right:15px"> <table width=3D"100%" cellspacin=
+g=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"><tbody><tr><td=
+ class=3D"r15-c nl2go-default-textstyle" align=3D"left" style=3D"color:#363=
+636;font-family:Alegreya Sans,Arial,Helvetica,sans-serif;font-size:18px;lin=
+e-height:1.4;word-break:break-word;padding-bottom:15px;padding-top:15px;tex=
+t-align:left"> <div><p style=3D"margin:0"><span style=3D"color:rgb(242,45,4=
+5)"><strong>Last day to Register: </strong></span></p><p style=3D"margin:0"=
+><span style=3D"color:rgb(242,45,45)"><strong>Jan 1, 2025</strong></span></=
+p></div> </td> </tr></tbody></table></td> </tr></tbody></table></th> </tr><=
+/tbody></table></td> </tr></tbody></table><table cellspacing=3D"0" cellpadd=
+ing=3D"0" border=3D"0" role=3D"presentation" width=3D"100%" align=3D"center=
+" class=3D"r3-o" style=3D"table-layout:fixed;width:100%"><tbody><tr><td cla=
+ss=3D"r25-i" style=3D"background-color:#eeeeee"> <table width=3D"100%" cell=
+spacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"><tbody><=
+tr><th width=3D"33.33%" valign=3D"top" class=3D"r5-c" style=3D"font-weight:=
+normal"> <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"pr=
+esentation" width=3D"100%" class=3D"r6-o" style=3D"table-layout:fixed;width=
+:100%"><tbody><tr><td valign=3D"top" class=3D"r10-i" style=3D"padding-left:=
+15px;padding-right:15px"> <table width=3D"100%" cellspacing=3D"0" cellpaddi=
+ng=3D"0" border=3D"0" role=3D"presentation"><tbody><tr><td class=3D"r15-c n=
+l2go-default-textstyle" align=3D"left" style=3D"color:#363636;font-family:A=
+legreya Sans,Arial,Helvetica,sans-serif;font-size:18px;line-height:1.4;word=
+-break:break-word;padding-bottom:15px;padding-top:15px;text-align:left"> <d=
+iv><p style=3D"margin:0"><span style=3D"font-size:18px"><strong>3. Leadersh=
+ip and Talent Management</strong></span></p></div> </td> </tr></tbody></tab=
+le></td> </tr></tbody></table></th> <th width=3D"33.33%" valign=3D"top" cla=
+ss=3D"r5-c" style=3D"font-weight:normal"> <table cellspacing=3D"0" cellpadd=
+ing=3D"0" border=3D"0" role=3D"presentation" width=3D"100%" class=3D"r6-o" =
+style=3D"table-layout:fixed;width:100%"><tbody><tr><td valign=3D"top" class=
+=3D"r10-i" style=3D"padding-left:15px;padding-right:15px"> <table width=3D"=
+100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation=
+"><tbody><tr><td class=3D"r15-c nl2go-default-textstyle" align=3D"left" sty=
+le=3D"color:#363636;font-family:Alegreya Sans,Arial,Helvetica,sans-serif;fo=
+nt-size:18px;line-height:1.4;word-break:break-word;padding-bottom:15px;padd=
+ing-top:15px;text-align:left"> <div><p style=3D"margin:0"><a href=3D"https:=
+//elearn.nptel.ac.in/shop/iit-workshops/ongoing/management-computer-science=
+/leadership-and-talent-management/?v=3D13b5bfe96f3e" target=3D"_blank" rel=
+=3D"noopener noreferrer" style=3D"color:#fcfcfc;text-decoration:none"><span=
+ style=3D"color:#d48829"><strong>Register Now</strong></span></a><strong> -=
+ </strong></p><p style=3D"margin:0"><strong>Rs. 1,000</strong></p></div> </=
+td> </tr></tbody></table></td> </tr></tbody></table></th> <th width=3D"33.3=
+3%" valign=3D"top" class=3D"r5-c" style=3D"font-weight:normal"> <table cell=
+spacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" width=3D=
+"100%" class=3D"r6-o" style=3D"table-layout:fixed;width:100%"><tbody><tr><t=
+d valign=3D"top" class=3D"r10-i" style=3D"padding-left:15px;padding-right:1=
+5px"> <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0=
+" role=3D"presentation"><tbody><tr><td class=3D"r15-c nl2go-default-textsty=
+le" align=3D"left" style=3D"color:#363636;font-family:Alegreya Sans,Arial,H=
+elvetica,sans-serif;font-size:18px;line-height:1.4;word-break:break-word;pa=
+dding-bottom:15px;padding-top:15px;text-align:left"> <div><p style=3D"margi=
+n:0"><span style=3D"color:#39a50e"><strong>Last day to Register: </strong><=
+/span></p><p style=3D"margin:0"><span style=3D"color:#39a50e"><strong>Jan 0=
+7, 2025</strong></span></p></div> </td> </tr></tbody></table></td> </tr></t=
+body></table></th> </tr></tbody></table></td> </tr></tbody></table><table c=
+ellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" width=
+=3D"100%" align=3D"center" class=3D"r3-o" style=3D"table-layout:fixed;width=
+:100%"><tbody><tr><td class=3D"r25-i" style=3D"background-color:#eeeeee"> <=
+table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=
+=3D"presentation"><tbody><tr><th width=3D"33.33%" valign=3D"top" class=3D"r=
+5-c" style=3D"font-weight:normal"> <table cellspacing=3D"0" cellpadding=3D"=
+0" border=3D"0" role=3D"presentation" width=3D"100%" class=3D"r6-o" style=
+=3D"table-layout:fixed;width:100%"><tbody><tr><td valign=3D"top" class=3D"r=
+10-i" style=3D"padding-left:15px;padding-right:15px"> <table width=3D"100%"=
+ cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"><tb=
+ody><tr><td class=3D"r15-c nl2go-default-textstyle" align=3D"left" style=3D=
+"color:#363636;font-family:Alegreya Sans,Arial,Helvetica,sans-serif;font-si=
+ze:18px;line-height:1.4;word-break:break-word;padding-bottom:15px;padding-t=
+op:15px;text-align:left"> <div><p style=3D"margin:0"><strong>4. Climate Res=
+ilient Plants for Future (CRPF) Batch-3</strong></p></div> </td> </tr></tbo=
+dy></table></td> </tr></tbody></table></th> <th width=3D"33.33%" valign=3D"=
+top" class=3D"r5-c" style=3D"font-weight:normal"> <table cellspacing=3D"0" =
+cellpadding=3D"0" border=3D"0" role=3D"presentation" width=3D"100%" class=
+=3D"r6-o" style=3D"table-layout:fixed;width:100%"><tbody><tr><td valign=3D"=
+top" class=3D"r10-i" style=3D"padding-left:15px;padding-right:15px"> <table=
+ width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"pr=
+esentation"><tbody><tr><td class=3D"r15-c nl2go-default-textstyle" align=3D=
+"left" style=3D"color:#363636;font-family:Alegreya Sans,Arial,Helvetica,san=
+s-serif;font-size:18px;line-height:1.4;word-break:break-word;padding-bottom=
+:15px;padding-top:15px;text-align:left"> <div><p style=3D"margin:0"><a href=
+=3D"https://elearn.nptel.ac.in/shop/iit-workshops/ongoing/life-science-comp=
+uter-science/climate-resilient-plants-for-future-crpf-batch-3/?v=3D13b5bfe9=
+6f3e" target=3D"_blank" rel=3D"noopener noreferrer" style=3D"color:#fcfcfc;=
+text-decoration:none"><span style=3D"color:#d48829"><strong>Register Now</s=
+trong></span></a><strong> - </strong></p><p style=3D"margin:0"><strong>Rs. =
+200 onwards</strong></p></div> </td> </tr></tbody></table></td> </tr></tbod=
+y></table></th> <th width=3D"33.33%" valign=3D"top" class=3D"r5-c" style=3D=
+"font-weight:normal"> <table cellspacing=3D"0" cellpadding=3D"0" border=3D"=
+0" role=3D"presentation" width=3D"100%" class=3D"r6-o" style=3D"table-layou=
+t:fixed;width:100%"><tbody><tr><td valign=3D"top" class=3D"r10-i" style=3D"=
+padding-left:15px;padding-right:15px"> <table width=3D"100%" cellspacing=3D=
+"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"><tbody><tr><td cla=
+ss=3D"r15-c nl2go-default-textstyle" align=3D"left" style=3D"color:#363636;=
+font-family:Alegreya Sans,Arial,Helvetica,sans-serif;font-size:18px;line-he=
+ight:1.4;word-break:break-word;padding-bottom:15px;padding-top:15px;text-al=
+ign:left"> <div><p style=3D"margin:0"><span style=3D"color:#39a50e"><strong=
+>Last day to Register: </strong></span></p><p style=3D"margin:0"><span styl=
+e=3D"color:#39a50e"><strong>Jan 07, 2025</strong></span></p></div> </td> </=
+tr></tbody></table></td> </tr></tbody></table></th> </tr></tbody></table></=
+td> </tr></tbody></table><table cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" role=3D"presentation" width=3D"100%" align=3D"center" class=3D"r3-o"=
+ style=3D"table-layout:fixed;width:100%"><tbody><tr><td class=3D"r25-i" sty=
+le=3D"background-color:#eeeeee"> <table width=3D"100%" cellspacing=3D"0" ce=
+llpadding=3D"0" border=3D"0" role=3D"presentation"><tbody><tr><th width=3D"=
+33.33%" valign=3D"top" class=3D"r5-c" style=3D"font-weight:normal"> <table =
+cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" widt=
+h=3D"100%" class=3D"r6-o" style=3D"table-layout:fixed;width:100%"><tbody><t=
+r><td valign=3D"top" class=3D"r10-i" style=3D"padding-left:15px;padding-rig=
+ht:15px"> <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" role=3D"presentation"><tbody><tr><td class=3D"r15-c nl2go-default-te=
+xtstyle" align=3D"left" style=3D"color:#363636;font-family:Alegreya Sans,Ar=
+ial,Helvetica,sans-serif;font-size:18px;line-height:1.4;word-break:break-wo=
+rd;padding-bottom:15px;padding-top:15px;text-align:left"> <div><p style=3D"=
+margin:0"><strong>5. The Math Behind AI for Filmmaking &amp; Content Creati=
+on =E2=80=93 Batch 2</strong></p></div> </td> </tr></tbody></table></td> </=
+tr></tbody></table></th> <th width=3D"33.33%" valign=3D"top" class=3D"r5-c"=
+ style=3D"font-weight:normal"> <table cellspacing=3D"0" cellpadding=3D"0" b=
+order=3D"0" role=3D"presentation" width=3D"100%" class=3D"r6-o" style=3D"ta=
+ble-layout:fixed;width:100%"><tbody><tr><td valign=3D"top" class=3D"r10-i" =
+style=3D"padding-left:15px;padding-right:15px"> <table width=3D"100%" cells=
+pacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"><tbody><t=
+r><td class=3D"r15-c nl2go-default-textstyle" align=3D"left" style=3D"color=
+:#363636;font-family:Alegreya Sans,Arial,Helvetica,sans-serif;font-size:18p=
+x;line-height:1.4;word-break:break-word;padding-bottom:15px;padding-top:15p=
+x;text-align:left"> <div><p style=3D"margin:0"><a href=3D"https://elearn.np=
+tel.ac.in/shop/iit-workshops/ongoing/computer-science/the-math-behind-ai-fo=
+r-filmmaking-content-creation-batch-2/?v=3D13b5bfe96f3e" target=3D"_blank" =
+rel=3D"noopener noreferrer" style=3D"color:#fcfcfc;text-decoration:none"><s=
+pan style=3D"color:#d48829"><strong>Register Now</strong></span></a><strong=
+> - </strong></p><p style=3D"margin:0"><strong>Rs. 500</strong></p></div> <=
+/td> </tr></tbody></table></td> </tr></tbody></table></th> <th width=3D"33.=
+33%" valign=3D"top" class=3D"r5-c" style=3D"font-weight:normal"> <table cel=
+lspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" width=
+=3D"100%" class=3D"r6-o" style=3D"table-layout:fixed;width:100%"><tbody><tr=
+><td valign=3D"top" class=3D"r10-i" style=3D"padding-left:15px;padding-righ=
+t:15px"> <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" role=3D"presentation"><tbody><tr><td class=3D"r15-c nl2go-default-te=
+xtstyle" align=3D"left" style=3D"color:#363636;font-family:Alegreya Sans,Ar=
+ial,Helvetica,sans-serif;font-size:18px;line-height:1.4;word-break:break-wo=
+rd;padding-bottom:15px;padding-top:15px;text-align:left"> <div><p style=3D"=
+margin:0"><span style=3D"color:#39a50e"><strong>Last day to Register: </str=
+ong></span></p><p style=3D"margin:0"><span style=3D"color:#39a50e"><strong>=
+Jan 07, 2025</strong></span></p></div> </td> </tr></tbody></table></td> </t=
+r></tbody></table></th> </tr></tbody></table></td> </tr></tbody></table><ta=
+ble cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" =
+width=3D"100%" align=3D"center" class=3D"r3-o" style=3D"table-layout:fixed;=
+width:100%"><tbody><tr><td class=3D"r25-i" style=3D"background-color:#eeeee=
+e"> <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" =
+role=3D"presentation"><tbody><tr><th width=3D"33.33%" valign=3D"top" class=
+=3D"r5-c" style=3D"font-weight:normal"> <table cellspacing=3D"0" cellpaddin=
+g=3D"0" border=3D"0" role=3D"presentation" width=3D"100%" class=3D"r6-o" st=
+yle=3D"table-layout:fixed;width:100%"><tbody><tr><td valign=3D"top" class=
+=3D"r10-i" style=3D"padding-left:15px;padding-right:15px"> <table width=3D"=
+100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation=
+"><tbody><tr><td class=3D"r15-c nl2go-default-textstyle" align=3D"left" sty=
+le=3D"color:#363636;font-family:Alegreya Sans,Arial,Helvetica,sans-serif;fo=
+nt-size:18px;line-height:1.4;word-break:break-word;padding-bottom:15px;padd=
+ing-top:15px;text-align:left"> <div><p style=3D"margin:0"><strong>6. Applie=
+d Vibe Coding</strong></p></div> </td> </tr></tbody></table></td> </tr></tb=
+ody></table></th> <th width=3D"33.33%" valign=3D"top" class=3D"r5-c" style=
+=3D"font-weight:normal"> <table cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" role=3D"presentation" width=3D"100%" class=3D"r6-o" style=3D"table-l=
+ayout:fixed;width:100%"><tbody><tr><td valign=3D"top" class=3D"r10-i" style=
+=3D"padding-left:15px;padding-right:15px"> <table width=3D"100%" cellspacin=
+g=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"><tbody><tr><td=
+ class=3D"r15-c nl2go-default-textstyle" align=3D"left" style=3D"color:#363=
+636;font-family:Alegreya Sans,Arial,Helvetica,sans-serif;font-size:18px;lin=
+e-height:1.4;word-break:break-word;padding-bottom:15px;padding-top:15px;tex=
+t-align:left"> <div><p style=3D"margin:0"><a href=3D"https://elearn.nptel.a=
+c.in/shop/iit-workshops/ongoing/computer-science/applied-vibe-coding-worksh=
+op/?v=3D13b5bfe96f3e" target=3D"_blank" rel=3D"noopener noreferrer" style=
+=3D"color:#fcfcfc;text-decoration:none"><span style=3D"color:#d48829"><stro=
+ng>Register Now</strong></span></a><strong> - </strong></p><p style=3D"marg=
+in:0"><strong>Rs. 200</strong></p></div> </td> </tr></tbody></table></td> <=
+/tr></tbody></table></th> <th width=3D"33.33%" valign=3D"top" class=3D"r5-c=
+" style=3D"font-weight:normal"> <table cellspacing=3D"0" cellpadding=3D"0" =
+border=3D"0" role=3D"presentation" width=3D"100%" class=3D"r6-o" style=3D"t=
+able-layout:fixed;width:100%"><tbody><tr><td valign=3D"top" class=3D"r10-i"=
+ style=3D"padding-left:15px;padding-right:15px"> <table width=3D"100%" cell=
+spacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"><tbody><=
+tr><td class=3D"r15-c nl2go-default-textstyle" align=3D"left" style=3D"colo=
+r:#363636;font-family:Alegreya Sans,Arial,Helvetica,sans-serif;font-size:18=
+px;line-height:1.4;word-break:break-word;padding-bottom:15px;padding-top:15=
+px;text-align:left"> <div><p style=3D"margin:0"><span style=3D"color:#39a50=
+e"><strong>Last day to Register: </strong></span></p><p style=3D"margin:0">=
+<span style=3D"color:#39a50e"><strong>Jan 07, 2025</strong></span></p></div=
+> </td> </tr></tbody></table></td> </tr></tbody></table></th> </tr></tbody>=
+</table></td> </tr></tbody></table><table cellspacing=3D"0" cellpadding=3D"=
+0" border=3D"0" role=3D"presentation" width=3D"100%" align=3D"center" class=
+=3D"r3-o" style=3D"table-layout:fixed;width:100%"><tbody><tr><td class=3D"r=
+25-i" style=3D"background-color:#eeeeee"> <table width=3D"100%" cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"><tbody><tr><th =
+width=3D"33.33%" valign=3D"top" class=3D"r5-c" style=3D"font-weight:normal"=
+> <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentat=
+ion" width=3D"100%" class=3D"r6-o" style=3D"table-layout:fixed;width:100%">=
+<tbody><tr><td valign=3D"top" class=3D"r10-i" style=3D"padding-left:15px;pa=
+dding-right:15px"> <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0=
+" border=3D"0" role=3D"presentation"><tbody><tr><td class=3D"r15-c nl2go-de=
+fault-textstyle" align=3D"left" style=3D"color:#363636;font-family:Alegreya=
+ Sans,Arial,Helvetica,sans-serif;font-size:18px;line-height:1.4;word-break:=
+break-word;padding-bottom:15px;padding-top:15px;text-align:left"> <div><p s=
+tyle=3D"margin:0"><strong>7. Essentials of Campus Network Design</strong></=
+p></div> </td> </tr></tbody></table></td> </tr></tbody></table></th> <th wi=
+dth=3D"33.33%" valign=3D"top" class=3D"r5-c" style=3D"font-weight:normal"> =
+<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentatio=
+n" width=3D"100%" class=3D"r6-o" style=3D"table-layout:fixed;width:100%"><t=
+body><tr><td valign=3D"top" class=3D"r10-i" style=3D"padding-left:15px;padd=
+ing-right:15px"> <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" =
+border=3D"0" role=3D"presentation"><tbody><tr><td class=3D"r15-c nl2go-defa=
+ult-textstyle" align=3D"left" style=3D"color:#363636;font-family:Alegreya S=
+ans,Arial,Helvetica,sans-serif;font-size:18px;line-height:1.4;word-break:br=
+eak-word;padding-bottom:15px;padding-top:15px;text-align:left"> <div><p sty=
+le=3D"margin:0"><a href=3D"https://elearn.nptel.ac.in/shop/iit-workshops/on=
+going/computer-science/essentials-of-campus-network-design/?v=3D13b5bfe96f3=
+e" target=3D"_blank" rel=3D"noopener noreferrer" style=3D"color:#fcfcfc;tex=
+t-decoration:none"><span style=3D"color:#d48829"><strong>Register Now</stro=
+ng></span></a><strong> - </strong></p><p style=3D"margin:0"><strong>Rs. 2,5=
+00</strong></p></div> </td> </tr></tbody></table></td> </tr></tbody></table=
+></th> <th width=3D"33.33%" valign=3D"top" class=3D"r5-c" style=3D"font-wei=
+ght:normal"> <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=
+=3D"presentation" width=3D"100%" class=3D"r6-o" style=3D"table-layout:fixed=
+;width:100%"><tbody><tr><td valign=3D"top" class=3D"r10-i" style=3D"padding=
+-left:15px;padding-right:15px"> <table width=3D"100%" cellspacing=3D"0" cel=
+lpadding=3D"0" border=3D"0" role=3D"presentation"><tbody><tr><td class=3D"r=
+15-c nl2go-default-textstyle" align=3D"left" style=3D"color:#363636;font-fa=
+mily:Alegreya Sans,Arial,Helvetica,sans-serif;font-size:18px;line-height:1.=
+4;word-break:break-word;padding-bottom:15px;padding-top:15px;text-align:lef=
+t"> <div><p style=3D"margin:0"><span style=3D"color:#39a50e"><strong>Last d=
+ay to Register: </strong></span></p><p style=3D"margin:0"><span style=3D"co=
+lor:#39a50e"><strong>Jan 14, 2025</strong></span></p></div> </td> </tr></tb=
+ody></table></td> </tr></tbody></table></th> </tr></tbody></table></td> </t=
+r></tbody></table><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" r=
+ole=3D"presentation" width=3D"100%" align=3D"center" class=3D"r3-o" style=
+=3D"table-layout:fixed;width:100%"><tbody><tr><td class=3D"r25-i" style=3D"=
+background-color:#eeeeee"> <table width=3D"100%" cellspacing=3D"0" cellpadd=
+ing=3D"0" border=3D"0" role=3D"presentation"><tbody><tr><th width=3D"33.33%=
+" valign=3D"top" class=3D"r5-c" style=3D"font-weight:normal"> <table cellsp=
+acing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" width=3D"1=
+00%" class=3D"r6-o" style=3D"table-layout:fixed;width:100%"><tbody><tr><td =
+valign=3D"top" class=3D"r10-i" style=3D"padding-left:15px;padding-right:15p=
+x"> <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" =
+role=3D"presentation"><tbody><tr><td class=3D"r15-c nl2go-default-textstyle=
+" align=3D"left" style=3D"color:#363636;font-family:Alegreya Sans,Arial,Hel=
+vetica,sans-serif;font-size:18px;line-height:1.4;word-break:break-word;padd=
+ing-bottom:15px;padding-top:15px;text-align:left"> <div><p style=3D"margin:=
+0"><strong>8. AI Cinematic Visuals =E2=80=93 From Prompt to Production =E2=
+=80=93 Batch 2</strong></p></div> </td> </tr></tbody></table></td> </tr></t=
+body></table></th> <th width=3D"33.33%" valign=3D"top" class=3D"r5-c" style=
+=3D"font-weight:normal"> <table cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" role=3D"presentation" width=3D"100%" class=3D"r6-o" style=3D"table-l=
+ayout:fixed;width:100%"><tbody><tr><td valign=3D"top" class=3D"r10-i" style=
+=3D"padding-left:15px;padding-right:15px"> <table width=3D"100%" cellspacin=
+g=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"><tbody><tr><td=
+ class=3D"r15-c nl2go-default-textstyle" align=3D"left" style=3D"color:#363=
+636;font-family:Alegreya Sans,Arial,Helvetica,sans-serif;font-size:18px;lin=
+e-height:1.4;word-break:break-word;padding-bottom:15px;padding-top:15px;tex=
+t-align:left"> <div><p style=3D"margin:0"><a href=3D"https://elearn.nptel.a=
+c.in/shop/iit-workshops/ongoing/computer-science/ai-cinematic-visuals-from-=
+prompt-to-production-batch-2/?v=3D13b5bfe96f3e" target=3D"_blank" rel=3D"no=
+opener noreferrer" style=3D"color:#fcfcfc;text-decoration:none"><span style=
+=3D"color:#d48829"><strong>Register Now</strong></span></a><strong> - </str=
+ong></p><p style=3D"margin:0"><strong>Rs. 500</strong></p></div> </td> </tr=
+></tbody></table></td> </tr></tbody></table></th> <th width=3D"33.33%" vali=
+gn=3D"top" class=3D"r5-c" style=3D"font-weight:normal"> <table cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" width=3D"100%" =
+class=3D"r6-o" style=3D"table-layout:fixed;width:100%"><tbody><tr><td valig=
+n=3D"top" class=3D"r10-i" style=3D"padding-left:15px;padding-right:15px"> <=
+table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=
+=3D"presentation"><tbody><tr><td class=3D"r15-c nl2go-default-textstyle" al=
+ign=3D"left" style=3D"color:#363636;font-family:Alegreya Sans,Arial,Helveti=
+ca,sans-serif;font-size:18px;line-height:1.4;word-break:break-word;padding-=
+bottom:15px;padding-top:15px;text-align:left"> <div><p style=3D"margin:0"><=
+span style=3D"color:#39a50e"><strong>Last day to Register: </strong></span>=
+</p><p style=3D"margin:0"><span style=3D"color:#39a50e"><strong>Jan 21, 202=
+5</strong></span></p></div> </td> </tr></tbody></table></td> </tr></tbody><=
+/table></th> </tr></tbody></table></td> </tr></tbody></table><table cellspa=
+cing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" width=3D"10=
+0%" align=3D"center" class=3D"r3-o" style=3D"table-layout:fixed;width:100%"=
+><tbody><tr><td class=3D"r9-i" style=3D"background-color:#ffffff;padding-bo=
+ttom:20px;padding-top:20px"> <table width=3D"100%" cellspacing=3D"0" cellpa=
+dding=3D"0" border=3D"0" role=3D"presentation"><tbody><tr><th width=3D"100%=
+" valign=3D"top" class=3D"r5-c" style=3D"font-weight:normal"> <table cellsp=
+acing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" width=3D"1=
+00%" class=3D"r6-o" style=3D"table-layout:fixed;width:100%"><tbody><tr><td =
+valign=3D"top" class=3D"r10-i" style=3D"padding-left:15px;padding-right:15p=
+x"> <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" =
+role=3D"presentation"><tbody><tr><td class=3D"r24-c" align=3D"center" style=
+=3D"padding-bottom:30px;padding-top:30px"> <table width=3D"100%" cellspacin=
+g=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" height=3D"1" s=
+tyle=3D"border-top-style:solid;background-clip:border-box;border-top-color:=
+#4a4a4a;border-top-width:1px;font-size:1px;line-height:1px"><tbody><tr><td =
+height=3D"0" style=3D"font-size:0px;line-height:0px">=C2=AD</td> </tr></tbo=
+dy></table></td> </tr></tbody></table></td> </tr></tbody></table></th> </tr=
+></tbody></table></td> </tr></tbody></table><table cellspacing=3D"0" cellpa=
+dding=3D"0" border=3D"0" role=3D"presentation" width=3D"100%" align=3D"cent=
+er" class=3D"r3-o" style=3D"table-layout:fixed;width:100%"><tbody><tr><td c=
+lass=3D"r26-i" style=3D"background-color:#ffffff;padding-top:45px"> <table =
+width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"pre=
+sentation"><tbody><tr><th width=3D"100%" valign=3D"top" class=3D"r5-c" styl=
+e=3D"font-weight:normal"> <table cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" role=3D"presentation" width=3D"100%" align=3D"left" class=3D"r27-o" =
+style=3D"table-layout:fixed;width:100%"><tbody><tr><td align=3D"center" val=
+ign=3D"top" class=3D"r28-i nl2go-default-textstyle" style=3D"color:#363636;=
+font-family:Alegreya Sans,Arial,Helvetica,sans-serif;font-size:18px;line-he=
+ight:1.4;word-break:break-word;padding-bottom:10px;text-align:center"> <div=
+><h1 class=3D"default-heading1" style=3D"margin:0;color:#363636;font-family=
+:Alegreya Sans,Arial,Helvetica,sans-serif;font-size:20px;font-weight:500;wo=
+rd-break:break-word">Follow Us:</h1></div> </td> </tr></tbody></table></th>=
+ </tr></tbody></table></td> </tr></tbody></table><table cellspacing=3D"0" c=
+ellpadding=3D"0" border=3D"0" role=3D"presentation" width=3D"100%" align=3D=
+"center" class=3D"r3-o" style=3D"table-layout:fixed;width:100%"><tbody><tr>=
+<td class=3D"r29-i" style=3D"background-color:#d48829;padding-bottom:12px;p=
+adding-top:12px"> <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0"=
+ border=3D"0" role=3D"presentation"><tbody><tr><th width=3D"100%" valign=3D=
+"top" class=3D"r5-c" style=3D"font-weight:normal"> <table cellspacing=3D"0"=
+ cellpadding=3D"0" border=3D"0" role=3D"presentation" width=3D"600" align=
+=3D"center" class=3D"r3-o" style=3D"table-layout:fixed;width:600px"><tbody>=
+<tr><td valign=3D"top"> <table width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" role=3D"presentation"><tbody><tr><td class=3D"r31-c" st=
+yle=3D"display:inline-block"> <table cellspacing=3D"0" cellpadding=3D"0" bo=
+rder=3D"0" role=3D"presentation" width=3D"600" class=3D"r6-o" style=3D"tabl=
+e-layout:fixed;width:600px"><tbody><tr><td class=3D"r32-i" style=3D"padding=
+-left:206px;padding-right:206px"> <table width=3D"100%" cellspacing=3D"0" c=
+ellpadding=3D"0" border=3D"0" role=3D"presentation"><tbody><tr><th width=3D=
+"47" class=3D"r33-c mobshow resp-table" style=3D"font-weight:normal"> <tabl=
+e cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" wi=
+dth=3D"100%" class=3D"r34-o" style=3D"table-layout:fixed;width:100%"><tbody=
+><tr><td class=3D"r35-i" style=3D"font-size:0px;line-height:0px;padding-bot=
+tom:5px;padding-top:5px"> <a href=3D"https://www.facebook.com/NPTELNoc/" ta=
+rget=3D"_blank" style=3D"color:#fcfcfc;text-decoration:none"> <img src=3D"h=
+ttps://creative-assets.mailinblue.com/editor/social-icons/rounded_bw/facebo=
+ok_32px.png" width=3D"32" border=3D"0" style=3D"display: block; width: 100%=
+;"></a> </td> <td class=3D"nl2go-responsive-hide" width=3D"15" style=3D"fon=
+t-size:0px;line-height:1px">=C2=AD </td> </tr></tbody></table></th> <th wid=
+th=3D"47" class=3D"r33-c mobshow resp-table" style=3D"font-weight:normal"> =
+<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentatio=
+n" width=3D"100%" class=3D"r34-o" style=3D"table-layout:fixed;width:100%"><=
+tbody><tr><td class=3D"r35-i" style=3D"font-size:0px;line-height:0px;paddin=
+g-bottom:5px;padding-top:5px"> <a href=3D"https://twitter.com/nptel_officia=
+l?ref_src=3Dtwsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target=3D"_blan=
+k" style=3D"color:#fcfcfc;text-decoration:none"> <img src=3D"https://creati=
+ve-assets.mailinblue.com/editor/social-icons/rounded_bw/twitter_32px.png" w=
+idth=3D"32" border=3D"0" style=3D"display: block; width: 100%;"></a> </td> =
+<td class=3D"nl2go-responsive-hide" width=3D"15" style=3D"font-size:0px;lin=
+e-height:1px">=C2=AD </td> </tr></tbody></table></th> <th width=3D"47" clas=
+s=3D"r33-c mobshow resp-table" style=3D"font-weight:normal"> <table cellspa=
+cing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" width=3D"10=
+0%" class=3D"r34-o" style=3D"table-layout:fixed;width:100%"><tbody><tr><td =
+class=3D"r35-i" style=3D"font-size:0px;line-height:0px;padding-bottom:5px;p=
+adding-top:5px"> <a href=3D"https://www.youtube.com/user/nptelhrd" target=
+=3D"_blank" style=3D"color:#fcfcfc;text-decoration:none"> <img src=3D"https=
+://creative-assets.mailinblue.com/editor/social-icons/rounded_bw/youtube_32=
+px.png" width=3D"32" border=3D"0" style=3D"display: block; width: 100%;"></=
+a> </td> <td class=3D"nl2go-responsive-hide" width=3D"15" style=3D"font-siz=
+e:0px;line-height:1px">=C2=AD </td> </tr></tbody></table></th> <th width=3D=
+"47" class=3D"r33-c mobshow resp-table" style=3D"font-weight:normal"> <tabl=
+e cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" wi=
+dth=3D"100%" class=3D"r34-o" style=3D"table-layout:fixed;width:100%"><tbody=
+><tr><td class=3D"r35-i" style=3D"font-size:0px;line-height:0px;padding-bot=
+tom:5px;padding-top:5px"> <a href=3D"https://www.instagram.com/nptel_india/=
+" target=3D"_blank" style=3D"color:#fcfcfc;text-decoration:none"> <img src=
+=3D"https://creative-assets.mailinblue.com/editor/social-icons/rounded_bw/i=
+nstagram_32px.png" width=3D"32" border=3D"0" style=3D"display: block; width=
+: 100%;"></a> </td> <td class=3D"nl2go-responsive-hide" width=3D"15" style=
+=3D"font-size:0px;line-height:1px">=C2=AD </td> </tr></tbody></table></th> =
+</tr></tbody></table></td> </tr></tbody></table></td> </tr></tbody></table>=
+</td> </tr></tbody></table></th> </tr></tbody></table></td> </tr></tbody></=
+table><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"prese=
+ntation" width=3D"100%" align=3D"center" class=3D"r3-o" style=3D"table-layo=
+ut:fixed;width:100%"><tbody><tr><td class=3D"r36-i" style=3D"background-col=
+or:#ffffff;padding-left:30px;padding-right:30px;padding-top:25px"> <table w=
+idth=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"pres=
+entation"><tbody><tr><th width=3D"100%" valign=3D"top" class=3D"r5-c" style=
+=3D"font-weight:normal"> <table cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" role=3D"presentation" width=3D"100%" align=3D"center" class=3D"r3-o"=
+ style=3D"table-layout:fixed;width:100%"><tbody><tr><td align=3D"left" vali=
+gn=3D"top" class=3D"r7-i nl2go-default-textstyle" style=3D"color:#363636;fo=
+nt-family:Alegreya Sans,Arial,Helvetica,sans-serif;font-size:18px;word-brea=
+k:break-word;line-height:1.5;text-align:left"> <div><p style=3D"margin:0;te=
+xt-align:center"><strong>NPTEL Administrator,</strong><br>IC &amp; SR, 3rd =
+floor<br>IIT Madras, Chennai - 600036</p></div> </td> </tr></tbody></table>=
+</th> </tr></tbody></table></td> </tr></tbody></table></td> </tr></tbody></=
+table></td> </tr></tbody></table>
+
+
+
+</div><div><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gma=
+il_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div dir=3D"ltr"><div>=
+<div style=3D"font-size:12.8px"><br></div></div><div>Thanks and Regards,</d=
+iv><div>NPTEL TEAM.</div></div></div></div></div></div></div></div>
+
+<p></p>
+
+-- <br />
+To unsubscribe from this group and stop receiving emails from it:<br />
+Log in to Google Groups and click on My Groups seen in the left navigation =
+pane. You will see the list of your groups. Choose the group &quot;NPTEL Ne=
+wsletter&quot;<br />
+Click the Leave Group icon on the right side to leave the group or you can =
+choose the &quot;No email&quot; option under Subscription to stop receiving=
+ these emails.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:newsletter-announce+unsubscribe@nptel.iitm.ac.in"=
+>newsletter-announce+unsubscribe@nptel.iitm.ac.in</a>.<br />
+
+--0000000000002e07ec064716ab98--

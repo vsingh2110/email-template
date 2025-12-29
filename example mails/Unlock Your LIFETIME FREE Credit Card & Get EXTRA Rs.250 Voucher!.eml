@@ -1,0 +1,724 @@
+Delivered-To: vsingh2110@gmail.com
+Received: by 2002:a05:640c:7706:b0:256:8a2c:2551 with SMTP id l6csp895416eiw;
+        Sun, 28 Dec 2025 19:03:37 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IH2BWTcG15cw4O9RxctwihhGkATearIurO2wGei7wWd8Yke3TTcZQl0+zaMBWZ5zIpZUsBE
+X-Received: by 2002:a05:6a00:e11:b0:7a9:c21a:559a with SMTP id d2e1a72fcca58-7ff646f9900mr24688200b3a.8.1766977416766;
+        Sun, 28 Dec 2025 19:03:36 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1766977416; cv=none;
+        d=google.com; s=arc-20240605;
+        b=jCL3XJGu/aXjfaZUYQ+dk2QyhSrNaLxwuPC1laY1/dTvPmLgBFqaExfBwQOJxn3lfe
+         6FYsQ3xGnYWJY6vDJrXgJzAlARamFu/ECkz6PyKqc34UEX43h+I5RJpOluQ+qMiQekES
+         peCdC+U2jiGLr+gzBgmZpndIYOFimMY4pTxE74vwCFqDp3rqj9hM0+CDuFHHkTV7ftMT
+         xzo6+IE0QWy+AoF6mcK+YBMTPxRoAZFzFoU47VS3+SQ7afIZvSufxrElI3UisVzu4uuS
+         xJ9zE4YrREpazLgs8zUwQviMjA8GBjLReolWDNan7uBOM0EI2ULOKJJvg8EreEvnlUxD
+         84wA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=list-unsubscribe-post:list-unsubscribe:message-id:mime-version
+         :reply-to:to:date:subject:from:dkim-signature;
+        bh=laKWmwp+EdQaZbonxkKHnHBRUhZvzqW+TZLoGpaPQ4M=;
+        fh=jsQ7xJJ5ayTHU+ptpOuJckTo0WFpqHKDYZlFYR28RXY=;
+        b=dV3+suUtEGEj/D++u0PHwFi1kERpdmrWBcFY/dbA0mbrwkA+EwJJWgyu8ftvZ235ty
+         FQJCCk05okWHzSBQ09EplMswgQRhVbqLeDCc7xuKjqfRrsP/0gKqKO7OApA9XVI78RMR
+         o1aaUAkT7YKWc3QoOm03btaur64DhWb80lOEDnQ5ZdfZifi4h8+w94D0e1zwiQjHgSrZ
+         TKq5dXne6/G9cxU0k914ZGaLheF/3XAcSIHGAHYnbhY9s9EOAz4GW32W5w04cqlpSFSC
+         WQOKkI8P2iEsiUWgI0ZollZwiDtVzNAF9dRs1F1RFAmC6mSPu1P2pzZFbgVqNnd+UcVF
+         XAdA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mailers.hdfcbank.net header.s=hdfcbank header.b=tqCy6Myc;
+       spf=pass (google.com: domain of bounce@mailers.hdfcbank.net designates 130.248.216.57 as permitted sender) smtp.mailfrom=bounce@mailers.hdfcbank.net;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=hdfcbank.net
+Return-Path: <bounce@mailers.hdfcbank.net>
+Received: from r57.mailers.hdfcbank.net (r57.mailers.hdfcbank.net. [130.248.216.57])
+        by mx.google.com with ESMTPS id d2e1a72fcca58-7ffe6035128si40476381b3a.184.2025.12.28.19.03.36
+        for <vsingh2110@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 28 Dec 2025 19:03:36 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce@mailers.hdfcbank.net designates 130.248.216.57 as permitted sender) client-ip=130.248.216.57;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mailers.hdfcbank.net header.s=hdfcbank header.b=tqCy6Myc;
+       spf=pass (google.com: domain of bounce@mailers.hdfcbank.net designates 130.248.216.57 as permitted sender) smtp.mailfrom=bounce@mailers.hdfcbank.net;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=hdfcbank.net
+Return-Path: <bounce@mailers.hdfcbank.net>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=mailers.hdfcbank.net; s=hdfcbank; t=1766977378;
+	bh=laKWmwp+EdQaZbonxkKHnHBRUhZvzqW+TZLoGpaPQ4M=;
+	h=From:Subject:Date:To:MIME-Version:Message-ID:List-Unsubscribe:
+	 List-Unsubscribe-Post:Content-Type;
+	b=tqCy6Mycbh5jtmelE4e/5B4G3YCBLYi3tarohFAzXgru5YGhxrFdMT6w15em/5L2V
+	 qzteRW8r7E12Fu+u5S/vo0F+uJKxhi4RnZoCGJyXg3tAnPlsZtu8Onv6J684nt4cJ1
+	 H3ZplYEiS5JDD4UbnfXY0ROVnaE+8cNihR14eeMd7xnNWcZbTND4Pn97APVa8ZYKfj
+	 3DXhhK8uUyTgF87SUs+SIP7QV6pyyN7JGXS38jdHfAoc7rzM8tNuUz0ZwhDBZW1HkC
+	 5q/X3pHLq7W/smmfmUCQ4N5VEFzbjETgD86NspHp6UPpwXLhYQEXtrlR1nFYeFszcN
+	 68iK8zY7DvdGA==
+X-MSFBL: olq4oJNaZqiw1XM7r4T2bnn4DXTXUvKiNt/7I8DF1E0=|eyJnIjoicHJvZC50YXJ
+	nZXQxNF9iYWE3YzRmYS1lOGJiLTRhNDUtOGE1MS04MTU1YzU4NzFjNmIiLCJyY3B
+	0X21ldGEiOnsgImluIjogImhkZmNiYW5rX21pZF9wcm9kMTUiLCAiciI6ICJ2c2l
+	uZ2gyMTEwQGdtYWlsLmNvbSIsICJtIjogIjhiODFkZjczLWFmMWEtNDcxMS1hYTk
+	1LTc4YzA2NGU5YjQ0MCIsICJkIjogIjc5NzA0NzIiLCAiaSI6ICIzODE3MDMzNzU
+	zRUU4OTcyMEE0OTBENERAQWRvYmVPcmciIH0sInIiOiJ2c2luZ2gyMTEwQGdtYWl
+	sLmNvbSIsImIiOiJoZGZjYmFua18xMzAuMjQ4LjIxNi41N19wcm9kLnRhcmdldDE
+	0X2JhYTdjNGZhLWU4YmItNGE0NS04YTUxLTgxNTVjNTg3MWM2YiJ9
+Received: from [10.1.1.231] ([10.1.1.231:53567] helo=r50.mailers.hdfcbank.net) by sgp3-prod1-mta-i-0523d467a76897a9f (envelope-from <bounce@mailers.hdfcbank.net>) (ecelerity 4.4.1.20033 r(msys-ecelerity:tags/4.4.1.0^0)) with ESMTP id E1/94-24133-16FE1596; Mon, 29 Dec 2025 03:02:58 +0000
+From: "HDFC Bank" <information@mailers.hdfcbank.net>
+Subject: Unlock Your LIFETIME FREE Credit Card & Get EXTRA Rs.250 Voucher!
+Date: Mon, 29 Dec 2025 08:32:57 +0530
+To: <vsingh2110@gmail.com>
+Reply-To: "HDFC Bank" <no-reply@mailers.hdfcbank.net>
+MIME-Version: 1.0
+X-mailer: nlserver, Build 8.6.5
+Message-ID: <NMFFDA8b81df73-af1a-4711-aa95-78c064e9b44000799EA8hdfcbank_mid_prod15@mailers.hdfcbank.net>
+List-Unsubscribe: <https://m.mailers.hdfcbank.net/hdbk/unsubOneClick.jssp?id=%409oqODxMw9jJaI594DXmSNUoTljdhdy8LYP98t9wrMZClHuDnbd2nOGu5chG2n1W2%2Ft%2BGhMTWS4TpnrRJhSgYGFm4lrzf%2FxHeZjTaq5uKQ1c%3D>,<mailto:bounce@mailers.hdfcbank.net?subject=unsubscribe%3CNMFFDA8b81df73-af1a-4711-aa95-78c064e9b44000799EA8hdfcbank_mid_prod15@mailers.hdfcbank.net%3E>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Content-Type: multipart/alternative;
+	charset="windows-1252";
+	boundary="----=_NextPart_376_31BDB2E0.31BDB2E0"
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_376_31BDB2E0.31BDB2E0
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+Try Scan & Pay + ₹250 Amazon Voucher  
+----------------------------------------------------------------------------
+To view this message in HTML format, click here:
+ https://t13.mailers.hdfcbank.net/r/?id=t8b81df73-af1a-4711-aa95-78c064e9b440,19d3a5,71c3e&e=cDE9JTQwJTJCd1pGVlNjZkR5bE94eGRKNXQzQTNnWFVNNnpvaHdmeDdzbUYwajA3TWJxdmk1dnE0Q0NZWTA2SEx1YWFhNVdyTTZDMlNvMFklMkJhRWJnYjRXSkpzMmtnJTNEJTNE&s=IgQfgBFSjRctLY7e27SA_ZIBkNU9YwmrIDLdqRFivHg 
+or paste this link in a Web browser
+----------------------------------------------------------------------------	
+ 
+
+	
+	
+
+	
+	
+	
+	
+
+	
+	
+	
+ https://t13.mailers.hdfcbank.net/r/?id=t8b81df73-af1a-4711-aa95-78c064e9b440,19d3a5,71c3f&e=cDE9NzMzNQ&s=IfVnNpqku588zaSMz2ilhlB64LvBfAJ-wV6w504Npjo Apply Today!  	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+
+	
+	
+ https://t13.mailers.hdfcbank.net/r/?id=t8b81df73-af1a-4711-aa95-78c064e9b440,19d3a5,71c40&e=cDE9NzMzNQ&s=QOLezbT_MgM27TIt207o_LDWFJXMeCNst8c67v4DxZo Apply Today!  	
+	
+	
+	
+	
+	
+	
+
+*T&C Apply |  https://t13.mailers.hdfcbank.net/r/?id=t8b81df73-af1a-4711-aa95-78c064e9b440,19d3a5,71c41&e=cDE9JTQwOW9xT0R4TXc5akphSTU5NERYbVNOVW9UbGpkaGR5OExZUDk4dDl3ck1aQ2xIdURuYmQybk9HdTVjaEcybjFXMiUyRnQlMkJHaE1UV1M0VHBuclJKaFNnWUdGbTRscnpmJTJGeEhlWmpUYXE1dUtRMWMlM0Q&s=SqzwytMAqdNMKGA6i3AMVy_1TLehm9k5S-Vteg5FEgc
+
+------=_NextPart_376_31BDB2E0.31BDB2E0
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html dir=3D"ltr" lang=3D"en" xmlns=3D"http://www.w3.org/1999/xhtml"
+xmlns:o=3D"urn:schemas-microsoft-com:office:office" xml:lang=3D"en">
+  <head>
+    <meta name=3D"generator" content=3D
+    "HTML Tidy for HTML5 for Windows version 5.0.0" />
+    <meta charset=3D"UTF-8" />
+    <meta name=3D"x-apple-disable-message-reformatting" />
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge" />
+    <meta content=3D"telephone=3Dno" name=3D"format-detection" />
+    <title>
+      Lifetime Free RuPay Credit Card -1 'July 24
+    </title>
+    <!--[if (mso 16)]><style type=3D"text/css">     a {text-decoration: non=
+e;}     </style><![endif]--><!--[if gte mso 9]><style>sup { font-size: 100%=
+ !important; }</style><![endif]--><!--[if gte mso 9]><xml> <o:OfficeDocumen=
+tSettings> <o:AllowPNG></o:AllowPNG> <o:PixelsPerInch>96</o:PixelsPerInch> =
+</o:OfficeDocumentSettings> </xml>
+<![endif]-->
+
+    <style type=3D"text/css">
+    /*<![CDATA[*/
+    #outlook a { padding:0;}.es-button { mso-style-priority:100!important; =
+      text-decoration:none!important;}a[x-apple-data-detectors] {     color=
+:inherit!important;        text-decoration:none!important; font-size:inheri=
+t!important;    font-family:inherit!important;  font-weight:inherit!importa=
+nt;  line-height:inherit!important;}.es-desk-hidden {        display:none; =
+  float:left;     overflow:hidden;        width:0;        max-height:0;   l=
+ine-height:0;  mso-hide:all;}@media screen and (max-width:384px) {.mail-mes=
+sage-content { width:414px!important } }
+    /*]
+        ]>*/
+    </style>
+  </head>
+  <body data-new-gr-c-s-loaded=3D"14.1186.0" style=3D
+  "width:100%;font-family:arial, 'helvetica neue', helvetica, sans-serif;-w=
+ebkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0">
+    <!-- Start of preheader -->
+    <!-- Preheader Start -->
+    <span style=3D
+    "display:none !important;font-size:0px;line-height:0;color:#ffffff;visi=
+bility:hidden;opacity:0;height:0;width:0;mso-hide:all">Try
+    Scan &amp; Pay + =E2=82=B9250 Amazon Voucher</span> 
+    <!-- Preheader End -->
+
+    <div dir=3D"ltr" lang=3D"en" class=3D"es-wrapper-color" style=3D
+    "background-color:#F6F6F6" xml:lang=3D"en">
+      <!-- Mirror Page Start-->
+
+      <table cellpadding=3D"0" cellspacing=3D"0" style=3D
+      "max-width: 650px;" align=3D"center">
+        <tbody>
+          <tr>
+            <td id=3D"viewBrowser" colspan=3D"3" style=3D
+            "padding: 4px 0 6px;" height=3D"20" align=3D"center">
+              <p align=3Dcenter>
+  <font style=3D"font-family: Verdana, Arial; font-size: 10px">
+  If you are unable to view this message correctly,
+  <a href=3D"https://t13.mailers.hdfcbank.net/r/=3Fid=3Dh8b81df73-af1a-4711=
+-aa95-78c064e9b440,19d3a5,71c3a&e=3DcDE9JTQwJTJCd1pGVlNjZkR5bE94eGRKNXQzQTN=
+nWFVNNnpvaHdmeDdzbUYwajA3TWJxdmk1dnE0Q0NZWTA2SEx1YWFhNVdyV2w0anglMkJKMjd3RX=
+FEV3dZeDh6QW9RJTNEJTNE&s=3DQqBTo2_B7aBFqF_teTHXnk7ylllEtAJJczM6LkgDupY" _la=
+bel=3D"Mirror Page" _type=3D"mirrorPage">click here</a>
+  </font>
+</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- Mirror Page End -->
+       <span style=3D
+      "display:none !important;font-size:0px;line-height:0;color:#ffffff;vi=
+sibility:hidden;opacity:0;height:0;width:0;mso-hide:all">
+      <!--[if gte mso 9]><v:background xmlns:v=3D"urn:schemas-microsoft-com=
+:vml" fill=3D"t"> <v:fill type=3D"tile" color=3D"#f6f6f6"></v:fill> </v:bac=
+kground><![endif]--></span>
+      <table class=3D"es-wrapper" width=3D"100%" cellspacing=3D"0"
+      cellpadding=3D"0" role=3D"none" style=3D
+      "mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;b=
+order-spacing:0px;padding:0;Margin:0;width:100%;height:100%;background-repe=
+at:repeat;background-position:center top;background-color:#F6F6F6">
+        <tr class=3D"gmail-fix" height=3D"0">
+          <td style=3D"padding:0;Margin:0">
+            <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0"
+            align=3D"center" role=3D"none" style=3D
+            "mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:coll=
+apse;border-spacing:0px;width:600px">
+              <tr>
+                <td cellpadding=3D"0" cellspacing=3D"0" border=3D"0"
+                height=3D"0" style=3D
+                "padding:0;Margin:0;line-height:1px;min-width:600px">
+                  <img src=3D
+                  "https://res13.mailers.hdfcbank.net/res/img/56ABE4CBC1753=
+63DA0810882244B34FF.png"
+                  width=3D"600" height=3D"1" style=3D
+                  "display:block;border:0;outline:none;text-decoration:none=
+;-ms-interpolation-mode:bicubic;max-height:0px;min-height:0px;min-width:600=
+px;width:600px"
+                  alt=3D"" />
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td valign=3D"top" style=3D"padding:0;Margin:0">
+            <table cellpadding=3D"0" cellspacing=3D"0" class=3D
+            "es-header" align=3D"center" role=3D"none" style=3D
+            "mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:coll=
+apse;border-spacing:0px;table-layout:fixed !important;width:100%;background=
+-color:transparent;background-repeat:repeat;background-position:center top"=
+>
+              <tr>
+                <td align=3D"center" style=3D"padding:0;Margin:0">
+                  <table class=3D"es-header-body" cellspacing=3D"0"
+                  cellpadding=3D"0" bgcolor=3D"#FFFFFF" align=3D"center"
+                  role=3D"none" style=3D
+                  "mso-table-lspace:0pt;mso-table-rspace:0pt;border-collaps=
+e:collapse;border-spacing:0px;background-color:#FFFFFF;width:600px">
+                    <tr>
+                      <td align=3D"left" style=3D"padding:0;Margin:0">
+                        <table cellspacing=3D"0" cellpadding=3D"0"
+                        width=3D"100%" role=3D"none" style=3D
+                        "mso-table-lspace:0pt;mso-table-rspace:0pt;border-c=
+ollapse:collapse;border-spacing:0px">
+                          <tr>
+                            <td align=3D"left" style=3D
+                            "padding:0;Margin:0;width:600px">
+                              <table width=3D"100%" cellspacing=3D"0"
+                              cellpadding=3D"0" role=3D"presentation"
+                              style=3D
+                              "mso-table-lspace:0pt;mso-table-rspace:0pt;bo=
+rder-collapse:collapse;border-spacing:0px">
+                                <tr>
+                                  <td align=3D"center" style=3D
+                                  "padding:0;Margin:0;font-size:0px">
+                                    <img class=3D"adapt-img" src=3D
+                                    "https://res13.mailers.hdfcbank.net/res=
+/img/02580FCB1176C5322E3306AF1425CFFD.jpg"
+                                    alt=3D"" style=3D
+                                    "display:block;border:0;outline:none;te=
+xt-decoration:none;-ms-interpolation-mode:bicubic"
+                                    width=3D"600" height=3D"64" />
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+
+            <table cellpadding=3D"0" cellspacing=3D"0" class=3D
+            "es-content" align=3D"center" role=3D"none" style=3D
+            "mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:coll=
+apse;border-spacing:0px;table-layout:fixed !important;width:100%">
+              <tr>
+                <td align=3D"center" style=3D"padding:0;Margin:0">
+                  <table bgcolor=3D"#FFFFFF" class=3D"es-content-body"
+                  align=3D"center" cellpadding=3D"0" cellspacing=3D"0"
+                  role=3D"none" style=3D
+                  "mso-table-lspace:0pt;mso-table-rspace:0pt;border-collaps=
+e:collapse;border-spacing:0px;background-color:#FFFFFF;width:600px">
+                    <tr>
+                      <td align=3D"left" background=3D
+                      "https://res13.mailers.hdfcbank.net/res/img/A04084E76=
+291AEF6DD70C9F50EB5004D.jpg"
+                      style=3D
+                      "padding:0;Margin:0;padding-left:20px;padding-right:2=
+0px;background-image:url(https://res13.mailers.hdfcbank.net/res/img/A04084E=
+76291AEF6DD70C9F50EB5004D.jpg);background-repeat:no-repeat;background-posit=
+ion:left top">
+                        <table cellpadding=3D"0" cellspacing=3D"0"
+                        width=3D"100%" role=3D"none" style=3D
+                        "mso-table-lspace:0pt;mso-table-rspace:0pt;border-c=
+ollapse:collapse;border-spacing:0px">
+                          <tr>
+                            <td align=3D"center" valign=3D"top" style=3D
+                            "padding:0;Margin:0;width:560px">
+                              <table cellpadding=3D"0" cellspacing=3D
+                              "0" width=3D"100%" role=3D"presentation"
+                              style=3D
+                              "mso-table-lspace:0pt;mso-table-rspace:0pt;bo=
+rder-collapse:collapse;border-spacing:0px">
+                                <tr>
+                                  <td align=3D"center" height=3D"0"
+                                  style=3D"padding:0;Margin:0">
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td align=3D"center" height=3D"0"
+                                  style=3D"padding:0;Margin:0">
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td align=3D"center" height=3D"118"
+                                  style=3D"padding:0;Margin:0">
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td align=3D"center" style=3D
+                                  "padding:0;Margin:0">
+                                    <!--[if mso]><a href=3D"https://v.hdfcb=
+ank.com/payzapp/index.html" target=3D"_blank" hidden> <v:roundrect xmlns:v=
+=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:off=
+ice:word" esdevVmlButton href=3D"https://mycards.hdfcbank.com/=3Fredirect_u=
+rl=3DUTM=3D=3F&utm_source=3Dmcmycards&utm_medium=3Donline&utm_campaign=3DEm=
+ailFAD&utm_content=3Drupayupilglc&type=3DrupayCard&productType=3DCC&channel=
+=3DMCMKTG&lgCode=3DEMAIL&lcCode1=3DOCT&lcCode2=3DFRESH&smCode=3D&branchCode=
+=3D&cardNum=3D7335&mobileNum=3D" style=3D"height:33px; v-text-anchor:middle=
+; width:315px" arcsize=3D"27%" stroke=3D"f" fillcolor=3D"#4ea426"> <w:ancho=
+rlock></w:anchorlock> <center style=3D'color:#ffffff; font-family:arial, "h=
+elvetica neue", helvetica, sans-serif; font-size:13px; font-weight:700; lin=
+e-height:13px; mso-text-raise:1px'>Apply Today!</center> </v:roundrect></a>
+<![endif]-->
+                                    <!--[if !mso]><!=3D=3D --><span class=
+=3D"msohide es-button-border"
+                                    style=3D
+                                    "border-style:solid;border-color:#2CB54=
+3;background:#4ea426;border-width:0px 0px 2px 0px;display:inline-block;bord=
+er-radius:9px;width:auto;mso-hide:all;border-bottom-width:0px"><a href=3D"h=
+ttps://t13.mailers.hdfcbank.net/r/=3Fid=3Dh8b81df73-af1a-4711-aa95-78c064e9=
+b440,19d3a5,71c3b&e=3DcDE9NzMzNQ&s=3DMx3fKgZzKQkVjVu7ivUXVpQRcITGNhTU2OYVR0=
+Ykvx4" class=3D"es-button es-button-1712755061064" target=3D"_blank" style=
+=3D"mso-style-priority:100 !important;text-decoration:none;-webkit-text-siz=
+e-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:=
+#ffffff;font-size:20px;padding:5px 15px;display:inline-block;background:#4e=
+a426;border-radius:9px;font-family:arial, 'helvetica neue', helvetica, sans=
+-serif;font-weight:bold;font-style:normal;line-height:24px;width:auto;text-=
+align:center;mso-padding-alt:0;mso-border-alt:10px solid #4ea426">Apply
+                                    Today!</a></span> 
+                                    <!--<![endif]-->
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td align=3D"center" height=3D"0"
+                                  style=3D"padding:0;Margin:0">
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td align=3D"center" height=3D"0"
+                                  style=3D"padding:0;Margin:0">
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td align=3D"center" height=3D"0"
+                                  style=3D"padding:0;Margin:0">
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td align=3D"center" height=3D"0"
+                                  style=3D"padding:0;Margin:0">
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td align=3D"center" height=3D"0"
+                                  style=3D"padding:0;Margin:0">
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td align=3D"center" height=3D"0"
+                                  style=3D"padding:0;Margin:0">
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td align=3D"center" height=3D"0"
+                                  style=3D"padding:0;Margin:0">
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td align=3D"center" height=3D"0"
+                                  style=3D"padding:0;Margin:0">
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+
+            <table cellpadding=3D"0" cellspacing=3D"0" class=3D
+            "es-content" align=3D"center" role=3D"none" style=3D
+            "mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:coll=
+apse;border-spacing:0px;table-layout:fixed !important;width:100%">
+              <tr>
+                <td align=3D"center" style=3D"padding:0;Margin:0">
+                  <table bgcolor=3D"#FFFFFF" class=3D"es-content-body"
+                  align=3D"center" cellpadding=3D"0" cellspacing=3D"0"
+                  role=3D"none" style=3D
+                  "mso-table-lspace:0pt;mso-table-rspace:0pt;border-collaps=
+e:collapse;border-spacing:0px;background-color:#FFFFFF;width:600px">
+                    <tr>
+                      <td align=3D"left" background=3D
+                      "https://res13.mailers.hdfcbank.net/res/img/F0E43F2FD=
+BBD23F2940B7733B181E574.jpg"
+                      style=3D
+                      "padding:0;Margin:0;background-image:url(https://res1=
+3.mailers.hdfcbank.net/res/img/F0E43F2FDBBD23F2940B7733B181E574.jpg);backgr=
+ound-repeat:no-repeat;background-position:left top">
+                        <table cellpadding=3D"0" cellspacing=3D"0"
+                        width=3D"100%" role=3D"none" style=3D
+                        "mso-table-lspace:0pt;mso-table-rspace:0pt;border-c=
+ollapse:collapse;border-spacing:0px">
+                          <tr>
+                            <td align=3D"center" valign=3D"top" style=3D
+                            "padding:0;Margin:0;width:600px">
+                              <table cellpadding=3D"0" cellspacing=3D
+                              "0" width=3D"100%" role=3D"presentation"
+                              style=3D
+                              "mso-table-lspace:0pt;mso-table-rspace:0pt;bo=
+rder-collapse:collapse;border-spacing:0px">
+                                <tr>
+                                  <td align=3D"center" height=3D"548"
+                                  style=3D"padding:0;Margin:0">
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td align=3D"center" height=3D"0"
+                                  style=3D"padding:0;Margin:0">
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+
+            <table cellpadding=3D"0" cellspacing=3D"0" class=3D
+            "es-content" align=3D"center" role=3D"none" style=3D
+            "mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:coll=
+apse;border-spacing:0px;table-layout:fixed !important;width:100%">
+              <tr>
+                <td align=3D"center" style=3D"padding:0;Margin:0">
+                  <table bgcolor=3D"#FFFFFF" class=3D"es-content-body"
+                  align=3D"center" cellpadding=3D"0" cellspacing=3D"0"
+                  role=3D"none" style=3D
+                  "mso-table-lspace:0pt;mso-table-rspace:0pt;border-collaps=
+e:collapse;border-spacing:0px;background-color:#FFFFFF;width:600px">
+                    <tr>
+                      <td align=3D"left" background=3D
+                      "https://res13.mailers.hdfcbank.net/res/img/3791FA6D1=
+B9CB056C480FE9D072DDDED.jpg"
+                      style=3D
+                      "padding:0;Margin:0;padding-top:10px;padding-left:20p=
+x;padding-right:20px;background-image:url(https://res13.mailers.hdfcbank.ne=
+t/res/img/3791FA6D1B9CB056C480FE9D072DDDED.jpg);background-repeat:no-repeat=
+;background-position:left top">
+                        <table cellpadding=3D"0" cellspacing=3D"0"
+                        width=3D"100%" role=3D"none" style=3D
+                        "mso-table-lspace:0pt;mso-table-rspace:0pt;border-c=
+ollapse:collapse;border-spacing:0px">
+                          <tr>
+                            <td align=3D"center" valign=3D"top" style=3D
+                            "padding:0;Margin:0;width:560px">
+                              <table cellpadding=3D"0" cellspacing=3D
+                              "0" width=3D"100%" role=3D"presentation"
+                              style=3D
+                              "mso-table-lspace:0pt;mso-table-rspace:0pt;bo=
+rder-collapse:collapse;border-spacing:0px">
+                                <tr>
+                                  <td align=3D"center" height=3D"264"
+                                  style=3D"padding:0;Margin:0">
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+
+            <table cellpadding=3D"0" cellspacing=3D"0" class=3D
+            "es-content" align=3D"center" role=3D"none" style=3D
+            "mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:coll=
+apse;border-spacing:0px;table-layout:fixed !important;width:100%">
+              <tr>
+                <td align=3D"center" style=3D"padding:0;Margin:0">
+                  <table bgcolor=3D"#FFFFFF" class=3D"es-content-body"
+                  align=3D"center" cellpadding=3D"0" cellspacing=3D"0"
+                  role=3D"none" style=3D
+                  "mso-table-lspace:0pt;mso-table-rspace:0pt;border-collaps=
+e:collapse;border-spacing:0px;background-color:#FFFFFF;width:600px">
+                    <tr>
+                      <td align=3D"left" background=3D
+                      "https://res13.mailers.hdfcbank.net/res/img/A14274E93=
+7C12591AE256D8FBAEC83EF.jpg"
+                      style=3D
+                      "padding:0;Margin:0;padding-top:10px;padding-left:20p=
+x;padding-right:20px;background-image:url(https://res13.mailers.hdfcbank.ne=
+t/res/img/A14274E937C12591AE256D8FBAEC83EF.jpg);background-repeat:no-repeat=
+;background-position:left top;background-color:#4b1246"
+                      bgcolor=3D"#4B1246">
+                        <table cellpadding=3D"0" cellspacing=3D"0"
+                        width=3D"100%" role=3D"none" style=3D
+                        "mso-table-lspace:0pt;mso-table-rspace:0pt;border-c=
+ollapse:collapse;border-spacing:0px">
+                          <tr>
+                            <td align=3D"center" valign=3D"top" style=3D
+                            "padding:0;Margin:0;width:560px">
+                              <table cellpadding=3D"0" cellspacing=3D
+                              "0" width=3D"100%" role=3D"presentation"
+                              style=3D
+                              "mso-table-lspace:0pt;mso-table-rspace:0pt;bo=
+rder-collapse:collapse;border-spacing:0px">
+                                <tr>
+                                  <td align=3D"center" height=3D"96"
+                                  style=3D"padding:0;Margin:0">
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td align=3D"center" height=3D"144"
+                                  style=3D"padding:0;Margin:0">
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td align=3D"center" style=3D
+                                  "padding:0;Margin:0">
+                                    <!--[if mso]><a href=3D"https://v.hdfcb=
+ank.com/payzapp/index.html" target=3D"_blank" hidden> <v:roundrect xmlns:v=
+=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:off=
+ice:word" esdevVmlButton href=3D"https://mycards.hdfcbank.com/=3Fredirect_u=
+rl=3DUTM=3D=3F&utm_source=3Dmcmycards&utm_medium=3Donline&utm_campaign=3DEm=
+ailFAD&utm_content=3Drupayupilglc&type=3DrupayCard&productType=3DCC&channel=
+=3DMCMKTG&lgCode=3DEMAIL&lcCode1=3DOCT&lcCode2=3DFRESH&smCode=3D&branchCode=
+=3D&cardNum=3D7335&mobileNum=3D" style=3D"height:31px; v-text-anchor:middle=
+; width:288px" arcsize=3D"29%" stroke=3D"f" fillcolor=3D"#4ea426"> <w:ancho=
+rlock></w:anchorlock> <center style=3D'color:#ffffff; font-family:arial, "h=
+elvetica neue", helvetica, sans-serif; font-size:11px; font-weight:700; lin=
+e-height:11px; mso-text-raise:1px'>Apply Today!</center> </v:roundrect></a>
+<![endif]-->
+                                    <!--[if !mso]><!=3D=3D --><span class=
+=3D"msohide es-button-border"
+                                    style=3D
+                                    "border-style:solid;border-color:#2CB54=
+3;background:#4ea426;border-width:0px 0px 2px 0px;display:inline-block;bord=
+er-radius:9px;width:auto;mso-hide:all;border-bottom-width:0px"><a href=3D"h=
+ttps://t13.mailers.hdfcbank.net/r/=3Fid=3Dh8b81df73-af1a-4711-aa95-78c064e9=
+b440,19d3a5,71c3c&e=3DcDE9NzMzNQ&s=3DCp7QSgS6V_qn-47M-0dXFGbYpXs0Uz62qm63t4=
+Gwzw4" class=3D"es-button es-button-1720175327685" target=3D"_blank" style=
+=3D"mso-style-priority:100 !important;text-decoration:none;-webkit-text-siz=
+e-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:=
+#ffffff;font-size:18px;padding:5px 15px;display:inline-block;background:#4e=
+a426;border-radius:9px;font-family:arial, 'helvetica neue', helvetica, sans=
+-serif;font-weight:bold;font-style:normal;line-height:22px;width:auto;text-=
+align:center;mso-padding-alt:0;mso-border-alt:10px solid #4ea426">Apply
+                                    Today!</a></span> 
+                                    <!--<![endif]-->
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td align=3D"center" height=3D"27"
+                                  style=3D"padding:0;Margin:0">
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td align=3D"center" height=3D"0"
+                                  style=3D"padding:0;Margin:0">
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td align=3D"center" height=3D"0"
+                                  style=3D"padding:0;Margin:0">
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+
+            <table cellpadding=3D"0" cellspacing=3D"0" class=3D
+            "es-content" align=3D"center" role=3D"none" style=3D
+            "mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:coll=
+apse;border-spacing:0px;table-layout:fixed !important;width:100%">
+              <tr>
+                <td align=3D"center" style=3D"padding:0;Margin:0">
+                  <table bgcolor=3D"#FFFFFF" class=3D"es-content-body"
+                  align=3D"center" cellpadding=3D"0" cellspacing=3D"0"
+                  style=3D
+                  "mso-table-lspace:0pt;mso-table-rspace:0pt;border-collaps=
+e:collapse;border-spacing:0px;background-color:#FFFFFF;border-right:1px sol=
+id #999999;border-left:1px solid #999999;width:600px;border-bottom:4px soli=
+d #004b8d"
+                  role=3D"none">
+                    <tr>
+                      <td align=3D"left" style=3D
+                      "padding:0;Margin:0;padding-left:20px;padding-right:2=
+0px">
+                        <table cellpadding=3D"0" cellspacing=3D"0"
+                        width=3D"100%" role=3D"none" style=3D
+                        "mso-table-lspace:0pt;mso-table-rspace:0pt;border-c=
+ollapse:collapse;border-spacing:0px">
+                          <tr>
+                            <td align=3D"center" valign=3D"top" style=3D
+                            "padding:0;Margin:0;width:560px">
+                              <table cellpadding=3D"0" cellspacing=3D
+                              "0" width=3D"100%" role=3D"presentation"
+                              style=3D
+                              "mso-table-lspace:0pt;mso-table-rspace:0pt;bo=
+rder-collapse:collapse;border-spacing:0px">
+                                <tr>
+                                  <td align=3D"center" style=3D
+                                  "padding:5px;Margin:0">
+                                    <p style=3D
+                                    "Margin:0;-webkit-text-size-adjust:none=
+;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:helveti=
+ca, 'helvetica neue', arial, verdana, sans-serif;line-height:15px;color:#00=
+0000;font-size:10px">
+                                      *T&amp;C Apply | <a target=3D"_blank"=
+ style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-=
+height-rule:exactly;text-decoration:underline;color:#0b5394;font-size:10px;=
+font-family:helvetica, 'helvetica neue', arial, verdana, sans-serif" href=
+=3D"https://t13.mailers.hdfcbank.net/r/=3Fid=3Dh8b81df73-af1a-4711-aa95-78c=
+064e9b440,19d3a5,71c3d&e=3DcDE9JTQwOW9xT0R4TXc5akphSTU5NERYbVNOVW9UbGpkaGR5=
+OExZUDk4dDl3ck1aQ2xIdURuYmQybk9HdTVjaEcybjFXMiUyRnQlMkJHaE1UV1M0VHBuclJKaFN=
+nWUdGbTRscnpmJTJGeEhlWmpUYXE1dUtRMWMlM0Q&s=3DfhOEM3YFgp8n3wBHiSlYclMfOOOfkK=
+2di_EeyCzXhn0" unsubscribe=3D""></a>
+                                    </p>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </div>
+  <img height=3D'0' width=3D'0' alt=3D'' src=3D'https://t13.mailers.hdfcban=
+k.net/r/=3Fid=3Dh8b81df73-af1a-4711-aa95-78c064e9b440,19d3a5,1'/></body>
+</html>
+
+------=_NextPart_376_31BDB2E0.31BDB2E0--
+

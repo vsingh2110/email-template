@@ -1,0 +1,276 @@
+Delivered-To: vsingh2110@gmail.com
+Received: by 2002:a05:640c:7706:b0:256:8a2c:2551 with SMTP id l6csp680289eiw;
+        Sun, 28 Dec 2025 08:15:24 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IEMxmKugFYT/6ks41BPI4PpLuAyzT8YRG9Q9GTm8AFxHR/SfXzkODuFDdmXUWvo3YDavUaX
+X-Received: by 2002:a17:903:38cd:b0:2a3:6b54:5d42 with SMTP id d9443c01a7336-2a36b545df5mr91514225ad.59.1766938524618;
+        Sun, 28 Dec 2025 08:15:24 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1766938524; cv=none;
+        d=google.com; s=arc-20240605;
+        b=ap1Y4nYgJ9MiPWV8OsVkgYeRIzsod9cCxf8zoBAKJ8AlwxGUVefoAa4cxGgxkcoskU
+         jHHyBHKIw3Pwk3cerIS/QmhwxB9vEjhj7BIX5p88pnYgQDCBi0l1mo3dpbVbQbqz6p2V
+         MsYOf6o4hWIGKo7x57/CkIXWmAZcIz7IKW/3H/w+Q9vOIeyl+X8is9cezGWh2KO2nFHG
+         rTgefupAae7w79R4j7td2zbVhUYLhIP6bQLw5PNTQzRc/kqcijMB8XwLDqxXpDkVnc7W
+         onRbOsJs0i32mXUBOJ+TpKJHWuchT+2GjDZ2meSB1n3CxXBKOQJRzRGLNsYPS3qQqHOA
+         hJLA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=list-unsubscribe-post:feedback-id:reply-to:list-unsubscribe
+         :content-transfer-encoding:mime-version:message-id:subject:from:to
+         :date:dkim-signature:dkim-signature;
+        bh=aFkIW8M3bcwCOb6G8de3nbMXHjpJZAr8il9iPZjch74=;
+        fh=jsQ7xJJ5ayTHU+ptpOuJckTo0WFpqHKDYZlFYR28RXY=;
+        b=b1zmm6SJ39R17L1vKF7zdwF09i2R/FwdcodIMn2SumGPxW7AfSwDGV4mLbPwR/Kl91
+         A0+Z2WSU3UN3us6NBxHgmI0/GeVpzU2RiEC1lKlhxOEQgUPXESfGUBbFBWKBphxtt9oR
+         49G0rK160uqaC8IFJvzyOwv4kWkRoRgS9DhixOv4inaFTZNgFgopFFS+jIbHtgHeulYQ
+         gYAudnc/wK77F6ydi7Q4IKptxbM772T0pXw1tudIqqIHtPqgLNpsOWWJUdl5F9YBmai4
+         yc1hvXM94hcHtKQwuehamQRQGx6QlB/xXwECCntbcwoP/fhGgLC6fE39xSj/1RLB5VzK
+         rAZA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@alerts.sbi.co.in header.s=nc header.b=UxmJeKdD;
+       dkim=pass header.i=@env.etransmail.com header.s=fnc header.b=IqyobFmW;
+       spf=pass (google.com: domain of 17668605045837070-189-1-gmail.com@alerts.sbi.co.in designates 175.158.69.53 as permitted sender) smtp.mailfrom=17668605045837070-189-1-gmail.com@alerts.sbi.co.in;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=sbi.co.in
+Return-Path: <17668605045837070-189-1-gmail.com@alerts.sbi.co.in>
+Received: from d53-smtp-out-in.communications.sbi.co.in (d53-smtp-out-in.communications.sbi.co.in. [175.158.69.53])
+        by mx.google.com with ESMTPS id 41be03b00d2f7-c1e79715dc1si43298914a12.49.2025.12.28.08.15.24
+        for <vsingh2110@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Sun, 28 Dec 2025 08:15:24 -0800 (PST)
+Received-SPF: pass (google.com: domain of 17668605045837070-189-1-gmail.com@alerts.sbi.co.in designates 175.158.69.53 as permitted sender) client-ip=175.158.69.53;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@alerts.sbi.co.in header.s=nc header.b=UxmJeKdD;
+       dkim=pass header.i=@env.etransmail.com header.s=fnc header.b=IqyobFmW;
+       spf=pass (google.com: domain of 17668605045837070-189-1-gmail.com@alerts.sbi.co.in designates 175.158.69.53 as permitted sender) smtp.mailfrom=17668605045837070-189-1-gmail.com@alerts.sbi.co.in;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=sbi.co.in
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=alerts.sbi.co.in; s=nc;
+	h=list-unsubscribe-post:feedback-id:reply-to:list-unsubscribe:
+	 content-transfer-encoding:content-type:mime-version:message-id:subject:from:to:
+	 from:to:subject;
+	bh=aFkIW8M3bcwCOb6G8de3nbMXHjpJZAr8il9iPZjch74=;
+	b=UxmJeKdD/6q5Q/Y2GAH+U9+HlgZCtNNuszDsFTZemtqdohtwmPFzk3PEe9q1a024vkNxOAVWcvt7X
+	 Izqkys5o/CjNWPS/U1rP8AGm68fII0faMnAOnvpH7JR8Df5rVBKAztHLInNv9KMKuJhC3ILW3DkfMW
+	 Zx4dV282apaxN/NYuRdF4A2eyaRGJ6ww75OI4Cw9shgqUFNS3j2Nael8JtOpQKMqNozMToDOdIElFR
+	 j0cmL9Sc5E0IHgjXb2fnBKFFMKts2wQ6V3as9E1+OWQaB533hwtHeDfWc+W/JK6GOSG3bSZVXZmtiV
+	 JTfkLnyAfSEsH8JV18Y0nQ91/1QJW8g==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=env.etransmail.com; s=fnc;
+	h=list-unsubscribe-post:feedback-id:reply-to:list-unsubscribe:
+	 content-transfer-encoding:content-type:mime-version:message-id:subject:from:to:
+	 from:to:subject;
+	bh=aFkIW8M3bcwCOb6G8de3nbMXHjpJZAr8il9iPZjch74=;
+	b=IqyobFmWAZXc5fCtAT/1HhEzsy07CQ7bBPc/6F/+9Duk05zjRMHwXnb6pu1jqBD0rDIVAQBXSoGGZ
+	 AbTyL6f8OChHRION258sl43+7uNB2YP+tLLAT7IREKPp6XYulyhHxmLr2jQNwvisAtrYAMraXWXlBT
+	 79Ad7E1DRxTxKSmk=
+Date: Sun, 28 Dec 2025 21:45:24 +0530
+To: <vsingh2110@gmail.com>
+From: =?UTF-8?B?U0JJIFJld2FyZHog?= <no-reply@alerts.sbi.co.in>
+Subject: =?UTF-8?B?V2ludGVyIHJld2FyZHMgYXJlIGNhbGxpbmcg8J+TniBEb27igJl0IGlnbm9yZQ==?=
+Message-Id: <lkefze17668605045837070@alerts.sbi.co.in>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_----------=_176693852314640617739"
+Content-Transfer-Encoding: binary
+List-Unsubscribe: <https://unsub-api.netcorecloud.net/YHNMJN?id=189=bU5TBlRRU15YHRREGRcWFBkVExYZEBMYFhATFhIYFRcYEkMWREFCRkFBFEQZFxYUGQVPQEpZXV9eAgIHAnhSWllbDxgHDg8aUFYCUgEBBgEJAQYOCgcDDwZMW0JGSEYNFx0WWBcUAEsAEV1KV1JCV1ZHVlVVX0ZcGF5WQh1hfXl1eC0JDQUeEFI=>, <mailto:17668605045837070-189-fncunsub@alerts.sbi.co.in?subject=Unsubscribe>
+Reply-To: membersupport@StateBankRewardz.com
+Feedback-Id: 189:202512:1:falconide
+X-Job: itsp_sbir:189:202512
+X-Fncid: 189-17668605045837070-0
+X-Abuse-Reports-To: abuse@pepipost.com
+X-Injtime: 1766938523
+X-Gentime: 1766938523
+X-Traffic-Type: 189-2
+X-Mailer: NetcoreCloud Mailer
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+
+This is a multi-part message in MIME format.
+
+--_----------=_176693852314640617739
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="utf-8"
+
+
+
+=20
+=20=20
+=20=20
+=20=20
+=20=20
+=20
+=20
+=20=20
+=20=20=20
+=20=20=20=20
+     To ensure that you receive our updates & offers in your inbox, please =
+add noreply@alerts.sbi.co.in to your contact list, address book or safe sen=
+der list.
+=20=20=20=20
+=20=20=20=20
+=20=20=20=20=20
+=20=20=20=20
+=20=20=20=20
+=20=20=20=20=20
+=20=20=20=20
+=20=20=20=20
+=20=20=20=20=20
+=20=20=20=20
+=20=20=20=20
+=20=20=20=20=20
+=20=20=20=20
+=20=20=20=20
+=20=20=20=20=20
+=20=20=20=20=20
+=20=20=20=20
+=20=20=20=20=20
+=20=20=20=20
+=20=20=20=20
+     =C2=A0
+=20=20=20=20
+=20=20=20=20
+     Disclaimer:  This communication is confidential and is intended solely=
+ for members of State Bank Rewardz and is not an unsolicited commercial com=
+munication or spam. If you are not the intended recipient (or have received=
+ this communication in error), please notify the sender immediately and des=
+troy the same. Any unauthorized disclosure; copying, distribution or use of=
+ this message is strictly prohibited, and if done, will result in strict le=
+gal action. This message is not guaranteed to be complete or error free. No=
+ liability is assumed for any errors and/or omissions in the contents of th=
+is message.  Please also note that a OTP (One time Password) verification f=
+eature has been added for security reasons. The OTP will be sent to your mo=
+bile number and email ID registered with the bank. If you wish to update yo=
+ur mobile number or email ID, please visit your State Bank of India's home =
+branch . Please do not reply to this mail as it is a computer generated mai=
+l. Please discard the mail if you are not the intended recipient of the mai=
+l or the mail has reached you inadvertently. Terms and Conditions apply. Pl=
+ease email your queries to membersupport@StateBankRewardz.com . For more in=
+formation and to read our Privacy Policy, please visit www.rewardz.sbi.bank=
+.in
+=20=20=20=20
+=20=20=20
+=20=20
+=20
+
+=
+
+--_----------=_176693852314640617739
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang=3D"und">
+ <head>
+  <meta charset=3D"utf-8">
+  <title></title>
+  <!--[if mso]><xml>
+    <w:WordDocument xmlns:w=3D"urn:schemas-microsoft-com:office:word">
+      <w:DontUseAdvancedTypographyReadingMail/>
+    </w:WordDocument>
+    </xml><![endif]-->
+  <style type=3D"text/css">@media screen and (max-width:384px) {.mail-messa=
+ge-content { width:414px!important } }</style>
+ </head>
+ <body>
+  <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" =
+role=3D"none" style=3D"width:700px">
+   <tbody>
+    <tr>
+     <td align=3D"center" style=3D"font-family:Verdana, Arial, Helvetica, s=
+ans-serif;font-size:11px;padding:0px 5px 10px 5px">To ensure that you recei=
+ve our updates &amp; offers in your inbox, please add<br><a style=3D"color:=
+#F00" href=3D"=3D189=3De05TBlRRU15YHQRUDAAPDA1RVwAKVQoNUwYHVAUJDQMPUQVVBlED=
+X1lXBgFaBlUFCQxPQEpZXV9eAgIHAnhSWllbDxgHDg8aUFYCUgEBBgEJAQYOCgcDDwZMW0JGSEY=
+NFx0HUwgIFAMTGFUIXEVCRxdGUV8XU1wWX14cZHBxcHFrZyh7WwgGGhdS&fl=3DUEYXRhdbTUkP=
+BlUDXBlaW0BZR09LVURZRFRJGFFXWBhdHQAZVy4yPFUFVQZtBXFQQ19/bA5EYX5iVxwCUFoCB1s=
+HAVQFV1dSWFMFBQkFBwNfUQJXWAUAAQUCBw=3D=3D&ext=3Dcz1kbk5wYm1kb01qRXhNRUJuYld=
+GcGJDNWpiMjA9JmFtcDtyPWUzMD0mYW1wO2JyPWUzMD0mYW1wO3Q9YldGcGJIUnZKVE5CYm05eV=
+pYQnNlU1UwTUdGc1pYSjBjeTV6WW1rdVkyOHVhVzRsTTBaMWRHMWZjMjkxY21ObEpUTkVKVEkyZ=
+FhSdFgyMWxaR2wxYlNVelJHVnRZV2xzWDJOaGJYQmhhV2R1SlRJMmRYUnRYMk5oYlhCaGFXZHVK=
+VE5FVTBKSlFWQkpYMWRwYm5SbGNsSTBYMEZPVWw4ME9UQTNOamxmUlY4eU5sOUNMVFE0TWpZbE1=
+qWjFkRzFmZDNKbFppVXpSRFJpWWpjd1l6VmlZbUUyTlRRNU1qRmhNREl4TjJaa01XRmhOVE01TX=
+pJMEpUSTJkWFJ0WDNkemIzVnlZMlVsTTBSbGJXRnBiRzV2ZEdsbWFXTmhkR2x2Ymc9PSZhbXA7b=
+T1QTFBNV1VmQl94JmFtcDtvPWZhbHNl" target=3D"_blank">noreply@alerts.sbi.co.in=
+</a> to your contact list, address book or safe sender list.</td>
+    </tr>
+    <tr>
+     <td><img src=3D"https://banners.loylty.com/20251218_WinterCarnivalEmai=
+ler_01.jpg" alt=3D"" width=3D"700" height=3D"141" style=3D"display:block;li=
+ne-height:0px"></td>
+    </tr>
+    <tr>
+     <td><img src=3D"https://banners.loylty.com/20251218_WinterCarnivalEmai=
+ler_02.jpg" width=3D"700" height=3D"695" alt=3D"" style=3D"display:block;li=
+ne-height:0px"></td>
+    </tr>
+    <tr>
+     <td align=3D"center"><img style=3D"display:block;line-height:0px" src=
+=3D"https://banners.loylty.com/20251218_WinterCarnivalEmailer_03.jpg" width=
+=3D"700" height=3D"553" alt=3D""></td>
+    </tr>
+    <tr>
+     <td align=3D"center"><img style=3D"display:block;line-height:0px" src=
+=3D"https://banners.loylty.com/20251218_WinterCarnivalEmailer_04.jpg" width=
+=3D"700" height=3D"685" alt=3D""></td>
+    </tr>
+    <tr>
+     <td align=3D"center"><img style=3D"display:block;line-height:0px" src=
+=3D"https://banners.loylty.com/20251218_WinterCarnivalEmailer_05.jpg" width=
+=3D"700" height=3D"250" alt=3D""></td>
+    </tr>=20
+    <tr>
+     <td align=3D"center"><img style=3D"display:block;line-height:0px" src=
+=3D"https://banners.loylty.com/20251218_WinterCarnivalEmailer_06.jpg" width=
+=3D"700" height=3D"137" alt=3D""></td>
+    </tr>
+    <tr>
+     <td align=3D"center">&nbsp;</td>
+    </tr>
+    <tr>
+     <td style=3D"font-family:Verdana, Arial, Helvetica, sans-serif;font-si=
+ze:10px;text-align:justify;padding:5px"><strong>Disclaimer:</strong> <br><b=
+r><br> This communication is confidential and is intended solely for member=
+s of State Bank Rewardz and is not an unsolicited commercial communication =
+or spam. If you are not the intended recipient (or have received this commu=
+nication in error), please notify the sender immediately and destroy the sa=
+me. Any unauthorized disclosure; copying, distribution or use of this messa=
+ge is strictly prohibited, and if done, will result in strict legal action.=
+ This message is not guaranteed to be complete or error free. No liability =
+is assumed for any errors and/or omissions in the contents of this message.=
+ <br><br> Please also note that a OTP (One time Password) verification feat=
+ure has been added for security reasons. The OTP will be sent to your mobil=
+e number and email ID registered with the bank. If you wish to update your =
+mobile number or email ID, please visit your <br><strong>State Bank of Indi=
+a's home branch</strong> .<br><br> Please do not reply to this mail as it i=
+s a computer generated mail. Please discard the mail if you are not the int=
+ended recipient of the mail or the mail has reached you inadvertently. Term=
+s and Conditions apply. Please email your queries to <a href=3D"=3D189=3De0=
+5TBlRRU15YHVAHWgcOAwwBCwMICQRZAwgKAwJaBFFbB1NVUwNXBwRVVwcIVgVRWwNPQEpZXV9eA=
+gIHAnhSWllbDxgHDg8aUFYCUgEBBgEJAQYOCgcDDwZMW0JGSEYNFx0HUwgIFAMTGFUIXEVCRxdG=
+UV8XU1wWX14cZHBxcHFrZyh7WwgGGhdS&fl=3DUEYXRhdbTUkPBlUDXBlaW0BZR09LVURZRFRJG=
+FFXWBhdHQAZVy4yPFUFVQZtBXFQQ19/bA5EYX5iVxwCUFoCB1sHAVQFV1dSWFMFBQkFBwNfUQJX=
+WAUAAQUCBw=3D=3D&ext=3Dcz1kbk5wYm1kb01qRXhNRUJuYldGcGJDNWpiMjA9JmFtcDtyPWUz=
+MD0mYW1wO2JyPWUzMD0mYW1wO3Q9YldGcGJIUnZKVE5CYldWdFltVnljM1Z3Y0c5eWRDVTBNRk4=
+wWVhSbFFtRnVhMUpsZDJGeVpIb3VZMjl0SlROR2RYUnRYM052ZFhKalpTVXpSQ1V5Tm5WMGJWOX=
+RaV1JwZFcwbE0wUmxiV0ZwYkY5allXMXdZV2xuYmlVeU5uVjBiVjlqWVcxd1lXbG5iaVV6UkZOQ=
+1NVRlFTVjlYYVc1MFpYSlNORjlCVGxKZk5Ea3dOelk1WDBWZk1qWmZRaTAwT0RJMkpUSTJkWFJ0=
+WDNkeVpXWWxNMFEwWW1JM01HTTFZbUpoTmpVME9USXhZVEF5TVRkbVpERmhZVFV6T1RNeU5DVXl=
+OblYwYlY5M2MyOTFjbU5sSlRORVpXMWhhV3h1YjNScFptbGpZWFJwYjI0PSZhbXA7bT1oUnhQTV=
+dVRVpuOSZhbXA7bz1mYWxzZQ=3D=3D" target=3D"_blank" style=3D"color:#F00">memb=
+ersupport@StateBankRewardz.com</a>. For more information and to read our Pr=
+ivacy Policy, please visit www.rewardz.sbi.bank.in</td>
+    </tr>
+   </tbody>
+  </table>
+ <img src=3D'https://deliveryalerts.sbi.co.in/RBIEFSUKM?id=3D189=3Dd05TBlRR=
+U15YHRREGRcWFBkVExYZEBMYFhATFhIYFRcYEkMWREFCRkFBFEQZFxYUGQVPQEpZXV9eAgIHAnh=
+SWllbDxgHDg8aUFYCUgEBBgEJAQYOCgcDDwZMW0JGSEYNFx0HUwgIFAMTGFUIXEVCRxdGUV8XU1=
+wWX14cZHBxcHFrZyh7WwgGGhdS' alt=3D'' /></body>
+</html>
+<img src=3D"https://ngage.loyltyrewardz.com/e/o/3OPZ4dabT2GdzjLZ7tRFTg/4bb7=
+0c5bba654921a0217fd1aa539324?s=3DdnNpbmdoMjExMEBnbWFpbC5jb20=3D&amp;r=3De30=
+=3D&amp;br=3De30=3D" alt=3D"">=
+=
+
+--_----------=_176693852314640617739--
+

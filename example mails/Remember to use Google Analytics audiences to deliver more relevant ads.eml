@@ -1,0 +1,1029 @@
+Delivered-To: vsingh2110@gmail.com
+Received: by 2002:a05:640c:7706:b0:256:8a2c:2551 with SMTP id l6csp312000eiw;
+        Sun, 21 Dec 2025 07:38:12 -0800 (PST)
+X-Received: by 2002:a05:690e:13c8:b0:644:5419:2e73 with SMTP id 956f58d0204a3-6466a8bffb7mr7098502d50.76.1766331492171;
+        Sun, 21 Dec 2025 07:38:12 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1766331492; cv=none;
+        d=google.com; s=arc-20240605;
+        b=LaYi3QP0sO87yXAj7+MGgdI2YmsUL0LJFUBJ7jVhBRKo8f2Cn83wYER6IJn8zLhwY2
+         WgeUVhwvETcviCKpV2WydOzsVvHtuK6MKS7y2lFsrJPa/fJPxxxFf9y9qW1U3AeZPvKr
+         a0n14nCv5H9LfkI4FJ/L1vzxdJaBiKqh8Wj/6fK2ZTJRLERVdrs7YcovRyhKNsJTR9bb
+         XLdoIDyqZpQRnLL/evHMCfWhaW59c/PYGg5lr4MmwL0WANStEFh+gsnZtuQg8SweJ4fW
+         9pai6FnJ9bz3pl5A0Zc95opzRJ+SJ3jARBuxmvHLN+RWBVym7DOhGv0WOOt1KFnuj2qn
+         XuIw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:from:subject:message-id:gmsai:list-id:feedback-id:precedence
+         :list-unsubscribe:list-unsubscribe-post:reply-to:date:mime-version
+         :dkim-signature;
+        bh=j/wB3MEpyDCc30bNFHARI3Ct2Wfxq+TVMelEMxdy/CQ=;
+        fh=VsADH51DasWUAWKbge5tokyYCeQDDfmF8MJrxNRkreQ=;
+        b=MmpRJIjGc+OsPL8n4BIzzZtAV0VQ53QDCwOBraGuRV5/inCT3iuGgaMG/xZJ4aXebd
+         qzTF5yvs2O3uz12PP1L0o4eCh3ShkSa7texLh1iT5/pEGGWrBZSmhdXS9z7C6iAvTu0H
+         cvBkfnKXoeR8pkzE9OYdsfigr1FHIhBmvX74a7+KonnFMEJojQtisBDBtAQv5ZdDWccn
+         hc8gPPI2UHsMqWoQB9MrtUg86Yc6n9VtcnG10hxifaTPDZ7ARGL89feAGBYY7YuRvOO5
+         3KmYAlBGvUA6KnR5t4WcKt1iSTHkNxQ7CnsPknqkNd5yrO+GbtBpDEn7D6+1kriGGhOM
+         WRnQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@google.com header.s=20230601 header.b=jG4ZQUdZ;
+       spf=pass (google.com: domain of 3yxriarekcvwerep2xmgw-rsvitp2ksskpi.gsqzwmrkl6554kqemp.gsq@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3YxRIaREKCvwerep2xmgw-rsvitp2ksskpi.gsqzwmrkl6554kqemp.gsq@scoutcamp.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <3YxRIaREKCvwerep2xmgw-rsvitp2ksskpi.gsqzwmrkl6554kqemp.gsq@scoutcamp.bounces.google.com>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id 00721157ae682-78fa7266cddsor43543947b3.13.2025.12.21.07.38.11
+        for <vsingh2110@gmail.com>
+        (Google Transport Security);
+        Sun, 21 Dec 2025 07:38:12 -0800 (PST)
+Received-SPF: pass (google.com: domain of 3yxriarekcvwerep2xmgw-rsvitp2ksskpi.gsqzwmrkl6554kqemp.gsq@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@google.com header.s=20230601 header.b=jG4ZQUdZ;
+       spf=pass (google.com: domain of 3yxriarekcvwerep2xmgw-rsvitp2ksskpi.gsqzwmrkl6554kqemp.gsq@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3YxRIaREKCvwerep2xmgw-rsvitp2ksskpi.gsqzwmrkl6554kqemp.gsq@scoutcamp.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20230601; t=1766331491; x=1766936291; dara=google.com;
+        h=to:from:subject:message-id:gmsai:list-id:feedback-id:precedence
+         :list-unsubscribe:list-unsubscribe-post:reply-to:date:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=j/wB3MEpyDCc30bNFHARI3Ct2Wfxq+TVMelEMxdy/CQ=;
+        b=jG4ZQUdZMBkKsmoSqVFVlfrWjYn2n3BAkGmzQeOTD7X8hmi157VeCsZrYvhjvks3kL
+         pGBbzk3zZuRFmw1ASXi3z1N7pUkdPFCNDyoww91PMzLS6IPAsGLAwwI9FFjpyr0ktEcw
+         gr4UBZk+Y4zQ88oW6SYvOwPny6uEs+xElZaotFIfH5so/4/nG9zK+3sDs/uCD+7tXWmq
+         x5pI3LKmOr2zD3zqPmkZJeUw7jF7Go8KEoTYoD6MOodjuJH6uh48opXb1QRNU5UveLRi
+         CxOxBoezsXJOW1zA97xVDio6SLZ/pugzOGKU2S6NRl6/DuAX24HyIVJLiTif64vGUWtW
+         NSzA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1766331491; x=1766936291;
+        h=to:from:subject:message-id:gmsai:list-id:feedback-id:precedence
+         :list-unsubscribe:list-unsubscribe-post:reply-to:date:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=j/wB3MEpyDCc30bNFHARI3Ct2Wfxq+TVMelEMxdy/CQ=;
+        b=UYAedbG6Jf2Ux9Ml1OmVMC3kvyJEBkyCL9zCDU/7PFR1XDE3h38sMCUwthN5crmN9C
+         YMzlNCtvLU+BZJUtyoHtzz8Bk6Ofnbk3vLZImBLzYgFMKEydY1CkmGVyTJer839Im6E9
+         JbfddeOIl3tx+PACVLImxVoPpawHOzqTK/DWA4EeqssfvG3Xu1tyFwMKr3KFOuxPexdT
+         +WW2oz3KWKQ2VuCB5jZk0eYvnMPdOgYDX9q5UTtnVQLNWWjSnx7R8qcmzIwjguO6EyKw
+         D9cOvak2Ms6Xj11PCAB4k17qh5BFC6Je9oQee9bZj6dlF5ih9HOED9SSzhpmUzG+SuLD
+         l/Ow==
+X-Gm-Message-State: AOJu0YxTe3RGj/uac7EGh63j3sJxzoCbNu6Hl2iMIN9xPjjkRI/TEWET
+	HTtVulTCep5oUxY/lE16LGZEDia0fPq/eTnEI6zHbhDuf6NRGy5hSj/5KAdj
+X-Google-Smtp-Source: AGHT+IEFPAUp9D7mn9exmUb6CnXCOE8ItnoWjOUkAwIvt1tGIG83wdXsb9RVtKddHneY1qyOOuWyxS8=
+MIME-Version: 1.0
+X-Received: by 2002:a05:690c:6187:b0:786:4ed4:24f0 with SMTP id
+ 00721157ae682-78fb40266a2mr74227177b3.5.1766331491819; Sun, 21 Dec 2025
+ 07:38:11 -0800 (PST)
+Date: Sun, 21 Dec 2025 07:38:11 -0800
+Reply-To: Google Analytics <analytics-noreply@google.com>
+X-Google-Id: 4225530
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Unsubscribe: <https://myaccount.google.com/communication-preferences/auto/unsubscribe/gt/ANnMTcYGsyycnJK3wr6_0SiMoKON0Boe-AB7REmxAx1j5JyMEF_nH5is222eFEJbeLSSTGOsjhQWNo00CIBJu3J-00kbprfqz_oTcozKp6PDxxJY15Z96zqDt4FmYtOA4ccmenevXojKaxyyGIHGB2FhvvlnnaRTA_A_BJMSTuY4oI9AZBsegqTXZu-vH1vZSY2ILNJDHTy7deLCpBB_XAHfSjXTUzfhI3_yn0hskZ9-0iPrGIfv_Vud3_sD9b9KgoFa4t3k6C9ZmxdRlxgTG2M-CddWw0Vq?utm_source=gm_header&utm_medium=email>
+Precedence: bulk
+Feedback-ID: P300-305:C20237439:M110622112-en-GB:gamma
+List-Id: <7f4ecb034bda89b32f6ca3ccd82dee468e1b8a23.google.com>
+gmsai: false
+X-Notifications: 4ed633863f260000
+X-Notifications-Bounce-Info: Ae2mSnyXaFWgxi1QquJ0Qj5Mi31jWVIoq6A96Eo6AIV00nT3LUK-P0sF56ZAHs0SUZYRuucujq5hMZjoUU7X79n5-2lR59YPmLP57_1dR7ljn9SGLWcG6ZLdAHRnK2gJndaBLKbY0cRun3dOjORemMcxeRQ_42YTQ3c-EITI0tLEFitNvRcz8kQaqlQzOCdNXUGNk-ISE8ngXosrMH2PZxA9AhpVV5OOmAivs86L1rgU_QWK5vvuWuX9RQSESkuAaDcrSJy2c8BWSroDz0eMDWSPjCwbS1vvlakaUGDQPsGp5KCZutKXXZ2qrEhiBKPEBDtXAlpuAS7mls184LEBZruhGtZVtQz2fNyY-3uuQB4kyjhhUNifcHuJsvInCj60hA4Fn75oT78rnRWpx-hEZ81uHUCOwqvkvpf_z6fHettG7vGH28IrikdbczTRJ31KBbWAvtlvlyheF9kfd8-mFzw6FbtttxWXCvk_27x91dir0_L0MZyHh1T-AKCaASNufE1gD0n4psdHCvY9AUitBbCKEuc2MKTfuMjw93-O7fiV4liBjQazVH-p8bX4-KzzIiLQqfVqmeO2MWqKVWpYpQyAJghg6b3lUvZQNjAwNjA0MDQxNTM1NTk2OTMzMg
+Message-ID: <9b33ebf6eab7ea9b594b4f56572452c87b952527-20237439-111442490@google.com>
+Subject: Remember to use Google Analytics audiences to deliver more relevant ads
+From: Google Analytics <analytics-noreply@google.com>
+To: vsingh2110@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000202423064678191e"
+
+--000000000000202423064678191e
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+Content-Transfer-Encoding: base64
+
+DQoNClRoZSByaWdodCBhZCBmb3IgdGhlIHJpZ2h0IGF1ZGllbmNlDQpOb3cgdGhhdCB5b3UndmUg
+bGlua2VkIHlvdXIgR29vZ2xlIEFuYWx5dGljcyBhY2NvdW50IHRvIEdvb2dsZSBBZHMsICANCnJl
+bWVtYmVyIHRvIHVzZSBhdWRpZW5jZXMgdGhhdCBBbmFseXRpY3MgaGFzIGJ1aWx0IGZvciB5b3Ug
+dG8gZGVsaXZlciBtb3JlICANCnJlbGV2YW50IGFkcyAtIHdpdGggbm8gYWRkaXRpb25hbCBjb2Rp
+bmcgb24geW91ciBzaXRlLg0KQ3JlYXRlICANCmF1ZGllbmNlczxodHRwczovL2MuZ2xlL0FObk1U
+Y2FxVngzdlA2VGE4azRHUld6OWVTRnE5clNjU2JmdS1jTVoyYV9WRjFZOXdhc05ib1AtX2kzcHYw
+Vzg1VWpjVEQzdjl1Q2dGaTNRMEhPOW1YU1E1bjhnVmRCX0R5SUVWbjl1c3k5UERBZ2tSekhNbEsx
+V2l5b29talN5MkF3NTdSNVNLZnhHRTVZZkFHenZsNlJQYXI5b3QyNFQteE02ZHFISWQ1SFExS2Fi
+cGVaZHNMU25kNlB3eU9Jby14a29ZQkJiYnV6eElEUmxFOW9lUmJORGgtbE53VU1TWndwZDJYbGtt
+dHIzb25FNUwwM2RwMnF1bnNMYkZFTjNNQUZGeDZRT2lCX3R1ZlZwV1Z3ZzVHWlYxUjZYYm1PdUJv
+bkE3YTRPTFBqX0RoT0pyNEJCVFd3VEJlQ1ZvZk5RS1NWaWhXOU9ubUVlbFktZlNOR21FeHNucUJK
+c3FmQ2luVU1XOHQxT3JJYlZjSno4NmxNQ3dGSmFyYTB0SXRVcU1vSEpZWmR1QUVJLVhPSldNdld2
+R1JxQz4NCg0KDQpIb3cgaXQgd29ya3MNCkF1ZGllbmNlcyBpbiBBbmFseXRpY3MgYXJlIHNwZWNp
+ZmljIGdyb3VwcyBvZiB1c2VycyBkZWZpbmVkIGJ5IHRoZSBhY3Rpb25zICANCnRoZXkgdGFrZSBv
+biB5b3VyIHNpdGUgYW5kIGFwcCwgc3VjaCBhcyB1c2VycyB3aG8gaGF2ZSB2aXNpdGVkIGEgY2Vy
+dGFpbiAgDQpwYWdlIG9uIHlvdXIgc2l0ZSBvciBwcmV2aW91c2x5IHB1cmNoYXNlZCBhIGNlcnRh
+aW4gcHJvZHVjdC4NCg0KV2h5IGl0IG1hdHRlcnMNCkNyZWF0aW5nIGFuIGF1ZGllbmNlIGFuZCBl
+eHBvcnRpbmcgaXQgdG8gR29vZ2xlIEFkcyBlbmFibGVzIHlvdSB0byAgDQpwZXJzb25hbGlzZSB5
+b3VyIGFkIGNhbXBhaWducyBhbmQgcmVhY2ggdGhlIHJpZ2h0IGN1c3RvbWVycyB3aXRoIHRoZSBy
+aWdodCAgDQptZXNzYWdlLg0KTGVhcm4gbW9yZSDCuw0KDQpQUk8gVElQDQpUbyBnZXQgc3RhcnRl
+ZCwgc2ltcGx5IGNob29zZSBmcm9tIGEgbGlzdCBvZiBzdWdnZXN0ZWQgYXVkaWVuY2VzIGluICAN
+CkFuYWx5dGljcyB0aGF0IGFyZSByZWFkeSBmb3IgeW91IHRvIHVzZSBvciBldmVuIGRlZmluZSBh
+IGN1c3RvbSBhdWRpZW5jZSB0byAgDQptZWV0IHlvdXIgbmVlZHMuIFZpc2l0IHRoaXMgcGFnZSB0
+byBsZWFybiBtb3JlIGFib3V0IGNyZWF0aW5nIGF1ZGllbmNlcyBpbiAgDQpBbmFseXRpY3MuPGh0
+dHBzOi8vYy5nbGUvQU5uTVRjYnNDRmNmQTdNVkdFWk8wWEtVNUg5YzJjV2l3emhDTEF2cUFzQkd6
+WGE5Wjc1MllzV2ZJZDZyV0QtMmg5Z3g0NGlPSWlybkhXRFhFeF9uRkdBMXppM1I1ZkxJRXJ1YXY3
+WWpwdkgyZWtuN3MzYWczZ2k4Ym9tU1RBWkU5SE5UdjZHUlJjMkVfWjVtN25GcC1COFg4ZkJPOEZO
+MkJFd0U3eThsSTlPdzZoUndiZHVwak92SEJSbjRHajFvWWNNUzRBN0VBWDM0aHlrQ2dPa1pQQjBp
+MGIzTGl0Rl9NeWpGR01xSzk4djY4dlFubFhyUXN5eDMwMzNwbXFseVVMREdBWENTT01vakItbXJU
+T1Zlbkk3QXB0VjUyd1JqMnhtazk0bVNlMTdzeU5uLUtxUlh2aFFJZ25wZmJSVndNaHJJSjY1UXB1
+TjVtNXMycFNDQ2tTWl84Zk5fR3NXa290bHhpcWd0YzJSSV9aN2xNV0xqQ3VKQ0huRDRoVUMyUXVo
+YVdrUjR3ZE9VSmRCN3BtbzBqdXllQnFZSG9ZQjVVZz4NCg0KSGFwcHkgbWVhc3VyaW5nLA0KVGhl
+IEdvb2dsZSBBbmFseXRpY3MgVGVhbQ0KDQpIZWxwICANCkNlbnRyZTxodHRwczovL2MuZ2xlL0FO
+bk1UY1luV0x2VVhYclhnNUpPR2hna1QtTHk4NWZLaUZMcGR3UURWSkVjclQ1SG9jRUpUV2x1TzVT
+Zlk1TnBLbDF1dGlvYjlJX1U4bS1INjVsOXJ1c3ZtZVJmOXN6VVhzZGs5RHZnbHVfVFR0Q3piTXI0
+R1h6NjZyVThFazJsZGEwUzl4dXdrYkk0QkhOVjFCOHRuYUgtUlpVV0dyT0hMQVkxVmRFYzRSVXJT
+MnBqM0U1VkpMRWlPNFBQMjVUblpOY2lNWHE3SHJyUkxoRHBaYXpaX3FDTWE1Y1R0S1RhOFgzeDhk
+R3RLNHp0UzYxcGNIbFEtSTlHN1VGMlJVUHQtVkFIcGNQZTNYaWRjRmpzQWJOa0kxVC1DX1EzQ1Rx
+bldwRW12Y2xPR2tSTzdJbHp2NE1ua2lfdmgtWVp6NmhyempSSy01WWdhbkNNNUstcVdnVGRQRzVw
+NUoyZ25QNWpXTlZBRXJISUpTOHZqbWlsTzNQMEJsVHJMcVliMExJUzBxOVVDZlRiPg0KTGVhcm5p
+bmcgIA0KQ2VudHJlPGh0dHBzOi8vYy5nbGUvQU5uTVRjYUU4OEdGMkMtSkNIWE5CdEplQmZQallx
+LVp0N1BiUUc5WWVmN2s2Y1FZcWJhU1VnT09GTzRzbUlRU0tGMGdNQy1KZEpCdGltTmpfVTlzeGc4
+M3FzWWxrMGVBTm5CY19hd1hCdFFnd1ZRR1FkTlJvUWxUVUhyMGRGdkNXa19iSC0yTWFnVUdvRTF3
+YXF0TlFaNFIxVmZXS0RudjdTeUFDRXhoQ1RGcG1tTzU5bW9ybVVXU195VUFKa3pYN0psS3NobVVJ
+ZTJ3ckoyd2xlZjg3VDAyMlVVdW1jQjlNMkkxdlBHdE5kR3FOUU1yTWNER1dsTHhJTTFUdWQ3ZVFU
+M1lFYlV6M2RiRzhwUWJrUVAzd3ZkX2UzaTJHTUR2SEF1N3oxSERkcW5MZlpGNk5YNldBamp4SFhH
+RVZSX2pZUXhpQzE2Z0FmcEhZOXJFQldtNXJuU1JNZG5tUGNQZz4NCg0KwqkgMjAyNSBHb29nbGUg
+TExDIDE2MDAgQW1waGl0aGVhdHJlIFBhcmt3YXksIE1vdW50YWluIFZpZXcsIENBIDk0MDQzDQoN
+ClRoaXMgZW1haWwgd2FzIHNlbnQgdG8gdnNpbmdoMjExMEBnbWFpbC5jb20gYmVjYXVzZSB5b3Ug
+aW5kaWNhdGVkIHRoYXQgIA0KeW91J2QgbGlrZSB0byByZWNlaXZlIHVwZGF0ZXMgYW5kIHRpcHMg
+YWJvdXQgeW91ciBHb29nbGUgQW5hbHl0aWNzIGFjY291bnQuICANCklmIHlvdSBkb24ndCB3YW50
+IHRvIHJlY2VpdmUgc3VjaCBlbWFpbHMgaW4gdGhlIGZ1dHVyZSwgcGxlYXNlIHVuc3Vic2NyaWJl
+ICANCmhlcmU8aHR0cHM6Ly9teWFjY291bnQuZ29vZ2xlLmNvbS9jb21tdW5pY2F0aW9uLXByZWZl
+cmVuY2VzL3Vuc3Vic2NyaWJlL2d0L0FObk1UY1otWUN3V015eGVIcHk4WTFUamhvbHNxa0lWSm1W
+czdEUTJBelJYbDA3dlJJMUl3VF9ZYVV1MnhIUEJqV21pV1FfUUJvVEFOVEhXZlFmdHF3WERWQ24w
+NXZZUHpETlE0aE5meUlSemhDSWtOSnpWMmY3Q3RsMWdiQ3U2a3p0c1dfMzJTTFhXVnFuZUtoWm1V
+THZBTEstemJLUFpRN1MwQkxBbXRRejJMbnZBc0lHRWpxZTMzYUF3UHlMU19WS0hwVkR6VlRpVHNJ
+Q29RNnZlNjFvb1RSRE91dW9ielA2bkZ0T0Jsa0VzX0pEOFc0YzFXRWl3LWd2SVByQWVsV2duZW9k
+NTRYamVnaGlza3FQOGpWMU5kRGZPamc/dXRtX3NvdXJjZT1nbSZ1dG1fbWVkaXVtPWVtYWlsJmF1
+dG89dHJ1ZT4uICANCllvdSBjYW4gYWxzbyBjaGFuZ2UgeW91ciBwcmVmZXJlbmNlcyBhdCB5b3Vy
+IGFjY291bnQncyBHb29nbGUgQW5hbHl0aWNzICANCkVtYWlsIENvbW11bmljYXRpb25zIHBhZ2Ug
+YnkgbG9nZ2luZyBpbiB0byAgDQpodHRwczovL3d3dy5nb29nbGUuY29tL2FuYWx5dGljcy9zZXR0
+aW5ncy9teV9hY2NvdW50PGh0dHBzOi8vd3d3Lmdvb2dsZS5jb20vYW5hbHl0aWNzL3NldHRpbmdz
+L215X2FjY291bnQ+DQoNCg0KDQo=
+--000000000000202423064678191e
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!doctype html>
+<html xmlns=3Dhttp://www.w3.org/1999/xhtml xmlns:v=3Durn:schemas-microsoft-=
+com:vml xmlns:o=3Durn:schemas-microsoft-com:office:office lang=3Den-gb>
+<head>
+<meta http-equiv=3DContent-Type content=3D"text/html; charset=3DUTF-8">
+<meta name=3Dviewport content=3D"width=3Ddevice-width; initial-scale=3D.65;=
+">
+<meta name=3Dviewport content=3Dtarget-densitydpi=3Ddevice-dpi>
+<!--[if !mso]><!-->
+<meta http-equiv=3DX-UA-Compatible content=3DIE=3Dedge>
+<!--<![endif]-->
+<meta name=3Dcolor-scheme content=3D"light dark">
+<meta name=3Dsupported-color-schemes content=3D"light dark">
+<title>The right ad for the right audience</title>
+<style>
+:root {
+color-scheme: light dark;
+supported-color-schemes: light dark;
+}
+@media (prefers-color-scheme: dark ) {
+/* Custom Dark Mode Font Colors */
+td, span, h1, h2, h3, h4, h5, h6, h7, p, div {
+color: #ffffff !important;}
+.main_wrapper
+{background-color: #202124 !important; }
+body { background-color: #3C4043 !important; }
+a, a span{
+color: #6C93EF !important;
+}
+.cta_font , .cta_font span{
+background-color: #1967D2 !important;
+color:#ffffff !important;
+}
+.bgc {
+background-color: #3C4043 !important;
+}
+.yellowfix{
+background-color: #f9bc04 !important;
+}
+.greenfix{
+background-color: #5BB974 !important;
+}
+.blackfix{
+color: #212225 !important;
+}
+.dark_mode_yellow_bg
+{
+background-color: #25210F !important;
+}
+.dark_mode_content_bg
+{ background-color: #202124 !important;}
+.dark_mode_green_bg
+{
+background-color: #324438 !important;
+}
+.footer_icon_bg
+{
+background-color: #202124 !important;
+border-radius: 20px !important;}
+.orange_color, .orange_color span
+{color:#E37400 !important;}
+.footer_icon_bg_dark_main,.footer_icon_bg_dark_main div, .footer_icon_bg_da=
+rk_main div a
+{
+background-color: #242526 !important;
+}
+}
+@media only screen and (max-width:900px) {
+.desktop_only {
+display:none !important;
+font-size:0px !important;
+line-height:0 !important;
+height:0px !important;
+max-height:0px !important;
+overflow:hidden !important;
+}
+.mobile_only {
+height: auto !important;
+overflow: visible !important;
+display: block !important;
+max-height: inherit !important;
+width: 100% !important;
+font-size:inherit !important;
+line-height:inherit !important;
+}
+.hideOnMobile{display:none !important;}
+.showOnMobile{display:inline-block !important;}
+.main_wrapper {width: 100% !important;}
+.fullwidth {width: 100% !important;}
+.d-table-row {display: table-row !important;}
+.disp_change{display: block !important; width: 100% !important; padding-bot=
+tom: 15px !important;}
+.pdadjust {padding: 37px 20px 37px 20px !important;}
+.mob_pdng_sprte{padding-left:20px !important; padding-right:20px !important=
+;}
+.pdtop{padding-top:195px !important; padding-bottom: 50px !important;}
+.wd_adjust{width: 90% !important;}
+.pdlftryt{padding-left:20px !important; padding-right:20px !important;}
+.iphone_only_head{padding-left:0px !important; padding-right:10px !importan=
+t;}
+.iphone_only_subhead{padding-left:0px !important; padding-right:20px !impor=
+tant;}
+.borderfix{border:none !important;}
+.cstm_img{
+width:282px !important;
+}
+.align_left{
+text-align: left !important;
+}
+.mob_center_cstm{
+text-align: center !important;
+}
+.Image_bottom_space_mob{
+padding-bottom:15px !important;
+}
+.mob_headline
+{font-size:32px !important;
+line-height:40px !important;
+}
+.mob_bullet_para
+{font-size:24px !important;
+letter-spacing:-0.25px !important;
+}
+.mob_four_sec_pd_bottom{padding-bottom:55px !important;}
+.mob_padd_rg_lf{padding:0 31px !important;}
+.footer_mob_cls1{padding:0 20px !important;}
+.footer_adr_mob_set{
+padding: 14px 18px 6px 18px !important;
+}
+}
+</style>
+<style>
+@media only screen and (min-width: 480px)and (max-width: 900px) {
+.module_landscape
+{max-width:100% !important;
+padding-left:80px !important;
+padding-right:80px !important;
+}
+.mob_icon_img
+{padding: 5px 15px 30px 0px !important;}
+}
+@media screen and (max-width:600px) {
+.mob_height_pro_tip
+{height:25px !important;}
+.mob_sign_off
+{padding-left:25px !important; padding-right:25px !important; }
+.mob_potrait
+{padding-top:10px !important;}
+.mob_set_padd
+{padding-left:25px !important;
+padding-right:25px !important;}
+.mob_icon_img
+{padding: 5px 15px 30px 14px !important;}
+.mob_left_potrait
+{padding-left:10px !important;}
+}
+</style>
+<!--[if mso]>
+<style>
+html, body, table, tr, td, div{
+font-family: Arial, sans-serif !important;
+}
+.mso_cstm{
+margin-top:100px;
+}
+</style>
+<![endif]-->
+<!--[if gte mso 9]>
+<xml>
+<o:OfficeDocumentSettings>
+<o:AllowPNG/>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+<!--[if gte mso 9]>
+<style>
+sup { font-size: 100% !important;}
+</style>
+<![endif]-->
+</head>
+<div itemscope itemtype=3Dhttp://schema.org/EmailMessage>
+<div itemprop=3Daction itemscope itemtype=3Dhttp://schema.org/ViewAction>
+<link itemprop=3Durl href=3Dhttps://c.gle/ANnMTcYK9zZ8OsYTuFggtknh90qaUZDiL=
+W4ppBXKlred3ed8W0WxGrTlYjmQZ8w9OXjY5nR9fN5twjm2eMEiIkTxCDTwtJJofg5Ka8YYHm62=
+gEprGRT5DOIYr0wlazTpl9mt20BocgjxumRgDMpuJ0Q0WkLRcAPbCfafD7CppRBX9CIpexiFVKR=
+IGmOH4D0iKXhOqwOslWuuSMkZveafy6Qn8rZ6kgR1jsDN25gM0hS-3rfjhEyXwL-Tv23V0Gz2gl=
+3ldVZQsQMAtfdQ_dyIOcUYUOM6qHSoTf4Kn6VuDO3-8L0TAdaGeUg2kC99c64fT1i9mKrOQTOvt=
+v_GUUBOfjgZS-s_90g9oOrbMBXZyNvPRDKOdiUkmcWEYi2BBxrVuJz9BIYvWBh4nUbRZHX18P33=
+M-QDx25gdl8BPDrr>
+<meta itemprop=3Dname content=3D"Create audiences">
+</div>
+</div>
+<meta itemprop=3Ddescription content=3D"Create audiences">
+<body style=3D"margin:0; padding:0; width:100%; font-family:Google Sans, Ro=
+boto, Arial, Helvetica, sans-serif background-color:#ffffff;" bgcolor=3D#ff=
+ffff class=3Dbody>
+<div style=3D"font-size: 0px; line-height: 0px; color: #ffffff; display: no=
+ne; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0p=
+x; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left:=
+ 0px;"></div>
+<div style=3D"font-size: 0px; line-height:0px; display: none; max-height: 0=
+px; overflow: hidden;">
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0 =E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0 =E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0
+</div><div style=3D"font-size: 0px; line-height:0px; color: #ffffff; displa=
+y: none;">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0=C2=A0 =C2=A0=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0=C2=A0 =C2=A0=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0=C2=A0 =C2=A0=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0=C2=A0 =C2=A0
+</div>
+<section>
+<center style=3D"width:100%; margin:0 auto;">
+<!--[if mso]>
+<table role=3D"presentation" class=3D"main_wrapper" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"0" align=3D"center" width=3D"720" bgcolor=3D"#ffffff=
+" style=3D"background: #ffffff;border: 2px solid #f1f3f4; width: 720px;">
+<![endif]-->
+<!--[if !mso]><!-->
+<table role=3Dpresentation class=3Dmain_wrapper border=3D0 cellspacing=3D0 =
+cellpadding=3D0 align=3Dcenter width=3D720 bgcolor=3D#ffffff style=3D"backg=
+round: #ffffff;border: 2px solid #f1f3f4; width: 720px;">
+<!--<![endif]-->
+<tr>
+<td style=3D"">
+<table role=3Dpresentation width=3D100% cellpadding=3D0 cellspacing=3D0 sty=
+le=3Dwidth:100%;>
+<tr>
+<td style=3D"">
+<table role=3Dpresentation width=3D100% cellpadding=3D0 cellspacing=3D0 sty=
+le=3Dwidth:100%>
+<tr>
+<td style=3Dwidth:22px width=3D22>=C2=A0</td>
+<td style=3D"">
+<table role=3Dpresentation width=3D100% cellpadding=3D0 cellspacing=3D0 sty=
+le=3Dwidth:100%>
+<tr>
+<td style=3D"" height=3D15>=C2=A0</td>
+</tr>
+<tr>
+<td style=3Ddirection:ltr;>
+<table role=3Dpresentation width=3D100% cellpadding=3D0 cellspacing=3D0 sty=
+le=3Dwidth:100%>
+<tr>
+<td style=3Dtext-align:left align=3Dleft>
+<img src=3Dhttps://www.gstatic.com/gumdrop/files/analytics-google-logo-tran=
+sparent-w377px-h124px-2x.png width=3D80 style=3Dmax-width:80px alt=3D"" ari=
+a-hidden=3Dtrue>
+</td>
+<td style=3Dtext-align:right align=3Dright>
+<img src=3Dhttps://www.gstatic.com/gumdrop/files/analytics-header-logo-tran=
+sparent-w456px-h116px-2x.png width=3D104 style=3Dwidth:104px; alt=3D"" aria=
+-hidden=3Dtrue>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style=3Dheight:15px; height=3D15>=C2=A0</td>
+</tr>
+</table>
+</td>
+<td style=3Dwidth:22px width=3D22>=C2=A0</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3Dcenter style=3D"color:#3C4043; font-family:&#39;Google Sans&#39=
+;, &#39;Open Sans&#39;, Arial, sans-serif;; font-size:40px; font-weight:700=
+; line-height:52px; margin:0; padding:40px 80px 12px 80px; text-align:cente=
+r; word-break:normal;direction:ltr;color:#3C4043;" dir=3Dltr class=3D"mob_p=
+dng_sprte mob_headline ">The right ad for the <!--[if gte mso 9]><br /><![e=
+ndif]--><span style=3D"white-space: nowrap !important;"><span class=3Dorang=
+e_color style=3D"color: #E37400; ">right audience</span></span>
+</td>
+</tr>
+<tr>
+<td align=3Dcenter style=3D"color:#5F6368; font-family:Google Sans Text, Ro=
+boto, Arial, Helvetica, sans-serif; font-size:14px; font-weight:400; line-h=
+eight:21px; margin:0; padding:0px 80px 16px 80px; letter-spacing:0.2px;text=
+-align:center; word-break:normal;direction:ltr;color:#5F6368;" dir=3Dltr cl=
+ass=3D"mob_pdng_sprte ">Now that you&#39;ve linked your Google Analytics ac=
+count to <span style=3D"white-space: nowrap !important;">Google Ads</span>,=
+ remember to use audiences that Analytics has built for you to deliver more=
+ relevant <span style=3D"white-space: nowrap !important;">ads -</span> with=
+ no additional coding on <span style=3D"white-space: nowrap !important;">yo=
+ur site.</span>
+</td>
+</tr>
+<tr>
+<td align=3Dcenter style=3D"text-align: center;padding-bottom: 40px;padding=
+:0px 15px 40px;" class=3D"mob_center_cstm cta_mob_cls1 ">
+<div>
+<!--[if mso]>
+<v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:schem=
+as-microsoft-com:office:word" href=3D"https://c.gle/ANnMTcY3PrqftiP0tP1VYzn=
+wqtcvDvjYTBqXECBXp5fbPgdsndcjp9yCXHOV4qsHT8-SkrsC9Z2yhKthh0QMFc--p50NXELCBH=
+NuDwsHvJYk6o-vd6936b_Yhx9BfTW5WskoRlMomIDx3LB2eQjTk0G0hPAJKKFbV0psvqyuXMUv6=
+FuQJEbM6CF2E03VfDmblW8wc16yReZIUEiK43bebvCL3Av1dNIlbwrh0KZygTYgBi4Ph73l-kkv=
+UisT02PAplD6sXelgMoYtM0uvKPJtC7kSuzhgzCFDfyJo_JygkospzDN-r69jICbv09aINHQ7A9=
+l_6VDTYDWeduOGMF64eEcwKQZBUwKVXyhBzBozEH4gCOQNoQSMDedRwGSh0xqp6X0XrWBlhrpO8=
+EriPgnZfVlHjE" style=3D"height:48px; v-text-anchor:middle; width:180px;" ar=
+csize=3D"50%" strokecolor=3D"#1967D2" fillcolor=3D"#1967D2;">
+<w:anchorlock/>
+<center class=3D"cstm_ko"style=3D"color:#ffffff;font-family:'Google Sans', =
+'Open Sans', Arial, sans-serif;; font-size: 16px; font-weight:normal; word-=
+break:normal;direction:ltr;" dir=3D"ltr">Create audiences</center>
+</v:roundrect>
+<![endif]-->
+<!--[if !mso]><!-->
+<a href=3Dhttps://c.gle/ANnMTcY3PrqftiP0tP1VYznwqtcvDvjYTBqXECBXp5fbPgdsndc=
+jp9yCXHOV4qsHT8-SkrsC9Z2yhKthh0QMFc--p50NXELCBHNuDwsHvJYk6o-vd6936b_Yhx9BfT=
+W5WskoRlMomIDx3LB2eQjTk0G0hPAJKKFbV0psvqyuXMUv6FuQJEbM6CF2E03VfDmblW8wc16yR=
+eZIUEiK43bebvCL3Av1dNIlbwrh0KZygTYgBi4Ph73l-kkvUisT02PAplD6sXelgMoYtM0uvKPJ=
+tC7kSuzhgzCFDfyJo_JygkospzDN-r69jICbv09aINHQ7A9l_6VDTYDWeduOGMF64eEcwKQZBUw=
+KVXyhBzBozEH4gCOQNoQSMDedRwGSh0xqp6X0XrWBlhrpO8EriPgnZfVlHjE target=3D_blan=
+k dir=3Dltr style=3D"display: inline-block;" class=3Ddesktop_only>
+<table role=3Dpresentation cellspacing=3D0 cellpadding=3D0 align=3Dcenter>
+<tr style=3D"padding: 0; margin: 0; font-size: 0; line-height: 0;"><td styl=
+e=3D"border-top: 3px;border-top-left-radius: 4px;border-top-right-radius: 4=
+px;display:inline-block; -webkit-text-size-adjust:none;mso-hide:all;text-al=
+ign: center; height:3px;"></td></tr>
+<tr><td style=3D"background-color: #1967D2;border: 1px solid #1967D2;border=
+-radius: 40px;color:#ffffff;display:inline-block;font-family:&#39;Google Sa=
+ns&#39;, &#39;Open Sans&#39;, Arial, sans-serif;;font-size: 16px;line-heigh=
+t: 24px;text-decoration:none; min-width: 84px;padding: 12px 24px 12px 24px;=
+-webkit-text-size-adjust:none;mso-hide:all;font-weight:500;text-align: cent=
+er;word-break:normal;direction:ltr;" dir=3Dltr class=3D"cta_font font_local=
+e2">
+Create audiences
+</td></tr>
+</table></a>
+<a href=3Dhttps://c.gle/ANnMTcY3PrqftiP0tP1VYznwqtcvDvjYTBqXECBXp5fbPgdsndc=
+jp9yCXHOV4qsHT8-SkrsC9Z2yhKthh0QMFc--p50NXELCBHNuDwsHvJYk6o-vd6936b_Yhx9BfT=
+W5WskoRlMomIDx3LB2eQjTk0G0hPAJKKFbV0psvqyuXMUv6FuQJEbM6CF2E03VfDmblW8wc16yR=
+eZIUEiK43bebvCL3Av1dNIlbwrh0KZygTYgBi4Ph73l-kkvUisT02PAplD6sXelgMoYtM0uvKPJ=
+tC7kSuzhgzCFDfyJo_JygkospzDN-r69jICbv09aINHQ7A9l_6VDTYDWeduOGMF64eEcwKQZBUw=
+KVXyhBzBozEH4gCOQNoQSMDedRwGSh0xqp6X0XrWBlhrpO8EriPgnZfVlHjE target=3D_blan=
+k dir=3Dltr style=3D"display: none;" class=3D"mobile_only mob_center_cstm">
+<table role=3Dpresentation cellspacing=3D0 cellpadding=3D0 align=3Dcenter>
+<tr style=3D"padding: 0; margin: 0; font-size: 0; line-height: 0;"><td styl=
+e=3D"border-top: 3px;border-top-left-radius: 4px;border-top-right-radius: 4=
+px;display:inline-block; -webkit-text-size-adjust:none;mso-hide:all;text-al=
+ign: center; height:3px;"></td></tr>
+<tr><td style=3D"background-color: #1967D2;border: 1px solid #1967D2;border=
+-radius: 25px;color:#ffffff;display:inline-block;font-family:&#39;Google Sa=
+ns&#39;, &#39;Open Sans&#39;, Arial, sans-serif;;font-size: 16px;line-heigh=
+t: 24px;text-decoration:none; min-width: 84px;padding: 12px 24px 12px 24px;=
+-webkit-text-size-adjust:none;mso-hide:all;font-weight:500;text-align: cent=
+er;word-break:normal;direction:ltr;" dir=3Dltr class=3D"cta_font cta_mobile=
+">Create audiences</td></tr>
+<tr style=3D"padding: 0; margin: 0; font-size: 0; line-height: 0;"><td styl=
+e=3D"border-top: 3px;display:inline-block;border-bottom-left-radius: 4px;bo=
+rder-bottom-right-radius: 4px; -webkit-text-size-adjust:none;mso-hide:all;t=
+ext-align: center; height:3px;"></td></tr>
+</table></a>
+<!--<![endif]-->
+</div>
+</td>
+</tr>
+<tr>
+<td class=3D"mob_set_padd " style=3Dpadding-bottom:40px;>
+<!--[if mso]>
+<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"=
+0" width=3D"560" style=3D"margin:0px auto;width:560px;max-width:560px;" ali=
+gn=3D"center">
+<![endif]-->
+<!--[if !mso]><!-->
+<table role=3Dpresentation cellspacing=3D0 cellpadding=3D0 border=3D0 width=
+=3D100% style=3D"margin:0px auto;width:100%;max-width:560px;" class=3D"modu=
+le_landscape ">
+<!--<![endif]-->
+<tr>
+<td class=3Ddark_mode_yellow_bg style=3D"background-color: #FEF7E0;border:1=
+px solid #FEF7E0;border-radius: 20px;padding:24px 0px;">
+<!--[if mso]>
+<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"=
+0" width=3D"560" align=3D"left">
+<![endif]-->
+<!--[if !mso]><!-->
+<table role=3Dpresentation cellspacing=3D0 cellpadding=3D0 border=3D0 width=
+=3D100% align=3Dleft>
+<!--<![endif]-->
+<tr>
+<td class=3Ddark_mode_yellow_bg style=3D"padding: 0px 24px 12px 24px;font-s=
+ize: 20px;line-height:30px; font-weight: 700;color:#3C4043;font-family:Goog=
+le Sans, Roboto, Arial, Helvetica, sans-serif;word-break:normal;direction:l=
+tr;">
+How it works
+</td>
+</tr>
+<tr>
+<td class=3Ddark_mode_yellow_bg style=3D"padding: 0px 24px 0px 24px;font-si=
+ze: 14px;line-height:21px; font-weight: 400; color:#3C4043;font-family:Goog=
+le Sans Text, Roboto, Arial, Helvetica, sans-serif;word-break:normal;direct=
+ion:ltr;">
+Audiences in Analytics are specific groups of users defined by the actions =
+they take on your site and app, such as users who have visited a certain pa=
+ge on your site or previously purchased a <span style=3D"white-space: nowra=
+p !important;">certain product</span>.
+</td>
+</tr>
+</table>
+</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class=3D"mob_set_padd " style=3Dpadding-bottom:40px;>
+<!--[if mso]>
+<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"=
+0" width=3D"560" style=3D"margin:0px auto;width:560px;max-width:560px;" ali=
+gn=3D"center">
+<![endif]-->
+<!--[if !mso]><!-->
+<table role=3Dpresentation cellspacing=3D0 cellpadding=3D0 border=3D0 width=
+=3D100% style=3D"margin:0px auto;width:100%;max-width:560px;" class=3D"modu=
+le_landscape ">
+<!--<![endif]-->
+<tr>
+<td class=3Ddark_mode_green_bg style=3D"background-color: #E6F4EA;border:1p=
+x solid #E6F4EA;border-radius: 20px;padding:24px 0px 24px 0px;">
+<!--[if mso]>
+<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"=
+0" width=3D"560" align=3D"left">
+<![endif]-->
+<!--[if !mso]><!-->
+<table role=3Dpresentation cellspacing=3D0 cellpadding=3D0 border=3D0 width=
+=3D"" align=3Dleft>
+<!--<![endif]-->
+<tr>
+<td class=3Ddark_mode_green_bg style=3D"padding: 0px 24px 12px 24px;font-si=
+ze:12px;line-height:16px; font-weight: 700;color:#3C4043;font-family:Google=
+ Sans, Roboto, Arial, Helvetica, sans-serif;word-break:normal;text-align:le=
+ft;direction:ltr;font-size:20px;line-height:30px">
+Why it matters
+</td>
+</tr>
+<tr>
+<td class=3Ddark_mode_green_bg style=3D"padding: 0px 24px 0px 24px;font-siz=
+e: 14px;line-height:21px; font-weight: 400; color:#3C4043;font-family:Googl=
+e Sans Text, Roboto, Arial, Helvetica, sans-serif;word-break:normal;ext-ali=
+gn:left;direction:ltr;">
+Creating an audience and exporting it to <span style=3D"white-space: nowrap=
+ !important;">Google Ads</span> enables you to personalise your ad campaign=
+s and reach the right customers with the <span style=3D"white-space: nowrap=
+ !important;">right message</span>.
+</td>
+</tr>
+<tr>
+<td class=3Ddark_mode_green_bg style=3D"padding: 12px 24px 0px 24px;font-si=
+ze: 14px;line-height:21px; font-weight: 400; color:#3C4043;font-family:Goog=
+le Sans, Roboto, Arial, Helvetica, sans-serif;word-break:normal;ext-align:l=
+eft;direction:ltr;">
+<a href=3Dhttps://c.gle/ANnMTcbgJXlLqwekAmm6LiyYB5Jce-ym01gFvadM17zEIFfDgec=
+kCtZVgNxbb7ahIRaLeFOuHSDUM5DQ2IpB4hn2e-tjw2ylm3EzFkHpiIZ1czNFzZa0l-s2L_EFLU=
+9KGh4hLcHupXYqxFFbhIfPDJb2exPDsfC5Y4i3kyGIOrYUGDXcpd51R3CWPwFsZ0lu4g-k7By7Z=
+LgQcWyrFVhoxpbvwBqz9qg9nzXA1oqHpr4Q2mvVBw89MQqzyXhlx6F5jwBscNkvDBiw6RmWLoLC=
+pVQjoMURryqITDRQ67dLFoOrAnEZPWJ19jh8u5VitmUxRnd_fHyGqr2serLxndAl_pbxGAuYLt0=
+Myh1cS9grTeyILxcqpqGrNaU1zxxmL8PTUGM target=3D_blank dir=3Dltr style=3Dcolo=
+r:#1967D2;text-decoration:none; class=3D"">
+Learn more =C2=BB
+</a>
+</td>
+</tr>
+</table>
+</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class=3Dmob_set_padd style=3Dpadding-bottom:40px;>
+<table role=3Dpresentation cellspacing=3D0 cellpadding=3D0 border=3D0 width=
+=3D"" align=3Dcenter style=3D"max-width:560px;margin:0px auto;direction:ltr=
+;" class=3Dmodule_landscape dir=3Dltr>
+<tr>
+<!--[if gte mso 9]>
+<v:rect xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"" stroke=3D"false=
+" style=3D"width:560px; height:48px;background-repeat: no-repeat;background=
+-size:100%;">
+<v:fill type=3D"frame" src=3D"https://www.gstatic.com/gumdrop/files/analyti=
+cs-pro-tip-top-module-new-transparent-w2240px-h172px-2x.png" color=3D"#ffff=
+ff" />
+<v:textbox inset=3D"0,0,0,0">
+<![endif]-->
+<td colspan=3D3 class=3D"mob_height_pro_tip module_landscape " background=
+=3Dhttps://www.gstatic.com/gumdrop/files/analytics-pro-tip-top-module-new-t=
+ransparent-w2240px-h172px-2x.png style=3D"background-size:100% 100%;backgro=
+und-repeat:no-repeat;padding:0;height:45px;width:560px;" height=3D45 valign=
+=3Dtop>=C2=A0</td>
+<!--[if gte mso 9]>
+</v:textbox>
+</v:rect>
+<![endif]-->
+</tr>
+<tr>
+<td class=3Dmiddle_bg_dark background=3Dhttps://www.gstatic.com/gumdrop/fil=
+es/analytics-pro-tip-middle-module-new-transparent-w2240px-h40px-2x.png sty=
+le=3D"background-position:center top; background-repeat:no-repeat; backgrou=
+nd-size:100% 100%; height: auto;width:560px;">
+<!--[if gte mso 9]>
+<v:rect xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"true" stroke=3D"f=
+alse" style=3D"width:560px;height:80px;">
+<v:fill type=3D"frame" src=3D"https://www.gstatic.com/gumdrop/files/analyti=
+cs-pro-tip-middle-module-new-transparent-w2240px-h40px-2x.png" border=3D"0"=
+ width=3D"560" cellpadding=3D"0" cellspacing=3D"0" height=3D"80" style=3D"b=
+ackground-image:url(https://www.gstatic.com/gumdrop/files/analytics-pro-tip=
+-middle-module-new-transparent-w2240px-h40px-2x.png)" color=3D"#ffffff" />
+<v:textbox inset=3D"0,0,0,0">
+<![endif]-->
+<table role=3Dpresentation cellspacing=3D0 cellpadding=3D0 border=3D0 align=
+=3Dleft>
+<tr>
+<td style=3D"padding: 10px 24px 6px 24px;font-size: 14px;line-height:21px; =
+font-weight: 700;color:#3C4043;font-family:Google Sans,&#39;Roboto&#39;, &#=
+39;Segoe UI&#39;, &#39;Helvetica Neue&#39;, Frutiger, &#39;Frutiger Linotyp=
+e&#39;, &#39;Dejavu Sans&#39;, &#39;Trebuchet MS&#39;, Verdana, Arial, sans=
+-serif;direction:ltr;text-align:left;word-break:normal;">
+PRO TIP
+</td>
+</tr>
+<tr>
+<td style=3D"padding:0px 24px 12px 24px;font-size: 14px;line-height:21px; f=
+ont-weight: 400;color:#5F6368;font-family:Google Sans Text,&#39;Roboto&#39;=
+, &#39;Segoe UI&#39;, &#39;Helvetica Neue&#39;, Frutiger, &#39;Frutiger Lin=
+otype&#39;, &#39;Dejavu Sans&#39;, &#39;Trebuchet MS&#39;, Verdana, Arial, =
+sans-serif;text-align:left;word-break:normal;direction:ltr;">
+To get started, simply choose from a list of suggested audiences in Analyti=
+cs that are ready for you to use or even define a custom audience to meet y=
+our needs. <a href=3Dhttps://c.gle/ANnMTcYlLbdG84Ek_n1GHLpUyvephG3ZVS19P1Hg=
+c4aqqmh0u6AFqrmQKSHq5Ja4PbMi0KsSzcmke9ceNTP_2CpEDrjMHd9WAVlTAhtrGST722Mvw9z=
+mrckGyts7-EKye0xpdJNITaDbQEem5DjkEZLedwNCuMTMwcKH-YTQyywbBDKY4qdxhK5xCvi2TF=
+BLl5_U2MfHjqLr98lsp7PioEia_qQt_vmSeYGueXQ9yjWOEobdzut_nkKemNO-k6fzPBmnyEFiD=
+_BlwGsdEt9dnwybSq1ecMkr3VYnId3BJZjwJJQcOr4MSIYo0Fn2DowjLIjJYck4ouMzAo0R84QR=
+QJ4m-6W2TsijavcTy6CC1E5DjXS9HB5i1qBPdjwIegJWGLaKONCKAm5UsC2Sox0USbebH4p0JMV=
+B_Waq style=3Dtext-decoration:none;color:#1967D2; target=3D_blank>Visit thi=
+s page to learn more about creating audiences <span style=3D"white-space: n=
+owrap !important;">in Analytics.</span></a>
+</td>
+</tr>
+</table>
+<!--[if gte mso 9]>
+</v:textbox>
+</v:rect>
+<![endif]-->
+</td>
+</tr>
+<tr>
+<!--[if gte mso 9]>
+<v:rect xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"" stroke=3D"false=
+" style=3D"width:560px; height:px; background-repeat: repeat-y;background-s=
+ize:100%;">
+<v:fill type=3D"frame" src=3D"https://www.gstatic.com/gumdrop/files/analyti=
+cs-pro-tip-bottom-module-new-transparent-w2240px-h102px-2x.png" color=3D"#f=
+fffff" />
+<v:textbox style=3D"mso-fit-shape-to-text:true" inset=3D"0,0,0,0">
+<![endif]-->
+<td colspan=3D3 class=3D"module_landscape " background=3Dhttps://www.gstati=
+c.com/gumdrop/files/analytics-pro-tip-bottom-module-new-transparent-w2240px=
+-h102px-2x.png style=3D"height:20px;line-height: 23px; background-repeat:no=
+-repeat;background-size: 100% 100%;width:560px;" height=3D20 valign=3Dtop>=
+=C2=A0</td>
+<!--[if gte mso 9]>
+</v:textbox>
+</v:rect>
+<![endif]-->
+</tr>
+</table>
+</td></tr>
+<tr>
+<td align=3Dleft style=3D"text-align: center;padding-bottom: 40px;padding-l=
+eft: 80px;padding-right: 80px;direction:ltr;" class=3D"mob_center_cstm mob_=
+sign_off">
+<table cellspacing=3D0 cellpadding=3D0 border=3D0 role=3Dpresentation align=
+=3Dleft>
+<tr>
+<td style=3Dtext-align:left;padding-bottom:10px;>
+<img src=3Dhttps://www.gstatic.com/gumdrop/files/analytics-signoff-vertical=
+-line-transparent-w199px-h12px-2x.png width=3D99 style=3Dmax-width:100%;wid=
+th:99px; alt=3D"" aria-hidden=3Dtrue>
+</td>
+</tr>
+<tr>
+<td style=3D"font-size: 14px;line-height:21px; color:#5F6368;font-weight: n=
+ormal;font-family:Google Sans Text, Roboto, Arial, Helvetica, sans-serif;te=
+xt-align:left;letter-spacing:0.2px;word-break:normal;direction:ltr;">
+Happy measuring,</td>
+</tr>
+<tr>
+<td style=3D"font-weight:normal;font-size: 14px;line-height:21px;color:#3C4=
+043; font-weight: normal;font-family:Google Sans, Roboto, Arial, Helvetica,=
+ sans-serif;text-align:left;font-weight:700;letter-spacing:0.2px;word-break=
+:normal;direction:ltr;">
+The Google Analytics Team
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class=3D"" style=3Dpadding-bottom:32px;direction:ltr dir=3Dltr>
+<table role=3Dpresentation width=3D"" cellpadding=3D0 cellspacing=3D0 style=
+=3D"margin:0px auto;" align=3Dcenter>
+<tr>
+<td valign=3Dtop class=3Dfooter_icon_bg align=3Dcenter style=3D"border: 1px=
+ solid #E8EAED; background:#ffffff;padding:21px 0px 10px;border-radius:20px=
+;width:144px;vertical-align:top; mso-border-bottom-alt: 1px solid #E8EAED; =
+border-collapse:collapse;">
+<table role=3Dpresentation width=3D100% cellpadding=3D0 cellspacing=3D0 bor=
+der=3D0>
+<tr>
+<td class=3Dfooter_icon_bg style=3Dtext-align:center;vertical-align:top;>
+<a href=3Dhttps://c.gle/ANnMTcZcCLax3-3z4djPMxpqkRsr6jqK91RS8faP5AYzh6A6Fsd=
+jLe2pACa2NW1snUCfSBkOSc7YJNKq1Lc_FeR7lRlzRaB_DIDwSMYNeaUe_Rj_VUbaitW1uZs0-a=
+a-3U4jOog8o4hUu6nZqaoKSwYvJsTYF6O40Ai1nlNpyTOyDK7IoKMrbRSV1zNoCukjyfnW3vm05=
+C7azhP9oS6g9EWo-sfBWh3DdI6MP45g92r2uD58JOu92QqXH-ijxfpMon1p6lDSybud9KX8ZbLO=
+nxvKtH-GVDP93KaEopqRbJqkgZCpcoIBBL-1ogRXh6-WulZ7J_Gs0_dLOEwRaD-_9WZL8mBMQiY=
+5rldjQZ0wulxJJr8ryjwyeyF2A3b5P78nbM6T-3dxFf0 target=3D_blank style=3D"text-=
+decoration:none; color: #1967D2; font-weight:normal; border:0; ">
+<img src=3Dhttps://www.gstatic.com/gumdrop/files/analytics-help-center-foot=
+er-transparent-w96px-h97px-2x.png width=3D48 style=3Dmax-width:48px alt=3D"=
+Help Centre">
+</a>
+</td>
+</tr>
+<tr>
+<td class=3Dfooter_icon_bg style=3D"font-size:14px;line-height:21px;text-al=
+ign:center;font-weight:700;padding:2px 3px 10px;vertical-align:top;font-fam=
+ily:Google Sans Text, Roboto, Arial, Helvetica, sans-serif;word-break:norma=
+l;">
+<a href=3Dhttps://c.gle/ANnMTcZcCLax3-3z4djPMxpqkRsr6jqK91RS8faP5AYzh6A6Fsd=
+jLe2pACa2NW1snUCfSBkOSc7YJNKq1Lc_FeR7lRlzRaB_DIDwSMYNeaUe_Rj_VUbaitW1uZs0-a=
+a-3U4jOog8o4hUu6nZqaoKSwYvJsTYF6O40Ai1nlNpyTOyDK7IoKMrbRSV1zNoCukjyfnW3vm05=
+C7azhP9oS6g9EWo-sfBWh3DdI6MP45g92r2uD58JOu92QqXH-ijxfpMon1p6lDSybud9KX8ZbLO=
+nxvKtH-GVDP93KaEopqRbJqkgZCpcoIBBL-1ogRXh6-WulZ7J_Gs0_dLOEwRaD-_9WZL8mBMQiY=
+5rldjQZ0wulxJJr8ryjwyeyF2A3b5P78nbM6T-3dxFf0 target=3D_blank style=3D"text-=
+decoration:none; color: #1967D2; border:0;font-family:Google Sans Text, Rob=
+oto, Arial, Helvetica, sans-serif; ">
+Help Centre
+</a>
+</td>
+</tr>
+</table>
+</td>
+<td class=3Dfooter_icon_bg_dark_main width=3D10 style=3Dwidth:10px;>=C2=A0<=
+/td>
+<td valign=3Dtop class=3Dfooter_icon_bg align=3Dcenter style=3D"border: 1px=
+ solid #E8EAED; background:#ffffff;padding:21px 0px 10px;border-radius:20px=
+;width:144px;vertical-align:top; mso-border-bottom-alt: 1px solid #E8EAED; =
+border-collapse:collapse;">
+<table class=3Dfooter_icon_bg role=3Dpresentation width=3D100% cellpadding=
+=3D0 cellspacing=3D0 border=3D0>
+<tr>
+<td class=3Dfooter_icon_bg style=3Dtext-align:center;vertical-align:top;>
+<a href=3Dhttps://c.gle/ANnMTcYYAp6g5OjsqpIuDJhO-xjImL6LGIWZqJYlx-q0QPwiANL=
+9-xgPGr0jYbh_2t2Pdde4DJnVpVW1TwLudxCGnvpQuTV95uxeDtf4VuYf2HN4dfPGTltOANsld4=
+egCj-EWvD8UoWuB1W8GyunnWbwBmtwKzwJAFzSTxxHiBuBcEBL-FQgABCgTq1RmDSy0lPZAqHk_=
+NIRfdSgjDD9F_Sq-sA8BaKVusn-6J8F1z2jY2JfWoD04pa_LmbNJ1-8Cbd3jImYxyflRa7JJqEl=
+THdasfef9O5-xutNycRXTv22oApNol2tiQ2m2pFC6m2-ND_aXYuZwBkMMcTB4nerYiVDRwzUwRA=
+I0nw target=3D_blank style=3D"text-decoration:none; color: #1967D2; font-we=
+ight:normal; border:0; ">
+<img src=3Dhttps://www.gstatic.com/gumdrop/files/analytics-bulb-icon-desk-t=
+ransparent-w96px-h97px-2x.png width=3D48 style=3Dmax-width:48px alt=3D"Lear=
+ning Centre">
+</a>
+</td>
+</tr>
+<tr>
+<td class=3Dfooter_icon_bg style=3D"font-size:14px;line-height:21px;text-al=
+ign:center;font-weight:700;padding:2px 3px 12px;;vertical-align:top;font-fa=
+mily:Google Sans Text, Roboto, Arial, Helvetica, sans-serif;word-break:norm=
+al;">
+<a href=3Dhttps://c.gle/ANnMTcYYAp6g5OjsqpIuDJhO-xjImL6LGIWZqJYlx-q0QPwiANL=
+9-xgPGr0jYbh_2t2Pdde4DJnVpVW1TwLudxCGnvpQuTV95uxeDtf4VuYf2HN4dfPGTltOANsld4=
+egCj-EWvD8UoWuB1W8GyunnWbwBmtwKzwJAFzSTxxHiBuBcEBL-FQgABCgTq1RmDSy0lPZAqHk_=
+NIRfdSgjDD9F_Sq-sA8BaKVusn-6J8F1z2jY2JfWoD04pa_LmbNJ1-8Cbd3jImYxyflRa7JJqEl=
+THdasfef9O5-xutNycRXTv22oApNol2tiQ2m2pFC6m2-ND_aXYuZwBkMMcTB4nerYiVDRwzUwRA=
+I0nw target=3D_blank style=3D"text-decoration:none; color: #1967D2; border:=
+0;font-family:Google Sans Text, Roboto, Arial, Helvetica, sans-serif; ">
+Learning Centre
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class=3Dfooter_icon_bg_dark_main style=3D"background-color:#F8F9FA;padd=
+ing:40px 0px;">
+<table role=3Dpresentation width=3D100% cellpadding=3D0 cellspacing=3D0 sty=
+le=3Dwidth:100%;>
+<tr>
+<td class=3D"mob_footer footer_icon_bg_dark_main" dir=3Dltr style=3D"width:=
+100%; padding-top:0px; padding-bottom:11px; text-align:center;">
+<img width=3D80 src=3Dhttps://www.gstatic.com/gumdrop/files/bard-google-bla=
+ck-logo-transparent-w126px-h40px-2x.png border=3D0 style=3D"border:none; ou=
+tline:none; font-size: 8px; color:#ffffff;width:80px;" alt=3D"" aria-hidden=
+=3Dtrue>
+</td>
+</tr>
+<tr>
+<td class=3Dfooter_icon_bg_dark_main style=3D"">
+<table role=3Dpresentation width=3D100% cellpadding=3D0 cellspacing=3D0 sty=
+le=3Dwidth:100%>
+<tr>
+<td class=3Dfooter_icon_bg_dark_main style=3Dwidth:40px width=3D40>=C2=A0</=
+td>
+<td class=3Dfooter_icon_bg_dark_main style=3D"">
+<table role=3Dpresentation width=3D100% cellpadding=3D0 cellspacing=3D0 sty=
+le=3D"width:100%; direction:ltr; direction:ltr">
+<tr>
+<td class=3Dfooter_icon_bg_dark_main style=3D"font-size:12px;line-height:20=
+px;text-align:center;font-weight:bold;color:#3C4043;padding-bottom:16px; fo=
+nt-family:Google Sans Text, Roboto, Arial, Helvetica, sans-serif; "><!--[if=
+ mso]><font face=3D"Arial,sans-serif"><![endif]-->
+<span style=3D"font-size:inherit; color:inherit; font-weight:inherit; line-=
+height:inherit; font-family:inherit;">=C2=A9 2025 Google LLC 1600 Amphithea=
+tre Parkway, Mountain View, CA 94043</span>
+</td>
+</tr>
+</table>
+</td>
+<td class=3Dfooter_icon_bg_dark_main style=3Dwidth:40px width=3D40>=C2=A0</=
+td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class=3Dfooter_mob_cls1>
+<table role=3Dpresentation width=3D100% cellpadding=3D0 cellspacing=3D0 sty=
+le=3Dwidth:100%>
+<tr>
+<td class=3Dfooter_icon_bg_dark_main style=3D"color:#3C4043;font-size:12px;=
+line-height:20px;text-align:center;font-family:Google Sans Text, Roboto, Ar=
+ial, Helvetica, sans-serif;direction:ltr; mso-padding-alt:0 78px;" dir=3Dlt=
+r><!--[if mso]><font face=3D"Arial,sans-serif"><![endif]-->
+<div class=3Dfullwidth style=3D"width:560px; overflow:hidden; word-break:br=
+eak-word;margin:0px auto">This email was sent to vsingh2110@gmail.com becau=
+se you indicated that you&#39;d like to receive updates and tips about your=
+ <span style=3D"white-space: nowrap !important;">Google Analytics</span> ac=
+count. If you don&#39;t want to receive such emails in the future, please <=
+a href=3Dhttps://myaccount.google.com/communication-preferences/unsubscribe=
+/gt/ANnMTcYGsyycnJK3wr6_0SiMoKON0Boe-AB7REmxAx1j5JyMEF_nH5is222eFEJbeLSSTGO=
+sjhQWNo00CIBJu3J-00kbprfqz_oTcozKp6PDxxJY15Z96zqDt4FmYtOA4ccmenevXojKaxyyGI=
+HGB2FhvvlnnaRTA_A_BJMSTuY4oI9AZBsegqTXZu-vH1vZSY2ILNJDHTy7deLCpBB_XAHfSjXTU=
+zfhI3_yn0hskZ9-0iPrGIfv_Vud3_sD9b9KgoFa4t3k6C9ZmxdRlxgTG2M-CddWw0Vq?utm_sou=
+rce=3Dgm&amp;utm_medium=3Demail&amp;auto=3Dtrue style=3Dtext-decoration:non=
+e;color:#1967D2; target=3D_blank>unsubscribe here</a>. You can also change =
+your preferences at your account&#39;s <span style=3D"white-space: nowrap !=
+important;">Google Analytics</span> Email Communications page by logging in=
+ to <a href=3Dhttps://c.gle/ANnMTcazbJ6n-DA49Ox0p5B8DhsuFDjNXEtIFs75-BW7jW_=
+GZw9zyrZHVpgaN-kcBu7iNOcge-wTbNSpvsVMAKVCXbWYmp5sg_qVxXB2liCmqP5VvdjUHM6bG6=
+2G7LzWvnTJcwIffPJriyqtT6UjKH7QUi3e style=3Dtext-decoration:none;color:#1967=
+D2; target=3D_blank>https://www.google.com/analytics/settings/my_account</a=
+>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</center>
+</section>
+<img height=3D1 width=3D3 src=3Dhttps://www.gstatic.com/gumdrop/files/adsen=
+se-spacer-transparent-w3px-h1px-1x.gif aria-hidden=3Dtrue>
+<img alt=3D"" height=3D1 width=3D3 src=3Dhttps://notifications.google.com/g=
+/img/ANnMTcYaoXyIe8UdYUV6UjZ-DLfBL55ETD-UdGF_yEOgOkT0NLizhrgTYkPRO1k96LQtSE=
+pRRsrMCHGjWQkup94qfWRsdtg6-sSQ48zQkfxW6bKOJPKbqew5EMZTHWigNj-txyKn5A.gif></=
+body>
+</html> =20
+
+
+--000000000000202423064678191e--

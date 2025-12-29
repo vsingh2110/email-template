@@ -1,0 +1,1318 @@
+Delivered-To: vsingh2110@gmail.com
+Received: by 2002:a05:640c:7706:b0:256:8a2c:2551 with SMTP id l6csp1183457eiw;
+        Mon, 29 Dec 2025 07:09:45 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IGCljIheSplwSyBO25d/Jy53c0OOUoeHJPqjK5XwdKJsMTgYZXXdVBp6Osyr3LCIcDIn78J
+X-Received: by 2002:a05:622a:1987:b0:4ee:739:149 with SMTP id d75a77b69052e-4f4abd999f3mr508292751cf.46.1767020985482;
+        Mon, 29 Dec 2025 07:09:45 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1767020985; cv=none;
+        d=google.com; s=arc-20240605;
+        b=MzQiSVJu1868TkrV0jt0mG0yyGDTMQhfKYwo3aRyYiU0YC+TZMMRAccwuF9pav8QMV
+         awujOUaOLfstAxYIYOpXAC35JEGmfHyMt9mim7MGUD4U57Mcc3RxHhFmxQZBreiX1AC8
+         HziN+G+iW/MYRpbOl/kTssz0iswN3LfCCyKc0GCU0P3FIDeTWHraK7K3FKiGyGHiQSzo
+         yVYmnTMQfMdWPlSL+DNeMW5d8lozKo9bCKSbnCqH8FOeRPuHjoB20h/LCoRshbki4i0b
+         nClU0pbGQwOTbvOotmxfGVlze+pUvr9NlXoOF9KQvp6xw+8P0DlHDCwU1FZnDAFOROV6
+         jtcg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:reply-to:pre-header:feedback-id:list-unsubscribe-post
+         :list-unsubscribe:content-transfer-encoding:mime-version:subject
+         :message-id:from:date:dkim-signature:dkim-signature;
+        bh=0aVkOrqLuEL4SpD9ZJjtQapw+mMWFLhr+TAFt0jb4O8=;
+        fh=VsADH51DasWUAWKbge5tokyYCeQDDfmF8MJrxNRkreQ=;
+        b=kTuBHAo+fRrZumUY6sTh1t/x1I7OJZVPdqvkRb3JvaW/NK9Q6EUCvChVmHy+7S33Ys
+         h8GMvTRZPLmbmsJXYnRzZSxgGGAW44uKVpQVkBW3YzBhOIJTwqPsbcrJBl4ptAeSBiRe
+         p8Wd8Zc34zo748PdYku16WExfhPUZjgkFhp2nePbv987zVkBRXoHtDtBO3BMGUoe1PfX
+         wQF3ljADNEaCgSUyzsB8slz5yXy6sQaLhY7a5C6Mw1ZCuQnx1WII3CwPa3+LR1o/rZRu
+         CNQFvFmaY/XZswSVCQZiNUjtxh/gB3IOHNq3NTmPAVqlP6BVUORR3EAQ02MUU8Kq4VPI
+         2KLg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@progressive.international header.s=s1 header.b=cU7P4sSh;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=tJJtltzJ;
+       spf=pass (google.com: domain of bounces+1584542-3575-vsingh2110=gmail.com@em8835.progressive.international designates 167.89.57.64 as permitted sender) smtp.mailfrom="bounces+1584542-3575-vsingh2110=gmail.com@em8835.progressive.international";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=progressive.international
+Return-Path: <bounces+1584542-3575-vsingh2110=gmail.com@em8835.progressive.international>
+Received: from o6.mailings.actionnetwork.org (o6.mailings.actionnetwork.org. [167.89.57.64])
+        by mx.google.com with ESMTPS id d75a77b69052e-4f4ac64bec9si302237351cf.132.2025.12.29.07.09.44
+        for <vsingh2110@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 29 Dec 2025 07:09:45 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounces+1584542-3575-vsingh2110=gmail.com@em8835.progressive.international designates 167.89.57.64 as permitted sender) client-ip=167.89.57.64;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@progressive.international header.s=s1 header.b=cU7P4sSh;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=tJJtltzJ;
+       spf=pass (google.com: domain of bounces+1584542-3575-vsingh2110=gmail.com@em8835.progressive.international designates 167.89.57.64 as permitted sender) smtp.mailfrom="bounces+1584542-3575-vsingh2110=gmail.com@em8835.progressive.international";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=progressive.international
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=progressive.international;
+	h=date:from:subject:mime-version:content-type:content-transfer-encoding:
+	list-unsubscribe:list-unsubscribe-post:feedback-id:reply-to:to:cc:content-type:date:
+	feedback-id:from:subject:to;
+	s=s1; bh=0aVkOrqLuEL4SpD9ZJjtQapw+mMWFLhr+TAFt0jb4O8=;
+	b=cU7P4sShCK3+HWPJNkx45hMr3ztunW+IL1DJ6OKq9342bAzwYC5bv/Gl5g0fifR7s9eM
+	0s5/b4feQAztqGIGVRM1tfgwRlblBmpSQyku6HAf1WezH6PJkGFLozqwDt/J44bOMlTUDI
+	UdVH8BdudB1CEjf8gLIFYcZU6wyBbpFq+biZF/fPTflLymx5ZNZX5bFh1jsfCYGm8aq2xJ
+	EI+nRC+p3wXp6hbQ8vKu7IU3Y6+4wC5wQHWIWdn+dzLuPMFRvghzCyJGWLfJjxgeWnObKv
+	iqKm2GgR+PerMXXYlmnpRUskXRayMAJk7qcCjXMzLinsLDEYKLopggPMhr1Mf08A==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=date:from:subject:mime-version:content-type:content-transfer-encoding:
+	list-unsubscribe:list-unsubscribe-post:feedback-id:reply-to:to:cc:content-type:date:
+	feedback-id:from:subject:to;
+	s=smtpapi; bh=0aVkOrqLuEL4SpD9ZJjtQapw+mMWFLhr+TAFt0jb4O8=;
+	b=tJJtltzJioAkvCZsFpgPWTEOHQXtT3t7Ac0T3yKV2ct4z3dKj+9cO0KSfFqfBvGDlfkR
+	mS/kyzEsrW3LDLePAjqMdk6dgug1Z4ZKLqMtKS9IhyUJuwboVl9lqJjkWpHip9Klqezojd
+	wiRnuuB6pOSXnIiHYbW6Kqe3BgpLpguQ0=
+Received: by recvd-7df6f77f7b-4rbc8 with SMTP id recvd-7df6f77f7b-4rbc8-1-695299B7-8D
+	2025-12-29 15:09:43.515651412 +0000 UTC m=+1011311.608249809
+Received: from actionnetwork.org (unknown)
+	by geopod-ismtpd-22 (SG)
+	with ESMTP id R6SXUGaoSa6BvZ-18Z-O8w
+	for <vsingh2110@gmail.com>;
+	Mon, 29 Dec 2025 15:09:43.480 +0000 (UTC)
+Date: Mon, 29 Dec 2025 15:09:43 +0000 (UTC)
+From: Progressive International <info@progressive.international>
+Message-ID: <695299b76ac64_22d87c2b5683a8474c774ba@ip-10-0-0-244.mail>
+Subject: The 2026 Internationalism Calendar Has Arrived =?UTF-8?B?4oCT?= Order
+ Now
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+List-Unsubscribe: 
+ =?us-ascii?Q?=3Chttps=3A=2F=2Factionnetwork=2Eorg=2Fparse=3Fenvelope=3Demail=5F3034776=5F=5F=5Fsubj?=
+ =?us-ascii?Q?ect=5F3530735=2E008ee29e-db62-404f-80bc-94e?=
+ =?us-ascii?Q?458dd15c5=40inbound-parse=2Eactionnetwork=2Eo?=
+ =?us-ascii?Q?rg=3E=2C?=
+ =?us-ascii?Q?_=3Cmailto=3Aemail=5F3034776=5F=5F=5Fsubject=5F3530735=2E008ee29e-db62-404f-80b?=
+ =?us-ascii?Q?c-94e458dd15c5=40inbound-parse=2Eactionnetw?=
+ =?us-ascii?Q?ork=2Eorg=3E?=
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Feedback-ID: email_3034776___subject_3530735:progressive.international:action_network
+pre-header: 
+Reply-To: info@progressive.international
+X-SG-EID: 
+ =?us-ascii?Q?u001=2EI+5CwZm0O5Fy8HvAuoeu4h8+4AJ7qm995wrkLZD6pk7Qc+uLUeH=2FDSsBm?=
+ =?us-ascii?Q?5XGpeCxtR=2Fi5SoNfn0fVne0Y4QJLNA9TftUZX2W?=
+ =?us-ascii?Q?lMCq3BLnTLSlSW4=2Ft7lsKTrsvpC6CHLW5RPF0eX?=
+ =?us-ascii?Q?1XfFk4K91=2FI2IkSzmUWhfSrQ1Zpu9SwYTiTMjKL?=
+ =?us-ascii?Q?E=2Ft4UqhK5e1I3iVgHXk1hVGRroFXerBpU0lMH7I?=
+ =?us-ascii?Q?qvuSR8+0UwZQCCPU0opczU09bR4mPYTAmedQHL2?=
+ =?us-ascii?Q?rhHCZM3ZByTC=2Fwmz8DecrErJIQ=3D=3D?=
+X-SG-ID: 
+ =?us-ascii?Q?u001=2ESdBcvi+Evd=2FbQef8eZF3BgVGWOc355JTO=2F79qMox3Sj0B5s9WJwwd9g3L?=
+ =?us-ascii?Q?HVwyyLmK6IokBnC219oWwtRnALOxmxkyeSnpTJR?=
+ =?us-ascii?Q?uqobldaq1ag=3D?=
+To: vsingh2110@gmail.com
+X-Entity-ID: u001.d2h9ld8lUWB4bG8SCFfz8w==
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www=
+.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microso=
+ft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office">
+<head>
+<!--[if gte mso 9]>
+<xml>
+  <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+  </o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1.0">
+  <meta name=3D"x-apple-disable-message-reformatting">
+  <!--[if !mso]><!--><meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3De=
+dge"><!--<![endif]-->
+  <title></title>
+ =20
+    <style type=3D"text/css">
+     =20
+      @media only screen and (min-width: 620px) {
+        .u-row {
+          width: 600px !important;
+        }
+
+        .u-row .u-col {
+          vertical-align: top;
+        }
+
+       =20
+            .u-row .u-col-25 {
+              width: 150px !important;
+            }
+         =20
+
+            .u-row .u-col-100 {
+              width: 600px !important;
+            }
+         =20
+      }
+
+      @media only screen and (max-width: 620px) {
+        .u-row-container {
+          max-width: 100% !important;
+          padding-left: 0px !important;
+          padding-right: 0px !important;
+        }
+
+        .u-row {
+          width: 100% !important;
+        }
+
+        .u-row .u-col {
+          display: block !important;
+          width: 100% !important;
+          min-width: 320px !important;
+          max-width: 100% !important;
+        }
+
+        .u-row .u-col > div {
+          margin: 0 auto;
+        }
+
+
+        .u-row .u-col img {
+          max-width: 100% !important;
+        }
+
+}
+   =20
+body{margin:0;padding:0}table,td,tr{border-collapse:collapse;vertical-align=
+:top}p{margin:0}.ie-container table,.mso-container table{table-layout:fixed=
+}*{line-height:inherit}a[x-apple-data-detectors=3Dtrue]{color:inherit!impor=
+tant;text-decoration:none!important}
+
+
+table, td { color: #000000; } #u_body a { color: #fc164b; text-decoration: =
+underline; } @media (max-width: 480px) { #u_content_image_2 .v-src-width { =
+width: auto !important; } #u_content_image_2 .v-src-max-width { max-width: =
+100% !important; } }
+    </style>
+ =20
+ =20
+
+</head>
+
+<body class=3D"clean-body u_body" style=3D"margin: 0;padding: 0;-webkit-tex=
+t-size-adjust: 100%;background-color: #f7f4f1;color: #000000">
+  <!--[if IE]><div class=3D"ie-container"><![endif]-->
+  <!--[if mso]><div class=3D"mso-container"><![endif]-->
+  <table role=3D"presentation" id=3D"u_body" style=3D"border-collapse: coll=
+apse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-=
+rspace: 0pt;vertical-align: top;min-width: 320px;Margin: 0 auto;background-=
+color: #f7f4f1;width:100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+  <tr style=3D"vertical-align: top">
+    <td style=3D"word-break: break-word;border-collapse: collapse !importan=
+t;vertical-align: top">
+    <!--[if (mso)|(IE)]><table role=3D"presentation" width=3D"100%" cellpad=
+ding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td align=3D"center" style=3D=
+"background-color: #f7f4f1;"><![endif]-->
+   =20
+ =20
+ =20
+<div class=3D"u-row-container" style=3D"padding: 0px;background-color: tran=
+sparent">
+  <div class=3D"u-row" style=3D"margin: 0 auto;min-width: 320px;max-width: =
+600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-wor=
+d;background-color: transparent;">
+    <div style=3D"border-collapse: collapse;display: table;width: 100%;heig=
+ht: 100%;background-color: transparent;">
+      <!--[if (mso)|(IE)]><table role=3D"presentation" width=3D"100%" cellp=
+adding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding: 0px;b=
+ackground-color: transparent;" align=3D"center"><table role=3D"presentation=
+" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:600px;"><=
+tr style=3D"background-color: transparent;"><![endif]-->
+     =20
+<!--[if (mso)|(IE)]><td align=3D"center" width=3D"600" style=3D"width: 600p=
+x;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid tra=
+nsparent;border-right: 0px solid transparent;border-bottom: 0px solid trans=
+parent;" valign=3D"top"><![endif]-->
+<div class=3D"u-col u-col-100" style=3D"max-width: 320px;min-width: 600px;d=
+isplay: table-cell;vertical-align: top;">
+  <div style=3D"height: 100%;width: 100% !important;">
+  <!--[if (!mso)&(!IE)]><!--><div style=3D"box-sizing: border-box; height: =
+100%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid=
+ transparent;border-right: 0px solid transparent;border-bottom: 0px solid t=
+ransparent;"><!--<![endif]-->
+ =20
+<table id=3D"u_content_image_2" style=3D"font-family:helvetica,sans-serif;"=
+ role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" b=
+order=3D"0">
+  <tbody>
+    <tr>
+      <td style=3D"overflow-wrap:break-word;word-break:break-word;padding:4=
+0px 10px;font-family:helvetica,sans-serif;" align=3D"left">
+       =20
+<table role=3D"presentation" width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0">
+  <tr>
+    <td style=3D"padding-right: 0px;padding-left: 0px;" align=3D"left">
+      <a
+ href=3D"https://click.actionnetwork.org/ss/c/u001.lmpSTrE-G07FKUPTdpC9IWa0=
+HsNukvK5plYjdt6s8TEQ59zxNnySqXzkX5uScLZ67pWCALN2yZzE_ofi0MuNYrlYC4MLZQ7wKKZ=
+Sx166ZbMzLdjPrEhcaJlSe4lFKktvxvBpg3A9adYGR2rqrN_Cl0s0-LYx1iz5Ha1QoGG4INY3VT=
+3TsQXqcaA-kgF3CeRwRvIqTbNIVSD3T8bMnKxjFo5wfP_kIQ1Nv7EfuOctWYMn2DdCPUDxJ5J6x=
+bEIX5LrIGhMFkK8MRiTl8ZZ9agvDB0dToMaaWYM6uW86HONRHFKfFehqOgNE-52dV6lk-vkW6FU=
+NnvtNG11-rafMl1uE_78ahBEEcTkiajdopiYXoriJBBcaLXO-EawnGTKzedA/4mu/A_S0rPuLRu=
+CnNV_rc6VgTQ/h0/h001.S6_n16pvYJin06Viv34tMdTE3dKmCuRZp6phRbh1pgY" target=3D=
+"_blank">
+      <img align=3D"left" border=3D"0"
+ src=3D"https://actionnetwork.org/unlayer_files/1618951192477-PI+Logo+Long+=
+EN.png" alt=3D"Progressive International" title=3D"Progressive Internationa=
+l" style=3D"outline: none;text-decoration: none;-ms-interpolation-mode: bic=
+ubic;clear: both;display: inline-block !important;border: none;height: auto=
+;float: none;width: 70%;max-width: 406px;" width=3D"406" class=3D"v-src-wid=
+th v-src-max-width"/>
+      </a>
+    </td>
+
+  </tr>
+</table>
+
+      </td>
+
+    </tr>
+  </tbody>
+</table>
+
+  <!--[if (!mso)&(!IE)]><!--></div>
+<!--<![endif]-->
+  </div>
+
+</div>
+
+<!--[if (mso)|(IE)]></td>
+<![endif]-->
+      <!--[if (mso)|(IE)]></tr></table></td>
+</tr></table><![endif]-->
+    </div>
+
+  </div>
+
+  </div>
+
+ =20
+
+
+ =20
+ =20
+<div class=3D"u-row-container" style=3D"padding: 0px;background-color: tran=
+sparent">
+  <div class=3D"u-row" style=3D"margin: 0 auto;min-width: 320px;max-width: =
+600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-wor=
+d;background-color: transparent;">
+    <div style=3D"border-collapse: collapse;display: table;width: 100%;heig=
+ht: 100%;background-color: transparent;">
+      <!--[if (mso)|(IE)]><table role=3D"presentation" width=3D"100%" cellp=
+adding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding: 0px;b=
+ackground-color: transparent;" align=3D"center"><table role=3D"presentation=
+" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:600px;"><=
+tr style=3D"background-color: transparent;"><![endif]-->
+     =20
+<!--[if (mso)|(IE)]><td align=3D"center" width=3D"600" style=3D"background-=
+color: #ffffff;width: 600px;padding: 18px;border-top: 0px solid transparent=
+;border-left: 0px solid transparent;border-right: 0px solid transparent;bor=
+der-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius:=
+ 0px; -moz-border-radius: 0px;" valign=3D"top"><![endif]-->
+<div class=3D"u-col u-col-100" style=3D"max-width: 320px;min-width: 600px;d=
+isplay: table-cell;vertical-align: top;">
+  <div style=3D"background-color: #ffffff;height: 100%;width: 100% !importa=
+nt;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;"=
+>
+  <!--[if (!mso)&(!IE)]><!--><div style=3D"box-sizing: border-box; height: =
+100%; padding: 18px;border-top: 0px solid transparent;border-left: 0px soli=
+d transparent;border-right: 0px solid transparent;border-bottom: 0px solid =
+transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radi=
+us: 0px;"><!--<![endif]-->
+ =20
+<table style=3D"font-family:helvetica,sans-serif;" role=3D"presentation" ce=
+llpadding=3D"0" cellspacing=3D"0" width=3D"100%" border=3D"0">
+  <tbody>
+    <tr>
+      <td style=3D"overflow-wrap:break-word;word-break:break-word;padding:1=
+0px;font-family:helvetica,sans-serif;" align=3D"left">
+       =20
+<table role=3D"presentation" width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0">
+  <tr>
+    <td style=3D"padding-right: 0px;padding-left: 0px;" align=3D"center">
+      <a
+ href=3D"https://click.actionnetwork.org/ss/c/u001.XaF8mXqsA6b2dSPmhsleMaL7=
+Pg11C4-_N79k9bkrzkvDVnAtHuvxX01GvEpiVq-dR_MTM-I1NlhHRtYB4EY4hYlLu2BKOCxEJKp=
+YkAKLKAUm5XTKUGKe_hSBLRnBCxexVCWfKgkvruzKogMegJnplLl0l9N7nFTLV-Tiqpgt-mLvmk=
+zL0iW7OjW-bzmMvprkfsW9cq_yh4c9SUh9FxfjkRfPpiVBIP2oOZBcMkqY6a-ii9wo-j1E7sAvY=
+U6XsD64iMkLR212cuvl7Sep2h67wdJTEzkhWQ-cI7sH2OuRxFE0-w9aindBikiCUb3NmpzCsbME=
+UXdUhsenfhkUh6Dn-nlStQc6dy5CI348ZWintteeD6Ne1xkuooydn_SHZ8wHRIW0XYgmFwtgC7f=
+4yzWQIkJIqxHxa9QHm7PNCN9suzK6zIFJM5dV3-JdlQnBcblQ9svVR5o-lUPUQE0SAllCmmK8bW=
+EKH3QX0-pz1EFkAuQ/4mu/A_S0rPuLRuCnNV_rc6VgTQ/h1/h001.8kdp0xVlxLUuR-YUAHFA6R=
+jSKlQSGBqabEnGuR8psxQ" target=3D"_blank">
+      <img align=3D"center" border=3D"0"
+ src=3D"https://actionnetwork.org/unlayer_files/1765459263077-IMG_0285.jpg"=
+ alt=3D"" title=3D"" style=3D"outline: none;text-decoration: none;-ms-inter=
+polation-mode: bicubic;clear: both;display: inline-block !important;border:=
+ none;height: auto;float: none;width: 100%;max-width: 580px;" width=3D"580"=
+ class=3D"v-src-width v-src-max-width"/>
+      </a>
+    </td>
+
+  </tr>
+</table>
+
+      </td>
+
+    </tr>
+  </tbody>
+</table>
+
+<table style=3D"font-family:helvetica,sans-serif;" role=3D"presentation" ce=
+llpadding=3D"0" cellspacing=3D"0" width=3D"100%" border=3D"0">
+  <tbody>
+    <tr>
+      <td style=3D"overflow-wrap:break-word;word-break:break-word;padding:1=
+0px;font-family:helvetica,sans-serif;" align=3D"left">
+       =20
+  <div style=3D"font-size: 14px; color: #280000; line-height: 140%; text-al=
+ign: left; word-wrap: break-word;">
+    <p style=3D"margin-top: 10px; margin-bottom: 10px; line-height: 140%; p=
+adding: 0px; font-size: 14px;"><span style=3D"color: rgb(40, 0, 0); font-fa=
+mily: helvetica, sans-serif; font-size: 18px; line-height: 25.2px;"><span s=
+tyle=3D"caret-color: rgb(40, 0, 0); line-height: 19.6px;">Dear Vikas,<br>
+<br>
+</span></span><span style=3D"font-size: 18px; line-height: 25.2px;">Five ye=
+ars ago, our International was born with a burning mission: To make solidar=
+ity more than a slogan. Today, as 2025 comes to a close, the Progressive In=
+ternational is looking ahead to the next 12 months of struggle.<br>
+<br>
+</span><span style=3D"font-size: 18px; line-height: 25.2px;"><strong>To for=
+ge a new international order rooted in liberation, freedom and dignity, we =
+need you. And what better way to support our work than by ordering our <a
+ href=3D"https://click.actionnetwork.org/ss/c/u001.XaF8mXqsA6b2dSPmhsleMaL7=
+Pg11C4-_N79k9bkrzkvDVnAtHuvxX01GvEpiVq-dR_MTM-I1NlhHRtYB4EY4hYlLu2BKOCxEJKp=
+YkAKLKAWYUPNMN85bu0RJtlfMqi0b0qXcESnSTY1akrn1u6skx68D6NjpBG3zBy4BSP6_6KqQQk=
+11r5SL7LzF06sjYtZF06n7bOrbA49yd_q22aLWeAudZOKTgeMQOat5b0CEmuJABQW8oFynVrS2O=
+D3NEgf94OM_xMoSaJqRdeTQ3KoqtxglYAa7_QDrEDTnS1M2VnHPLTp3FWchyri3L4S4GkIDxtBl=
+yk4ik540JvdaASzALlGWDNx0nc-N_RgaYhgSQt63AGRlvsIunI1bHuW2vuj8_1gDJ16QMZM5oGK=
+UVBjKMc_vcaD2t6Ydv_W9XK6KG2HkStX7tADaxwp62k44gZks/4mu/A_S0rPuLRuCnNV_rc6VgT=
+Q/h2/h001.eA-12XKkFUnRobQO1L2Nf4zMzkrSdNjRUB-arQac8W4">2026 Internationalis=
+m Calendar</a> &mdash; just in time for the new year.</strong></span></p>
+
+  </div>
+
+
+      </td>
+
+    </tr>
+  </tbody>
+</table>
+
+<table style=3D"font-family:helvetica,sans-serif;" role=3D"presentation" ce=
+llpadding=3D"0" cellspacing=3D"0" width=3D"100%" border=3D"0">
+  <tbody>
+    <tr>
+      <td style=3D"overflow-wrap:break-word;word-break:break-word;padding:1=
+0px;font-family:helvetica,sans-serif;" align=3D"left">
+       =20
+  <!--[if mso]><style>.v-button {background: transparent !important;}</styl=
+e><![endif]-->
+<div align=3D"center">
+  <!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns=
+:w=3D"urn:schemas-microsoft-com:office:word"
+ href=3D"https://workshop.progressive.international/products/internationali=
+sm-calendar-2027?link_id=3D3&can_id=3Db77efdcb7a9c54ceced2ba7d81a9ef92&sour=
+ce=3Demail-presenting-the-internationalism-calendar-2026-2&email_referrer=
+=3Demail_3034776___subject_3530735&email_subject=3Dthe-2026-internationalis=
+m-calendar-has-arrived-nil-order-now&&" style=3D"height:44px; v-text-anchor=
+:middle; width:260px;" arcsize=3D"54.5%"  stroke=3D"f" fillcolor=3D"#fc164b=
+"><w:anchorlock/><center style=3D"color:#ffffff;"><![endif]-->
+    <a
+ href=3D"https://click.actionnetwork.org/ss/c/u001.XaF8mXqsA6b2dSPmhsleMaL7=
+Pg11C4-_N79k9bkrzkvDVnAtHuvxX01GvEpiVq-dR_MTM-I1NlhHRtYB4EY4hYlLu2BKOCxEJKp=
+YkAKLKAWYUPNMN85bu0RJtlfMqi0b5UGS1fgzOyt_KEk47UNhKTrRVhC9204VE5c4PL9quCbKFF=
+cBTnTyd3Ns4aFN7cciN8VbdzyUgEzyePSDLFXOrVGhkZaAKTd_jY8Zd3gNC9VlOrxBEUfpPrWIy=
+wBH3jZvggtBDi4koX0AGrhERwrTAbSqpCoXd5ezK0Z9LJ4tBqrY1izU5V0kDwlpwTdzTD3v0GRU=
+QCpkowUFbGJoHoMZ9wzK81Wr7IIoGFwmLdEtowJ3hWJP2XM8HevmWoZyGVaWh1wxQGwR617dSV2=
+da0j7h07-JOpBoqBdj58HYFlr0IkupekDBbD9Oci63Y5gdVfV/4mu/A_S0rPuLRuCnNV_rc6VgT=
+Q/h3/h001.-_1TNhkOYkidWjx_KLthuanjVbm-6bjugAySjAOzo20" target=3D"_blank" cl=
+ass=3D"v-button" style=3D"box-sizing: border-box;display: inline-block;text=
+-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: =
+#ffffff; background-color: #fc164b; border-radius: 24px;-webkit-border-radi=
+us: 24px; -moz-border-radius: 24px; width:auto; max-width:100%; overflow-wr=
+ap: break-word; word-break: break-word; word-wrap:break-word; mso-border-al=
+t: none;font-size: 20px;">
+      <span style=3D"display:block;padding:10px 20px;line-height:120%;"><st=
+rong><span style=3D"line-height: 24px;">Buy the calendar today</span></stro=
+ng></span>
+    </a>
+    <!--[if mso]></center></v:roundrect><![endif]-->
+</div>
+
+
+      </td>
+
+    </tr>
+  </tbody>
+</table>
+
+<table style=3D"font-family:helvetica,sans-serif;" role=3D"presentation" ce=
+llpadding=3D"0" cellspacing=3D"0" width=3D"100%" border=3D"0">
+  <tbody>
+    <tr>
+      <td style=3D"overflow-wrap:break-word;word-break:break-word;padding:1=
+0px;font-family:helvetica,sans-serif;" align=3D"left">
+       =20
+  <div style=3D"font-family: helvetica,sans-serif; font-size: 18px; color: =
+#280000; line-height: 140%; text-align: left; word-wrap: break-word;">
+    <p style=3D"caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); white-space=
+: normal; text-decoration-line: none; text-decoration-thickness: auto; text=
+-decoration-style: solid; line-height: 140%;">Assembled by the Progressive =
+International Secretariat and brought to life by Gabriel Silveira =E2=81=A8=
+and Jose Manuel Parralejo=E2=81=A9, our calendar features a selection of 12=
+ chapters of revolution and counter-revolution, one for each month of the c=
+oming year.</p>
+
+<p style=3D"caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); white-space: no=
+rmal; text-decoration-line: none; text-decoration-thickness: auto; text-dec=
+oration-style: solid; line-height: 140%;">&nbsp;</p>
+
+<p style=3D"caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); white-space: no=
+rmal; text-decoration-line: none; text-decoration-thickness: auto; text-dec=
+oration-style: solid; line-height: 140%;">&ldquo;May I wish you in advance =
+every happiness for the New Year,&rdquo; wrote Karl Marx to Friedrich Engel=
+s in December 1861. &ldquo;If it&rsquo;s anything like the old one, I, for =
+my part, would sooner consign it to the devil.&rdquo; Tempting as that may =
+be, it is not an option.</p>
+
+<p style=3D"caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); white-space: no=
+rmal; text-decoration-line: none; text-decoration-thickness: auto; text-dec=
+oration-style: solid; line-height: 140%;">&nbsp;</p>
+
+<p style=3D"caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); white-space: no=
+rmal; text-decoration-line: none; text-decoration-thickness: auto; text-dec=
+oration-style: solid; line-height: 140%;">Inspired by the 25,000 women who =
+rose to oppose British rule in Nigeria in 1929, the heroic struggle of the =
+Chinese people to defeat Japanese fascism in 1945 and the enduring determin=
+ation of the Irish republicans, we resolve to carry forward the struggle ag=
+ainst imperialism in all its forms.</p>
+
+<p style=3D"caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); white-space: no=
+rmal; text-decoration-line: none; text-decoration-thickness: auto; text-dec=
+oration-style: solid; line-height: 140%;">&nbsp;</p>
+
+<p style=3D"caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); white-space: no=
+rmal; text-decoration-line: none; text-decoration-thickness: auto; text-dec=
+oration-style: solid; line-height: 140%;"><strong>Help sustain these effort=
+s by ordering your copy of the <a
+ href=3D"https://click.actionnetwork.org/ss/c/u001.XaF8mXqsA6b2dSPmhsleMaL7=
+Pg11C4-_N79k9bkrzkvDVnAtHuvxX01GvEpiVq-dR_MTM-I1NlhHRtYB4EY4hYlLu2BKOCxEJKp=
+YkAKLKAWYUPNMN85bu0RJtlfMqi0bJH70oTn3G9g2pHw0sVL7dvT5AZBQ6yrzx23LoZn831Tqa0=
+VfjH-vtTLG53rMuQRaeFiw34yIqN9RlvU6xQRfjIF9D_cul7bbpaPgt1JXwZ9g6lb2i7SbOu7Ft=
+z_gSJDTuIrDhXDL-F6pWHFA670ru1jWB18PfLgEjjJ18NYJImInofx6VKiGNOpYUYWmHak6eKlN=
+NsoqVrtY1j4mQ6Q62Nb4LdY9z2JQR8WZKyys7LT0aKp1owNjC3Vqm0AQf0iyY4BwxMSXhhkLEDw=
+AnQajZJITBgz9cIddH7S1IUmOQrvAv6eYeYIZclBJ_nGdudoD/4mu/A_S0rPuLRuCnNV_rc6VgT=
+Q/h4/h001.enVu4dSdRAvPQxg_GAmXDlSR-nXhwswuj27jifcOPfs">2026 Internationalis=
+m Calendar</a> today on the PI Workshop.</strong></p>
+
+<p style=3D"caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); white-space: no=
+rmal; text-decoration-line: none; text-decoration-thickness: auto; text-dec=
+oration-style: solid; line-height: 140%;">&nbsp;</p>
+
+<p style=3D"caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); white-space: no=
+rmal; text-decoration-line: none; text-decoration-thickness: auto; text-dec=
+oration-style: solid; line-height: 140%;">We don&rsquo;t have corporate spo=
+nsors or billionaire backers. <strong>We have you.</strong></p>
+
+<p style=3D"caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); white-space: no=
+rmal; text-decoration-line: none; text-decoration-thickness: auto; text-dec=
+oration-style: solid; line-height: 140%;">&nbsp;</p>
+
+<p style=3D"caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); white-space: no=
+rmal; text-decoration-line: none; text-decoration-thickness: auto; text-dec=
+oration-style: solid; line-height: 140%;">Happy New Year,</p>
+
+<p style=3D"caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); white-space: no=
+rmal; text-decoration-line: none; text-decoration-thickness: auto; text-dec=
+oration-style: solid; line-height: 140%;">&nbsp;</p>
+
+<p style=3D"caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); white-space: no=
+rmal; text-decoration-line: none; text-decoration-thickness: auto; text-dec=
+oration-style: solid; line-height: 140%;">The Progressive International Sec=
+retariat</p>
+
+  </div>
+
+
+      </td>
+
+    </tr>
+  </tbody>
+</table>
+
+  <!--[if (!mso)&(!IE)]><!--></div>
+<!--<![endif]-->
+  </div>
+
+</div>
+
+<!--[if (mso)|(IE)]></td>
+<![endif]-->
+      <!--[if (mso)|(IE)]></tr></table></td>
+</tr></table><![endif]-->
+    </div>
+
+  </div>
+
+  </div>
+
+ =20
+
+
+ =20
+ =20
+<div class=3D"u-row-container" style=3D"padding: 0px;background-color: tran=
+sparent">
+  <div class=3D"u-row" style=3D"margin: 0 auto;min-width: 320px;max-width: =
+600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-wor=
+d;background-color: transparent;">
+    <div style=3D"border-collapse: collapse;display: table;width: 100%;heig=
+ht: 100%;background-color: transparent;">
+      <!--[if (mso)|(IE)]><table role=3D"presentation" width=3D"100%" cellp=
+adding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding: 0px;b=
+ackground-color: transparent;" align=3D"center"><table role=3D"presentation=
+" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:600px;"><=
+tr style=3D"background-color: transparent;"><![endif]-->
+     =20
+<!--[if (mso)|(IE)]><td align=3D"center" width=3D"600" style=3D"width: 600p=
+x;padding: 10px;border-top: 0px solid transparent;border-left: 0px solid tr=
+ansparent;border-right: 0px solid transparent;border-bottom: 0px solid tran=
+sparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: =
+0px;" valign=3D"top"><![endif]-->
+<div class=3D"u-col u-col-100" style=3D"max-width: 320px;min-width: 600px;d=
+isplay: table-cell;vertical-align: top;">
+  <div style=3D"height: 100%;width: 100% !important;border-radius: 0px;-web=
+kit-border-radius: 0px; -moz-border-radius: 0px;">
+  <!--[if (!mso)&(!IE)]><!--><div style=3D"box-sizing: border-box; height: =
+100%; padding: 10px;border-top: 0px solid transparent;border-left: 0px soli=
+d transparent;border-right: 0px solid transparent;border-bottom: 0px solid =
+transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radi=
+us: 0px;"><!--<![endif]-->
+ =20
+<table style=3D"font-family:helvetica,sans-serif;" role=3D"presentation" ce=
+llpadding=3D"0" cellspacing=3D"0" width=3D"100%" border=3D"0">
+  <tbody>
+    <tr>
+      <td style=3D"overflow-wrap:break-word;word-break:break-word;padding:1=
+0px;font-family:helvetica,sans-serif;" align=3D"left">
+       =20
+  <table role=3D"presentation" aria-label=3D"divider" height=3D"0px" align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"=
+ style=3D"border-collapse: collapse;table-layout: fixed;border-spacing: 0;m=
+so-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;border-top: =
+0px solid #BBBBBB;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%=
+">
+    <tbody>
+      <tr style=3D"vertical-align: top">
+        <td style=3D"word-break: break-word;border-collapse: collapse !impo=
+rtant;vertical-align: top;font-size: 0px;line-height: 0px;mso-line-height-r=
+ule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
+          <span>&#160;</span>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+      </td>
+
+    </tr>
+  </tbody>
+</table>
+
+  <!--[if (!mso)&(!IE)]><!--></div>
+<!--<![endif]-->
+  </div>
+
+</div>
+
+<!--[if (mso)|(IE)]></td>
+<![endif]-->
+      <!--[if (mso)|(IE)]></tr></table></td>
+</tr></table><![endif]-->
+    </div>
+
+  </div>
+
+  </div>
+
+ =20
+
+
+ =20
+ =20
+<div class=3D"u-row-container" style=3D"padding: 0px;background-color: tran=
+sparent">
+  <div class=3D"u-row" style=3D"margin: 0 auto;min-width: 320px;max-width: =
+600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-wor=
+d;background-color: transparent;">
+    <div style=3D"border-collapse: collapse;display: table;width: 100%;heig=
+ht: 100%;background-color: transparent;">
+      <!--[if (mso)|(IE)]><table role=3D"presentation" width=3D"100%" cellp=
+adding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding: 0px;b=
+ackground-color: transparent;" align=3D"center"><table role=3D"presentation=
+" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:600px;"><=
+tr style=3D"background-color: transparent;"><![endif]-->
+     =20
+<!--[if (mso)|(IE)]><td align=3D"center" width=3D"150" style=3D"width: 150p=
+x;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid tra=
+nsparent;border-right: 0px solid transparent;border-bottom: 0px solid trans=
+parent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0=
+px;" valign=3D"top"><![endif]-->
+<div class=3D"u-col u-col-25" style=3D"max-width: 320px;min-width: 150px;di=
+splay: table-cell;vertical-align: top;">
+  <div style=3D"height: 100%;width: 100% !important;border-radius: 0px;-web=
+kit-border-radius: 0px; -moz-border-radius: 0px;">
+  <!--[if (!mso)&(!IE)]><!--><div style=3D"box-sizing: border-box; height: =
+100%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid=
+ transparent;border-right: 0px solid transparent;border-bottom: 0px solid t=
+ransparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radiu=
+s: 0px;"><!--<![endif]-->
+ =20
+<table style=3D"font-family:helvetica,sans-serif;" role=3D"presentation" ce=
+llpadding=3D"0" cellspacing=3D"0" width=3D"100%" border=3D"0">
+  <tbody>
+    <tr>
+      <td style=3D"overflow-wrap:break-word;word-break:break-word;padding:1=
+0px;font-family:helvetica,sans-serif;" align=3D"left">
+       =20
+  <!--[if mso]><style>.v-button {background: transparent !important;}</styl=
+e><![endif]-->
+<div align=3D"center">
+  <!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns=
+:w=3D"urn:schemas-microsoft-com:office:word"
+ href=3D"https://facebook.com/progintl?link_id=3D6&can_id=3Db77efdcb7a9c54c=
+eced2ba7d81a9ef92&source=3Demail-presenting-the-internationalism-calendar-2=
+026-2&email_referrer=3Demail_3034776___subject_3530735&email_subject=3Dthe-=
+2026-internationalism-calendar-has-arrived-nil-order-now&&" style=3D"height=
+:41px; v-text-anchor:middle; width:124px;" arcsize=3D"61%"  stroke=3D"f" fi=
+llcolor=3D"#280000"><w:anchorlock/><center style=3D"color:#ffffff;"><![endi=
+f]-->
+    <a
+ href=3D"https://click.actionnetwork.org/ss/c/u001.RNKlYhK-gnABEpCnH88uwEtR=
+AkF3J3_hZGm4Dq-pCYeLtnkj0BNj4O9fFIc7F_dpUobVzqVX-Xv6buDANQ3unJGLuFg8aewzSEZ=
+KAMd_NewCdFMwiUWcVTnH2juwIgLPg0qtVTsDzX3UAqBbbIa2-CzCUWtrk-b6Uh34ZZNAODjNiw=
+Fw4wGoS35jdeOTMD7i7MTako-Ok7UNQgkdyhTekfyxmbA2O7qrHlg2SOL6ndJsefN1T6PpFVTlE=
+tV_6Pf3PQ-qmEiPMF4ZgRm-5V7SUtkfH5YjGCRegPjKJR9qxfUlbRLIUK5FoTMjDYc6sAWKPZdp=
+l-388O2E3SxktwawIsgrhdsdpK5WiElVuf-LXgM/4mu/A_S0rPuLRuCnNV_rc6VgTQ/h5/h001.=
+-9YJt58YVkB7aFFECZxG75zFJr3gpPHDlJwxNjrP8H0" target=3D"_blank" class=3D"v-b=
+utton" style=3D"box-sizing: border-box;display: inline-block;text-decoratio=
+n: none;-webkit-text-size-adjust: none;text-align: center;color: #ffffff; b=
+ackground-color: #280000; border-radius: 25px;-webkit-border-radius: 25px; =
+-moz-border-radius: 25px; width:auto; max-width:100%; overflow-wrap: break-=
+word; word-break: break-word; word-wrap:break-word; mso-border-alt: none;fo=
+nt-size: 14px;">
+      <span style=3D"display:block;padding:10px 20px;line-height:120%;"><sp=
+an style=3D"font-size: 18px; line-height: 21.599999999999998px;"><strong><s=
+pan style=3D"line-height: 21.599999999999998px; font-size: 18px;">Facebook<=
+/span></strong></span></span>
+    </a>
+    <!--[if mso]></center></v:roundrect><![endif]-->
+</div>
+
+
+      </td>
+
+    </tr>
+  </tbody>
+</table>
+
+  <!--[if (!mso)&(!IE)]><!--></div>
+<!--<![endif]-->
+  </div>
+
+</div>
+
+<!--[if (mso)|(IE)]></td>
+<![endif]-->
+<!--[if (mso)|(IE)]><td align=3D"center" width=3D"150" style=3D"width: 150p=
+x;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid tra=
+nsparent;border-right: 0px solid transparent;border-bottom: 0px solid trans=
+parent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0=
+px;" valign=3D"top"><![endif]-->
+<div class=3D"u-col u-col-25" style=3D"max-width: 320px;min-width: 150px;di=
+splay: table-cell;vertical-align: top;">
+  <div style=3D"height: 100%;width: 100% !important;border-radius: 0px;-web=
+kit-border-radius: 0px; -moz-border-radius: 0px;">
+  <!--[if (!mso)&(!IE)]><!--><div style=3D"box-sizing: border-box; height: =
+100%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid=
+ transparent;border-right: 0px solid transparent;border-bottom: 0px solid t=
+ransparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radiu=
+s: 0px;"><!--<![endif]-->
+ =20
+<table style=3D"font-family:helvetica,sans-serif;" role=3D"presentation" ce=
+llpadding=3D"0" cellspacing=3D"0" width=3D"100%" border=3D"0">
+  <tbody>
+    <tr>
+      <td style=3D"overflow-wrap:break-word;word-break:break-word;padding:1=
+0px;font-family:helvetica,sans-serif;" align=3D"left">
+       =20
+  <!--[if mso]><style>.v-button {background: transparent !important;}</styl=
+e><![endif]-->
+<div align=3D"center">
+  <!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns=
+:w=3D"urn:schemas-microsoft-com:office:word"
+ href=3D"https://twitter.com/progintl?link_id=3D8&can_id=3Db77efdcb7a9c54ce=
+ced2ba7d81a9ef92&source=3Demail-presenting-the-internationalism-calendar-20=
+26-2&email_referrer=3Demail_3034776___subject_3530735&email_subject=3Dthe-2=
+026-internationalism-calendar-has-arrived-nil-order-now&&" style=3D"height:=
+41px; v-text-anchor:middle; width:98px;" arcsize=3D"61%"  stroke=3D"f" fill=
+color=3D"#280000"><w:anchorlock/><center style=3D"color:#ffffff;"><![endif]=
+-->
+    <a
+ href=3D"https://click.actionnetwork.org/ss/c/u001.SEgofQhSb9pGg8bz5XQG3atS=
+2ZoeY2ZV0zRm74aEN5LCUGnTXn31JZxf8b058ZA6mP91uHnZ9EBFe3e-RjjLyen5in96zGRLfJY=
+VTBfuWKPzoDmY47nsexQ1bwAd9AXOGp-JVATE0TfqCRw3bDGRD_TbSG_ALqbcy67w42kiaKoK35=
+25XTDae4qUy7W-s5ILLJ3RSdqDhdJF3NtK2VX6r_INqsiq0WWwi5t7afpMo3S5SVGTcdEe2hVDu=
+I5BDdxFBVYT1olN_A7mz1P6tIwr-6jDNbyfGpCFrTyzkrvtyrlnFnealT1ZjRRIfbf-R-PuK9uj=
+Lq4phnOA_poGaBddd5pT0nBguzTZj91c5u4bxmk/4mu/A_S0rPuLRuCnNV_rc6VgTQ/h6/h001.=
+ebFsZwE2iIoxuppF8bTPoSoHxDA71x02aw0Ea1j47vI" target=3D"_blank" class=3D"v-b=
+utton" style=3D"box-sizing: border-box;display: inline-block;text-decoratio=
+n: none;-webkit-text-size-adjust: none;text-align: center;color: #ffffff; b=
+ackground-color: #280000; border-radius: 25px;-webkit-border-radius: 25px; =
+-moz-border-radius: 25px; width:auto; max-width:100%; overflow-wrap: break-=
+word; word-break: break-word; word-wrap:break-word; mso-border-alt: none;fo=
+nt-size: 14px;">
+      <span style=3D"display:block;padding:10px 20px;line-height:120%;"><sp=
+an style=3D"font-size: 18px; line-height: 21.599999999999998px;"><strong><s=
+pan style=3D"line-height: 21.599999999999998px; font-size: 18px;">Twitter</=
+span></strong></span></span>
+    </a>
+    <!--[if mso]></center></v:roundrect><![endif]-->
+</div>
+
+
+      </td>
+
+    </tr>
+  </tbody>
+</table>
+
+  <!--[if (!mso)&(!IE)]><!--></div>
+<!--<![endif]-->
+  </div>
+
+</div>
+
+<!--[if (mso)|(IE)]></td>
+<![endif]-->
+<!--[if (mso)|(IE)]><td align=3D"center" width=3D"150" style=3D"width: 150p=
+x;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid tra=
+nsparent;border-right: 0px solid transparent;border-bottom: 0px solid trans=
+parent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0=
+px;" valign=3D"top"><![endif]-->
+<div class=3D"u-col u-col-25" style=3D"max-width: 320px;min-width: 150px;di=
+splay: table-cell;vertical-align: top;">
+  <div style=3D"height: 100%;width: 100% !important;border-radius: 0px;-web=
+kit-border-radius: 0px; -moz-border-radius: 0px;">
+  <!--[if (!mso)&(!IE)]><!--><div style=3D"box-sizing: border-box; height: =
+100%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid=
+ transparent;border-right: 0px solid transparent;border-bottom: 0px solid t=
+ransparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radiu=
+s: 0px;"><!--<![endif]-->
+ =20
+<table style=3D"font-family:helvetica,sans-serif;" role=3D"presentation" ce=
+llpadding=3D"0" cellspacing=3D"0" width=3D"100%" border=3D"0">
+  <tbody>
+    <tr>
+      <td style=3D"overflow-wrap:break-word;word-break:break-word;padding:1=
+0px;font-family:helvetica,sans-serif;" align=3D"left">
+       =20
+  <!--[if mso]><style>.v-button {background: transparent !important;}</styl=
+e><![endif]-->
+<div align=3D"center">
+  <!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns=
+:w=3D"urn:schemas-microsoft-com:office:word"
+ href=3D"https://instagram.com/progintl_en?link_id=3D10&can_id=3Db77efdcb7a=
+9c54ceced2ba7d81a9ef92&source=3Demail-presenting-the-internationalism-calen=
+dar-2026-2&email_referrer=3Demail_3034776___subject_3530735&email_subject=
+=3Dthe-2026-internationalism-calendar-has-arrived-nil-order-now&&" style=3D=
+"height:41px; v-text-anchor:middle; width:126px;" arcsize=3D"61%"  stroke=
+=3D"f" fillcolor=3D"#280000"><w:anchorlock/><center style=3D"color:#ffffff;=
+"><![endif]-->
+    <a
+ href=3D"https://click.actionnetwork.org/ss/c/u001.T4f1s0H8aL8dqpmq959YtCao=
+5D8xPyZJfBAvKlzbYdMspp05aSrfiM21nuKC7k0LmXeOi3M5xgWVGbNhOGCm7Xvzu61hDaO5waQ=
+hRC-BtzEvhZN2wv8zMoNzxijI8Ffg5Tl5cPPMtu9fQ9pCF0I5OfdPSQL11LEHMhtfzWMBSMD1Bx=
+Tg6ARSBmVl0xIsmnoDhOG-bkS0RZZX-gwK9KlKBi7Qr-UlSTtl8cZ78hV8wM55_1zBeRYHDNCnN=
+kJLUdRldJ1tD1fqprbBH05jz79bM5WWxd9DZ-KVDMRYaaxfA1C73dB1c4DvrwtmiPX3Hx5wXG0R=
+XrEBYYx8v04GTisipiH0GDPHV7xZCBTDb7euGcTX3h1Q8aSDkUsrYaG0MIaV/4mu/A_S0rPuLRu=
+CnNV_rc6VgTQ/h7/h001.Z05R4Qe6VNckVuf8shmSPKmYxJ3LFqMk0MIi3ElN-dA" target=3D=
+"_blank" class=3D"v-button" style=3D"box-sizing: border-box;display: inline=
+-block;text-decoration: none;-webkit-text-size-adjust: none;text-align: cen=
+ter;color: #ffffff; background-color: #280000; border-radius: 25px;-webkit-=
+border-radius: 25px; -moz-border-radius: 25px; width:auto; max-width:100%; =
+overflow-wrap: break-word; word-break: break-word; word-wrap:break-word; ms=
+o-border-alt: none;font-size: 14px;">
+      <span style=3D"display:block;padding:10px 20px;line-height:120%;"><sp=
+an style=3D"font-size: 18px; line-height: 21.599999999999998px;"><strong><s=
+pan style=3D"line-height: 21.599999999999998px; font-size: 18px;">Instagram=
+</span></strong></span></span>
+    </a>
+    <!--[if mso]></center></v:roundrect><![endif]-->
+</div>
+
+
+      </td>
+
+    </tr>
+  </tbody>
+</table>
+
+  <!--[if (!mso)&(!IE)]><!--></div>
+<!--<![endif]-->
+  </div>
+
+</div>
+
+<!--[if (mso)|(IE)]></td>
+<![endif]-->
+<!--[if (mso)|(IE)]><td align=3D"center" width=3D"150" style=3D"width: 150p=
+x;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid tra=
+nsparent;border-right: 0px solid transparent;border-bottom: 0px solid trans=
+parent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0=
+px;" valign=3D"top"><![endif]-->
+<div class=3D"u-col u-col-25" style=3D"max-width: 320px;min-width: 150px;di=
+splay: table-cell;vertical-align: top;">
+  <div style=3D"height: 100%;width: 100% !important;border-radius: 0px;-web=
+kit-border-radius: 0px; -moz-border-radius: 0px;">
+  <!--[if (!mso)&(!IE)]><!--><div style=3D"box-sizing: border-box; height: =
+100%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid=
+ transparent;border-right: 0px solid transparent;border-bottom: 0px solid t=
+ransparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radiu=
+s: 0px;"><!--<![endif]-->
+ =20
+<table style=3D"font-family:helvetica,sans-serif;" role=3D"presentation" ce=
+llpadding=3D"0" cellspacing=3D"0" width=3D"100%" border=3D"0">
+  <tbody>
+    <tr>
+      <td style=3D"overflow-wrap:break-word;word-break:break-word;padding:1=
+0px;font-family:helvetica,sans-serif;" align=3D"left">
+       =20
+  <!--[if mso]><style>.v-button {background: transparent !important;}</styl=
+e><![endif]-->
+<div align=3D"center">
+  <!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns=
+:w=3D"urn:schemas-microsoft-com:office:word"
+ href=3D"https://www.youtube.com/c/ProgressiveInternational?link_id=3D12&ca=
+n_id=3Db77efdcb7a9c54ceced2ba7d81a9ef92&source=3Demail-presenting-the-inter=
+nationalism-calendar-2026-2&email_referrer=3Demail_3034776___subject_353073=
+5&email_subject=3Dthe-2026-internationalism-calendar-has-arrived-nil-order-=
+now&&" style=3D"height:41px; v-text-anchor:middle; width:111px;" arcsize=3D=
+"61%"  stroke=3D"f" fillcolor=3D"#280000"><w:anchorlock/><center style=3D"c=
+olor:#ffffff;"><![endif]-->
+    <a
+ href=3D"https://click.actionnetwork.org/ss/c/u001.XaF8mXqsA6b2dSPmhsleMeQL=
+xUWtV0SUVSHSIn96lDQ8dAtt0vNbD_TkVxLk3FIGUY4xsDgZCfpZtgELmWS9jBoihS7JUIrrw-3=
+xZtIBtx47xL7A3l8bGSSk3xnN2T2bNiXPp7oM7ws4tPWA5FkSQlxHSMuQumB7WO83k8vr5NwjZj=
+O4Ab1ckTw1m5oKNw8w-IdYIiGJg5h2eYBLLDvoeMUxGwIbgnq-vz419-2KkFNRi7lWTUVSokpqE=
+4bFh434feIjkVV6wfP-Sbe3LBUCoV92lSGc3he0HdZnEekB5hmg-3aTu5-cYWJrDw4c2glrBzOj=
+5N3-f2Pl6qRAvQ1jTgFTyYUcCR_LUGB7Yw1azOe_0AbVzsKXGnMD7PYOca9chtyJqp-cCnDIyCy=
+sTwzu1Q/4mu/A_S0rPuLRuCnNV_rc6VgTQ/h8/h001.YX0bkmhV3wDSfhsh9LA8FkBvCJajmA-9=
+3sxFrZr6JbY" target=3D"_blank" class=3D"v-button" style=3D"box-sizing: bord=
+er-box;display: inline-block;text-decoration: none;-webkit-text-size-adjust=
+: none;text-align: center;color: #ffffff; background-color: #280000; border=
+-radius: 25px;-webkit-border-radius: 25px; -moz-border-radius: 25px; width:=
+auto; max-width:100%; overflow-wrap: break-word; word-break: break-word; wo=
+rd-wrap:break-word; mso-border-alt: none;font-size: 14px;">
+      <span style=3D"display:block;padding:10px 20px;line-height:120%;"><sp=
+an style=3D"font-size: 18px; line-height: 21.599999999999998px;"><strong><s=
+pan style=3D"line-height: 21.599999999999998px; font-size: 18px;">Youtube</=
+span></strong></span></span>
+    </a>
+    <!--[if mso]></center></v:roundrect><![endif]-->
+</div>
+
+
+      </td>
+
+    </tr>
+  </tbody>
+</table>
+
+  <!--[if (!mso)&(!IE)]><!--></div>
+<!--<![endif]-->
+  </div>
+
+</div>
+
+<!--[if (mso)|(IE)]></td>
+<![endif]-->
+      <!--[if (mso)|(IE)]></tr></table></td>
+</tr></table><![endif]-->
+    </div>
+
+  </div>
+
+  </div>
+
+ =20
+
+
+ =20
+ =20
+<div class=3D"u-row-container" style=3D"padding: 0px;background-color: tran=
+sparent">
+  <div class=3D"u-row" style=3D"margin: 0 auto;min-width: 320px;max-width: =
+600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-wor=
+d;background-color: transparent;">
+    <div style=3D"border-collapse: collapse;display: table;width: 100%;heig=
+ht: 100%;background-color: transparent;">
+      <!--[if (mso)|(IE)]><table role=3D"presentation" width=3D"100%" cellp=
+adding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding: 0px;b=
+ackground-color: transparent;" align=3D"center"><table role=3D"presentation=
+" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:600px;"><=
+tr style=3D"background-color: transparent;"><![endif]-->
+     =20
+<!--[if (mso)|(IE)]><td align=3D"center" width=3D"600" style=3D"width: 600p=
+x;padding: 10px;border-top: 0px solid transparent;border-left: 0px solid tr=
+ansparent;border-right: 0px solid transparent;border-bottom: 0px solid tran=
+sparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: =
+0px;" valign=3D"top"><![endif]-->
+<div class=3D"u-col u-col-100" style=3D"max-width: 320px;min-width: 600px;d=
+isplay: table-cell;vertical-align: top;">
+  <div style=3D"height: 100%;width: 100% !important;border-radius: 0px;-web=
+kit-border-radius: 0px; -moz-border-radius: 0px;">
+  <!--[if (!mso)&(!IE)]><!--><div style=3D"box-sizing: border-box; height: =
+100%; padding: 10px;border-top: 0px solid transparent;border-left: 0px soli=
+d transparent;border-right: 0px solid transparent;border-bottom: 0px solid =
+transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radi=
+us: 0px;"><!--<![endif]-->
+ =20
+<table style=3D"font-family:helvetica,sans-serif;" role=3D"presentation" ce=
+llpadding=3D"0" cellspacing=3D"0" width=3D"100%" border=3D"0">
+  <tbody>
+    <tr>
+      <td style=3D"overflow-wrap:break-word;word-break:break-word;padding:1=
+0px;font-family:helvetica,sans-serif;" align=3D"left">
+       =20
+  <table role=3D"presentation" aria-label=3D"divider" height=3D"0px" align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"=
+ style=3D"border-collapse: collapse;table-layout: fixed;border-spacing: 0;m=
+so-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;border-top: =
+0px solid #BBBBBB;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%=
+">
+    <tbody>
+      <tr style=3D"vertical-align: top">
+        <td style=3D"word-break: break-word;border-collapse: collapse !impo=
+rtant;vertical-align: top;font-size: 0px;line-height: 0px;mso-line-height-r=
+ule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
+          <span>&#160;</span>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+      </td>
+
+    </tr>
+  </tbody>
+</table>
+
+  <!--[if (!mso)&(!IE)]><!--></div>
+<!--<![endif]-->
+  </div>
+
+</div>
+
+<!--[if (mso)|(IE)]></td>
+<![endif]-->
+      <!--[if (mso)|(IE)]></tr></table></td>
+</tr></table><![endif]-->
+    </div>
+
+  </div>
+
+  </div>
+
+ =20
+
+
+ =20
+ =20
+<div class=3D"u-row-container" style=3D"padding: 0px;background-color: tran=
+sparent">
+  <div class=3D"u-row" style=3D"margin: 0 auto;min-width: 320px;max-width: =
+600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-wor=
+d;background-color: transparent;">
+    <div style=3D"border-collapse: collapse;display: table;width: 100%;heig=
+ht: 100%;background-color: transparent;">
+      <!--[if (mso)|(IE)]><table role=3D"presentation" width=3D"100%" cellp=
+adding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding: 0px;b=
+ackground-color: transparent;" align=3D"center"><table role=3D"presentation=
+" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:600px;"><=
+tr style=3D"background-color: transparent;"><![endif]-->
+     =20
+<!--[if (mso)|(IE)]><td align=3D"center" width=3D"600" style=3D"width: 600p=
+x;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid tra=
+nsparent;border-right: 0px solid transparent;border-bottom: 0px solid trans=
+parent;" valign=3D"top"><![endif]-->
+<div class=3D"u-col u-col-100" style=3D"max-width: 320px;min-width: 600px;d=
+isplay: table-cell;vertical-align: top;">
+  <div style=3D"height: 100%;width: 100% !important;">
+  <!--[if (!mso)&(!IE)]><!--><div style=3D"box-sizing: border-box; height: =
+100%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid=
+ transparent;border-right: 0px solid transparent;border-bottom: 0px solid t=
+ransparent;"><!--<![endif]-->
+ =20
+<table style=3D"font-family:helvetica,sans-serif;" role=3D"presentation" ce=
+llpadding=3D"0" cellspacing=3D"0" width=3D"100%" border=3D"0">
+  <tbody>
+    <tr>
+      <td style=3D"overflow-wrap:break-word;word-break:break-word;padding:0=
+px;font-family:helvetica,sans-serif;" align=3D"left">
+       =20
+<table role=3D"presentation" width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0">
+  <tr>
+    <td style=3D"padding-right: 0px;padding-left: 0px;" align=3D"center">
+     =20
+      <img align=3D"center" border=3D"0"
+ src=3D"https://actionnetwork.org/unlayer_files/1653381064950-map%E2%80%94p=
+i%E2%80%94logo%E2%80%94EN.png" alt=3D"Image" title=3D"Image" style=3D"outli=
+ne: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;=
+display: inline-block !important;border: none;height: auto;float: none;widt=
+h: 100%;max-width: 600px;" width=3D"600" class=3D"v-src-width v-src-max-wid=
+th"/>
+     =20
+    </td>
+
+  </tr>
+</table>
+
+      </td>
+
+    </tr>
+  </tbody>
+</table>
+
+  <!--[if (!mso)&(!IE)]><!--></div>
+<!--<![endif]-->
+  </div>
+
+</div>
+
+<!--[if (mso)|(IE)]></td>
+<![endif]-->
+      <!--[if (mso)|(IE)]></tr></table></td>
+</tr></table><![endif]-->
+    </div>
+
+  </div>
+
+  </div>
+
+ =20
+
+
+ =20
+ =20
+<div class=3D"u-row-container" style=3D"padding: 0px;background-color: tran=
+sparent">
+  <div class=3D"u-row" style=3D"margin: 0 auto;min-width: 320px;max-width: =
+600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-wor=
+d;background-color: transparent;">
+    <div style=3D"border-collapse: collapse;display: table;width: 100%;heig=
+ht: 100%;background-color: transparent;">
+      <!--[if (mso)|(IE)]><table role=3D"presentation" width=3D"100%" cellp=
+adding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding: 0px;b=
+ackground-color: transparent;" align=3D"center"><table role=3D"presentation=
+" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:600px;"><=
+tr style=3D"background-color: transparent;"><![endif]-->
+     =20
+<!--[if (mso)|(IE)]><td align=3D"center" width=3D"600" style=3D"width: 600p=
+x;padding: 10px;border-top: 0px solid transparent;border-left: 0px solid tr=
+ansparent;border-right: 0px solid transparent;border-bottom: 0px solid tran=
+sparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: =
+0px;" valign=3D"top"><![endif]-->
+<div class=3D"u-col u-col-100" style=3D"max-width: 320px;min-width: 600px;d=
+isplay: table-cell;vertical-align: top;">
+  <div style=3D"height: 100%;width: 100% !important;border-radius: 0px;-web=
+kit-border-radius: 0px; -moz-border-radius: 0px;">
+  <!--[if (!mso)&(!IE)]><!--><div style=3D"box-sizing: border-box; height: =
+100%; padding: 10px;border-top: 0px solid transparent;border-left: 0px soli=
+d transparent;border-right: 0px solid transparent;border-bottom: 0px solid =
+transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radi=
+us: 0px;"><!--<![endif]-->
+ =20
+<table style=3D"font-family:helvetica,sans-serif;" role=3D"presentation" ce=
+llpadding=3D"0" cellspacing=3D"0" width=3D"100%" border=3D"0">
+  <tbody>
+    <tr>
+      <td style=3D"overflow-wrap:break-word;word-break:break-word;padding:1=
+0px;font-family:helvetica,sans-serif;" align=3D"left">
+       =20
+  <table role=3D"presentation" aria-label=3D"divider" height=3D"0px" align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"=
+ style=3D"border-collapse: collapse;table-layout: fixed;border-spacing: 0;m=
+so-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;border-top: =
+0px solid #BBBBBB;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%=
+">
+    <tbody>
+      <tr style=3D"vertical-align: top">
+        <td style=3D"word-break: break-word;border-collapse: collapse !impo=
+rtant;vertical-align: top;font-size: 0px;line-height: 0px;mso-line-height-r=
+ule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
+          <span>&#160;</span>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+      </td>
+
+    </tr>
+  </tbody>
+</table>
+
+  <!--[if (!mso)&(!IE)]><!--></div>
+<!--<![endif]-->
+  </div>
+
+</div>
+
+<!--[if (mso)|(IE)]></td>
+<![endif]-->
+      <!--[if (mso)|(IE)]></tr></table></td>
+</tr></table><![endif]-->
+    </div>
+
+  </div>
+
+  </div>
+
+ =20
+
+
+ =20
+ =20
+<div class=3D"u-row-container" style=3D"padding: 0px;background-color: tran=
+sparent">
+  <div class=3D"u-row" style=3D"margin: 0 auto;min-width: 320px;max-width: =
+600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-wor=
+d;background-color: transparent;">
+    <div style=3D"border-collapse: collapse;display: table;width: 100%;heig=
+ht: 100%;background-color: transparent;">
+      <!--[if (mso)|(IE)]><table role=3D"presentation" width=3D"100%" cellp=
+adding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding: 0px;b=
+ackground-color: transparent;" align=3D"center"><table role=3D"presentation=
+" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:600px;"><=
+tr style=3D"background-color: transparent;"><![endif]-->
+     =20
+<!--[if (mso)|(IE)]><td align=3D"center" width=3D"600" style=3D"width: 600p=
+x;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid tra=
+nsparent;border-right: 0px solid transparent;border-bottom: 0px solid trans=
+parent;" valign=3D"top"><![endif]-->
+<div class=3D"u-col u-col-100" style=3D"max-width: 320px;min-width: 600px;d=
+isplay: table-cell;vertical-align: top;">
+  <div style=3D"height: 100%;width: 100% !important;">
+  <!--[if (!mso)&(!IE)]><!--><div style=3D"box-sizing: border-box; height: =
+100%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid=
+ transparent;border-right: 0px solid transparent;border-bottom: 0px solid t=
+ransparent;"><!--<![endif]-->
+ =20
+  <!--[if (!mso)&(!IE)]><!--></div>
+<!--<![endif]-->
+  </div>
+
+</div>
+
+<!--[if (mso)|(IE)]></td>
+<![endif]-->
+      <!--[if (mso)|(IE)]></tr></table></td>
+</tr></table><![endif]-->
+    </div>
+
+  </div>
+
+  </div>
+
+ =20
+
+
+    <!--[if (mso)|(IE)]></td>
+</tr></table><![endif]-->
+    </td>
+
+  </tr>
+  </tbody>
+  </table>
+  <!--[if mso]></div>
+<![endif]-->
+  <!--[if IE]></div>
+<![endif]-->
+<center>
+  <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" =
+id=3D"backgroundTable" style=3D"margin: 0;padding: 0;height: 100% !importan=
+t;width: 100% !important; line-height: 100% !important; border-collapse:col=
+lapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" role=3D"presentation">
+    <tr>
+      <td align=3D"center" valign=3D"top" style=3D"border-collapse: collaps=
+e;">
+		<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-t=
+op: 2px solid #909090; border-collapse:collapse; mso-table-lspace:0pt; mso-=
+table-rspace:0pt;" role=3D"presentation">
+		  <tr>
+		    <td valign=3D"top" style=3D"border-collapse: collapse;">
+		      <table border=3D"0" cellpadding=3D"10" cellspacing=3D"0" style=3D"b=
+order-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" role=
+=3D"presentation">
+		        <tr>
+		          <td colspan=3D"2" valign=3D"middle" style=3D"border-collapse: c=
+ollapse;border-top: 0;">
+		            <div style=3D"color: #333333;font-family: Arial;font-size: 11=
+px;line-height: 125%;text-align: left;" dir=3D"auto">
+		                Sent via <a
+ href=3D"https://click.actionnetwork.org/ss/c/u001.vJH41MPG4bgUd6h6NGKFprEV=
+d5SZ3aeQlOtv77_nyyS_xeVJsheT6zYmXkAt36-ef-RiRUIqOdlQHWobpHlR6UxhhyZ0EvQZRY5=
+hKq6KO74OwpwicyQFOkoKUjiLYjR5eOEFOP4qCcCWlsXcKaHq1mx9bXD_FUCut0MsjBkCQ_XGFy=
+rqrHv6nsG3VYhvxkmP8dJ6BJ359XfOVpbi6qHOJfrLhd0bnwnKYRoTl4Nwq97lwN2u14jtNmviI=
+B6SfR9SPPJbwHPTTBk-NNmjxvn1fV9JQbovm2zMIi7AdfnGgcp1wmjjPvpNqnd2cx3XmJ6NPG77=
+GxbhM72MNzOoipSPXDMl8SrHFdR-nhuQi1OQHps/4mu/A_S0rPuLRuCnNV_rc6VgTQ/h9/h001.=
+qaSAe-5pxE1Zb4LAYTYNEjLaeL83dY42aOIKVl8YAkY" style=3D"color: #004a6d;">Acti=
+onNetwork.org</a>.
+		              To update your email address, change your name or address, =
+or to stop receiving emails from Progressive International, please <a
+ href=3D"https://click.actionnetwork.org/ss/c/u001.qUXRBnqZ7T8nxbpAcIVwoUsW=
+LkUMWlo_0JmZttSlm3-gP0Xd1LL-Lub7Gk22PHy97_r9BokyGfGEFIMAADGF8N-RRphQ28NL_3X=
+p_XjcNVGUT2jGajz633aST_tpD4Fjfq8PAEQjWbcOpd0VpWlcX7rP4NnoV6W-PbYfhOskN6dXzg=
+HY3U8V6SSxy85kH4HO1ZzIUrA2W0SUTVd0KM8af8bi4AQ0uPlS7HiLEzq_VA6T-L7rAKcC_qYFd=
+ginmQ6n1ufTMkvRKPtbSEvOAEO8KssOqGNhgSsIpltHvQ3Q8508TgMgf2V1DMVYJrJqa6oRxGGq=
+Ic-91HwhREi5n7HJAKUZDrQq4ORYZvqpN6aE6dYP9Krs24R8mWfI_VoSC6r73NGGkubidxlW1Ot=
+rHBYLfa4ubXKtJqdCL6l0ku9AfbP5idlEUHX0XVhd-6sUDQ_x1b0H4_km6IUuFqPXzAqLT-Ka47=
+qYHz5vPwm6Kdsn2aVtahnim5F8EzvsYQ-q5cdex5gZj8ZdcdEJFBgbiX0QkiCthYYHhQ9hNAxMr=
+IHJQ71zzmOdORpYTt3mqxjopVrSaZKzKsY0JeJ0Wa_8yszgbg/4mu/A_S0rPuLRuCnNV_rc6VgT=
+Q/h10/h001.6cAf6ov-zBA4O9bsbxlFgzqgbp9f3AIn2Z7PRWLs1JI" style=3D"color: #00=
+4a6d;font-weight: normal;text-decoration: underline;">click here</a>.
+		            </div>
+
+		          </td>
+
+		        </tr>
+		      </table>
+		    </td>
+
+		  </tr>
+		</table>
+      </td>
+
+    </tr>
+  </table>
+</center>
+<img src=3D"https://click.actionnetwork.org/ss/o/u001.ZbNyqOfLYPaP-d23SgKjn=
+Q/4mu/A_S0rPuLRuCnNV_rc6VgTQ/ho.gif" alt=3D"" width=3D"1" height=3D"1" bord=
+er=3D"0" style=3D"height:1px !important;width:1px !important;border-width:0=
+ !important;margin-top:0 !important;margin-bottom:0 !important;margin-right=
+:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bot=
+tom:0 !important;padding-right:0 !important;padding-left:0 !important;"/></=
+body>
+
+</html>

@@ -1,0 +1,180 @@
+Delivered-To: vsingh2110@gmail.com
+Received: by 2002:a05:640c:7706:b0:256:8a2c:2551 with SMTP id l6csp876768eiw;
+        Sun, 28 Dec 2025 17:57:18 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IFGZ+oHcfk5ruxWSLgPqzaFjTzTf6rrudc/NXFQT0F09OaejLPUjynHb8nyZCDCSwZaukkC
+X-Received: by 2002:a05:6214:246d:b0:888:498e:5a3a with SMTP id 6a1803df08f44-88d8442dfd1mr476245346d6.68.1766973437956;
+        Sun, 28 Dec 2025 17:57:17 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1766973437; cv=none;
+        d=google.com; s=arc-20240605;
+        b=Cv1KPdfUuKaNcGldnEsY4uEB86j3TCyhEzVBynWg9hodGA629zymVwF1CCEV8yhvDN
+         WS/gtE22NKUheYiMpigPoNiIQx7Yp8q/5FRyF2ZlDX4uj6V+urUyEgvoRA2ylOVSzNbF
+         svBehg4IxC2PbQlY1xN78eeY5HqBzNrUtVCQIDlXZzcvRqT9T6XPVjQoLcLDJkFNNlch
+         +M3VfB9Z2DB7JMwgf0y1PLYq+OB6bFRlCyblmuofAoTDFq7u1Iccax9Dcuh2SQGrUHV2
+         QLHY3RybD5D6C+wXdVMhccGarmhPQaS/C/Uw3HebL/LvRxIEUFRS8Ejo521GK6k5RnF1
+         aRrA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:date:message-id:mime-version:subject:to:reply-to:from
+         :dkim-signature:dkim-signature;
+        bh=7xLefjJyJ95Uxx4k5crSs8U5Zie8xXuvQDDVfH6D+S8=;
+        fh=VsADH51DasWUAWKbge5tokyYCeQDDfmF8MJrxNRkreQ=;
+        b=L9Y7Zq29tKe74WI9uwaR64RG6Jwoofi6VI7vtOg3JCWBBi6GRt6rPkZSDjQ8yWXmQY
+         k01fWYVd1bckRwniONyrn03L2KOnIzLnJMnsBu0Xq6dZVOhi9OhAgrPSLb0WO8p0d23u
+         3YlnUo+KCuNlWYoq3CN7KZ5aL4yClv+f6nrudPRKwrbPzyqebifo+LyRe381aZ7agcch
+         ttk4dcVZrKq81E6aOhj43QpC4vnTrRn486ojFVEQZjd6/m/dkpgkeIhasMlrN2X95TdZ
+         DWLCBXxf+NAP5mVPjx3M95rA5vLugKBFz5h8IjSCsovyFdOZkMU16+T6Cv8suZf7Nv2Y
+         W59Q==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mails.org.in header.s=bq5gmgpkvfykt2wqahfamw2bzvkygdrz header.b=uhJb4oxE;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=civKAhy9;
+       spf=pass (google.com: domain of 0100019b67d2f676-4b2491cd-772b-403b-8158-8c9f61676d2d-000000@portalmails.mails.org.in designates 54.240.48.85 as permitted sender) smtp.mailfrom=0100019b67d2f676-4b2491cd-772b-403b-8158-8c9f61676d2d-000000@portalmails.mails.org.in;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=mails.org.in
+Return-Path: <0100019b67d2f676-4b2491cd-772b-403b-8158-8c9f61676d2d-000000@portalmails.mails.org.in>
+Received: from a48-85.smtp-out.amazonses.com (a48-85.smtp-out.amazonses.com. [54.240.48.85])
+        by mx.google.com with ESMTPS id 6a1803df08f44-88d950c72cfsi284378696d6.8.2025.12.28.17.57.17
+        for <vsingh2110@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Sun, 28 Dec 2025 17:57:17 -0800 (PST)
+Received-SPF: pass (google.com: domain of 0100019b67d2f676-4b2491cd-772b-403b-8158-8c9f61676d2d-000000@portalmails.mails.org.in designates 54.240.48.85 as permitted sender) client-ip=54.240.48.85;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mails.org.in header.s=bq5gmgpkvfykt2wqahfamw2bzvkygdrz header.b=uhJb4oxE;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=civKAhy9;
+       spf=pass (google.com: domain of 0100019b67d2f676-4b2491cd-772b-403b-8158-8c9f61676d2d-000000@portalmails.mails.org.in designates 54.240.48.85 as permitted sender) smtp.mailfrom=0100019b67d2f676-4b2491cd-772b-403b-8158-8c9f61676d2d-000000@portalmails.mails.org.in;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=mails.org.in
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=bq5gmgpkvfykt2wqahfamw2bzvkygdrz; d=mails.org.in; t=1766973437;
+	i=@ymcamob.mails.org.in;
+	h=From:Reply-To:To:Subject:MIME-Version:Content-Type:Message-ID:Date;
+	bh=9VCKqY7SoRtmqMZRTr5e414U7eyUF+jmm01R13wuXTQ=;
+	b=uhJb4oxEDBsHnVNNDKadnEx2rdzhZsKqQy3FN+YyaKCFww9+wGTV5Vnu7nMVbSkM
+	SK6gmq0uVOPWG/cvl6+djJXTcl8lEhJcQGB8R4bv/2C1dSbnBdxCgwiNwMJKqKdBgK2
+	3sO5rPvngl6EcA07yDRhG0ABQHrn0S973HHkXykU=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1766973437;
+	h=From:Reply-To:To:Subject:MIME-Version:Content-Type:Message-ID:Date:Feedback-ID;
+	bh=9VCKqY7SoRtmqMZRTr5e414U7eyUF+jmm01R13wuXTQ=;
+	b=civKAhy9th4nJTzCU4pFxyC5t8/ydg0agKvPc76cvAvjp0ITW3RhRFh8ano7CRb2
+	/KCsaRZtVGUgvvmUIws6U7oAcjSRkw/ne4Xeagw8IhjcRMLsVJ3ItdMbw03s4ahsdFD
+	c/ask4lAfm/KImDIuRTEplZme0DPhuChPadKs8+c=
+From: YMCA MOB ALUMNI ASSOCIATION <connect@ymcamob.mails.org.in>
+Reply-To: mob.ymca@gmail.com, ymcameetoldbuddies@gmail.com
+To: vsingh2110@gmail.com
+Subject: New Opportunities posted in YMCA MOB network
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_246485_1964293569.1766973437558"
+Message-ID: <0100019b67d2f676-4b2491cd-772b-403b-8158-8c9f61676d2d-000000@email.amazonses.com>
+Date: Mon, 29 Dec 2025 01:57:17 +0000
+Feedback-ID: ::1.us-east-1.mHKIOOrFXJaFr/byS+m4CZaV/j1RL1V6CHKgx86n9EI=:AmazonSES
+X-SES-Outgoing: 2025.12.29-54.240.48.85
+
+------=_Part_246485_1964293569.1766973437558
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Dear Vikas Singh,
+Greetings from YMCA MOB!!We are pleased to inform you that  new career oppo=
+rtunities  have been recently posted on the =E2=80=98Job Portal=E2=80=99 of=
+ YMCA MOB Alumni Network. You can directly apply for any opening which matc=
+hes your interest.
+Sales Engineer at B P Refcool, Gurgaon District, Bangalore, Mumbai, Pune, H=
+yderabad, Ahmedabad. Posted By Kapil Chand Singhal
+View Job Details
+(http://www.ymcamob.com/mail/mailcp_track_click?type=3D1&id=3D395410459&uid=
+=3D896923&v=3D2&token=3D49BpmBqE&encParam=3Dae2f4d8be42ced484430cecfc1efa3b=
+0014c91951ada22af6be983ec262dff125777cf2b9919a2a61ab3e4c53ff269bd1b7858ecb8=
+48d80c08df0609ae0183988cd0278d873c974e41e1d2852178a597df41b62df1b3e07efdcc7=
+f35e89c4517b53b7b74a50622af0b5ccbb2404dfacc44c73f674a1946ae25af9577bdd3558c=
+7a4162bafd78cb59a381a460374219e9)
+In case you if have any job openings in your company or organization, do sh=
+are them with your mates by posting on your  Job Portal!  Also, kindly fill=
+ in the Job Notification Preferences (Job Seeker or Job Provider) if you ha=
+ven=E2=80=99t done it already. (You will be asked on the page when you clic=
+k "View Job Details" button in this mail)
+With Best Regards,
+YMCA MOB
+
+
+ <b>IMPORTANT:</b> Please do not share this mail with others, as it gives d=
+irect access to your account=20
+
+
+
+ You received this email because you are a member of YMCA MOB ALUMNI ASSOCI=
+ATION - Alumni Portal. You can unsubscribe from all the mails by clicking t=
+he following link=20
+http://www.almashines.com/api/mail/unsubscribe?id=3D896923&type=3D1&token=
+=3D61201f3b23bdd61b01324d7204ce2dc6&cid=3D275
+------=_Part_246485_1964293569.1766973437558
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head><title>YMCA MOB Alumni Network</title></head>
+<body>
+<div style=3D"display:none;font-size:1px;color:#333333;line-height:1px;max-=
+height:0px;max-width:0px;opacity:0;overflow:hidden;">
+  Dear Vikas Singh,
+Greetings from YMCA MOB!!We are pleased to inform you that  new career oppo=
+rtuniti          =20
+</div>
+<div>
+=09<center style=3D"background-color: #eee;">
+=09=09<div style=3D"width:100%;max-width: 590px;background-color: #fff;padd=
+ing: 10px 20px;border-top: 3px solid #083d71;" align=3D"left">
+=09=09=09<div style=3D"padding:15px 0px;border-bottom: 1px solid #ccc;" ali=
+gn=3D"center">
+=09=09=09=09<img  alt=3D"Logo" style=3D"padding-right:20px;vertical-align: =
+middle;max-height:65px;max-width:560px;" src=3D"https://almashines.s3.duals=
+tack.ap-southeast-1.amazonaws.com/assets/images/institutes/logo/170x170/275=
+.jpg?v=3D1">
+=09=09=09</div>
+=09=09=09<div style=3D"margin-top:40px;line-height:23px;font-size:15px;colo=
+r:#444;">
+  =09=09=09=09<p><p>Dear Vikas Singh,</p><br><p>Greetings from YMCA MOB!!</=
+p><p>We are pleased to inform you that <b> new career opportunities </b> ha=
+ve been recently posted on the =E2=80=98Job Portal=E2=80=99 of YMCA MOB Alu=
+mni Network. You can <b>directly apply</b> for any opening which matches yo=
+ur interest.</p><br><div><p><b>Sales Engineer at B P Refcool</b>, Gurgaon D=
+istrict, Bangalore, Mumbai, Pune, Hyderabad, Ahmedabad. Posted By Kapil Cha=
+nd Singhal</p></div><br><p><div style=3D'margin-top:10px;margin-bottom:10px=
+;text-align:center;'><a href=3D'http://www.ymcamob.com/mail/mailcp_track_cl=
+ick?type=3D1&id=3D395410459&uid=3D896923&v=3D2&token=3D49BpmBqE&encParam=3D=
+ae2f4d8be42ced484430cecfc1efa3b0014c91951ada22af6be983ec262dff125777cf2b991=
+9a2a61ab3e4c53ff269bd1b7858ecb848d80c08df0609ae0183988cd0278d873c974e41e1d2=
+852178a597df41b62df1b3e07efdcc7f35e89c4517b53b7b74a50622af0b5ccbb2404dfacc4=
+4c73f674a1946ae25af9577bdd3558c7a4162bafd78cb59a381a460374219e9' style=3D'b=
+ackground-color: #4285F4;padding:8px 24px;display:inline-block;color:#fff;b=
+order-radius:3px;text-decoration:none;font-size:16px;'>View Job Details</a>=
+</div></p><br><p>In case you if have any job openings in your company or or=
+ganization, do share them with your mates by posting on your <a href=3D"htt=
+p://www.ymcamob.com/jobs"> Job Portal! </a> Also, kindly fill in the Job No=
+tification Preferences (Job Seeker or Job Provider) if you haven=E2=80=99t =
+done it already. (You will be asked on the page when you click "View Job De=
+tails" button in this mail)</p><br><p>With Best Regards,<br>YMCA MOB</p></p=
+>
+=09=09=09</div>
+=09=09=09<div><div style=3D'margin-top:13px;padding:15px 0px;color:#444;lin=
+e-height:20px;'><b>IMPORTANT:</b> Please do not share this mail with others=
+, as it gives direct access to your account</div></div>
+=09=09=09<div style=3D"margin-top:25px;padding:15px 0px;border-top:1px soli=
+d #ccc;color:#777;line-height:18px;">
+=09=09=09=09<div style=3D'font-size:11px; text-align: center;'>You received=
+ this email because you are a member of <a href=3D'http://www.ymcamob.com/'=
+ style=3D'color: inherit; font-weight: bolder; text-decoration: none;'>YMCA=
+ MOB ALUMNI ASSOCIATION - Alumni Portal</a>. To unsubscribe from all the ma=
+ils of it click <a href=3D'http://www.almashines.com/api/mail/unsubscribe?i=
+d=3D896923&type=3D1&token=3D61201f3b23bdd61b01324d7204ce2dc6&cid=3D275' sty=
+le=3D'color: inherit; font-weight: bolder; text-decoration: none;'>here</a>=
+.</div><div style=3D"font-size:11px; text-align: center;">Alumni Portal pow=
+ered by AlmaShines Technologies Pvt Ltd, Ahmedabad</div>
+=09=09=09</div>
+=09=09</div>
+=09</center>
+</div>
+<img alt=3DAlmashines src=3D"http://www.almashines.com/api/mail/mailcp_trac=
+k_open?type=3D1&id=3D395410459&uid=3D896923&v=3D2&token=3D49BpmBqE" height=
+=3D"1" width=3D"1">
+</body>
+</html>
+------=_Part_246485_1964293569.1766973437558--

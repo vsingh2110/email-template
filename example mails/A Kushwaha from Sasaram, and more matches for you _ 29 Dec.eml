@@ -1,0 +1,992 @@
+Delivered-To: vsingh2110@gmail.com
+Received: by 2002:a05:640c:7706:b0:256:8a2c:2551 with SMTP id l6csp946457eiw;
+        Sun, 28 Dec 2025 22:24:36 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IGEEPrS5VOt4rj0sYIRo5wyDgLezRynXTk/IwcAKjMEhXlDRxeEh7h1IDTTKr0bSOaPs8vv
+X-Received: by 2002:a17:90b:2d8b:b0:341:194:5e7d with SMTP id 98e67ed59e1d1-34e921af9bamr24873978a91.24.1766989476203;
+        Sun, 28 Dec 2025 22:24:36 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1766989476; cv=none;
+        d=google.com; s=arc-20240605;
+        b=TgF0xei1fT53DQNvErEssBEH/tW1t0ABN70xu8E8Z8cRPwwERlUuCPwj0l1wU/QX81
+         TeMGRTIArCbq3RXzhsL3yIVcLOJ/51puzQaT2L8msOB2ZkCGKUdUsy1Zfs16kxhqjHHq
+         LBiInbOc60J/7IJPgCtJUvYXf+QwxV0s6Q66UDRBkKU/6rdGYhBDB/Yghi2REA2IuL9W
+         ZLbFcdnbXubP9b1Ukd5Zq2CxMb1FmkdAaObhaLs2FEH8cFXCaYQGNMX18nGEQhLpTzYL
+         OjR469YLjzGzswlH3f4cggIpn1VKh6s7f264jKSy4Sk5C3Dyj1Doim0I9HxCAfOWyPKM
+         ygwg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:unique-id:content-transfer-encoding:mime-version
+         :subject:message-id:to:from:date:dkim-signature;
+        bh=rH0mA/AvKZF7zH9STUln3VPfYxqrXkRPUCHR5Z8QmGI=;
+        fh=VsADH51DasWUAWKbge5tokyYCeQDDfmF8MJrxNRkreQ=;
+        b=gFyps5BSVo6PwKb7rzUUmpgHVEsoVqLmBkY2QEkNyRYQKXGO7KmA/C3a+xbfEYvBki
+         KaHWdh8qHQk2QQvFH5uHg/79kUWHmU8vBUo2QLoatfEgVuPJKFYygGzqZvHcUriwRA7w
+         v/N1nEjP24A5ZdrBdALhRg4kgCgZRuQTXWya1u0C+31lCvt1CVTbkcwPv0lWNii+jKZj
+         kRBvYpJC//hskX7JNPlbQpvVS5V/dhG4lOd2O+I8dCsBF2/U42f2o+eKns/uxr1hR1V0
+         GiUeGa+2yGRYuk+qBBEPIMTAAXqSvEfOI9uxpDBJlmqJiBJtY+3ltSfUaQ/ty0Gd0El1
+         iL0A==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@jeevansathi.com header.s=s1024 header.b=ftuSba0+;
+       spf=pass (google.com: domain of matchalert@jeevansathi.com designates 180.179.180.202 as permitted sender) smtp.mailfrom=matchalert@jeevansathi.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=jeevansathi.com
+Return-Path: <matchalert@jeevansathi.com>
+Received: from nmail202.jeevansathi.com (nmail202.jeevansathi.com. [180.179.180.202])
+        by mx.google.com with ESMTPS id 98e67ed59e1d1-34e92387789si9738140a91.50.2025.12.28.22.24.35
+        for <vsingh2110@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 28 Dec 2025 22:24:36 -0800 (PST)
+Received-SPF: pass (google.com: domain of matchalert@jeevansathi.com designates 180.179.180.202 as permitted sender) client-ip=180.179.180.202;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@jeevansathi.com header.s=s1024 header.b=ftuSba0+;
+       spf=pass (google.com: domain of matchalert@jeevansathi.com designates 180.179.180.202 as permitted sender) smtp.mailfrom=matchalert@jeevansathi.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=jeevansathi.com
+Return-Path: <matchalert@jeevansathi.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=jeevansathi.com;
+	s=s1024; t=1766989473;
+	bh=rH0mA/AvKZF7zH9STUln3VPfYxqrXkRPUCHR5Z8QmGI=;
+	h=Date:From:To:Subject;
+	b=ftuSba0+tw9hPIG3XxsrqE9MFEqAJ1UVVM7OYwiXcQEXWKPtXz+4IJPtv9zJsku1/
+	 XVXpYGXiFEleWY4Og84kubOHkOVQt6eAXv50+A0tJBGqA78ACiFMSKIsHYkx1Nk0uT
+	 hcfrnaOveAXosl8eZfP6udTBa/twWw6DKYAlEJtk=
+Received: from [172.10.18.114] ([172.10.18.114:10761] helo=jsmailerconsumer-prod-deployment-666657f76b-wzb6j)
+	by nplimla12.ieil.net (envelope-from <matchalert@jeevansathi.com>)
+	(ecelerity 3.6.13.50539 r(Core:3.6.13.0)) with ESMTP
+	id CE/B1-18743-1AE12596; Mon, 29 Dec 2025 11:54:33 +0530
+Date: Mon, 29 Dec 2025 01:24:33 -0500 (EST)
+From: Jeevansathi Matches <matchalert@jeevansathi.com>
+To: vsingh2110@gmail.com
+Message-ID: <468853304.20046305.1766989473414@jsmailerconsumer-prod-deployment-666657f76b-wzb6j>
+Subject: A Kushwaha from Sasaram,  and more matches for you | 29 Dec
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+unique-id: 52c03802-0556-40b2-98b2-f446eb795453
+feedback-id: MATCHALERT:jeevansathi
+
+<!doctype html>
+<html>
+ <head>
+  <meta charset=3D"UTF-8">
+ </head>
+ <body>
+  <div style=3D"display:none!important; font-size:1px; color:#ffffff; line-=
+height:1px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; mso-=
+hide:all;">
+   Find fresh matches that are comptabile to you&#xa0;&#x200c;&#xa0;&#x200c=
+;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa=
+0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x=
+200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;=
+&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0=
+;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x2=
+00c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&=
+#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;=
+&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x20=
+0c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#=
+xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&=
+#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200=
+c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#x=
+a0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#=
+x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c=
+;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa=
+0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x=
+200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;=
+&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0;&#x200c;&#xa0=
+;&#x200c;&#xa0;&#x200c;
+  </div>
+  <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" st=
+yle=3D"border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt=
+;">
+   <tbody>
+    <tr>
+     <td valign=3D"top" align=3D"center">
+      <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+" align=3D"center">
+       <tbody>
+        <tr>
+         <td width=3D"10"></td>
+         <td align=3D"center" width=3D"602">
+          <table width=3D"93%" border=3D"0" align=3D"center" cellpadding=3D=
+"0" cellspacing=3D"0">
+           <tbody>
+            <tr>
+             <td height=3D"20"></td>
+            </tr>
+            <tr>
+             <td align=3D"center">
+              <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadd=
+ing=3D"0">
+               <tbody>
+                <tr>
+                 <td valign=3D"middle" align=3D"left"><a href=3D"https://ww=
+w.jeevansathi.com/?uniqueId=3D52c03802-0556-40b2-98b2-f446eb795453&amp;link=
+Text=3D&amp;mailId=3D2000" target=3D"_blank" style=3D"text-decoration:none;=
+"><img src=3D"https://www.jeevansathi.com/newMailerJeevansathiLogo.png" wid=
+th=3D"80" alt=3D"Jeevansathi"></a></td>
+                 <td width=3D"10"></td>
+                 <td align=3D"right"><a href=3D"https://www.jeevansathi.com=
+/e/a12/33/0/08671a21598330bed6c1d149863b37a1|i|5efcf3808d0defe6212993579e2c=
+a615i61829297______1766986983______/5efcf3808d0defe6212993579e2ca615i618292=
+97?uniqueId=3D52c03802-0556-40b2-98b2-f446eb795453&amp;linkText=3D&amp;mail=
+Id=3D2000">
+                   <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+align=3D"right">
+                    <tbody>
+                     <tr>
+                      <td valign=3D"middle" height=3D"27" align=3D"right" s=
+tyle=3D"font-family:'Roboto', Arial, Helvetica, sans-serif; font-size:10px;=
+ color:#172332; font-weight:400; text-align:right;"><a href=3D"https://www.=
+jeevansathi.com/e/a12/33/0/08671a21598330bed6c1d149863b37a1|i|5efcf3808d0de=
+fe6212993579e2ca615i61829297______1766986983______/5efcf3808d0defe621299357=
+9e2ca615i61829297?uniqueId=3D52c03802-0556-40b2-98b2-f446eb795453&amp;linkT=
+ext=3DVikasSingh&amp;mailId=3D2000" target=3D"_blank" style=3D"text-decorat=
+ion:none; color:#172332;">Vikas Singh</a></td>
+                      <td width=3D"10"></td>
+                      <td>
+                       <table width=3D"100%" border=3D"0" cellspacing=3D"0"=
+ cellpadding=3D"0">
+                        <tbody>
+                         <tr>
+                          <td width=3D"27" height=3D"27" bgcolor=3D"white" =
+style=3D"border-radius:100px;"><a href=3D"https://www.jeevansathi.com/e/a12=
+/33/0/08671a21598330bed6c1d149863b37a1|i|5efcf3808d0defe6212993579e2ca615i6=
+1829297______1766986983______/5efcf3808d0defe6212993579e2ca615i61829297?uni=
+queId=3D52c03802-0556-40b2-98b2-f446eb795453&amp;linkText=3D&amp;mailId=3D2=
+000" target=3D"_blank" style=3D"text-decoration:none;"><img src=3D"https://=
+photocdn.jeevansathi.com/61431/3/1228623527-1764935961167.jpeg" width=3D"27=
+" height=3D"27" style=3D"border-radius:100px;"></a></td>
+                         </tr>
+                        </tbody>
+                       </table></td>
+                     </tr>
+                    </tbody>
+                   </table></a></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+            <tr>
+             <td height=3D"20"></td>
+            </tr>
+           </tbody>
+          </table></td>
+         <td width=3D"10"></td>
+        </tr>
+       </tbody>
+      </table></td>
+    </tr>
+    <tr>
+     <td valign=3D"top" align=3D"center" style=3D"background: linear-gradie=
+nt(180deg,rgba(255, 221, 240, 1) 0%, rgba(251, 251, 251, 1) 50%, rgba(255, =
+255, 255, 1) 100%);">
+      <table width=3D"100%" bgcolor=3D"#FDE2F1" border=3D"0" cellspacing=3D=
+"0" cellpadding=3D"0" align=3D"center">
+       <tbody>
+        <tr>
+         <td width=3D"10"></td>
+         <td align=3D"center" width=3D"580">
+          <table width=3D"93%" border=3D"0" align=3D"center" cellpadding=3D=
+"0" cellspacing=3D"0">
+           <tbody>
+            <tr>
+             <td height=3D"40"></td>
+            </tr>
+            <tr>
+             <td valign=3D"middle" align=3D"center" style=3D"font-family:'R=
+oboto', Arial, Helvetica, sans-serif; text-align:center; font-size:20px; li=
+ne-height:27px; color:#1B2437; font-weight:700;">Some profiles partially ma=
+tching your Desired Partner Criteria</td>
+            </tr>
+            <tr>
+             <td valign=3D"top" align=3D"center" style=3D"font-family:'Robo=
+to',Arial,sans-serif;font-size:12px;line-height:13px;color:#999999;font-wei=
+ght:normal;letter-spacing:-0.04px">These profiles don't completely fulfill =
+all the criterias metioned by you</td>
+            </tr>
+            <tr>
+             <td align=3D"center">
+              <table border=3D"0" align=3D"center" cellpadding=3D"0" cellsp=
+acing=3D"0">
+               <tbody>
+                <tr>
+                 <td align=3D"center" width=3D"410">
+                  <table width=3D"100%" border=3D"0" cellspacing=3D"0" cell=
+padding=3D"0">
+                   <tbody>
+                    <tr>
+                     <td align=3D"center"><a href=3D"#?uniqueId=3D52c03802-=
+0556-40b2-98b2-f446eb795453&amp;linkText=3D&amp;mailId=3D2000" target=3D"_b=
+lank" style=3D"text-decoration:none;"><span>
+                        <table border=3D"0" align=3D"center" cellpadding=3D=
+"0" cellspacing=3D"0">
+                         <tbody>
+                          <tr>
+                           <td height=3D"20"></td>
+                          </tr>
+                          <tr>
+                           <td align=3D"center" width=3D"365" bgcolor=3D"#f=
+fffff" style=3D"border-radius:12px; box-shadow: 0px 30px 60px 0px #222C331A=
+; border:1px solid #f6f4f5;">
+                            <table width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0">
+                             <tbody>
+                              <tr>
+                              <td align=3D"center" height=3D"158">
+                              <table width=3D"100%" border=3D"0" align=3D"c=
+enter" cellpadding=3D"0" cellspacing=3D"0">
+                              <tbody>
+                              <tr>
+                              <td valign=3D"middle" align=3D"left" width=3D=
+"135"><img width=3D"118" style=3D"border-top-left-radius:12px; border-botto=
+m-left-radius:12px; height:158px; object-fit:cover;" alt=3D"" src=3D"https:=
+//static.jeevansathi.com/images/jsms/commonImg/3_4_NoFemalePhoto.jpg"></td>
+                              <td valign=3D"middle" align=3D"left">
+                              <table width=3D"100%" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"0">
+                              <tbody>
+                              <tr>
+                              <td height=3D"7"></td>
+                              </tr>
+                              <tr>
+                              <td valign=3D"middle" align=3D"left" style=3D=
+"font-family:'Roboto', Arial, Helvetica, sans-serif; text-align:left; font-=
+size:16px; line-height:24px; color:#172332; font-weight:700;">A Kushwaha, 2=
+3</td>
+                              </tr>
+                              <tr>
+                              <td height=3D"6"></td>
+                              </tr>
+                              <tr>
+                              <td valign=3D"middle" align=3D"left" style=3D=
+"font-family:'Roboto', Arial, Helvetica, sans-serif; text-align:left; font-=
+size:12px; line-height:16px; color:#172332; font-weight:400;">5' 1" &#xb7; =
+Sasaram</td>
+                              </tr>
+                              <tr>
+                              <td height=3D"2"></td>
+                              </tr>
+                              <tr>
+                              <td valign=3D"middle" align=3D"left" style=3D=
+"font-family:'Roboto', Arial, Helvetica, sans-serif; text-align:left; font-=
+size:12px; line-height:16px; color:#172332; font-weight:400;">Maurya</td>
+                              </tr>
+                              <tr>
+                              <td height=3D"2"></td>
+                              </tr>
+                              <tr>
+                              <td valign=3D"middle" align=3D"left" style=3D=
+"font-family:'Roboto', Arial, Helvetica, sans-serif; text-align:left; font-=
+size:12px; line-height:16px; color:#172332; font-weight:400;">Looking for j=
+ob &#xb7; No Income</td>
+                              </tr>
+                              <tr>
+                              <td height=3D"2"></td>
+                              </tr>
+                              <tr>
+                              <td valign=3D"middle" align=3D"left" style=3D=
+"font-family:'Roboto', Arial, Helvetica, sans-serif; text-align:left; font-=
+size:12px; line-height:16px; color:#172332; font-weight:400;"></td>
+                              </tr>
+                              <tr>
+                              <td height=3D"12"></td>
+                              </tr>
+                              <tr>
+                              <td align=3D"left">
+                              <table border=3D"0" align=3D"left" cellpaddin=
+g=3D"0" cellspacing=3D"0">
+                              <tbody>
+                              <tr>
+                              <td valign=3D"top" height=3D"20" align=3D"lef=
+t" style=3D"font-family:'Roboto', Arial, Helvetica, sans-serif; text-align:=
+left; font-size:12px; line-height:16px; color:#D8465C; font-weight:700;"><a=
+ target=3D"_blank" style=3D"text-decoration:none; color:#D8465C; font-weigh=
+t:700;" href=3D"https://www.jeevansathi.com/e/a10/2/null/08671a21598330bed6=
+c1d149863b37a1|i|5efcf3808d0defe6212993579e2ca615i61829297______1766986983_=
+_____/5efcf3808d0defe6212993579e2ca615i61829297?clickSource=3Dmatchalert1&a=
+mp;profilechecksum=3D153f021033a70591d10778a83c270c87i72666031&amp;stype=3D=
+B&amp;logic_used=3D0&amp;fromMatchAlertMailer=3D1&amp;uniqueId=3D52c03802-0=
+556-40b2-98b2-f446eb795453&amp;linkText=3DViewProfile&amp;mailId=3D2000">Vi=
+ew Profile</a></td>
+                              <td valign=3D"top" height=3D"20" align=3D"lef=
+t"><a href=3D"#?uniqueId=3D52c03802-0556-40b2-98b2-f446eb795453&amp;linkTex=
+t=3D&amp;mailId=3D2000" target=3D"_blank"><img src=3D"https://www.ieplads.c=
+om/mailers/2025_ui/jeevansathi/js-10th-april/images/icon-arrow.png" width=
+=3D"16" height=3D"16" alt=3D""></a></td>
+                              </tr>
+                              </tbody>
+                              </table></td>
+                              </tr>
+                              <tr>
+                              <td height=3D"4"></td>
+                              </tr>
+                              </tbody>
+                              </table></td>
+                              </tr>
+                              </tbody>
+                              </table></td>
+                              </tr>
+                             </tbody>
+                            </table></td>
+                          </tr>
+                         </tbody>
+                        </table></span></a></td>
+                    </tr>
+                    <tr>
+                     <td align=3D"center"><a href=3D"#?uniqueId=3D52c03802-=
+0556-40b2-98b2-f446eb795453&amp;linkText=3D&amp;mailId=3D2000" target=3D"_b=
+lank" style=3D"text-decoration:none;"><span>
+                        <table border=3D"0" align=3D"center" cellpadding=3D=
+"0" cellspacing=3D"0">
+                         <tbody>
+                          <tr>
+                           <td height=3D"20"></td>
+                          </tr>
+                          <tr>
+                           <td align=3D"center" width=3D"365" bgcolor=3D"#f=
+fffff" style=3D"border-radius:12px; box-shadow: 0px 30px 60px 0px #222C331A=
+; border:1px solid #f6f4f5;">
+                            <table width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0">
+                             <tbody>
+                              <tr>
+                              <td align=3D"center" height=3D"158">
+                              <table width=3D"100%" border=3D"0" align=3D"c=
+enter" cellpadding=3D"0" cellspacing=3D"0">
+                              <tbody>
+                              <tr>
+                              <td valign=3D"middle" align=3D"left" width=3D=
+"135"><img width=3D"118" style=3D"border-top-left-radius:12px; border-botto=
+m-left-radius:12px; height:158px; object-fit:cover;" alt=3D"" src=3D"https:=
+//photocdn.jeevansathi.com/profilePic450/372/769/1237306139-1766811647373.j=
+peg"></td>
+                              <td valign=3D"middle" align=3D"left">
+                              <table width=3D"100%" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"0">
+                              <tbody>
+                              <tr>
+                              <td height=3D"7"></td>
+                              </tr>
+                              <tr>
+                              <td valign=3D"middle" align=3D"left" style=3D=
+"font-family:'Roboto', Arial, Helvetica, sans-serif; text-align:left; font-=
+size:16px; line-height:24px; color:#172332; font-weight:700;">TWYU3891, 18<=
+/td>
+                              </tr>
+                              <tr>
+                              <td height=3D"6"></td>
+                              </tr>
+                              <tr>
+                              <td valign=3D"middle" align=3D"left" style=3D=
+"font-family:'Roboto', Arial, Helvetica, sans-serif; text-align:left; font-=
+size:12px; line-height:16px; color:#172332; font-weight:400;">5' 1" &#xb7; =
+Lucknow</td>
+                              </tr>
+                              <tr>
+                              <td height=3D"2"></td>
+                              </tr>
+                              <tr>
+                              <td valign=3D"middle" align=3D"left" style=3D=
+"font-family:'Roboto', Arial, Helvetica, sans-serif; text-align:left; font-=
+size:12px; line-height:16px; color:#172332; font-weight:400;">Maurya</td>
+                              </tr>
+                              <tr>
+                              <td height=3D"2"></td>
+                              </tr>
+                              <tr>
+                              <td valign=3D"middle" align=3D"left" style=3D=
+"font-family:'Roboto', Arial, Helvetica, sans-serif; text-align:left; font-=
+size:12px; line-height:16px; color:#172332; font-weight:400;">Student &#xb7=
+; No Income</td>
+                              </tr>
+                              <tr>
+                              <td height=3D"2"></td>
+                              </tr>
+                              <tr>
+                              <td valign=3D"middle" align=3D"left" style=3D=
+"font-family:'Roboto', Arial, Helvetica, sans-serif; text-align:left; font-=
+size:12px; line-height:16px; color:#172332; font-weight:400;"></td>
+                              </tr>
+                              <tr>
+                              <td height=3D"12"></td>
+                              </tr>
+                              <tr>
+                              <td align=3D"left">
+                              <table border=3D"0" align=3D"left" cellpaddin=
+g=3D"0" cellspacing=3D"0">
+                              <tbody>
+                              <tr>
+                              <td valign=3D"top" height=3D"20" align=3D"lef=
+t" style=3D"font-family:'Roboto', Arial, Helvetica, sans-serif; text-align:=
+left; font-size:12px; line-height:16px; color:#D8465C; font-weight:700;"><a=
+ target=3D"_blank" style=3D"text-decoration:none; color:#D8465C; font-weigh=
+t:700;" href=3D"https://www.jeevansathi.com/e/a10/2/null/08671a21598330bed6=
+c1d149863b37a1|i|5efcf3808d0defe6212993579e2ca615i61829297______1766986983_=
+_____/5efcf3808d0defe6212993579e2ca615i61829297?clickSource=3Dmatchalert1&a=
+mp;profilechecksum=3Dfbf4b06127e5b0c8c30cc629c4fe09c4i71900361&amp;stype=3D=
+B&amp;logic_used=3D0&amp;fromMatchAlertMailer=3D1&amp;uniqueId=3D52c03802-0=
+556-40b2-98b2-f446eb795453&amp;linkText=3DViewProfile&amp;mailId=3D2000">Vi=
+ew Profile</a></td>
+                              <td valign=3D"top" height=3D"20" align=3D"lef=
+t"><a href=3D"#?uniqueId=3D52c03802-0556-40b2-98b2-f446eb795453&amp;linkTex=
+t=3D&amp;mailId=3D2000" target=3D"_blank"><img src=3D"https://www.ieplads.c=
+om/mailers/2025_ui/jeevansathi/js-10th-april/images/icon-arrow.png" width=
+=3D"16" height=3D"16" alt=3D""></a></td>
+                              </tr>
+                              </tbody>
+                              </table></td>
+                              </tr>
+                              <tr>
+                              <td height=3D"4"></td>
+                              </tr>
+                              </tbody>
+                              </table></td>
+                              </tr>
+                              </tbody>
+                              </table></td>
+                              </tr>
+                             </tbody>
+                            </table></td>
+                          </tr>
+                         </tbody>
+                        </table></span></a></td>
+                    </tr>
+                    <tr>
+                     <td align=3D"center"><a href=3D"#?uniqueId=3D52c03802-=
+0556-40b2-98b2-f446eb795453&amp;linkText=3D&amp;mailId=3D2000" target=3D"_b=
+lank" style=3D"text-decoration:none;"><span>
+                        <table border=3D"0" align=3D"center" cellpadding=3D=
+"0" cellspacing=3D"0">
+                         <tbody>
+                          <tr>
+                           <td height=3D"20"></td>
+                          </tr>
+                          <tr>
+                           <td align=3D"center" width=3D"365" bgcolor=3D"#f=
+fffff" style=3D"border-radius:12px; box-shadow: 0px 30px 60px 0px #222C331A=
+; border:1px solid #f6f4f5;">
+                            <table width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0">
+                             <tbody>
+                              <tr>
+                              <td align=3D"center" height=3D"158">
+                              <table width=3D"100%" border=3D"0" align=3D"c=
+enter" cellpadding=3D"0" cellspacing=3D"0">
+                              <tbody>
+                              <tr>
+                              <td valign=3D"middle" align=3D"left" width=3D=
+"135"><img width=3D"118" style=3D"border-top-left-radius:12px; border-botto=
+m-left-radius:12px; height:158px; object-fit:cover;" alt=3D"" src=3D"https:=
+//static.jeevansathi.com/images/jsms/commonImg/3_4_NoFemalePhoto.jpg"></td>
+                              <td valign=3D"middle" align=3D"left">
+                              <table width=3D"100%" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"0">
+                              <tbody>
+                              <tr>
+                              <td height=3D"7"></td>
+                              </tr>
+                              <tr>
+                              <td valign=3D"middle" align=3D"left" style=3D=
+"font-family:'Roboto', Arial, Helvetica, sans-serif; text-align:left; font-=
+size:16px; line-height:24px; color:#172332; font-weight:700;">Nisha Kumari,=
+ 26</td>
+                              </tr>
+                              <tr>
+                              <td height=3D"6"></td>
+                              </tr>
+                              <tr>
+                              <td valign=3D"middle" align=3D"left" style=3D=
+"font-family:'Roboto', Arial, Helvetica, sans-serif; text-align:left; font-=
+size:12px; line-height:16px; color:#172332; font-weight:400;">5' 4" &#xb7; =
+Hajipur</td>
+                              </tr>
+                              <tr>
+                              <td height=3D"2"></td>
+                              </tr>
+                              <tr>
+                              <td valign=3D"middle" align=3D"left" style=3D=
+"font-family:'Roboto', Arial, Helvetica, sans-serif; text-align:left; font-=
+size:12px; line-height:16px; color:#172332; font-weight:400;">Maurya</td>
+                              </tr>
+                              <tr>
+                              <td height=3D"2"></td>
+                              </tr>
+                              <tr>
+                              <td valign=3D"middle" align=3D"left" style=3D=
+"font-family:'Roboto', Arial, Helvetica, sans-serif; text-align:left; font-=
+size:12px; line-height:16px; color:#172332; font-weight:400;">Not planning =
+to work &#xb7; No Income</td>
+                              </tr>
+                              <tr>
+                              <td height=3D"2"></td>
+                              </tr>
+                              <tr>
+                              <td valign=3D"middle" align=3D"left" style=3D=
+"font-family:'Roboto', Arial, Helvetica, sans-serif; text-align:left; font-=
+size:12px; line-height:16px; color:#172332; font-weight:400;"></td>
+                              </tr>
+                              <tr>
+                              <td height=3D"12"></td>
+                              </tr>
+                              <tr>
+                              <td align=3D"left">
+                              <table border=3D"0" align=3D"left" cellpaddin=
+g=3D"0" cellspacing=3D"0">
+                              <tbody>
+                              <tr>
+                              <td valign=3D"top" height=3D"20" align=3D"lef=
+t" style=3D"font-family:'Roboto', Arial, Helvetica, sans-serif; text-align:=
+left; font-size:12px; line-height:16px; color:#D8465C; font-weight:700;"><a=
+ target=3D"_blank" style=3D"text-decoration:none; color:#D8465C; font-weigh=
+t:700;" href=3D"https://www.jeevansathi.com/e/a10/2/null/08671a21598330bed6=
+c1d149863b37a1|i|5efcf3808d0defe6212993579e2ca615i61829297______1766986983_=
+_____/5efcf3808d0defe6212993579e2ca615i61829297?clickSource=3Dmatchalert1&a=
+mp;profilechecksum=3D038acccd6cba017357be0611e866f25ai72702513&amp;stype=3D=
+B&amp;logic_used=3D0&amp;fromMatchAlertMailer=3D1&amp;uniqueId=3D52c03802-0=
+556-40b2-98b2-f446eb795453&amp;linkText=3DViewProfile&amp;mailId=3D2000">Vi=
+ew Profile</a></td>
+                              <td valign=3D"top" height=3D"20" align=3D"lef=
+t"><a href=3D"#?uniqueId=3D52c03802-0556-40b2-98b2-f446eb795453&amp;linkTex=
+t=3D&amp;mailId=3D2000" target=3D"_blank"><img src=3D"https://www.ieplads.c=
+om/mailers/2025_ui/jeevansathi/js-10th-april/images/icon-arrow.png" width=
+=3D"16" height=3D"16" alt=3D""></a></td>
+                              </tr>
+                              </tbody>
+                              </table></td>
+                              </tr>
+                              <tr>
+                              <td height=3D"4"></td>
+                              </tr>
+                              </tbody>
+                              </table></td>
+                              </tr>
+                              </tbody>
+                              </table></td>
+                              </tr>
+                             </tbody>
+                            </table></td>
+                          </tr>
+                         </tbody>
+                        </table></span></a></td>
+                    </tr>
+                    <tr>
+                     <td height=3D"33"></td>
+                    </tr>
+                    <tr>
+                     <td align=3D"center">
+                      <table border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" align=3D"center" bgcolor=3D"#D8465C" style=3D"border-radius:100px;">
+                       <tbody>
+                        <tr>
+                         <td width=3D"5"></td>
+                         <td width=3D"203" align=3D"center" height=3D"40"><=
+a style=3D"text-decoration:none; display:block; font-family:'Roboto', Arial=
+, Helvetica, sans-serif; font-size:14px; line-height:40px; color:#ffffff; f=
+ont-weight:700; text-align:center;" href=3D"https://www.jeevansathi.com/e/a=
+2/11/null/08671a21598330bed6c1d149863b37a1|i|5efcf3808d0defe6212993579e2ca6=
+15i61829297______1766986983______/5efcf3808d0defe6212993579e2ca615i61829297=
+?From_Mail=3DY&amp;stype=3DB&amp;clicksource=3Dmatchalert1&amp;uniqueId=3D5=
+2c03802-0556-40b2-98b2-f446eb795453&amp;linkText=3DViewallRecentMatches&amp=
+;mailId=3D2000">View all Recent Matches</a></td>
+                         <td width=3D"5"></td>
+                        </tr>
+                       </tbody>
+                      </table></td>
+                    </tr>
+                    <tr>
+                     <td height=3D"32"></td>
+                    </tr>
+                    <tr>
+                     <td align=3D"center" bgcolor=3D"#FFFFFF" style=3D"bord=
+er-radius:16px; box-shadow: 0px 30px 60px 0px #222C331A; border:1px solid #=
+f6f4f5;">
+                      <table width=3D"90%" border=3D"0" align=3D"center" ce=
+llpadding=3D"0" cellspacing=3D"0">
+                       <tbody>
+                        <tr>
+                         <td height=3D"32"></td>
+                        </tr>
+                        <tr>
+                         <td valign=3D"middle" align=3D"left" style=3D"font=
+-family:'Roboto', Arial, Helvetica, sans-serif; text-align:left; font-size:=
+14px; line-height:20px; color:#172332; font-weight:600;">Your Desired Partn=
+er Preferences</td>
+                        </tr>
+                        <tr>
+                         <td valign=3D"middle" align=3D"left" style=3D"font=
+-family:'Roboto', Arial, Helvetica, sans-serif; text-align:left; font-size:=
+14px; line-height:20px; color:#172332; font-weight:400;">Updated recently</=
+td>
+                        </tr>
+                        <tr>
+                         <td height=3D"16"></td>
+                        </tr>
+                        <tr>
+                         <td height=3D"1" bgcolor=3D"#E3E9EE"></td>
+                        </tr>
+                        <tr>
+                         <td height=3D"16"></td>
+                        </tr>
+                        <tr>
+                         <td align=3D"center">
+                          <table width=3D"100%">
+                           <tbody>
+                            <tr>
+                             <td align=3D"left">
+                              <table width=3D"100%" border=3D"0" align=3D"l=
+eft" cellpadding=3D"0" cellspacing=3D"0">
+                              <tbody>
+                              <tr>
+                              <td valign=3D"middle" height=3D"20" width=3D"=
+18" align=3D"left"><img src=3D"https://www.ieplads.com/mailers/2025_ui/jeev=
+ansathi/js-10th-april/images/icon-cirlce-tick.png" width=3D"14" height=3D"1=
+4" alt=3D""></td>
+                              <td valign=3D"middle" height=3D"20" align=3D"=
+left" style=3D"font-family:'Roboto', Arial, Helvetica, sans-serif; text-ali=
+gn:left; font-size:14px; line-height:22px; color:#172332; font-weight:500;"=
+>Age: 18 to 28</td>
+                              </tr>
+                              </tbody>
+                              </table></td>
+                            </tr>
+                            <tr>
+                             <td align=3D"left">
+                              <table width=3D"100%" border=3D"0" align=3D"l=
+eft" cellpadding=3D"0" cellspacing=3D"0">
+                              <tbody>
+                              <tr>
+                              <td valign=3D"middle" height=3D"20" width=3D"=
+18" align=3D"left"><img src=3D"https://www.ieplads.com/mailers/2025_ui/jeev=
+ansathi/js-10th-april/images/icon-cirlce-tick.png" width=3D"14" height=3D"1=
+4" alt=3D""></td>
+                              <td valign=3D"middle" height=3D"20" align=3D"=
+left" style=3D"font-family:'Roboto', Arial, Helvetica, sans-serif; text-ali=
+gn:left; font-size:14px; line-height:22px; color:#172332; font-weight:500;"=
+>Height: 4' 8" to 5' 4"</td>
+                              </tr>
+                              </tbody>
+                              </table></td>
+                            </tr>
+                            <tr>
+                             <td align=3D"left">
+                              <table width=3D"100%" border=3D"0" align=3D"l=
+eft" cellpadding=3D"0" cellspacing=3D"0">
+                              <tbody>
+                              <tr>
+                              <td valign=3D"middle" height=3D"20" width=3D"=
+18" align=3D"left"><img src=3D"https://www.ieplads.com/mailers/2025_ui/jeev=
+ansathi/js-10th-april/images/icon-cirlce-tick1.png" width=3D"14" height=3D"=
+14" alt=3D""></td>
+                              <td valign=3D"middle" height=3D"20" align=3D"=
+left" style=3D"font-family:'Roboto', Arial, Helvetica, sans-serif; text-ali=
+gn:left; font-size:14px; line-height:22px; color:#8d939a; font-weight:500;"=
+>Marital Status: Never Married</td>
+                              </tr>
+                              </tbody>
+                              </table></td>
+                            </tr>
+                            <tr>
+                             <td align=3D"left">
+                              <table width=3D"100%" border=3D"0" align=3D"l=
+eft" cellpadding=3D"0" cellspacing=3D"0">
+                              <tbody>
+                              <tr>
+                              <td valign=3D"middle" height=3D"20" width=3D"=
+18" align=3D"left"><img src=3D"https://www.ieplads.com/mailers/2025_ui/jeev=
+ansathi/js-10th-april/images/icon-cirlce-tick2.png" width=3D"14" height=3D"=
+14" alt=3D""></td>
+                              <td valign=3D"middle" height=3D"20" align=3D"=
+left" style=3D"font-family:'Roboto', Arial, Helvetica, sans-serif; text-ali=
+gn:left; font-size:14px; line-height:20px; color:#d6d8db; font-weight:500;"=
+>Religion: Hindu</td>
+                              </tr>
+                              </tbody>
+                              </table></td>
+                            </tr>
+                           </tbody>
+                          </table></td>
+                        </tr>
+                        <tr>
+                         <td height=3D"10"></td>
+                        </tr>
+                        <tr>
+                         <td align=3D"left">
+                          <table border=3D"0" align=3D"left" cellpadding=3D=
+"0" cellspacing=3D"0">
+                           <tbody>
+                            <tr>
+                             <td width=3D"10"></td>
+                             <td valign=3D"top" height=3D"20" align=3D"left=
+" style=3D"font-family:'Roboto', Arial, Helvetica, sans-serif; text-align:l=
+eft; font-size:12px; line-height:16px; color:#D8465C; font-weight:700;"><a =
+target=3D"_blank" style=3D"text-decoration:none; color:#D8465C;" href=3D"ht=
+tps://www.jeevansathi.com/e/a13/35/null/08671a21598330bed6c1d149863b37a1|i|=
+5efcf3808d0defe6212993579e2ca615i61829297______1766986983______/5efcf3808d0=
+defe6212993579e2ca615i61829297?uniqueId=3D52c03802-0556-40b2-98b2-f446eb795=
+453&amp;linkText=3DEditNow&amp;mailId=3D2000">Edit Now</a></td>
+                             <td valign=3D"top" height=3D"20" align=3D"left=
+"><a href=3D"#?uniqueId=3D52c03802-0556-40b2-98b2-f446eb795453&amp;linkText=
+=3D&amp;mailId=3D2000" target=3D"_blank"><img src=3D"https://www.ieplads.co=
+m/mailers/2025_ui/jeevansathi/js-10th-april/images/icon-arrow.png" width=3D=
+"16" height=3D"16" alt=3D""></a></td>
+                            </tr>
+                           </tbody>
+                          </table></td>
+                        </tr>
+                        <tr>
+                         <td height=3D"12"></td>
+                        </tr>
+                        <tr>
+                         <td height=3D"1" bgcolor=3D"#E3E9EE"></td>
+                        </tr>
+                        <tr>
+                         <td height=3D"16"></td>
+                        </tr>
+                        <tr>
+                         <td valign=3D"middle" align=3D"left" style=3D"font=
+-family:'Roboto', Arial, Helvetica, sans-serif; text-align:left; font-size:=
+14px; line-height:20px; color:#172332; font-weight:400;">Found these matche=
+s relevant?</td>
+                        </tr>
+                        <tr>
+                         <td height=3D"10"></td>
+                        </tr>
+                        <tr>
+                         <td valign=3D"top" align=3D"left">
+                          <table border=3D"0" align=3D"left" cellpadding=3D=
+"0" cellspacing=3D"0">
+                           <tbody>
+                            <tr>
+                             <td align=3D"center" valign=3D"middle" style=
+=3D"font-family:'Roboto', Arial, Helvetica, sans-serif; text-align:center; =
+font-size:10px; line-height:14px; color:#172332; font-weight:400;"><a style=
+=3D"text-decoration:none; color:#172332;" target=3D"_blank" href=3D"https:/=
+/www.jeevansathi.com/e/65/null/08671a21598330bed6c1d149863b37a1|i|5efcf3808=
+d0defe6212993579e2ca615i61829297______1766986983______/5efcf3808d0defe62129=
+93579e2ca615i61829297?mailSentDate=3D2025-12-28'23:14:27&amp;stype=3DB&amp;=
+clicksource=3Dmatchalert1&amp;feedbackValue=3DN&amp;uniqueId=3D52c03802-055=
+6-40b2-98b2-f446eb795453&amp;linkText=3D&amp;mailId=3D2000"><img src=3D"htt=
+ps://www.ieplads.com/mailers/2025_ui/jeevansathi/js-10th-april/images/icon-=
+dislike.png" width=3D"32" alt=3D"Dislike"></a></td>
+                             <td width=3D"10"></td>
+                             <td align=3D"center" valign=3D"middle" style=
+=3D"font-family:'Roboto', Arial, Helvetica, sans-serif; text-align:center; =
+font-size:10px; line-height:14px; color:#172332; font-weight:400;"><a style=
+=3D"text-decoration:none; color:#172332;" target=3D"_blank" href=3D"https:/=
+/www.jeevansathi.com/e/65/null/08671a21598330bed6c1d149863b37a1|i|5efcf3808=
+d0defe6212993579e2ca615i61829297______1766986983______/5efcf3808d0defe62129=
+93579e2ca615i61829297?mailSentDate=3D2025-12-28'23:14:27&amp;stype=3DB&amp;=
+clicksource=3Dmatchalert1&amp;feedbackValue=3DY&amp;matchAlertLink=3Dhttps:=
+//www.jeevansathi.com/e/a8/34/0&amp;uniqueId=3D52c03802-0556-40b2-98b2-f446=
+eb795453&amp;linkText=3D&amp;mailId=3D2000"><img src=3D"https://www.ieplads=
+.com/mailers/2025_ui/jeevansathi/js-10th-april/images/icon-like.png" width=
+=3D"32" alt=3D"Like"></a></td>
+                            </tr>
+                           </tbody>
+                          </table></td>
+                        </tr>
+                        <tr>
+                         <td height=3D"32"></td>
+                        </tr>
+                       </tbody>
+                      </table></td>
+                    </tr>
+                    <tr>
+                     <td height=3D"40"></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+            <tr>
+             <td height=3D"32"></td>
+            </tr>
+           </tbody>
+          </table></td>
+         <td width=3D"10"></td>
+        </tr>
+       </tbody>
+      </table></td>
+    </tr>
+    <tr>
+     <td valign=3D"top" align=3D"center" style=3D"background: linear-gradie=
+nt(180deg,rgba(255, 221, 240, 1) 0%, rgba(251, 251, 251, 1) 50%, rgba(255, =
+255, 255, 1) 100%);">
+      <table width=3D"100%" border=3D"0" align=3D"center" cellpadding=3D"0"=
+ cellspacing=3D"0">
+       <tbody>
+        <tr>
+         <td valign=3D"top" align=3D"center" bgcolor=3D"#F6F7FA">
+          <table border=3D"0" align=3D"center" cellpadding=3D"0" cellspacin=
+g=3D"0">
+           <tbody>
+            <tr>
+             <td width=3D"10"></td>
+             <td align=3D"center" width=3D"440">
+              <table width=3D"95%" border=3D"0" align=3D"center" cellpaddin=
+g=3D"0" cellspacing=3D"0">
+               <tbody>
+                <tr>
+                 <td height=3D"27"></td>
+                </tr>
+                <tr>
+                 <td align=3D"center">
+                  <table border=3D"0" align=3D"center" cellpadding=3D"0" ce=
+llspacing=3D"0">
+                   <tbody>
+                    <tr>
+                     <td valign=3D"middle" align=3D"right" style=3D"font-fa=
+mily:'Roboto', Arial, Helvetica, sans-serif; text-align:right; font-size:10=
+px; line-height:12px; color:#768493; font-weight:400;">Download the mobile =
+app:</td>
+                     <td width=3D"7"></td>
+                     <td valign=3D"middle" align=3D"left" style=3D"font-fam=
+ily:'Roboto', Arial, Helvetica, sans-serif; text-align:left; font-size:10px=
+; line-height:12px; color:#000000; font-weight:400;"><a href=3D"https://pla=
+y.google.com/store/apps/details?id=3Dcom.jeevansathi.android&amp;referrer=
+=3Dutm_source=3Dorganic&amp;ut" style=3D"text-decoration:none; color:#00000=
+0;" target=3D"_blank"><img src=3D"https://www.jeevansathi.com/images/mailer=
+/footer/play_store.png" width=3D"60" alt=3D"Google Play"></a></td>
+                     <td width=3D"4"></td>
+                     <td valign=3D"middle" align=3D"left" style=3D"font-fam=
+ily:'Roboto', Arial, Helvetica, sans-serif; text-align:left; font-size:10px=
+; line-height:12px; color:#000000; font-weight:400;"><a href=3D"https://itu=
+nes.apple.com/in/app/jeevansathi/id969994186" style=3D"text-decoration:none=
+; color:#000000;" target=3D"_blank"><img src=3D"https://www.jeevansathi.com=
+/images/mailer/footer/apple_store.png" width=3D"60" alt=3D"App Store"></a><=
+/td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+                <tr>
+                 <td height=3D"12"></td>
+                </tr>
+                <tr>
+                 <td align=3D"center" style=3D"font-family:'Roboto', Arial,=
+ Helvetica, sans-serif; text-align:center; font-size:10px; line-height:12px=
+; color:#768493; font-weight:400;">You have received this mail because your=
+ e-mail ID is registered with Jeevansathi<span>.</span>com. This is a syste=
+m generated e-mail, please don't reply to this message.</td>
+                </tr>
+                <tr>
+                 <td height=3D"12"></td>
+                </tr>
+                <tr>
+                 <td align=3D"center" style=3D"font-family:'Roboto', Arial,=
+ Helvetica, sans-serif; text-align:center; font-size:10px; line-height:12px=
+; color:#768493; font-weight:400;">To stop receiving these mails, <a href=
+=3D"https://www.jeevansathi.com/e/12/null/08671a21598330bed6c1d149863b37a1|=
+i|5efcf3808d0defe6212993579e2ca615i61829297______1766986983______/5efcf3808=
+d0defe6212993579e2ca615i61829297?profileId=3D61829297&amp;uniqueId=3D52c038=
+02-0556-40b2-98b2-f446eb795453&amp;linkText=3DUnsubscribe&amp;mailId=3D2000=
+" style=3D"text-decoration:underline; color:#768493;" target=3D"_blank">Uns=
+ubscribe</a></td>
+                </tr>
+                <tr>
+                 <td height=3D"14"></td>
+                </tr>
+                <tr>
+                 <td align=3D"center">
+                  <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" a=
+lign=3D"center">
+                   <tbody>
+                    <tr>
+                     <td align=3D"center" valign=3D"middle" style=3D"font-f=
+amily:'Roboto', Arial, Helvetica, sans-serif; text-align:center; font-size:=
+10px; line-height:12px; color:#c5008b; font-weight:400;"><a href=3D"https:/=
+/www.instagram.com/jeevansathi_com/" style=3D"text-decoration:none; color:#=
+c5008b;" target=3D"_blank"><img src=3D"https://www.jeevansathi.com/images/m=
+ailer/footer/instagram.png" width=3D"16" alt=3D"Instagram"></a></td>
+                     <td width=3D"6" align=3D"center"></td>
+                     <td align=3D"center" valign=3D"middle" style=3D"font-f=
+amily:'Roboto', Arial, Helvetica, sans-serif; text-align:center; font-size:=
+10px; line-height:12px; color:#ff0000; font-weight:400;"><a href=3D"https:/=
+/www.youtube.com/@jeevansathi" style=3D"text-decoration:none; color:#ff0000=
+;" target=3D"_blank"><img src=3D"https://www.jeevansathi.com/images/mailer/=
+footer/youtube.png" width=3D"16" alt=3D"Youtube"></a></td>
+                     <td width=3D"6" align=3D"center"></td>
+                     <td align=3D"center" valign=3D"middle" style=3D"font-f=
+amily:'Roboto', Arial, Helvetica, sans-serif; text-align:center; font-size:=
+10px; line-height:12px; color:#000000; font-weight:400;"><a href=3D"https:/=
+/twitter.com/Jeevansathi_com" style=3D"text-decoration:none; color:#000000;=
+" target=3D"_blank"><img src=3D"https://www.jeevansathi.com/images/mailer/f=
+ooter/twitter.png" width=3D"16" alt=3D"Twitter"></a></td>
+                     <td width=3D"6" align=3D"center"></td>
+                     <td align=3D"center" valign=3D"middle" style=3D"font-f=
+amily:'Roboto', Arial, Helvetica, sans-serif; text-align:center; font-size:=
+10px; line-height:12px; color:#007ab9; font-weight:400;"><a href=3D"https:/=
+/www.linkedin.com/company/jeevansathidotcom/" style=3D"text-decoration:none=
+; color:#007ab9;" target=3D"_blank"><img src=3D"https://www.jeevansathi.com=
+/images/mailer/footer/linkedin.png" width=3D"16" alt=3D"Linkedin"></a></td>
+                     <td width=3D"6" align=3D"center"></td>
+                     <td align=3D"center" valign=3D"middle" style=3D"font-f=
+amily:'Roboto', Arial, Helvetica, sans-serif; text-align:center; font-size:=
+10px; line-height:12px; color:#3b5998; font-weight:400;"><a href=3D"https:/=
+/www.facebook.com/jeevansathi" style=3D"text-decoration:none; color:#3b5998=
+;" target=3D"_blank"><img src=3D"https://www.jeevansathi.com/images/mailer/=
+footer/facebook.png" width=3D"16" alt=3D"Facebook"></a></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+                <tr>
+                 <td height=3D"12"></td>
+                </tr>
+                <tr>
+                 <td height=3D"1" bgcolor=3D"#d0d5dc"></td>
+                </tr>
+                <tr>
+                 <td height=3D"12"></td>
+                </tr>
+                <tr>
+                 <td align=3D"center" style=3D"font-family:'Roboto', Arial,=
+ Helvetica, sans-serif; text-align:center; font-size:10px; line-height:12px=
+; color:#768493; font-weight:400;"><a href=3D"https://www.jeevansathi.com/e=
+/a17/84/0/08671a21598330bed6c1d149863b37a1|i|5efcf3808d0defe6212993579e2ca6=
+15i61829297______1766986983______/5efcf3808d0defe6212993579e2ca615i61829297=
+?uniqueId=3D52c03802-0556-40b2-98b2-f446eb795453&amp;linkText=3DContactus&a=
+mp;mailId=3D2000" style=3D"text-decoration:none; color:#768493;" target=3D"=
+_blank">Contact us</a> <span style=3D"color:#98A3AF;">|</span> <a href=3D"h=
+ttps://www.jeevansathi.com/e/a16/83/0/08671a21598330bed6c1d149863b37a1|i|5e=
+fcf3808d0defe6212993579e2ca615i61829297______1766986983______/5efcf3808d0de=
+fe6212993579e2ca615i61829297?uniqueId=3D52c03802-0556-40b2-98b2-f446eb79545=
+3&amp;linkText=3DT&amp;C&amp;mailId=3D2000" style=3D"text-decoration:none; =
+color:#768493;" target=3D"_blank">T&amp;C</a> <span style=3D"color:#98A3AF;=
+">|</span> <a href=3D"https://www.jeevansathi.com/e/a18/82/0/08671a21598330=
+bed6c1d149863b37a1|i|5efcf3808d0defe6212993579e2ca615i61829297______1766986=
+983______/5efcf3808d0defe6212993579e2ca615i61829297?uniqueId=3D52c03802-055=
+6-40b2-98b2-f446eb795453&amp;linkText=3DPrivacyPolicy&amp;mailId=3D2000" st=
+yle=3D"text-decoration:none; color:#768493;" target=3D"_blank">Privacy Poli=
+cy</a> <span style=3D"color:#98A3AF;">|</span> <a href=3D"https://www.jeeva=
+nsathi.com/e/a34/102/0/08671a21598330bed6c1d149863b37a1|i|5efcf3808d0defe62=
+12993579e2ca615i61829297______1766986983______/5efcf3808d0defe6212993579e2c=
+a615i61829297?uniqueId=3D52c03802-0556-40b2-98b2-f446eb795453&amp;linkText=
+=3DSafetyGuide&amp;mailId=3D2000" style=3D"text-decoration:none; color:#768=
+493;" target=3D"_blank">Safety Guide</a></td>
+                </tr>
+                <tr>
+                 <td height=3D"8"></td>
+                </tr>
+                <tr>
+                 <td align=3D"center"><img src=3D"https://www.jeevansathi.c=
+om/mailerFooterStrip.png" width=3D"247" alt=3D""></td>
+                </tr>
+                <tr>
+                 <td height=3D"35"></td>
+                </tr>
+               </tbody>
+              </table></td>
+             <td width=3D"10"></td>
+            </tr>
+           </tbody>
+          </table></td>
+        </tr>
+       </tbody>
+      </table></td>
+    </tr>
+   </tbody>
+  </table><img src=3D"https://www.jeevansathi.com/open/tracking.php?UUID=3D=
+52c03802-0556-40b2-98b2-f446eb795453" style=3D"display:none !important; ove=
+rflow:hidden; line-height:0">
+ </body>
+</html>

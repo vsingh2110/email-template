@@ -1,0 +1,1062 @@
+Delivered-To: vsingh2110@gmail.com
+Received: by 2002:a05:640c:7706:b0:256:8a2c:2551 with SMTP id l6csp1066276eiw;
+        Mon, 29 Dec 2025 03:53:31 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IGe6z3X51Ad85yoJ1Cg4e0Sp1CEL69C2fJB8rZBnnXFua7cqzwAhOUAfBa9qex8KkgrdnhS
+X-Received: by 2002:a17:90b:4a43:b0:34c:2f01:2262 with SMTP id 98e67ed59e1d1-34e71d6961amr28652916a91.3.1767009211386;
+        Mon, 29 Dec 2025 03:53:31 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1767009211; cv=none;
+        d=google.com; s=arc-20240605;
+        b=ZyppHIInL8ba2w/Ef9BY83+Ni6yF/QxeVkujfE5QhVF06VELklSNGtrivV/GYenKAH
+         S546FQhMQS/a42imsBf1rese2P2R/bEVWQIFW7bFlerfJcqWZqG1y8n9RadzzZ8N49ps
+         NjFhq6f9b+0MUiAvrhtliXng6W2y7gOZpy9HxACtfMhHPSmxbvQ8TmxhHBEK8wKVcJcl
+         xxbXiNLcdZCP8hEB4ImAipApLSPZvDPmWcXAwfT5O5SqN8vn8tTfzaqBYMYSOyN7hUId
+         aFlQWFpc2DppA7xk/XSxsfdV5jZS38eJ/lWE0slnfcM8IQ1HsNVimTLjHpP1qwla0Cln
+         +1Rw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=list-unsubscribe-post:list-unsubscribe:message-id:mime-version
+         :reply-to:to:date:subject:from:dkim-signature;
+        bh=eTquleOoDwEaaiw9diBl+CMRzA6X38Q9AA88Hxdkw5Y=;
+        fh=jsQ7xJJ5ayTHU+ptpOuJckTo0WFpqHKDYZlFYR28RXY=;
+        b=Qo0m85oqBdJut4lY7FPbfu5M9Lw82lQ+GGCEJmy1rr5oI2+xy8/OYdE2j2tk2QB9Z1
+         w37/UQDmQ5c8ZFxl1TeP0HQ+uDjtNdo7+5jzrFuPT5PsB02X42khKq+Kr+Hh+TLtP+zD
+         7Q+JlzsT450mQIDPt0DOaRxy2+IUsZJebrbrC5qB0YKO1lsxK3PB5rxdtvjjYc/m0tVa
+         tH7PN+BrjPmcZgfl51f2iu7ORXN7m9R7rrx6OEJqSlGKpgpmbvYbOcbIaBI0RSPfQPPb
+         tgrIFQHQLHe/vzt37GNCGGozdqy30iNVZ8wncvxal+gZUZZM4vyhdzFt8u/nVzvlWG5N
+         qwAQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mailers.hdfcbank.net header.s=hdfcbank header.b=P8lIc1IZ;
+       spf=pass (google.com: domain of bounce@mailers.hdfcbank.net designates 130.248.216.58 as permitted sender) smtp.mailfrom=bounce@mailers.hdfcbank.net;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=hdfcbank.net
+Return-Path: <bounce@mailers.hdfcbank.net>
+Received: from r58.mailers.hdfcbank.net (r58.mailers.hdfcbank.net. [130.248.216.58])
+        by mx.google.com with ESMTPS id 98e67ed59e1d1-34e70df1560si11213831a91.53.2025.12.29.03.53.30
+        for <vsingh2110@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 29 Dec 2025 03:53:31 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce@mailers.hdfcbank.net designates 130.248.216.58 as permitted sender) client-ip=130.248.216.58;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mailers.hdfcbank.net header.s=hdfcbank header.b=P8lIc1IZ;
+       spf=pass (google.com: domain of bounce@mailers.hdfcbank.net designates 130.248.216.58 as permitted sender) smtp.mailfrom=bounce@mailers.hdfcbank.net;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=hdfcbank.net
+Return-Path: <bounce@mailers.hdfcbank.net>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=mailers.hdfcbank.net; s=hdfcbank; t=1767009203;
+	bh=eTquleOoDwEaaiw9diBl+CMRzA6X38Q9AA88Hxdkw5Y=;
+	h=From:Subject:Date:To:MIME-Version:Message-ID:List-Unsubscribe:
+	 List-Unsubscribe-Post:Content-Type;
+	b=P8lIc1IZbO3W2iOcUWiRtCJF3HITD35ybCf1tWsYP0wec3Dt/dbj7vPb1zbgyqYkx
+	 G4hIwhnO/bRvdGsAK12Dt0nxIIVQO5AK7o8XRaj+srCtzLUU1i0RRZ/VSTLn8QoI2X
+	 PNr6UD0GJp9qDsVWsNN03duT6/lnJKeWHmTKEp7cNCLRwj0Ug7+cIiBUbbuOn+T9zz
+	 4lOgdbrd+fn4lWbnLhxzzlJu2Zqv/5cA329Widg9JaQIBC6YIykoLF76RgOLJ35HJw
+	 dYv/kW5DlmTR0eTI7sxR6Ho5st763JViBMtH2qB+3gqXtfylihV2LB1KE0FoHOC3L9
+	 /0A8gc2NcrSXA==
+X-MSFBL: JEeuwM4aVNuGiXoymHKXzMucoXd+c7Ej1NY6QESY5Uw=|eyJiIjoiaGRmY2Jhbmt
+	fMTMwLjI0OC4yMTYuNThfcHJvZC50YXJnZXQxNF9iYWE3YzRmYS1lOGJiLTRhNDU
+	tOGE1MS04MTU1YzU4NzFjNmIiLCJyIjoidnNpbmdoMjExMEBnbWFpbC5jb20iLCJ
+	yY3B0X21ldGEiOnsgImluIjogImhkZmNiYW5rX21pZF9wcm9kMTUiLCAiciI6ICJ
+	2c2luZ2gyMTEwQGdtYWlsLmNvbSIsICJtIjogIjg4MjBkZTdkLTljZDgtNDNkMy0
+	5MmZjLTc1MzUyNDI3ODFmZSIsICJkIjogIjc5NzA1NDYiLCAiaSI6ICIzODE3MDM
+	zNzUzRUU4OTcyMEE0OTBENERAQWRvYmVPcmciIH0sImciOiJwcm9kLnRhcmdldDE
+	0X2JhYTdjNGZhLWU4YmItNGE0NS04YTUxLTgxNTVjNTg3MWM2YiJ9
+Received: from [10.1.1.231] ([10.1.1.231:53571] helo=r55.mailers.hdfcbank.net) by sgp3-prod1-mta-i-051625c2b0f389e98 (envelope-from <bounce@mailers.hdfcbank.net>) (ecelerity 4.4.1.20033 r(msys-ecelerity:tags/4.4.1.0^0)) with ESMTP id CD/FC-45353-2BB62596; Mon, 29 Dec 2025 11:53:23 +0000
+From: "Kaizad Bharucha" <information@mailers.hdfcbank.net>
+Subject: =?windows-1252?Q?A_Decade_of_Social=A0Impact_through_'HDFC_Bank_?=
+ =?windows-1252?Q?Parivartan=92?=
+Date: Mon, 29 Dec 2025 17:23:22 +0530
+To: <vsingh2110@gmail.com>
+Reply-To: "HDFC Bank" <no-reply@mailers.hdfcbank.net>
+MIME-Version: 1.0
+X-mailer: nlserver, Build 8.6.5
+Message-ID: <NMFFDA8820de7d-9cd8-43d3-92fc-7535242781fe00799EF2hdfcbank_mid_prod15@mailers.hdfcbank.net>
+List-Unsubscribe: <https://m.mailers.hdfcbank.net/hdbk/unsubOneClick.jssp?id=%409oqODxMw9jJaI594DXmSNUoTljdhdy8LYP98t9wrMZClHuDnbd2nOGu5chG2n1W2%2Ft%2BGhMTWS4TpnrRJhSgYGFm4lrzf%2FxHeZjTaq5uKQ1c%3D>,<mailto:bounce@mailers.hdfcbank.net?subject=unsubscribe%3CNMFFDA8820de7d-9cd8-43d3-92fc-7535242781fe00799EF2hdfcbank_mid_prod15@mailers.hdfcbank.net%3E>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Content-Type: multipart/alternative;
+	charset="windows-1252";
+	boundary="----=_NextPart_096_33A34FDF.33A34FDF"
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_096_33A34FDF.33A34FDF
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+️  
+----------------------------------------------------------------------------
+To view this message in HTML format, click here:
+ https://t13.mailers.hdfcbank.net/r/?id=t8820de7d-9cd8-43d3-92fc-7535242781fe,19e06a,72300&e=cDE9JTQwd1hjWlM3TWpEOWZZRDlkOVVOMXk5VVZDYnlnemkwWEhvMVpOJTJCZ21Zb3k5NXhWMTFuY0QwSmYxNHRwREF6Zk9COFFhT1Z6ckRnemZNamVjOEZwJTJGUkpnJTNEJTNE&s=jRuh7niGgJPiTPLQt_0Uvs53nzk3Ry87uoNCfM7Hmpg 
+or paste this link in a Web browser
+----------------------------------------------------------------------------	
+
+	
+	
+
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+
+Celebrating 10 Years of Parivartan - A Decade of Impact 
+
+Dear Customer, 
+
+In the last financial year, we marked a special milestone - 10 years of HDFC Bank Parivartan, our CSR programme. What began as a commitment to give back to the communities we serve has grown into a structured programme that has touched over 10.56 crore lives till date, across 28 States and 8 Union Territories of India. 
+
+Over the past decade, Parivartan has delivered measurable impact across six key focus areas, in which it operates. I’d like to share some of the highlights of the cumulative impact created by the Bank’s CSR programme, up to March 2025. 
+	
+	
+	
+	
+	
+
+Rural Development 	Promotion of 
+
+Education 
+	Skill Training 
+
+& Livelihood Enhancement 
+	
+ Impacted  10,000+ villages  and  15 lakh  households through development initiatives. 	Established  2,600+  SMART schools and  930+  community libraries. 	Trained  7 lakh+  individuals and supported  10,700+  Self-Help Groups (SHGs). 	
+	
+Healthcare 
+
+& Hygiene 
+	Financial Literacy 
+
+& Inclusion 
+	Natural Resource Management 	
+Constructed  24,000+  household toilets, enabled waste management solutions across   550+  local bodies. 	Reached over 23+ lakh  people through secure banking campaigns such as Vigil Aunty. 	Created  14,500+  water conservation structures, installed  69,000+  solar lights. 	
+	
+	
+	
+	
+
+We are proud to share our progress with our stakeholders through HDFC Bank’s first standalone CSR Report, 2025 , which captures the scale and stories behind a decade of Parivartan. 
+	
+ https://t13.mailers.hdfcbank.net/r/?id=t8820de7d-9cd8-43d3-92fc-7535242781fe,19e06a,72304&e=dXRtX21lZGl1bT1FbWFpbCZjbXBuX29yaWdpbj1hY2N2OCZhY2NpZD1oZGJrMTllMDZhJmFjYmlkPTg4MjBkZTdkLTljZDgtNDNkMy05MmZjLTc1MzUyNDI3ODFmZQ&s=ef4qChFJN0IEkCsYLZEV-ADh1C1c2imSqgabrpPFDBA Read the CSR Report  	
+	
+	
+	
+	
+
+Thank you for being a valued part of our journey of change. 
+
+Wishing you and your loved ones a joyous Festive Season. 
+
+Warm regards, 
+Kaizad Bharucha 
+Deputy Managing Director, 
+HDFC Bank 
+	
+	
+	
+	
+
+T&C Apply. |  https://t13.mailers.hdfcbank.net/r/?id=t8820de7d-9cd8-43d3-92fc-7535242781fe,19e06a,72305&e=cDE9JTQwOW9xT0R4TXc5akphSTU5NERYbVNOVW9UbGpkaGR5OExZUDk4dDl3ck1aQ2xIdURuYmQybk9HdTVjaEcybjFXMiUyRnQlMkJHaE1UV1M0VHBuclJKaFNnWUdGbTRscnpmJTJGeEhlWmpUYXE1dUtRMWMlM0Q&s=SFALqQTMNYNCPW1bojFVxQ5ddniCbwXoXMqL0XmlkIY Unsubscribe
+
+------=_NextPart_096_33A34FDF.33A34FDF
+Content-Type: text/x-amp-html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <body>
+  </body>
+</html>
+
+------=_NextPart_096_33A34FDF.33A34FDF
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html dir=3D"ltr" xmlns:o=3D"urn:schemas-microsoft-com:office:office"
+lang=3D"en" xmlns=3D"http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name=3D"generator" content=3D
+    "HTML Tidy for HTML5 for Windows version 5.0.0" />
+    <meta charset=3D"UTF-8" />
+    <meta name=3D"x-apple-disable-message-reformatting" />
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge" />
+    <meta content=3D"telephone=3Dno" name=3D"format-detection" />
+    <title>
+      CSR Customer Emailer 2
+    </title>
+    <!--[if (mso 16)]><style type=3D"text/css"> a {text-decoration: none;} =
+ </style><![endif]--><!--[if gte mso 9]><style>sup { font-size: 100% !impor=
+tant; }</style><![endif]--><!--[if gte mso 9]><noscript> <xml> <o:OfficeDoc=
+umentSettings> <o:AllowPNG></o:AllowPNG> <o:PixelsPerInch>96</o:PixelsPerIn=
+ch> </o:OfficeDocumentSettings> </xml> </noscript>
+<![endif]-->
+<!--[if mso]><xml> <w:WordDocument xmlns:w=3D"urn:schemas-microsoft-com:off=
+ice:word"> <w:DontUseAdvancedTypographyReadingMail/> </w:WordDocument> </xm=
+l>
+<![endif]-->
+    <style type=3D"text/css">
+    /*<![CDATA[*/
+    .rollover:hover .rollover-first { max-height:0px!important; display:non=
+e!important;}.rollover:hover .rollover-second { max-height:none!important; =
+display:block!important;}.rollover span { font-size:0px;}u + .body img ~ di=
+v div { display:none;}#outlook a { padding:0;}span.MsoHyperlink,span.MsoHyp=
+erlinkFollowed { color:inherit; mso-style-priority:99;}a.es-button { mso-st=
+yle-priority:100!important; text-decoration:none!important;}a[x-apple-data-=
+detectors],#MessageViewBody a { color:inherit!important; text-decoration:no=
+ne!important; font-size:inherit!important; font-family:inherit!important; f=
+ont-weight:inherit!important; line-height:inherit!important;}.b { display:n=
+one; float:left; overflow:hidden; width:0; max-height:0; line-height:0; mso=
+-hide:all;}@media only screen and (max-width:600px) { }@media screen and (m=
+ax-width:384px) {.mail-message-content { width:414px!important } }
+    /*]
+        ]>*/
+    </style>
+  </head>
+  <body data-new-gr-c-s-loaded=3D"14.1216.0" class=3D"body" style=3D
+  "width:100%;height:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjus=
+t:100%;padding:0;Margin:0">
+    <div dir=3D"ltr" lang=3D"en" class=3D"es-wrapper-color" style=3D
+    "background-color:#FAFAFA">
+      <!--[if gte mso 9]><v:background xmlns:v=3D"urn:schemas-microsoft-com=
+:vml" fill=3D"t"> <v:fill type=3D"tile" color=3D"#fafafa"></v:fill> </v:bac=
+kground><![endif]-->
+      <!-- Start of preheader -->
+<!-- Preheader Start -->
+<span style=3D"display:none !important;font-size:0px;line-height:0;color:#f=
+fffff;visibility:hidden;opacity:0;height:0;width:0;mso-hide:all">=EF=B8=8F<=
+/span>
+<!-- Preheader End -->
+<!-- Mirror Page Start-->    
+<table cellpadding=3D"0" cellspacing=3D"0" style=3D"max-width: 650px;" alig=
+n=3D"center">
+<tbody>
+<tr>
+<td id=3D"viewBrowser" colspan=3D"3" style=3D"padding: 4px 0 6px;" height=
+=3D"20" align=3D"center">
+<p align=3Dcenter>
+  <font style=3D"font-family: Verdana, Arial; font-size: 10px">
+  If you are unable to view this message correctly,
+  <a href=3D"https://t13.mailers.hdfcbank.net/r/=3Fid=3Dh8820de7d-9cd8-43d3=
+-92fc-7535242781fe,19e06a,72300&e=3DcDE9JTQwd1hjWlM3TWpEOWZZRDlkOVVOMXk5VVZ=
+DYnlnemkwWEhvMVpOJTJCZ21Zb3k5NXhWMTFuY0QwSmYxNHRwREF6Zk9CSm0lMkZjaE4yNDF5OW=
+Q1NVFLdDNFRTZBJTNEJTNE&s=3DanaO1eW4LZ2j4AEKXNBpr55ng6iT2Goa4T_al0n0024" _la=
+bel=3D"Mirror Page" _type=3D"mirrorPage">click here</a>
+  </font>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Mirror Page End -->
+      <table cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" class=3D
+      "es-wrapper" role=3D"none" style=3D
+      "mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;b=
+order-spacing:0px;padding:0;Margin:0;width:100%;height:100%;background-repe=
+at:repeat;background-position:center top;background-color:#FAFAFA">
+        <tr height=3D"0" class=3D"gmail-fix">
+          <td style=3D"padding:0;Margin:0">
+            <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0"
+            align=3D"center" role=3D"none" style=3D
+            "mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:coll=
+apse;border-spacing:0px;width:600px">
+              <tr>
+                <td cellpadding=3D"0" cellspacing=3D"0" border=3D"0"
+                height=3D"0" style=3D
+                "padding:0;Margin:0;line-height:1px;min-width:600px">
+                  <img src=3D
+                  "https://res13.mailers.hdfcbank.net/res/img/56ABE4CBC1753=
+63DA0810882244B34FF.png"
+                  height=3D"1" alt=3D"" style=3D
+                  "display:block;font-size:14px;border:0;outline:none;text-=
+decoration:none;margin:0;max-height:0px;min-height:0px;min-width:600px;widt=
+h:600px"
+                  width=3D"1" />
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td valign=3D"top" style=3D"padding:0;Margin:0">
+            <table cellpadding=3D"0" align=3D"center" cellspacing=3D"0"
+            class=3D"es-header" role=3D"none" style=3D
+            "mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:coll=
+apse;border-spacing:0px;width:100%;table-layout:fixed !important;background=
+-color:transparent;background-repeat:repeat;background-position:center top"=
+>
+              <tr>
+                <td align=3D"center" style=3D"padding:0;Margin:0">
+                  <table cellpadding=3D"0" bgcolor=3D"#FFFFFF" align=3D
+                  "center" cellspacing=3D"0" class=3D"es-header-body"
+                  role=3D"none" style=3D
+                  "mso-table-lspace:0pt;mso-table-rspace:0pt;border-collaps=
+e:collapse;border-spacing:0px;background-color:transparent;width:600px">
+                    <tr>
+                      <td align=3D"left" style=3D"padding:0;Margin:0">
+                        <table cellpadding=3D"0" width=3D"100%"
+                        cellspacing=3D"0" role=3D"none" style=3D
+                        "mso-table-lspace:0pt;mso-table-rspace:0pt;border-c=
+ollapse:collapse;border-spacing:0px">
+                          <tr>
+                            <td valign=3D"top" align=3D"center" class=3D
+                            "es-m-p0r" style=3D
+                            "padding:0;Margin:0;width:600px">
+                              <table cellpadding=3D"0" width=3D"100%"
+                              cellspacing=3D"0" role=3D"presentation"
+                              style=3D
+                              "mso-table-lspace:0pt;mso-table-rspace:0pt;bo=
+rder-collapse:collapse;border-spacing:0px">
+                                <tr>
+                                  <td align=3D"center" style=3D
+                                  "padding:0;Margin:0;font-size:0px">
+                                    <img width=3D"600" title=3D"Logo"
+                                    src=3D
+                                    "https://res13.mailers.hdfcbank.net/res=
+/img/B83D8F6806217421902C2238E5F465A2.png"
+                                    alt=3D"Logo" class=3D"adapt-img"
+                                    style=3D
+                                    "display:block;font-size:12px;border:0;=
+outline:none;text-decoration:none;margin:0"
+                                    height=3D"64" />
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+
+            <table align=3D"center" cellspacing=3D"0" cellpadding=3D"0"
+            class=3D"es-content" role=3D"none" style=3D
+            "mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:coll=
+apse;border-spacing:0px;width:100%;table-layout:fixed !important">
+              <tr>
+                <td align=3D"center" bgcolor=3D"transparent" style=3D
+                "padding:0;Margin:0">
+                  <table bgcolor=3D"#FFFFFF" align=3D"center"
+                  cellpadding=3D"0" cellspacing=3D"0" class=3D
+                  "es-content-body" role=3D"none" style=3D
+                  "mso-table-lspace:0pt;mso-table-rspace:0pt;border-collaps=
+e:collapse;border-spacing:0px;background-color:#FFFFFF;width:600px">
+                    <tr>
+                      <td align=3D"left" background=3D
+                      "https://res13.mailers.hdfcbank.net/res/img/1F3AF8D1D=
+93246142B5772FC11470E8A.jpg"
+                      style=3D
+                      "padding:0;Margin:0;padding-top:10px;padding-right:20=
+px;padding-left:20px;background-image:url(https://res13.mailers.hdfcbank.ne=
+t/res/img/1F3AF8D1D93246142B5772FC11470E8A.jpg);background-repeat:no-repeat=
+;background-position:left top">
+                        <table cellpadding=3D"0" cellspacing=3D"0"
+                        width=3D"100%" role=3D"none" style=3D
+                        "mso-table-lspace:0pt;mso-table-rspace:0pt;border-c=
+ollapse:collapse;border-spacing:0px">
+                          <tr>
+                            <td align=3D"left" style=3D
+                            "padding:0;Margin:0;width:560px">
+                              <table role=3D"presentation" width=3D
+                              "100%" cellpadding=3D"0" cellspacing=3D
+                              "0" style=3D
+                              "mso-table-lspace:0pt;mso-table-rspace:0pt;bo=
+rder-collapse:collapse;border-spacing:0px">
+                                <tr>
+                                  <td align=3D"left" style=3D
+                                  "padding:0;Margin:0">
+                                    <p style=3D
+                                    "Margin:0;mso-line-height-rule:exactly;=
+font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px=
+;letter-spacing:0;color:#333333;font-size:14px">
+                                      <br />
+                                    </p>
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td align=3D"center" height=3D"196"
+                                  style=3D
+                                  "padding:0;Margin:0;font-size:0">
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+
+            <table align=3D"center" cellspacing=3D"0" cellpadding=3D"0"
+            class=3D"es-content" role=3D"none" style=3D
+            "mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:coll=
+apse;border-spacing:0px;width:100%;table-layout:fixed !important">
+              <tr>
+                <td align=3D"center" bgcolor=3D"transparent" style=3D
+                "padding:0;Margin:0">
+                  <table cellpadding=3D"0" cellspacing=3D"0" bgcolor=3D
+                  "#FFFFFF" align=3D"center" class=3D"es-content-body"
+                  style=3D
+                  "mso-table-lspace:0pt;mso-table-rspace:0pt;border-collaps=
+e:collapse;border-spacing:0px;background-color:#FFFFFF;border-right:1px sol=
+id #cccccc;border-left:1px solid #cccccc;width:600px"
+                  role=3D"none">
+                    <tr>
+                      <td style=3D"padding:0;Margin:0">
+                        <table cellspacing=3D"0" cellpadding=3D"0"
+                        align=3D"center" style=3D
+                        "mso-table-lspace:0pt;mso-table-rspace:0pt;border-c=
+ollapse:collapse;border-spacing:0px;border-right:1px solid transparent;widt=
+h:600px"
+                        role=3D"none">
+                          <tr>
+                            <td align=3D"left"
+                            data-custom-paddings-d-t=3D"true"
+                            data-custom-paddings-d-b=3D"true" style=3D
+                            "padding:0;Margin:0;padding-right:20px;padding-=
+left:20px;padding-top:25px">
+                              <table cellpadding=3D"0" cellspacing=3D
+                              "0" width=3D"100%" role=3D"none" style=3D
+                              "mso-table-lspace:0pt;mso-table-rspace:0pt;bo=
+rder-collapse:collapse;border-spacing:0px">
+                                <tr>
+                                  <td align=3D"left" style=3D
+                                  "padding:0;Margin:0;width:557px">
+                                    <table role=3D"presentation"
+                                    width=3D"100%" cellpadding=3D"0"
+                                    cellspacing=3D"0" style=3D
+                                    "mso-table-lspace:0pt;mso-table-rspace:=
+0pt;border-collapse:collapse;border-spacing:0px">
+                                      <tr>
+                                        <td align=3D"left" class=3D
+                                        "es-text-8155" style=3D
+                                        "padding:0;Margin:0">
+                                          <p class=3D
+                                          "es-text-mobile-size-14"
+                                          style=3D
+                                          "Margin:0;mso-line-height-rule:ex=
+actly;font-family:verdana, geneva, sans-serif;line-height:21px;letter-spaci=
+ng:0;color:#333333;font-size:14px">
+                                            <strong>Celebrating 10
+                                            Years of Parivartan - A
+                                            Decade of
+                                            Impact</strong>
+                                          </p>
+
+                                          <p class=3D
+                                          "es-text-mobile-size-14"
+                                          style=3D
+                                          "Margin:0;mso-line-height-rule:ex=
+actly;font-family:verdana, geneva, sans-serif;line-height:21px;letter-spaci=
+ng:0;color:#333333;font-size:14px">
+                                            <strong><br /></strong>
+                                          </p>
+
+                                          <p style=3D
+                                          "Margin:0;mso-line-height-rule:ex=
+actly;font-family:verdana, geneva, sans-serif;line-height:21px;letter-spaci=
+ng:0;color:#333333;font-size:14px">
+                                            Dear Customer,
+                                          </p>
+
+                                          <p style=3D
+                                          "Margin:0;mso-line-height-rule:ex=
+actly;font-family:verdana, geneva, sans-serif;line-height:21px;letter-spaci=
+ng:0;color:#333333;font-size:14px">
+                                            <br />
+                                          </p>
+
+                                          <p style=3D
+                                          "Margin:0;mso-line-height-rule:ex=
+actly;font-family:verdana, geneva, sans-serif;line-height:21px;letter-spaci=
+ng:0;color:#333333;font-size:14px">
+                                            In&nbsp;the last
+                                            financial year, we
+                                            marked a special
+                                            milestone -&nbsp;10
+                                            years of HDFC Bank
+                                            Parivartan, our CSR
+                                            programme. What began
+                                            as a commitment to give
+                                            back to the communities
+                                            we serve has grown into
+                                            a structured programme
+                                            that has&nbsp;touched
+                                            over 10.56 crore
+                                            lives&nbsp;till date,
+                                            across&nbsp;28 States
+                                            and 8 Union Territories
+                                            of India.
+                                          </p>
+
+                                          <p style=3D
+                                          "Margin:0;mso-line-height-rule:ex=
+actly;font-family:verdana, geneva, sans-serif;line-height:21px;letter-spaci=
+ng:0;color:#333333;font-size:14px">
+                                            <br />
+                                          </p>
+
+                                          <p style=3D
+                                          "Margin:0;mso-line-height-rule:ex=
+actly;font-family:verdana, geneva, sans-serif;line-height:21px;letter-spaci=
+ng:0;color:#333333;font-size:14px">
+                                            Over the past decade,
+                                            Parivartan has
+                                            delivered measurable
+                                            impact across six key
+                                            focus areas, in which
+                                            it operates. I=E2=80=99d like
+                                            to share some of the
+                                            highlights of the
+                                            cumulative impact
+                                            created by the Bank=E2=80=99s
+                                            CSR programme, up to
+                                            March 2025.
+                                          </p>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+
+            <table align=3D"center" cellspacing=3D"0" cellpadding=3D"0"
+            class=3D"es-content" role=3D"none" style=3D
+            "mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:coll=
+apse;border-spacing:0px;width:100%;table-layout:fixed !important">
+              <tr>
+                <td align=3D"center" bgcolor=3D"transparent" style=3D
+                "padding:0;Margin:0">
+                  <table bgcolor=3D"#FFFFFF" align=3D"center"
+                  cellpadding=3D"0" cellspacing=3D"0" class=3D
+                  "es-content-body" style=3D
+                  "mso-table-lspace:0pt;mso-table-rspace:0pt;border-collaps=
+e:collapse;border-spacing:0px;background-color:#FFFFFF;border-right:1px sol=
+id #cccccc;border-left:1px solid #cccccc;width:600px"
+                  role=3D"none">
+                    <tr>
+                      <td align=3D"left" data-custom-paddings-d-t=3D
+                      "true" data-custom-paddings-d-b=3D"true" style=3D
+                      "padding:20px;Margin:0">
+                        <table cellpadding=3D"0" cellspacing=3D"0"
+                        width=3D"100%" role=3D"none" style=3D
+                        "mso-table-lspace:0pt;mso-table-rspace:0pt;border-c=
+ollapse:collapse;border-spacing:0px">
+                          <tr>
+                            <td align=3D"left" style=3D
+                            "padding:0;Margin:0;width:558px">
+                              <table width=3D"100%" cellpadding=3D"0"
+                              cellspacing=3D"0" role=3D"presentation"
+                              style=3D
+                              "mso-table-lspace:0pt;mso-table-rspace:0pt;bo=
+rder-collapse:collapse;border-spacing:0px">
+                                <tr>
+                                  <td align=3D"center" class=3D
+                                  "es-text-3876" style=3D
+                                  "padding:0;Margin:0">
+                                    <table cellpadding=3D"0"
+                                    cellspacing=3D"0" class=3D
+                                    "es-table es-text-mobile-size-14"
+                                    style=3D
+                                    "mso-table-lspace:0pt;mso-table-rspace:=
+0pt;border-collapse:collapse;border-spacing:0px;width:100%"
+                                    role=3D"presentation">
+                                      <tr>
+                                        <td style=3D
+                                        "padding:0;Margin:0;border-width:1p=
+x;border-style:solid;border-color:#333333;width:191px;font-family:verdana, =
+geneva, sans-serif;font-size:14px;text-align:center;line-height:19.6px;heig=
+ht:60px;color:#004b8d;background-color:#cfe2f3">
+                                          <strong style=3D
+                                          "font-family:verdana, geneva, san=
+s-serif;font-size:14px;line-height:19.6px;color:#004b8d">
+                                          Rural
+                                          Development</strong>
+                                        </td>
+                                        <td style=3D
+                                        "padding:0;Margin:0;border-color:#3=
+33333;border-width:1px;border-style:solid;font-family:verdana, geneva, sans=
+-serif;font-size:14px;text-align:center;width:188px;height:60px;color:#004b=
+8d;background-color:#cfe2f3">
+                                          <strong style=3D
+                                          "color:#004b8d">Promotion
+                                          of</strong>
+                                          <p style=3D
+                                          "Margin:0;mso-line-height-rule:ex=
+actly;font-family:verdana, geneva, sans-serif;line-height:21px;letter-spaci=
+ng:0;color:#333333;font-size:14px">
+                                            <strong style=3D
+                                            "color:#004b8d">Education</stro=
+ng>
+                                          </p>
+                                        </td>
+                                        <td style=3D
+                                        "padding:0;Margin:0;border-color:#3=
+33333;border-width:1px;border-style:solid;font-family:verdana, geneva, sans=
+-serif;font-size:14px;text-align:center;height:60px;color:#004b8d;backgroun=
+d-color:#cfe2f3">
+                                          <strong style=3D
+                                          "color:#004b8d">Skill
+                                          Training</strong>
+                                          <p style=3D
+                                          "Margin:0;mso-line-height-rule:ex=
+actly;font-family:verdana, geneva, sans-serif;line-height:21px;letter-spaci=
+ng:0;color:#333333;font-size:14px">
+                                            <strong style=3D
+                                            "color:#004b8d">&amp;
+                                            Livelihood
+                                            Enhancement</strong>
+                                          </p>
+                                        </td>
+                                      </tr>
+
+                                      <tr>
+                                        <td style=3D
+                                        "padding:0;Margin:0;border-style:so=
+lid;border-color:#333333;border-width:1px;width:191px;font-family:verdana, =
+geneva, sans-serif;font-size:14px;text-align:center;line-height:22.4px;heig=
+ht:128px">
+                                          <span style=3D
+                                          "line-height:160%">&nbsp;Impacted=
+&nbsp;</span><strong style=3D"line-height:160%">10,000+
+                                          villages</strong><span style=3D"l=
+ine-height:160%">&nbsp;and&nbsp;</span><strong style=3D"line-height:160%">1=
+5
+                                          lakh</strong>
+                                          <span style=3D"line-height:160%">
+                                          households through
+                                          development
+                                          initiatives.</span>
+                                        </td>
+                                        <td style=3D
+                                        "padding:0;Margin:0;border-style:so=
+lid;border-color:#333333;border-width:1px;font-family:verdana, geneva, sans=
+-serif;font-size:14px;width:188px;line-height:22.4px;text-align:center;heig=
+ht:128px">
+                                          Established&nbsp;<strong>2,600+</=
+strong>
+                                          SMART
+                                          schools&nbsp;and&nbsp;<strong>930=
++</strong>
+                                          community libraries.
+                                        </td>
+                                        <td style=3D
+                                        "padding:0;Margin:0;border-width:1p=
+x;border-style:solid;border-color:#333333;font-family:verdana, geneva, sans=
+-serif;font-size:14px;line-height:22.4px;text-align:center;height:128px">
+                                          Trained&nbsp;<strong>7
+                                          lakh+</strong>
+                                          individuals&nbsp;and
+                                          supported&nbsp;<strong>10,700+</s=
+trong>
+                                          Self-Help Groups (SHGs).
+                                        </td>
+                                      </tr>
+
+                                      <tr>
+                                        <td colspan=3D"3" rowspan=3D"1"
+                                        style=3D
+                                        "padding:0;Margin:0;border-style:so=
+lid;border-color:#333333;border-width:1px;width:191px;font-family:verdana, =
+geneva, sans-serif;font-size:14px;height:26px">
+
+                                        </td>
+                                      </tr>
+
+                                      <tr>
+                                        <td style=3D
+                                        "padding:0;Margin:0;border-style:so=
+lid;border-color:#333333;border-width:1px;width:191px;font-family:verdana, =
+geneva, sans-serif;font-size:14px;text-align:center;height:58px;color:#004b=
+8d;background-color:#cfe2f3">
+                                          <strong style=3D
+                                          "color:#004b8d">Healthcare</stron=
+g>
+                                          <p style=3D
+                                          "Margin:0;mso-line-height-rule:ex=
+actly;font-family:verdana, geneva, sans-serif;line-height:21px;letter-spaci=
+ng:0;color:#333333;font-size:14px">
+                                            <strong style=3D
+                                            "color:#004b8d">&amp;
+                                            Hygiene</strong>
+                                          </p>
+                                        </td>
+                                        <td style=3D
+                                        "padding:0;Margin:0;border-width:1p=
+x;border-style:solid;border-color:#333333;font-family:verdana, geneva, sans=
+-serif;font-size:14px;width:188px;text-align:center;height:58px;color:#004b=
+8d;background-color:#cfe2f3">
+                                          <strong style=3D
+                                          "color:#004b8d">Financial
+                                          Literacy</strong>
+                                          <p style=3D
+                                          "Margin:0;mso-line-height-rule:ex=
+actly;font-family:verdana, geneva, sans-serif;line-height:21px;letter-spaci=
+ng:0;color:#333333;font-size:14px">
+                                            <strong style=3D
+                                            "color:#004b8d">&amp;
+                                            Inclusion</strong>
+                                          </p>
+                                        </td>
+                                        <td style=3D
+                                        "padding:0;Margin:0;border-color:#3=
+33333;border-width:1px;border-style:solid;font-family:verdana, geneva, sans=
+-serif;font-size:14px;text-align:center;height:58px;color:#004b8d;backgroun=
+d-color:#cfe2f3">
+                                          <strong style=3D
+                                          "color:#004b8d">Natural
+                                          Resource
+                                          Management</strong>
+                                        </td>
+                                      </tr>
+
+                                      <tr>
+                                        <td style=3D
+                                        "padding:0;Margin:0;border-style:so=
+lid;border-color:#333333;border-width:1px;width:191px;font-family:verdana, =
+geneva, sans-serif;font-size:14px;text-align:center;line-height:21px;height=
+:132px">
+                                          <span style=3D
+                                          "line-height:160%">Constructed</s=
+pan>
+                                          <strong style=3D
+                                          "line-height:150%">24,000+</stron=
+g>
+                                          <span style=3D
+                                          "line-height:150%">household
+                                          toilets, enabled waste
+                                          management
+                                          solutions&nbsp;across&nbsp;</span=
+>
+                                          <strong style=3D
+                                          "line-height:150%">550+</strong>
+                                          <span style=3D
+                                          "line-height:150%">local
+                                          bodies.</span>
+                                        </td>
+                                        <td style=3D
+                                        "padding:0;Margin:0;border-style:so=
+lid;border-color:#333333;border-width:1px;font-family:verdana, geneva, sans=
+-serif;font-size:14px;width:188px;line-height:22.4px;text-align:center;heig=
+ht:132px">
+                                          Reached over <strong>23+
+                                          lakh</strong> people
+                                          through secure banking
+                                          campaigns such as Vigil
+                                          Aunty.
+                                        </td>
+                                        <td style=3D
+                                        "padding:0;Margin:0;border-color:#3=
+33333;border-width:1px;border-style:solid;font-family:verdana, geneva, sans=
+-serif;font-size:14px;line-height:22.4px;text-align:center;height:132px">
+                                          <span style=3D
+                                          "line-height:160%">Created&nbsp;<=
+/span><strong style=3D"line-height:160%">14,500+</strong>
+                                          <span style=3D
+                                          "line-height:160%">water
+                                          conservation structures,
+                                          installed&nbsp;</span><strong sty=
+le=3D"line-height:160%">69,000+</strong>
+                                          <span style=3D
+                                          "line-height:160%">solar
+                                          lights.</span>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+
+            <table cellpadding=3D"0" align=3D"center" cellspacing=3D"0"
+            class=3D"es-content" role=3D"none" style=3D
+            "mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:coll=
+apse;border-spacing:0px;width:100%;table-layout:fixed !important">
+              <tr>
+                <td bgcolor=3D"transparent" align=3D"center" style=3D
+                "padding:0;Margin:0">
+                  <table cellspacing=3D"0" bgcolor=3D"#FFFFFF" align=3D
+                  "center" cellpadding=3D"0" class=3D"es-content-body"
+                  style=3D
+                  "mso-table-lspace:0pt;mso-table-rspace:0pt;border-collaps=
+e:collapse;border-spacing:0px;background-color:#FFFFFF;border-right:1px sol=
+id #cccccc;border-left:1px solid #cccccc;width:600px"
+                  role=3D"none">
+                    <tr>
+                      <td style=3D"padding:0;Margin:0">
+                        <table cellspacing=3D"0" cellpadding=3D"0"
+                        align=3D"center" style=3D
+                        "mso-table-lspace:0pt;mso-table-rspace:0pt;border-c=
+ollapse:collapse;border-spacing:0px;width:600px;border-bottom:1px solid tra=
+nsparent"
+                        role=3D"none">
+                          <tr>
+                            <td align=3D"left"
+                            data-custom-paddings-d-t=3D"true"
+                            data-custom-paddings-d-b=3D"true" style=3D
+                            "padding:0;Margin:0;padding-right:20px;padding-=
+left:20px">
+                              <table cellspacing=3D"0" width=3D"100%"
+                              cellpadding=3D"0" role=3D"none" style=3D
+                              "mso-table-lspace:0pt;mso-table-rspace:0pt;bo=
+rder-collapse:collapse;border-spacing:0px">
+                                <tr>
+                                  <td align=3D"left" style=3D
+                                  "padding:0;Margin:0;width:558px">
+                                    <table width=3D"100%"
+                                    cellpadding=3D"0" cellspacing=3D"0"
+                                    role=3D"presentation" style=3D
+                                    "mso-table-lspace:0pt;mso-table-rspace:=
+0pt;border-collapse:collapse;border-spacing:0px">
+                                      <tr>
+                                        <td align=3D"left" style=3D
+                                        "padding:0;Margin:0;padding-bottom:=
+20px">
+                                          <p style=3D
+                                          "Margin:0;mso-line-height-rule:ex=
+actly;font-family:verdana, geneva, sans-serif;line-height:21px;letter-spaci=
+ng:0;color:#333333;font-size:14px">
+                                            We are proud to share
+                                            our progress with our
+                                            stakeholders
+                                            through&nbsp;HDFC
+                                            Bank=E2=80=99s first standalone
+                                            <strong>CSR Report,
+                                            2025</strong>, which
+                                            captures the scale and
+                                            stories behind a decade
+                                            of Parivartan.
+                                          </p>
+                                        </td>
+                                      </tr>
+
+                                      <tr>
+                                        <td align=3D"center" style=3D
+                                        "padding:0;Margin:0">
+                                          <!--[if mso]><a href=3D"https://w=
+ww.hdfc.bank.in/" target=3D"_blank" hidden> <v:roundrect xmlns:v=3D"urn:sch=
+emas-microsoft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:word" e=
+sdevVmlButton href=3D"https://www.hdfc.bank.in/" style=3D"height:29px; v-te=
+xt-anchor:middle; width:227px" arcsize=3D"17%" stroke=3D"f" fillcolor=3D"#0=
+04b8d"> <w:anchorlock></w:anchorlock> <center style=3D'color:#ffffff; font-=
+family:verdana, geneva, sans-serif; font-size:10px; font-weight:400; line-h=
+eight:10px; mso-text-raise:1px'>Read the CSR Report</center> </v:roundrect>=
+</a>
+<![endif]-->
+                                          <!--[if !mso]><!=3D=3D --><span c=
+lass=3D"es-button-border msohide"
+                                          style=3D
+                                          "border-style:solid;border-color:=
+#2CB543;background:#004b8d;border-width:0px;display:inline-block;border-rad=
+ius:5px;width:auto;mso-hide:all"><a target=3D"_blank" href=3D"https://t13.m=
+ailers.hdfcbank.net/r/=3Fid=3Dh8820de7d-9cd8-43d3-92fc-7535242781fe,19e06a,=
+72301&e=3DdXRtX21lZGl1bT1FbWFpbCZjbXBuX29yaWdpbj1hY2N2OCZhY2NpZD1oZGJrMTllM=
+DZhJmFjYmlkPTg4MjBkZTdkLTljZDgtNDNkMy05MmZjLTc1MzUyNDI3ODFmZQ&s=3DLcuVlJzMY=
+q6meLw0RCieSZvkTjS6M0Vn5sk8xoGd5sQ" class=3D"es-button" style=3D"mso-style-=
+priority:100 !important;text-decoration:none !important;mso-line-height-rul=
+e:exactly;color:#FFFFFF;font-size:16px;padding:5px 20px;display:inline-bloc=
+k;background:#004b8d;border-radius:5px;font-family:verdana, geneva, sans-se=
+rif;font-weight:normal;font-style:normal;line-height:19.2px;width:auto;text=
+-align:center;letter-spacing:0;mso-padding-alt:0;mso-border-alt:10px solid =
+#004b8d">Read
+                                          the CSR Report</a></span>
+                                          <!--<![endif]-->
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+
+            <table cellspacing=3D"0" cellpadding=3D"0" align=3D"center"
+            class=3D"es-content" role=3D"none" style=3D
+            "mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:coll=
+apse;border-spacing:0px;width:100%;table-layout:fixed !important">
+              <tr>
+                <td bgcolor=3D"transparent" align=3D"center" style=3D
+                "padding:0;Margin:0">
+                  <table cellpadding=3D"0" cellspacing=3D"0" bgcolor=3D
+                  "#FFFFFF" align=3D"center" class=3D"es-content-body"
+                  style=3D
+                  "mso-table-lspace:0pt;mso-table-rspace:0pt;border-collaps=
+e:collapse;border-spacing:0px;background-color:#FFFFFF;border-right:1px sol=
+id #cccccc;border-left:1px solid #cccccc;width:600px;border-bottom:4px soli=
+d #004b8d"
+                  role=3D"none">
+                    <tr>
+                      <td align=3D"left" data-custom-paddings-d-t=3D
+                      "true" data-custom-paddings-d-b=3D"true" style=3D
+                      "Margin:0;padding-right:20px;padding-left:20px;paddin=
+g-top:20px;padding-bottom:15px">
+                        <table width=3D"100%" cellpadding=3D"0"
+                        cellspacing=3D"0" role=3D"none" style=3D
+                        "mso-table-lspace:0pt;mso-table-rspace:0pt;border-c=
+ollapse:collapse;border-spacing:0px">
+                          <tr>
+                            <td align=3D"left" style=3D
+                            "padding:0;Margin:0;width:558px">
+                              <table cellspacing=3D"0" role=3D
+                              "presentation" width=3D"100%"
+                              cellpadding=3D"0" style=3D
+                              "mso-table-lspace:0pt;mso-table-rspace:0pt;bo=
+rder-collapse:collapse;border-spacing:0px">
+                                <tr>
+                                  <td align=3D"left" style=3D
+                                  "padding:0;Margin:0">
+                                    <p style=3D
+                                    "Margin:0;mso-line-height-rule:exactly;=
+font-family:verdana, geneva, sans-serif;line-height:21px;letter-spacing:0;c=
+olor:#333333;font-size:14px">
+                                      Thank you for being a valued
+                                      part of our journey of
+                                      change.
+                                    </p>
+
+                                    <p style=3D
+                                    "Margin:0;mso-line-height-rule:exactly;=
+font-family:verdana, geneva, sans-serif;line-height:21px;letter-spacing:0;c=
+olor:#333333;font-size:14px">
+                                      <br />
+                                    </p>
+
+                                    <p style=3D
+                                    "Margin:0;mso-line-height-rule:exactly;=
+font-family:verdana, geneva, sans-serif;line-height:21px;letter-spacing:0;c=
+olor:#333333;font-size:14px">
+                                      Wishing you and your loved
+                                      ones a joyous Festive Season.
+                                    </p>
+
+                                    <p style=3D
+                                    "Margin:0;mso-line-height-rule:exactly;=
+font-family:verdana, geneva, sans-serif;line-height:21px;letter-spacing:0;c=
+olor:#333333;font-size:14px">
+                                      <br />
+                                    </p>
+
+                                    <p style=3D
+                                    "Margin:0;mso-line-height-rule:exactly;=
+font-family:verdana, geneva, sans-serif;line-height:21px;letter-spacing:0;c=
+olor:#333333;font-size:14px">
+                                      Warm regards,<br />
+                                      Kaizad Bharucha<br />
+                                      Deputy Managing
+                                      Director,<br />
+                                      HDFC Bank
+                                    </p>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+
+            <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0"
+            class=3D"es-content" role=3D"none" style=3D
+            "mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:coll=
+apse;border-spacing:0px;width:100%;table-layout:fixed !important">
+              <tr>
+                <td align=3D"center" style=3D"padding:0;Margin:0">
+                  <table cellpadding=3D"0" cellspacing=3D"0" align=3D
+                  "center" class=3D"es-content-body" style=3D
+                  "mso-table-lspace:0pt;mso-table-rspace:0pt;border-collaps=
+e:collapse;border-spacing:0px;background-color:transparent;width:600px"
+                  role=3D"none">
+                    <tr>
+                      <td align=3D"left" style=3D
+                      "padding:0;Margin:0;padding-right:20px;padding-left:2=
+0px;padding-top:5px">
+                        <table cellspacing=3D"0" width=3D"100%"
+                        cellpadding=3D"0" role=3D"none" style=3D
+                        "mso-table-lspace:0pt;mso-table-rspace:0pt;border-c=
+ollapse:collapse;border-spacing:0px">
+                          <tr>
+                            <td valign=3D"top" align=3D"center" style=3D
+                            "padding:0;Margin:0;width:560px">
+                              <table cellpadding=3D"0" cellspacing=3D
+                              "0" width=3D"100%" role=3D"presentation"
+                              style=3D
+                              "mso-table-lspace:0pt;mso-table-rspace:0pt;bo=
+rder-collapse:collapse;border-spacing:0px">
+                                <tr>
+                                  <td align=3D"center" style=3D
+                                  "padding:0;Margin:0">
+                                    <p style=3D
+                                    "Margin:0;mso-line-height-rule:exactly;=
+font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:15px=
+;letter-spacing:0;color:#333333;font-size:10px">
+                                      T&amp;C Apply. | <a target=3D"_blank"=
+ href=3D"https://t13.mailers.hdfcbank.net/r/=3Fid=3Dh8820de7d-9cd8-43d3-92f=
+c-7535242781fe,19e06a,72302&e=3DcDE9JTQwOW9xT0R4TXc5akphSTU5NERYbVNOVW9UbGp=
+kaGR5OExZUDk4dDl3ck1aQ2xIdURuYmQybk9HdTVjaEcybjFXMiUyRnQlMkJHaE1UV1M0VHBucl=
+JKaFNnWUdGbTRscnpmJTJGeEhlWmpUYXE1dUtRMWMlM0Q&s=3DC6KctXcmFflG9GR_lfoOam-C1=
+s5D3NkqzrQQg2JtLrw" style=3D"mso-line-height-rule:exactly;text-decoration:u=
+nderline;color:#0b5394;font-size:10px">                                    =
+  Unsubscribe</a>
+                                    </p>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </div>
+  <img height=3D'0' width=3D'0' alt=3D'' src=3D'https://t13.mailers.hdfcban=
+k.net/r/=3Fid=3Dh8820de7d-9cd8-43d3-92fc-7535242781fe,19e06a,1'/></body>
+</html>
+
+------=_NextPart_096_33A34FDF.33A34FDF--
+
